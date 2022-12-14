@@ -1,0 +1,38 @@
+.accomplish {
+  padding: 70px 200px;
+  position: relative;
+  z-index: 1;
+
+  .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 36px;
+      width: 450px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      width: 450px;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      h2 {
+        font-size: 42px;
+        width: 550px;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 28px;
+        width: 550px;
+        font-weight: 700;
+      }
+    }
+  }
+}

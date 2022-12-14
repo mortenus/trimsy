@@ -1,0 +1,41 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: calc(100vh - 350px);
+
+  @media only screen and (min-height: 725px) {
+    height: calc(100vh - 500px);
+
+    h1 {
+      font-size: 96px !important;
+    }
+
+    h3 {
+      font-size: 48px !important;
+    }
+  }
+
+  @media only screen and (min-height: 800px) {
+  }
+
+  h1 {
+    font-size: 84px;
+    font-weight: bold;
+
+    margin: 150px 0 30px 0;
+  }
+
+  h3 {
+    font-size: 34px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 500;
+
+    margin: 15px 0;
+  }
+}
