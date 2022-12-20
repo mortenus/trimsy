@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+
+  align-items: center;
+
+  margin: 75px 0;
+
+  .text {
+    margin: 0 50px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 500;
+
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+
+      line-height: 1.4;
+      font-weight: 400;
+    }
+  }
+
+  .flag {
+    padding: 20px 80px;
+
+    position: relative;
+
+    .image {
+      position: relative;
+    }
+
+    background: linear-gradient(90deg, rgb(80, 40, 103), rgb(80, 44, 109));
+  }
+}
