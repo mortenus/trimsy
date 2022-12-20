@@ -6,7 +6,11 @@ import Button from '../Button';
 
 import styles from './Header.module.scss';
 
-const Header = () => {
+type THeader = {
+  clean?: boolean;
+};
+
+const Header = ({ clean }: THeader) => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -25,17 +29,23 @@ const Header = () => {
         </Link>
 
         <div className={styles.wrap}>
-          <ul>
-            {/* <Link href="#home">
+          {clean ? (
+            <ul></ul>
+          ) : (
+            <>
+              <ul>
+                {/* <Link href="#home">
               <li>Home</li>
             </Link>
             <Link href="#overview">
               <li>Overview</li>
             </Link> */}
-          </ul>
-          <Button to="#contact" type="nav" className="nav">
-            Contact us
-          </Button>
+              </ul>
+              <Button to="#contact" type="nav" className="nav">
+                Contact us
+              </Button>
+            </>
+          )}
         </div>
       </nav>
     </header>

@@ -24,8 +24,6 @@ const ContactForm = (props: any) => {
     }
   };
 
-  console.log('props', props);
-
   return (
     <div id="contact" className={styles.contact}>
       <div className={styles.intro}>

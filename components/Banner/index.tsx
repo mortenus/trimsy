@@ -32,8 +32,8 @@ const Banner = () => {
 
       <h5>We stand with Ukraine.</h5>
 
-      <Link className={styles.link} href="#">
-        <span>More</span>
+      <Link className={styles.link} href="/stands-with-ukraine">
+        <a>More</a>
         <svg
           width="40"
           height="30"

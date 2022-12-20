@@ -27,8 +27,7 @@ const Influence = () => {
           resistanceRatio={0.2}
           effect="creative"
           autoplay={{
-            // delay: 5000,
-            delay: 1000000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
           pagination={{
