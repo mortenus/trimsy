@@ -11,34 +11,30 @@
 
   min-height: calc(100vh - 100px);
 
-  @media only screen and (min-height: 725px) {
-    height: calc(100vh - 500px);
+  p {
+    font-size: 36px;
+    font-weight: 500;
 
-    h1 {
-      font-size: 96px !important;
-    }
+    width: 850px;
 
-    h3 {
-      font-size: 48px !important;
-    }
-  }
+    line-height: 1.25;
 
-  @media only screen and (min-height: 800px) {
+    margin: 80px 0;
   }
 
   .text {
     text-align: end;
 
     h2 {
-      font-size: 48px;
+      font-size: 64px;
       font-weight: bold;
 
-      margin-top: 150px;
+      margin-top: 200px;
     }
 
     h3 {
-      font-size: 48px;
-      font-weight: 600;
+      font-size: 64px;
+      font-weight: bold;
 
       span {
         border-bottom: 3px solid #fff;
@@ -46,14 +42,18 @@
     }
   }
 
-  p {
-    font-size: 24px;
-    font-weight: 500;
+  @media (min-width: 960px) and (max-width: 1366px) {
+    p {
+      font-size: 28px;
 
-    width: 600px;
+      width: 700px;
+    }
 
-    line-height: 1.25;
-
-    margin: 50px 0;
+    .text {
+      h2,
+      h3 {
+        font-size: 48px;
+      }
+    }
   }
 }
