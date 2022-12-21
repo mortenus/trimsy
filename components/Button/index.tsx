@@ -46,20 +46,6 @@ const Button = ({ children, type, black, className, to, onClick, disabled }: TBu
       )}
     </>
   );
-
-  return (
-    <Link href={to ? to : '#'}>
-      <div
-        className={clsx(
-          styles.button,
-          { [styles.className]: className },
-          { [styles.black]: black },
-          { [styles.nav]: type === 'nav' },
-        )}>
-        {children}
-      </div>
-    </Link>
-  );
 };
 
 export default Button;

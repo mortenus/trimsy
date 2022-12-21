@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Trimsy</title>
+        <title>Trimsy - Web Development</title>
         <meta name="description" content="Discover your presence in Web the way you want." />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
