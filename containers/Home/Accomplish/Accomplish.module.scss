@@ -11,27 +11,28 @@
     margin-bottom: 30px;
 
     h2 {
-      font-size: 36px;
-      width: 450px;
+      //   font-size: 36px;
+      width: 25vw;
+      font-size: clamp(2.4rem, 1.4vw, 3rem);
     }
 
     p {
-      font-size: 24px;
-      font-weight: 500;
-      width: 450px;
+      font-size: clamp(1.8rem, 1.4vw, 2rem);
+      font-weight: 600;
+      width: 30vw;
     }
 
     @media only screen and (min-width: 1600px) {
       h2 {
-        font-size: 42px;
-        width: 550px;
-        font-weight: 800;
+        // font-size: 42px;
+        // width: 550px;
+        // font-weight: 800;
       }
 
       p {
-        font-size: 28px;
-        width: 550px;
-        font-weight: 700;
+        // font-size: 28px;
+        // width: 550px;
+        // font-weight: 700;
       }
     }
   }

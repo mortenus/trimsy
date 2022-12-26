@@ -1,4 +1,4 @@
-$bannerHeight: 70px;
+$bannerHeight: clamp(4.35rem, 5vw, 8rem);
 
 .banner {
   display: flex;
@@ -13,38 +13,37 @@ $bannerHeight: 70px;
 
   h5 {
     color: #fff;
-    font-size: 18px;
+    font-size: clamp(1.125rem, 1.5vw, 2rem);
 
     margin-left: 15px;
   }
 
   svg {
-    width: 30px;
-    height: 34px;
+    width: clamp(2rem, 2vw, 3.8rem);
     position: relative;
     bottom: 2px;
   }
 
-  @media only screen and (min-width: 1600px) {
-    height: $bannerHeight + 60px;
+  //   @media only screen and (min-width: 1600px) {
+  //     height: $bannerHeight + 60px;
 
-    h5 {
-      font-size: 26px;
-    }
+  //     h5 {
+  //       font-size: 26px;
+  //     }
 
-    svg {
-      width: 35px;
-      height: 40px;
-    }
-  }
+  //     svg {
+  //       width: 35px;
+  //       height: 40px;
+  //     }
+  //   }
 
-  @media (min-width: 1450px) and (max-width: 1600px) {
-    height: $bannerHeight + 30px;
+  //   @media (min-width: 1450px) and (max-width: 1600px) {
+  //     height: $bannerHeight + 30px;
 
-    h5 {
-      font-size: 24px;
-    }
-  }
+  //     h5 {
+  //       font-size: 24px;
+  //     }
+  //   }
 
   .link {
     display: flex;
@@ -57,6 +56,7 @@ $bannerHeight: 70px;
 
     span {
       font-weight: bold;
+      font-size: clamp(1rem, 1.2vw, 1.3rem);
 
       position: relative;
 
@@ -78,15 +78,12 @@ $bannerHeight: 70px;
       }
 
       @media (min-width: 1450px) and (max-width: 1600px) {
-        font-size: 20px;
         &::after {
           top: 20px;
         }
       }
 
       @media only screen and (min-width: 1600px) {
-        font-size: 24px;
-
         bottom: -1px;
 
         &::after {
@@ -96,20 +93,12 @@ $bannerHeight: 70px;
     }
 
     svg {
-      width: 20px;
-      height: 30px;
+      //   width: 20px;
+      //   height: 30px;
+
+      width: clamp(1.5rem, 1.2vw, 4rem);
+      //   height: clamp(2rem, 1.2vw, 4rem);
       bottom: 0;
-    }
-
-    @media (min-width: 1600px) {
-      span {
-        font-size: 18px;
-      }
-
-      svg {
-        width: 25px;
-        height: 35px;
-      }
     }
   }
 }

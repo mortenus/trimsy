@@ -22,7 +22,7 @@ const validations = ({ values, errors }: TValidations) => {
       if (!value) {
         errors.fullname = 'Fill your name';
       } else if (value.split('').length < 4) {
-        errors.fullname = `Name is too short ${value.split('').length}`;
+        errors.fullname = 'Name is too short';
       } else if (value.split('').length > 16) {
         errors.fullname = 'Name is too long';
       } else if (!/^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/i.test(value)) {

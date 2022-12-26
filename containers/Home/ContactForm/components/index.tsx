@@ -28,7 +28,10 @@ const ContactForm = (props: any) => {
     <div id="contact" className={styles.contact}>
       <div className={styles.intro}>
         <h2>Contact us</h2>
-        <p>Tell us how we can help you bring your ideas into reality.</p>
+        <p>
+          Tell us how we can help you bring your
+          <br /> ideas into reality.
+        </p>
       </div>
       <div onSubmit={handleSubmit} className={styles.form}>
         <ContactInput
