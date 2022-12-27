@@ -45,6 +45,11 @@
         width: max(30%, 600px);
         height: clamp(25vh, 20rem, 40vh);
       }
+
+      @media (max-width: 650px) {
+        height: clamp(33vh, 17rem, 34vh);
+        width: 100%;
+      }
     }
 
     :global(.swiper-pagination-bullets) {
@@ -60,6 +65,10 @@
     :global(.swiper-pagination-bullet) {
       background: #fff;
       opacity: 0.8;
+
+      @media (max-width: 650px) {
+        display: none;
+      }
     }
 
     :global(.swiper-pagination-bullet-active) {
@@ -70,11 +79,19 @@
     :global(.swiper-button-next) {
       height: 100%;
       top: 0;
+
+      @media (max-width: 650px) {
+        display: none;
+      }
     }
 
     :global(.swiper-button-prev) {
       height: 100%;
       top: 0;
+
+      @media (max-width: 650px) {
+        display: none;
+      }
     }
   }
 }
