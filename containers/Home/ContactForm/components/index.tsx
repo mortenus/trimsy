@@ -11,18 +11,18 @@ const ContactForm = (props: any) => {
 
   const [valueDescribe, setValueDescribe] = React.useState('');
 
-  const textareaRef = React.useRef<HTMLTextAreaElement>(null);
-  const [scrollHeightTextarea, setScrollHeightTextarea] = React.useState(60);
+  //   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
+  //   const [scrollHeightTextarea, setScrollHeightTextarea] = React.useState(60);
 
-  const handleTextarea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValueDescribe(e.target.value);
-    console.log(e.target.value, valueDescribe);
-    if (textareaRef.current !== null) {
-      setScrollHeightTextarea(
-        textareaRef.current.scrollHeight > 60 ? textareaRef.current.scrollHeight : 60,
-      );
-    }
-  };
+  //   const handleTextarea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  //     setValueDescribe(e.target.value);
+  //     console.log(e.target.value, valueDescribe);
+  //     if (textareaRef.current !== null) {
+  //       setScrollHeightTextarea(
+  //         textareaRef.current.scrollHeight > 60 ? textareaRef.current.scrollHeight : 60,
+  //       );
+  //     }
+  //   };
 
   return (
     <div id="contact" className={styles.contact}>
@@ -53,11 +53,11 @@ const ContactForm = (props: any) => {
           placeholder={'Type your email'}
         />
         <textarea
-          style={{ height: `${scrollHeightTextarea}px` }}
+          //   style={{ height: `${scrollHeightTextarea}px` }}
           value={values?.description}
           name="description"
           onInput={handleChange}
-          ref={textareaRef}
+          //   ref={textareaRef}
           maxLength={400}
           placeholder={'Describe your objective'}
         />

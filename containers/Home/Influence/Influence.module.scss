@@ -26,20 +26,11 @@
 
       margin: 10px 0;
     }
-
-    // @media only screen and (min-width: 1600px) {
-    //   p {
-    //     width: 1000px;
-    //     font-size: 28px;
-    //   }
-
-    //   h2 {
-    //     font-size: 56px;
-    //   }
-    // }
   }
 
   .wrapper {
+    width: 100%;
+
     :global(.swiper) {
       //   width: 1200px;
       //   height: 100vh;
@@ -49,6 +40,11 @@
       max-width: 1800px;
 
       transition: width 0.2s ease;
+
+      @media (max-width: 1000px) {
+        width: max(30%, 600px);
+        height: clamp(25vh, 20rem, 40vh);
+      }
     }
 
     :global(.swiper-pagination-bullets) {
