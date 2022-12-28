@@ -34,7 +34,7 @@ const ContactForm = (props: any) => {
         </p>
       </div>
       <div onSubmit={handleSubmit} className={styles.form}>
-        <ContactInput
+        {/* <ContactInput
           size="small"
           name="fullname"
           help={!touched?.fullname ? undefined : errors.fullname}
@@ -42,7 +42,7 @@ const ContactForm = (props: any) => {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder={'Type your name'}
-        />
+        /> */}
         <ContactInput
           size="big"
           name="email"
@@ -56,6 +56,7 @@ const ContactForm = (props: any) => {
           //   style={{ height: `${scrollHeightTextarea}px` }}
           value={values?.description}
           name="description"
+          id="description"
           onInput={handleChange}
           //   ref={textareaRef}
           maxLength={400}
