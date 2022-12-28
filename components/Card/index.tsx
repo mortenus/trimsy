@@ -22,7 +22,7 @@ const Card = ({
   hover = false,
 }: TCard) => {
   return (
-    <div key={title} className={clsx([styles.card, { [styles.hover]: hover }])}>
+    <div key={title} className={clsx([styles.wrapper, { [styles.hover]: hover }])}>
       <div className={styles.content}>
         <div className={styles.favorite}>
           <Image

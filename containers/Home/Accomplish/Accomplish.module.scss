@@ -20,5 +20,15 @@
       font-weight: 600;
       width: 100%;
     }
+
+    @media (max-width: 500px) {
+      h2 {
+        font-size: 4vw;
+      }
+
+      p {
+        font-size: 3vw;
+      }
+    }
   }
 }

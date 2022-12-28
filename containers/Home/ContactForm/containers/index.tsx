@@ -32,6 +32,7 @@ const ContactFormContainer = withFormik({
         setSubmitting(false);
       });
   },
+  enableReinitialize: true,
 
   displayName: 'ContactForm',
 })(ContactForm);
