@@ -61,10 +61,10 @@ const ContactForm = (props: any) => {
           maxLength={400}
           placeholder={'Describe your objective'}
         />
-        <Button disabled={isSubmitting} type="submit" onClick={handleSubmit}>
-          Submit
-        </Button>
       </div>
+      <Button disabled={isSubmitting} type="submit" onClick={handleSubmit}>
+        Submit
+      </Button>
     </div>
   );
 };

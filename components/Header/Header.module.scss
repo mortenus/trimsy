@@ -41,7 +41,7 @@ $navHeight: 75px;
     justify-content: space-between;
     align-items: center;
     height: 75px;
-    padding: 0 75px;
+    padding: 0 clamp(0rem, 3.5vw, 5rem);
     position: fixed;
     width: 100%;
     background: #fff;
@@ -61,6 +61,12 @@ $navHeight: 75px;
       justify-content: space-between;
       align-items: center;
       height: 100%;
+
+      @media (max-width: 650px) {
+        a {
+          display: none;
+        }
+      }
 
       ul {
         display: flex;

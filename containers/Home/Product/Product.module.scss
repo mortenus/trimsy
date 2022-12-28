@@ -82,6 +82,10 @@
 
           align-items: center;
 
+          @media (max-width: 500px) {
+            display: none;
+          }
+
           .image {
             position: relative;
             width: 22px;
