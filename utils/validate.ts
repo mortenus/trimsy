@@ -31,8 +31,11 @@ const validations = ({ values, errors }: TValidations) => {
     },
   };
 
-  // @ts-ignore
-  Object.keys(values).forEach((key) => rules[key] && rules[key](values[key]));
+  Object.keys(values).forEach(
+    (key) =>
+      rules[key as keyof typeof rules] &&
+      rules[key as keyof typeof rules](values[key as keyof typeof rules]),
+  );
 };
 
 export default validations;
