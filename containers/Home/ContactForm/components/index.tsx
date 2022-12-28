@@ -43,10 +43,6 @@ const ContactForm = (props: any) => {
           onBlur={handleBlur}
           placeholder={'Type your name'}
         />
-        <div>
-          {errors.fullname}
-          {!!touched.fullname}123
-        </div>
         <ContactInput
           size="big"
           name="email"
