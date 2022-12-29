@@ -33,10 +33,6 @@ const Accomplish = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollHeight]);
 
-  React.useEffect(() => {
-    handleScrollHeightChange();
-  }, [isVisible]);
-
   //   const handleMove = () => {
   // if (scrollHeight <= 700) {
   //   setScrollMove(false);
@@ -75,6 +71,7 @@ const Accomplish = () => {
       <Button to="#contact" black>
         Contact us
       </Button>
+      <div>{isVisible && 'hi john'}</div>
     </section>
   );
 };
