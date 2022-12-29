@@ -12,9 +12,7 @@ const Accomplish = () => {
   const isVisible = useOnScreen(AccomplishRef);
 
   const handleScrollHeightChange = () => {
-    if (isVisible) {
-      setScrollHeight(window.scrollY);
-    }
+    setScrollHeight(window.scrollY);
   };
 
   React.useEffect(() => {
@@ -28,12 +26,16 @@ const Accomplish = () => {
   React.useEffect(() => {
     // handleMove();
 
-    // if (isVisible) {
-    setScrollMove((scrollHeight / 30) * 4);
-    // }
+    if (isVisible) {
+      setScrollMove((scrollHeight / 30) * 4);
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollHeight]);
+
+  React.useEffect(() => {
+    handleScrollHeightChange();
+  }, [isVisible]);
 
   //   const handleMove = () => {
   // if (scrollHeight <= 700) {
