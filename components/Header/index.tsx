@@ -30,17 +30,17 @@ const Header = ({ clean }: THeader) => {
 
         <div className={styles.wrap}>
           {clean ? (
-            <ul></ul>
+            <></>
           ) : (
             <>
-              <ul>
-                {/* <Link href="#home">
+              {/* <ul> */}
+              {/* <Link href="#home">
               <li>Home</li>
             </Link>
             <Link href="#overview">
               <li>Overview</li>
             </Link> */}
-              </ul>
+              {/* </ul> */}
               <Button to="#contact" type="nav" className="nav">
                 Contact us
               </Button>

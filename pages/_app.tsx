@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       {router.pathname === '/stands-with-ukraine' ? <Header clean /> : <Header />}
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

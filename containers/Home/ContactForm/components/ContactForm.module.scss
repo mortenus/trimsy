@@ -3,55 +3,30 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding-top: 100px;
 
-  margin-top: 20px;
+  margin-top: 200px;
 
-  height: 600px;
-
-  @media (min-width: 1600px) and (max-width: 2000px) {
-    height: 1000px;
-    padding-top: 200px;
-  }
-
-  @media (min-width: 1450px) and (max-width: 1600px) {
-    height: 700px;
-    padding-top: 150px;
-  }
+  height: 75vh;
 
   .intro {
     margin-bottom: 50px;
 
     h2 {
-      font-size: 48px;
-      margin-bottom: 40px;
+      font-size: clamp(2rem, 3.5vw, 4rem);
+      margin-bottom: 1.2rem;
     }
 
     p {
-      width: 500px;
-      font-size: 24px;
+      font-size: clamp(1.2rem, 2vw, 3rem);
     }
 
-    @media only screen and (min-width: 1600px) {
-      margin-bottom: 100px;
+    @media (max-width: 500px) {
       h2 {
-        font-size: 96px;
+        font-size: 8vw;
       }
 
       p {
-        width: 900px;
-        font-size: 48px;
-      }
-    }
-
-    @media (min-width: 1450px) and (max-width: 1600px) {
-      h2 {
-        font-size: 64px;
-      }
-
-      p {
-        width: 600px;
-        font-size: 32px;
+        font-size: 5vw;
       }
     }
   }
@@ -61,21 +36,20 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 500px;
+    // width: clamp(31.25rem, 2vw, 60rem);
+    width: max(40vw, 30rem);
 
-    @media (min-width: 1600px) and (max-width: 2000px) {
-      width: 900px;
-    }
-
-    @media (min-width: 1450px) and (max-width: 1600px) {
-      width: 575px;
+    @media (max-width: 500px) {
+      width: auto;
+      margin: 0 20px;
     }
 
     textarea {
-      padding: 10px 8px;
-      overflow-y: hidden;
+      padding: clamp(0.625rem, 1.2vw, 1.3rem) clamp(0.5rem, 1.2vw, 1rem);
 
-      min-height: 40px;
+      font-size: clamp(0.8rem, 1.4vw, 2rem);
+
+      min-height: clamp(2rem, 5vw, 9.3rem);
       max-height: 130px;
 
       white-space: pre-wrap;
@@ -92,18 +66,9 @@
 
       margin-bottom: 15px;
 
-      @media (min-width: 1600px) and (max-width: 2000px) {
-        padding: 18px 14px;
-        font-size: 24px;
-
-        min-height: 150px;
-      }
-
-      @media (min-width: 14500px) and (max-width: 1600px) {
-        padding: 14px 12px;
-        font-size: 18px;
-
-        min-height: 100px;
+      @media (max-width: 500px) {
+        min-width: auto;
+        width: 100%;
       }
     }
   }

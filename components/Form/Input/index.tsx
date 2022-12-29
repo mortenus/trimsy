@@ -43,7 +43,6 @@ const ContactInput = ({
         onChange={onChange}
         onBlur={onBlur}
         type="text"
-        min={6}
       />
     </div>
   );

@@ -1,5 +1,7 @@
 .product {
-  height: calc(100vh - 180px);
+  //   height: calc(100vh - 180px);
+
+  height: clamp(75vh, 15rem, calc(100vw - 200px));
 
   position: relative;
 
@@ -11,21 +13,21 @@
 
   margin-top: 100px;
 
-  @media (min-width: 1600px) and (max-width: 2000px) {
-    height: calc(100vh - 400px);
-  }
-
   .floating {
     position: absolute;
     left: 75px;
     top: 100px;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
 
     @media only screen and (min-width: 1600px) {
       left: 125px;
     }
   }
 
-  @media (max-width: 960px) {
+  @media only screen and (max-width: 960px) {
   }
 
   @media (min-width: 1150px) and (max-width: 1330px) {
@@ -46,26 +48,15 @@
     border-radius: 20px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    width: 880px;
+    // width: clamp(43.75rem, 1.4vw, 65rem);
+    width: max(45%, 40rem);
     margin: 35px auto 0 auto;
     overflow: hidden;
 
     user-select: none;
 
-    @media only screen and (min-width: 1600px) {
-      width: 900px;
-    }
-
-    @media (min-width: 1450px) and (max-width: 1600px) {
-      width: 850px;
-    }
-
-    @media (min-width: 1250px) and (max-width: 1450px) {
-      width: 780px;
-    }
-
-    @media only screen and (max-width: 1250px) {
-      width: 700px;
+    @media (max-width: 650px) {
+      width: clamp(29ch, 2vw, 75ch);
     }
 
     .content {
@@ -90,6 +81,10 @@
           position: relative;
 
           align-items: center;
+
+          @media (max-width: 650px) {
+            display: none;
+          }
 
           .image {
             position: relative;
@@ -159,6 +154,10 @@
       .headerLinks {
         display: flex;
 
+        @media (max-width: 650px) {
+          display: none;
+        }
+
         li {
           &:first-child {
             margin-right: 30px;
@@ -191,8 +190,4 @@
       }
     }
   }
-}
-
-@media only screen and (min-width: 960px) {
-  //
 }

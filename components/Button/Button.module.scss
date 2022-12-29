@@ -7,6 +7,7 @@ $blue: rgb(22, 106, 234);
   color: #fff;
 
   cursor: pointer;
+  user-select: none;
 
   background: $blue;
   border-radius: 40px;
@@ -17,29 +18,34 @@ $blue: rgb(22, 106, 234);
     background: lighten($blue, 10%);
   }
 
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+
+  padding: clamp(0.4rem, 1.3vw, 1rem) clamp(1.6rem, 1.4vw, 3rem);
+
   @media only screen and (min-width: 1600px) {
-    padding: 18px 46px;
-    font-size: 24px;
+    // padding: 18px 46px;
+    // font-size: 24px;
   }
 
   @media (min-width: 1450px) and (max-width: 1600px) {
-    padding: 16.8px 42px;
-    font-size: 20px;
+    // padding: 16.8px 42px;
+    // font-size: 20px;
   }
 
   @media (min-width: 960px) and (max-width: 1450px) {
-    padding: 12px 30px;
+    // padding: 12px 30px;
 
-    font-size: 18.5px;
+    // font-size: 18.5px;
   }
 
   @media only screen and (max-width: 960px) {
-    padding: 10.1px 25.2px;
+    // padding: 10.1px 25.2px;
 
-    font-size: 16px;
+    // font-size: 16px;
   }
 
   &.nav {
+    color: #fff;
     @media (min-width: 1000px) and (max-width: 1200px) {
       // padding:
     }

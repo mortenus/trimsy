@@ -1,37 +1,33 @@
 .accomplish {
-  padding: 70px 200px;
+  padding: 70px min(10%, 15vw);
   position: relative;
   z-index: 1;
 
   .text {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     margin-bottom: 30px;
 
     h2 {
-      font-size: 36px;
-      width: 450px;
+      width: 100%;
+      font-size: clamp(1.4rem, 2vw, 4rem);
+      margin-right: 3vw;
     }
 
     p {
-      font-size: 24px;
-      font-weight: 500;
-      width: 450px;
+      font-size: clamp(1rem, 1.6vw, 2.4rem);
+      font-weight: 600;
+      width: 100%;
     }
 
-    @media only screen and (min-width: 1600px) {
+    @media (max-width: 500px) {
       h2 {
-        font-size: 42px;
-        width: 550px;
-        font-weight: 800;
+        font-size: 4vw;
       }
 
       p {
-        font-size: 28px;
-        width: 550px;
-        font-weight: 700;
+        font-size: 3vw;
       }
     }
   }

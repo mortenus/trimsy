@@ -2,10 +2,11 @@ type TValidations = {
   values: {
     fullname: string;
     email: string;
+    description?: string;
   };
   errors: {
-    email?: string;
     fullname?: string;
+    email?: string;
   };
 };
 
@@ -22,17 +23,20 @@ const validations = ({ values, errors }: TValidations) => {
       if (!value) {
         errors.fullname = 'Fill your name';
       } else if (value.split('').length < 4) {
-        errors.fullname = `Name is too short ${value.split('').length}`;
+        errors.fullname = 'Name is too short';
       } else if (value.split('').length > 16) {
         errors.fullname = 'Name is too long';
-      } else if (!/^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/i.test(value)) {
+      } else if (!/^(?=[a-zA-Z]*$)(?!.*[<>'"/;`%])/i.test(value)) {
         errors.fullname = 'No special characters';
       }
     },
   };
 
-  // @ts-ignore
-  Object.keys(values).forEach((key) => rules[key] && rules[key](values[key]));
+  Object.keys(values).forEach(
+    (key) =>
+      rules[key as keyof typeof rules] &&
+      rules[key as keyof typeof rules](values[key as keyof typeof rules]),
+  );
 };
 
 export default validations;
