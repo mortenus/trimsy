@@ -18,16 +18,24 @@
     left: 75px;
     top: 100px;
 
+    z-index: 5;
+
+    @media (max-width: 960px) {
+      left: 30px;
+    }
+
     @media (max-width: 650px) {
+      left: 20px;
+      top: 160px;
+    }
+
+    @media (max-width: 550px) {
       display: none;
     }
 
     @media only screen and (min-width: 1600px) {
       left: 125px;
     }
-  }
-
-  @media only screen and (max-width: 960px) {
   }
 
   @media (min-width: 1150px) and (max-width: 1330px) {
@@ -64,6 +72,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        @media (max-width: 650px) {
+          justify-content: space-around;
+        }
       }
 
       .headline {

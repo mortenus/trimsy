@@ -1,9 +1,8 @@
 .accomplish {
-  padding: 70px min(10%, 15vw);
-  position: relative;
-  z-index: 1;
-
   position: absolute;
+  z-index: 1;
+  padding: 70px min(10%, 15vw);
+
   background: #fff;
 
   .text {

@@ -8,7 +8,7 @@ const Intro = () => {
   return (
     <>
       <Banner />
-      <div id="home" className={styles.intro}>
+      <div id="home" className={styles.wrapper}>
         <h1>Trimsy</h1>
         <h3>Success is near</h3>
         <p>Discover your presence in Web the way you want.</p>
