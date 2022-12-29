@@ -1,7 +1,9 @@
 .accomplish {
-  padding: 70px min(10%, 15vw);
-  position: relative;
+  position: absolute;
   z-index: 1;
+  padding: 70px min(10%, 15vw);
+
+  background: #fff;
 
   .text {
     display: flex;

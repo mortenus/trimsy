@@ -40,18 +40,20 @@ const Cart = () => {
   };
 
   React.useEffect(() => {
-    scrollRef.current?.addEventListener('DOMMouseScroll', preventDefault);
-    window && scrollRef.current?.addEventListener(wheelEvent, preventDefault);
-    scrollRef.current?.addEventListener('touchmove', preventDefault);
-    scrollRef.current?.addEventListener('keydown', preventDefault);
+    const scrollRefWrapper = scrollRef.current;
+
+    scrollRefWrapper?.addEventListener('DOMMouseScroll', preventDefault);
+    window && scrollRefWrapper?.addEventListener(wheelEvent, preventDefault);
+    scrollRefWrapper?.addEventListener('touchmove', preventDefault);
+    scrollRefWrapper?.addEventListener('keydown', preventDefault);
 
     return () => {
-      scrollRef.current?.removeEventListener('DOMMouseScroll', preventDefault);
-      window && scrollRef.current?.removeEventListener(wheelEvent, preventDefault);
-      scrollRef.current?.removeEventListener('touchmove', preventDefault);
-      scrollRef.current?.removeEventListener('keydown', preventDefault);
+      scrollRefWrapper?.removeEventListener('DOMMouseScroll', preventDefault);
+      window && scrollRefWrapper?.removeEventListener(wheelEvent, preventDefault);
+      scrollRefWrapper?.removeEventListener('touchmove', preventDefault);
+      scrollRefWrapper?.removeEventListener('keydown', preventDefault);
     };
-  }, []);
+  }, [scrollRef]);
 
   return (
     <div className={styles.drawer}>
