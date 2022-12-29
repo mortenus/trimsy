@@ -24,26 +24,30 @@ const Accomplish = () => {
   });
 
   React.useEffect(() => {
-    handleMove();
+    // handleMove();
+
+    if (isVisible) {
+      setScrollMove((scrollHeight / 30) * 4);
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollHeight]);
 
-  const handleMove = () => {
-    if (scrollHeight <= 700) {
-      setScrollMove(false);
-    }
+  //   const handleMove = () => {
+  // if (scrollHeight <= 700) {
+  //   setScrollMove(false);
+  // }
 
-    if (scrollHeight >= 1400) {
-      setScrollMove(true);
-    }
+  // if (scrollHeight >= 1400) {
+  //   setScrollMove(true);
+  // }
 
-    // if (scrollHeight <= 1600 && scrollHeight >= 400) {
-    if (isVisible) {
-      const a = (scrollHeight / 30) * 4;
-      setScrollMove(a);
-    }
-  };
+  // if (scrollHeight <= 1600 && scrollHeight >= 400) {
+  // if (isVisible) {
+  //   const a = (scrollHeight / 30) * 4;
+  //   setScrollMove(a);
+  // }
+  //   };
 
   return (
     <section
