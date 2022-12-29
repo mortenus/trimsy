@@ -25,12 +25,14 @@
   }
 
   .flag {
-    padding: 20px 80px;
+    padding: 20px 30px;
 
     position: relative;
 
-    .image {
+    .img {
       position: relative;
+      width: 300px;
+      height: 150px;
     }
 
     background: linear-gradient(90deg, rgb(80, 40, 103), rgb(80, 44, 109));

@@ -14,7 +14,9 @@ const Intro = () => {
             any way we <span>can</span>
           </h3>
         </div>
-        <p>We, at Trimsy, condemn the war in Ukraine. Join us in helping those in need</p>
+        <p>
+          We, at Trimsy, condemn the war in Ukraine. <br /> Join us in helping those in need
+        </p>
       </div>
     </>
   );

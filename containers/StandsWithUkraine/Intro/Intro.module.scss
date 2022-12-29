@@ -12,28 +12,32 @@
   min-height: calc(100vh - 100px);
 
   p {
-    font-size: 36px;
+    // font-size: 36px;
     font-weight: 500;
 
-    width: 850px;
+    // width: 850px;
 
     line-height: 1.25;
 
-    margin: 80px 0;
+    // margin: 80px 0;
+    font-size: clamp(0.7rem, 4vw, 2.5rem);
+    margin: 80px min(3vw, 12rem);
   }
 
   .text {
     text-align: end;
 
     h2 {
-      font-size: 64px;
+      font-size: clamp(0.8rem, 4.5vw, 3.5rem);
+      //   font-size: 64px;
       font-weight: bold;
 
       margin-top: 200px;
     }
 
     h3 {
-      font-size: 64px;
+      font-size: clamp(1rem, 4.5vw, 10rem);
+      //   font-size: 64px;
       font-weight: bold;
 
       span {
@@ -42,18 +46,18 @@
     }
   }
 
-  @media (min-width: 960px) and (max-width: 1366px) {
-    p {
-      font-size: 28px;
+  //   @media (min-width: 960px) and (max-width: 1366px) {
+  //     p {
+  //       font-size: 28px;
 
-      width: 700px;
-    }
+  //       width: 700px;
+  //     }
 
-    .text {
-      h2,
-      h3 {
-        font-size: 48px;
-      }
-    }
-  }
+  //     .text {
+  //       h2,
+  //       h3 {
+  //         font-size: 48px;
+  //       }
+  //     }
+  //   }
 }
