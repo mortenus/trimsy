@@ -26,7 +26,7 @@ const validations = ({ values, errors }: TValidations) => {
         errors.fullname = 'Name is too short';
       } else if (value.split('').length > 16) {
         errors.fullname = 'Name is too long';
-      } else if (!/^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/i.test(value)) {
+      } else if (!/^(?=[a-zA-Z]*$)(?!.*[<>'"/;`%])/i.test(value)) {
         errors.fullname = 'No special characters';
       }
     },
