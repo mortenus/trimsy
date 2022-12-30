@@ -3,14 +3,19 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Header } from 'components';
+import type { NextComponentType } from 'next';
 
-export default function App({ Component, pageProps }: AppProps) {
+type CustomAppProps = AppProps & {
+  Component: NextComponentType & { title: string };
+};
+
+export default function App({ Component, pageProps }: CustomAppProps) {
   const router = useRouter();
 
   return (
     <>
       <Head>
-        <title>Trimsy - Web Development</title>
+        <title>{Component.title + ' - Trimsy.org'}</title>
         <meta name="description" content="Discover your presence in Web the way you want." />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

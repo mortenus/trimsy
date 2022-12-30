@@ -1,8 +1,8 @@
 import { Contribute, Intro, SupportItem } from 'containers/StandsWithUkraine';
 import React from 'react';
+import Head from 'next/head';
 
 import styles from './stands.module.scss';
-
 import ComeBackAliveJpg from 'public/static/img/standsWithUkraine/comeBackAlive.jpg';
 import United24Jpg from 'public/static/img/standsWithUkraine/united24.jpg';
 import serhiyPrytulaJpg from 'public/static/img/standsWithUkraine/prytula.jpg';
@@ -43,7 +43,8 @@ const linksArr = [
   },
 ];
 
-const index = () => {
+StandsWithUkraine.title = 'Trimsy stands with Ukraine';
+export default function StandsWithUkraine() {
   return (
     <>
       <Intro />
@@ -56,6 +57,4 @@ const index = () => {
       </div>
     </>
   );
-};
-
-export default index;
+}
