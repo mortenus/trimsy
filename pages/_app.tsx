@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: CustomAppProps) {
   return (
     <>
       <Head>
-        <title>{Component.title + ' - Trimsy.org'}</title>
+        <title>{Component.title + ' - Trimsy'}</title>
         <meta name="description" content="Discover your presence in Web the way you want." />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +27,13 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      {router.pathname === '/stands-with-ukraine' ? <Header clean /> : <Header />}
+      {router.pathname === '/stands-with-ukraine' ? (
+        <Header clean />
+      ) : router.pathname === '/' ? (
+        <Header />
+      ) : (
+        <Header clean />
+      )}
       <Component {...pageProps} />
     </>
   );
