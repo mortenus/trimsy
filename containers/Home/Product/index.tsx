@@ -60,60 +60,8 @@ const arr = [
 ];
 
 const Product = () => {
-  //   const [scrollHeight, setScrollHeight] = React.useState(0);
-  //   const [scrollMove, setScrollMove] = React.useState<number | boolean>(false);
-
-  //   const ProductRef = React.useRef(null);
-  //   const isVisible = useOnScreen(ProductRef);
-
-  //   const handleScrollHeightChange = () => {
-  //     setScrollHeight(window.scrollY);
-  //   };
-
-  //   React.useEffect(() => {
-  //     window.addEventListener('scroll', handleScrollHeightChange);
-
-  //     return () => {
-  //       window.removeEventListener('scroll', handleScrollHeightChange);
-  //     };
-  //   });
-
-  //   React.useEffect(() => {
-  //     handleMove();
-
-  //     // eslint-disable-next-line react-hooks/exhaustive-deps
-  //   }, [scrollHeight]);
-
-  //   const handleMove = () => {
-  //     if (scrollHeight <= 700) {
-  //       setScrollMove(false);
-  //     }
-
-  //     if (scrollHeight >= 1400) {
-  //       setScrollMove(true);
-  //     }
-
-  //     // if (scrollHeight <= 1600 && scrollHeight >= 400) {
-  //     if (isVisible) {
-  //       const a = (scrollHeight / 30) * 4;
-  //       setScrollMove(a);
-  //     }
-  //   };
-
   return (
-    <section
-      id="product"
-      className={styles.product}
-      //   ref={ProductRef}
-      //   style={{
-      //     marginBottom:
-      //       scrollMove === false
-      //         ? '-50px'
-      //         : scrollMove === true
-      //         ? '-210px'
-      //         : `${-Math.abs(+scrollMove)}px`,
-      //   }}
-    >
+    <section id="product" className={styles.product}>
       <div className={styles.floating}>
         <Card
           title="Nike Kyrie Flytrap IV"
