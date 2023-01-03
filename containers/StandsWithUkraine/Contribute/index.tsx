@@ -16,8 +16,10 @@ const Contribute = () => {
         </p>
       </div>
       <div className={styles.flag}>
-        {/* img fit */}
-        <Image width={400} height={200} src={UkraineFlag} alt="Ukraine Flag" />
+        <div className={styles.img}>
+          <Image fill src={UkraineFlag} alt="Ukraine Flag" />
+        </div>
+        {/* <Image width={400} height={200} src={UkraineFlag} alt="Ukraine Flag" /> */}
       </div>
     </div>
   );

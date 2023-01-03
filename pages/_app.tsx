@@ -3,17 +3,26 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Header } from 'components';
+import type { NextComponentType } from 'next';
 
-export default function App({ Component, pageProps }: AppProps) {
+type CustomAppProps = AppProps & {
+  Component: NextComponentType & { title: string };
+};
+
+export default function App({ Component, pageProps }: CustomAppProps) {
   const router = useRouter();
 
   return (
     <>
       <Head>
-        <title>Trimsy - Web Development</title>
-        <meta name="description" content="Discover your presence in Web the way you want." />
-        <meta charSet="UTF-8" />
+        <title>{Component.title + ' - Trimsy'}</title>
+        <meta
+          name="description"
+          content="Discover your presence in Web the way you want. Trimsy has developers to help you achieve anything in the world of Web"
+        />
+        <meta name="robots" content="noodp,noydir" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -22,7 +31,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      {router.pathname === '/stands-with-ukraine' ? <Header clean /> : <Header />}
+      {router.pathname === '/stands-with-ukraine' ? (
+        <Header clean />
+      ) : router.pathname === '/' ? (
+        <Header />
+      ) : (
+        <Header clean />
+      )}
       <Component {...pageProps} />
     </>
   );

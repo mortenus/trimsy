@@ -25,7 +25,7 @@ type TButton = TButtonOnClick | TButtonLink;
 // @ts-ignore
 const Button = ({ children, type, black, className = '', to, onClick, disabled }: TButton) => {
   const stylying = clsx(
-    styles.button,
+    styles.wrapper,
     { [styles.disabled]: disabled },
     // { [styles[className]]: className },
     { [styles.black]: black },
