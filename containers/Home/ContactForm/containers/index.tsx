@@ -4,32 +4,37 @@ import { axios } from 'core';
 import validateForm from 'utils/validate';
 import ContactForm from '../components';
 
+interface TValues {
+  fullname: string;
+  email: string;
+  description: string;
+}
+
 const ContactFormContainer = withFormik({
   mapPropsToValues: () => ({
     fullname: '',
     email: '',
     description: '',
   }),
-  validate: (values) => {
+  validate: (values: TValues) => {
     const errors = {};
 
     validateForm({ values, errors });
 
     return errors;
   },
-  handleSubmit: (values, { setSubmitting, props }) => {
+  handleSubmit: (values: TValues, { setSubmitting, setStatus, resetForm }) => {
     setSubmitting(true);
-    console.log('values', values);
 
     axios
       .post('https://secure.trimsy.org/form', values)
       .then((res) => {
-        console.log('response:', res);
         setSubmitting(false);
+        setStatus('success');
       })
       .catch((err) => {
-        console.log('error:', err);
         setSubmitting(false);
+        setStatus('fail');
       });
   },
   enableReinitialize: true,

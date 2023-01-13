@@ -6,23 +6,28 @@ import ContactInput from 'components/Form/Input';
 import { Button } from 'components';
 
 const ContactForm = (props: any) => {
-  const { values, touched, errors, handleChange, handleBlur, handleSubmit, isValid, isSubmitting } =
-    props;
+  const {
+    values,
+    status,
+    touched,
+    errors,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    isSubmitting,
+    setStatus,
+  } = props;
 
-  //   const [valueDescribe, setValueDescribe] = React.useState('');
+  // handle button success/failed info
+  React.useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      setStatus(null);
+    }, 5000);
 
-  //   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
-  //   const [scrollHeightTextarea, setScrollHeightTextarea] = React.useState(60);
+    () => clearTimeout(delayDebounceFn);
 
-  //   const handleTextarea = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-  //     setValueDescribe(e.target.value);
-  //     console.log(e.target.value, valueDescribe);
-  //     if (textareaRef.current !== null) {
-  //       setScrollHeightTextarea(
-  //         textareaRef.current.scrollHeight > 60 ? textareaRef.current.scrollHeight : 60,
-  //       );
-  //     }
-  //   };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status]);
 
   return (
     <div id="contact" className={styles.contact}>
@@ -53,17 +58,19 @@ const ContactForm = (props: any) => {
           placeholder={'Type your email'}
         />
         <textarea
-          //   style={{ height: `${scrollHeightTextarea}px` }}
           value={values?.description}
           name="description"
           id="description"
           onInput={handleChange}
-          //   ref={textareaRef}
           maxLength={400}
           placeholder={'Describe your objective'}
         />
       </div>
-      <Button disabled={isSubmitting} type="submit" onClick={handleSubmit}>
+      <Button
+        status={status && status}
+        disabled={isSubmitting}
+        type="submit"
+        onClick={handleSubmit}>
         Submit
       </Button>
     </div>

@@ -8,6 +8,7 @@ import styles from './Influence.module.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
 import CarouselSlide from 'components/CarouselSlide';
 
 const Influence = () => {
@@ -47,7 +48,6 @@ const Influence = () => {
           <SwiperSlide>
             <CarouselSlide imgSrc={'/static/img/carousel/reactPizza.jpg'} />
           </SwiperSlide>
-          {/* <SwiperSlide><Image src={reactChat2Img} alt='Carousel img' /></SwiperSlide> */}
         </Swiper>
       </div>
     </section>

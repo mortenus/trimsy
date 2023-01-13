@@ -10,6 +10,7 @@ interface TButtonBase {
   type?: string;
   className?: string;
   disabled?: boolean;
+  status?: 'success' | 'fail';
 }
 
 interface TButtonOnClick extends TButtonBase {
@@ -23,7 +24,16 @@ interface TButtonLink extends TButtonBase {
 type TButton = TButtonOnClick | TButtonLink;
 
 // @ts-ignore
-const Button = ({ children, type, black, className = '', to, onClick, disabled }: TButton) => {
+const Button = ({
+  children,
+  type,
+  status,
+  black,
+  className = '',
+  to,
+  onClick,
+  disabled,
+}: TButton) => {
   const stylying = clsx(
     styles.wrapper,
     { [styles.disabled]: disabled },
@@ -31,6 +41,8 @@ const Button = ({ children, type, black, className = '', to, onClick, disabled }
     { [styles.black]: black },
     { [styles.nav]: type === 'nav' },
     { [styles.submit]: type === 'submit' },
+    { [styles.success]: status === 'success' },
+    { [styles.fail]: status === 'fail' },
   );
 
   return (
