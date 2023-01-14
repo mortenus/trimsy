@@ -44,7 +44,7 @@ const Cart = () => {
 
     scrollRefWrapper?.addEventListener('DOMMouseScroll', preventDefault);
     window && scrollRefWrapper?.addEventListener(wheelEvent, preventDefault);
-    scrollRefWrapper?.addEventListener('touchmove', preventDefault);
+    scrollRefWrapper?.addEventListener('touchmove', preventDefault, { passive: true });
     scrollRefWrapper?.addEventListener('keydown', preventDefault);
 
     return () => {

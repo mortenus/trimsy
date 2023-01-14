@@ -6,18 +6,32 @@
 
   margin: 75px 0;
 
+  @media (max-width: 500px) {
+    justify-content: auto;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .text {
     width: 30vw;
 
+    @media (max-width: 500px) {
+      width: 100%;
+      margin: 20px 50px;
+    }
+
     h2 {
-      font-size: 32px;
+      //   font-size: 32px;
+      font-size: clamp(1rem, 2.2vw, 4rem);
       font-weight: 500;
 
       margin-bottom: 15px;
     }
 
     p {
-      font-size: 16px;
+      //   font-size: 16px;
+      font-size: clamp(0.9rem, 1.2vw, 3rem);
 
       line-height: 1.4;
       font-weight: 400;
@@ -31,8 +45,8 @@
 
     .img {
       position: relative;
-      width: 300px;
-      height: 150px;
+      width: 35vw;
+      height: 20vw;
     }
 
     background: linear-gradient(90deg, rgb(80, 40, 103), rgb(80, 44, 109));

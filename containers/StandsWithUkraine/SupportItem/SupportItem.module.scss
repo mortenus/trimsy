@@ -19,6 +19,11 @@
       position: relative;
       width: 500px;
       height: 250px;
+
+      @media (max-width: 600px) {
+        width: 80vw;
+        height: 40vw;
+      }
     }
   }
 
