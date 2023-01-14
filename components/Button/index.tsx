@@ -23,14 +23,15 @@ interface TButtonLink extends TButtonBase {
 
 type TButton = TButtonOnClick | TButtonLink;
 
-// @ts-ignore
 const Button = ({
   children,
   type,
   status,
   black,
   className = '',
+  // @ts-ignore
   to,
+  // @ts-ignore
   onClick,
   disabled,
 }: TButton) => {
