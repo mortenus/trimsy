@@ -30,7 +30,13 @@ const ContactFormContainer = withFormik({
       .post('https://secure.trimsy.org/form', values)
       .then((res) => {
         setSubmitting(false);
+        resetForm();
         setStatus('success');
+
+        const delayDebounceFn = setTimeout(() => {
+          setStatus(null);
+        }, 5000);
+        clearTimeout(delayDebounceFn);
       })
       .catch((err) => {
         setSubmitting(false);

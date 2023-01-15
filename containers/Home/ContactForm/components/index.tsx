@@ -6,28 +6,8 @@ import ContactInput from 'components/Form/Input';
 import { Button } from 'components';
 
 const ContactForm = (props: any) => {
-  const {
-    values,
-    status,
-    touched,
-    errors,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    isSubmitting,
-    setStatus,
-  } = props;
-
-  // handle button success/failed info
-  React.useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
-      setStatus(null);
-    }, 5000);
-
-    () => clearTimeout(delayDebounceFn);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [status]);
+  const { values, status, touched, errors, handleChange, handleBlur, handleSubmit, isSubmitting } =
+    props;
 
   return (
     <div id="contact" className={styles.wrapper}>
