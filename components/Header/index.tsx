@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Link from 'next/link';
 
 import Button from '../Button';
@@ -33,15 +32,15 @@ const Header = ({ clean }: THeader) => {
             <></>
           ) : (
             <>
-              {/* <ul> */}
-              {/* <Link href="#home">
+              {/* <ul>
+              <Link href="#home">
               <li>Home</li>
             </Link>
             <Link href="#overview">
               <li>Overview</li>
-            </Link> */}
-              {/* </ul> */}
-              <Button to="#contact" type="nav" className="nav">
+            </Link>
+              </ul> */}
+              <Button to="#contact" type="nav">
                 Contact us
               </Button>
             </>
@@ -52,4 +51,4 @@ const Header = ({ clean }: THeader) => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

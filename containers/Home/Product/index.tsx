@@ -5,8 +5,6 @@ import styles from './Product.module.scss';
 
 import { Card, Cart } from 'components';
 
-import useOnScreen from 'hooks/useOnScreen';
-
 const arr = [
   {
     id: 1,

@@ -48,4 +48,4 @@ const ContactInput = ({
   );
 };
 
-export default ContactInput;
+export default React.memo(ContactInput);

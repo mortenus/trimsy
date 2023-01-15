@@ -37,7 +37,14 @@ const Card = ({
         </div>
 
         <div className={styles.image}>
-          <Image fill src={imageUrl} alt="Shoes Picture" />
+          <Image
+            fill
+            sizes="
+          (min-width: 1450px) and (max-width: 1600px)
+          "
+            src={imageUrl}
+            alt="Shoes Picture"
+          />
         </div>
       </div>
       <h5>{title}</h5>

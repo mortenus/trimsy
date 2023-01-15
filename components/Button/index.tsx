@@ -8,7 +8,7 @@ interface TButtonBase {
   children: React.ReactNode;
   black?: boolean;
   type?: string;
-  className?: string;
+  //   className?: string;
   disabled?: boolean;
   status?: 'success' | 'fail';
 }
@@ -28,7 +28,7 @@ const Button = ({
   type,
   status,
   black,
-  className = '',
+  //   className = '',
   // @ts-ignore
   to,
   // @ts-ignore
@@ -61,4 +61,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default React.memo(Button);
