@@ -12,7 +12,7 @@ type THeader = {
 
 const Header = ({ clean }: THeader) => {
   return (
-    <header className={styles.header}>
+    <header className={styles.wrapper}>
       <nav className={styles.nav}>
         <Link href="/" className={styles.logo}>
           <svg

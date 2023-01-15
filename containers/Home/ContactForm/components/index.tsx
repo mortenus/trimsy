@@ -30,7 +30,7 @@ const ContactForm = (props: any) => {
   }, [status]);
 
   return (
-    <div id="contact" className={styles.contact}>
+    <div id="contact" className={styles.wrapper}>
       <div className={styles.intro}>
         <h2>Contact us</h2>
         <p>

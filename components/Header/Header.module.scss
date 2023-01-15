@@ -1,20 +1,20 @@
 $navHeight: 75px;
 
 @media (min-width: 1450px) and (max-width: 1600px) {
-  .header,
+  .wrapper,
   .nav {
     height: calc($navHeight + 25px) !important;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .header,
+  .wrapper,
   .nav {
     height: calc($navHeight + 50px) !important;
   }
 }
 
-.header {
+.wrapper {
   height: $navHeight;
 
   svg {
