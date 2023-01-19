@@ -5,7 +5,7 @@ import styles from './Banner.module.scss';
 
 const Banner = () => {
   return (
-    <div className={styles.banner}>
+    <div className={styles.wrapper}>
       <svg
         width="57"
         height="40"

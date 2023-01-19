@@ -5,6 +5,12 @@
 
   position: relative;
 
+  @media (max-width: 500px) {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    margin-left: 0 !important;
+  }
+
   &.small {
     width: 40%;
   }

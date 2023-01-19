@@ -36,11 +36,14 @@ const ContactFormContainer = withFormik({
         const delayDebounceFn = setTimeout(() => {
           setStatus(null);
         }, 5000);
-        clearTimeout(delayDebounceFn);
       })
       .catch((err) => {
         setSubmitting(false);
         setStatus('fail');
+
+        const delayDebounceFn = setTimeout(() => {
+          setStatus(null);
+        }, 5000);
       });
   },
   enableReinitialize: true,

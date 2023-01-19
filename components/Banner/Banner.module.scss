@@ -1,6 +1,6 @@
 $bannerHeight: clamp(4.35rem, 5vw, 8rem);
 
-.banner {
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,10 @@ $bannerHeight: clamp(4.35rem, 5vw, 8rem);
     font-size: clamp(1.125rem, 1.5vw, 2rem);
 
     margin-left: 15px;
+
+    @media (max-width: 500px) {
+      margin: 8px 0;
+    }
   }
 
   svg {
