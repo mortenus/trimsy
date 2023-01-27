@@ -27,7 +27,8 @@ const Accomplish = () => {
     // handleMove();
 
     if (isVisible) {
-      setScrollMove((scrollHeight / 30) * 4);
+      //   setScrollMove((scrollHeight / 30) * 4);
+      setScrollMove(scrollHeight);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -50,16 +51,36 @@ const Accomplish = () => {
   //   };
 
   return (
-    <section className={styles.accomplish} ref={AccomplishRef}>
+    <section
+      className={styles.wrapper}
+      ref={AccomplishRef}
+      style={{
+        //   marginTop:
+        //     scrollMove === false
+        //       ? '-50px'
+        //       : scrollMove === true
+        //       ? '-210px'
+        //       : `${-Math.abs(+scrollMove)}px`,
+        transform: `translate3d(0px, ${
+          !scrollMove ? '-100' : -Math.abs(+scrollMove / 8)
+        }px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+        willChange: 'transform',
+        transformStyle: 'preserve-3d',
+      }}>
       <div
         className="wrapper"
         style={{
-          marginTop:
-            scrollMove === false
-              ? '-50px'
-              : scrollMove === true
-              ? '-210px'
-              : `${-Math.abs(+scrollMove)}px`,
+          //   marginTop:
+          //     scrollMove === false
+          //       ? '-50px'
+          //       : scrollMove === true
+          //       ? '-210px'
+          //       : `${-Math.abs(+scrollMove)}px`,
+          transform: `translate3d(0px, ${
+            !scrollMove ? '-100' : -Math.abs(+scrollMove / 7.5)
+          }px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+          willChange: 'transform',
+          transformStyle: 'preserve-3d',
         }}>
         <div className={styles.text}>
           <h2>Accomplish your goals in one go</h2>

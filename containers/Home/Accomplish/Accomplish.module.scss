@@ -1,7 +1,10 @@
-.accomplish {
+.wrapper {
   position: absolute;
   z-index: 1;
-  padding: 70px min(10%, 15vw);
+  padding: 0 min(10%, 15vw);
+
+  padding-top: 75px;
+  //   margin-top: 50px;
 
   background: #fff;
 

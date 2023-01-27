@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
 
-  min-height: calc(100vh - 500px);
+  //   min-height: calc(100vh - 500px);
+  min-height: 600px;
 
   h1 {
     font-size: clamp(3.5rem, 6vw, 10rem);
