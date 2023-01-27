@@ -1,7 +1,7 @@
 .input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  width: 100%;
 
   position: relative;
 
@@ -25,7 +25,8 @@
     // padding: 10px 8px;
     padding: clamp(0.625rem, 1.2vw, 1rem) clamp(0.5rem, 1.2vw, 0.8rem);
 
-    font-size: clamp(0.7rem, 1.3vw, 2rem);
+    // font-size: clamp(0.7rem, 1.3vw, 2rem);
+    font-size: 20px;
 
     width: 100%;
 
@@ -52,13 +53,16 @@
   .error {
     // font-size: 14px;
 
-    font-size: clamp(0.825rem, 1.4vw, 2rem);
+    // font-size: clamp(0.825rem, 1.4vw, 2rem);
+
+    font-size: 18px;
 
     color: rgba(255, 0, 0, 0.7);
     font-weight: bold;
 
     position: absolute;
-    top: min(-60%, 2vw);
+    // top: min(-60%, 2vw);
+    top: -40%;
     left: 5px;
 
     user-select: none;

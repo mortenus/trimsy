@@ -26,7 +26,7 @@ const ContactForm = (props: any) => {
           value={values?.fullname}
           onChange={handleChange}
           onBlur={handleBlur}
-          placeholder={'Type your name'}
+          placeholder={'Type your name*'}
         />
         <ContactInput
           size="big"
@@ -35,7 +35,7 @@ const ContactForm = (props: any) => {
           value={values?.email}
           onChange={handleChange}
           onBlur={handleBlur}
-          placeholder={'Type your email'}
+          placeholder={'Type your email*'}
         />
         <textarea
           value={values?.description}

@@ -5,11 +5,24 @@ import Button from '../Button';
 
 import styles from './Header.module.scss';
 
-type THeader = {
-  clean?: boolean;
-};
+type THeaderBase = {};
 
-const Header = ({ clean }: THeader) => {
+interface THeaderWithForm extends THeaderBase {
+  handleFormChange: Function;
+}
+
+interface THeaderClean extends THeaderBase {
+  clean: boolean;
+}
+
+type THeader = THeaderWithForm | THeaderClean;
+
+const Header = ({
+  // @ts-ignore
+  clean,
+  // @ts-ignore
+  handleFormChange,
+}: THeader) => {
   return (
     <header className={styles.wrapper}>
       <nav className={styles.nav}>
@@ -40,7 +53,7 @@ const Header = ({ clean }: THeader) => {
               <li>Overview</li>
             </Link>
               </ul> */}
-              <Button to="#contact" type="nav">
+              <Button type="nav" onClick={handleFormChange}>
                 Contact us
               </Button>
             </>

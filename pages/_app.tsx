@@ -2,14 +2,19 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Header } from 'components';
+import { FormOverflow, Header } from 'components';
 import type { NextComponentType } from 'next';
+import React from 'react';
 
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string };
 };
 
 export default function App({ Component, pageProps }: CustomAppProps) {
+  const [formOpen, setFormOpen] = React.useState<boolean>(false);
+
+  const handleFormOpenChange = () => setFormOpen(!formOpen);
+
   const router = useRouter();
 
   return (
@@ -33,12 +38,13 @@ export default function App({ Component, pageProps }: CustomAppProps) {
       </Head>
       {router.pathname === '/stands-with-ukraine' ? (
         <Header clean />
-      ) : router.pathname === '/' ? (
-        <Header />
       ) : (
-        <Header clean />
+        //   ) : router.pathname === '/' ? (
+        //     <Header />
+        <Header handleFormChange={handleFormOpenChange} />
       )}
       <Component {...pageProps} />
+      <FormOverflow open={formOpen} handleOpen={handleFormOpenChange} />
     </>
   );
 }

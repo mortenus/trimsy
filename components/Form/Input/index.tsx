@@ -30,11 +30,7 @@ const ContactInput = ({
         { [styles.big]: size === 'big' },
         { [styles.text]: size === 'text' },
       )}>
-      {help && (
-        <label htmlFor={name} className={styles.error}>
-          {help}
-        </label>
-      )}
+      {help && <label className={styles.error}>{help}</label>}
       <input
         placeholder={placeholder}
         name={name}
