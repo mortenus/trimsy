@@ -13,7 +13,7 @@ import CarouselSlide from 'components/CarouselSlide';
 
 const Influence = () => {
   return (
-    <section className={styles.section}>
+    <section id="portfolio" className={styles.section}>
       <div className={styles.intro}>
         <h2>Influence the Internet</h2>
         <p>

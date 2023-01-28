@@ -2,7 +2,7 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { FormOverflow, Header } from 'components';
+import { Footer, FormOverflow, Header } from 'components';
 import type { NextComponentType } from 'next';
 import React from 'react';
 
@@ -44,6 +44,8 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <Header handleFormChange={handleFormOpenChange} />
       )}
       <Component {...pageProps} />
+      <Footer />
+
       <FormOverflow open={formOpen} handleOpen={handleFormOpenChange} />
     </>
   );

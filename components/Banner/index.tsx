@@ -13,9 +13,9 @@ const Banner = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink">
-        <rect width="57" height="40" fill="url(#pattern0)" />
+        <rect width="57" height="40" fill="url(#ukraine-svg)" />
         <defs>
-          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+          <pattern id="ukraine-svg" patternContentUnits="objectBoundingBox" width="1" height="1">
             <use
               xlinkHref="#image0_75_7"
               transform="translate(0 -0.275) scale(0.037037 0.0527778)"

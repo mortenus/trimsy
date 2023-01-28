@@ -112,7 +112,7 @@ const FormOverflow = ({ open, handleOpen }: TFormOverflow) => {
                 </svg>
               </div>
 
-              <p>We will get in contact within 24 Hours</p>
+              <p className={styles.text}>We will get in contact within 24 Hours</p>
             </div>
 
             <div className={styles.item}>
@@ -175,7 +175,7 @@ const FormOverflow = ({ open, handleOpen }: TFormOverflow) => {
                 </svg>
               </div>
 
-              <p>We assemble all necessary requirements from you </p>
+              <p className={styles.text}>We assemble all necessary requirements from you </p>
             </div>
 
             <div className={styles.additional}>
