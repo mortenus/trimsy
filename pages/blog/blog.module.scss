@@ -1,0 +1,96 @@
+.wrapper {
+  .intro {
+    position: relative;
+
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+
+      background-image: url('../../public/static/img/blog/blog-background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    h2 {
+      font-size: 48px;
+      margin-bottom: 45px;
+    }
+
+    p {
+      text-align: center;
+      width: 500px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+
+  .content {
+    padding: 200px 400px;
+
+    background: #f3efe5;
+
+    .search {
+      position: relative;
+
+      height: 50px;
+
+      .icon {
+        position: absolute;
+        left: 20px;
+        top: 12px;
+
+        pointer-events: none;
+
+        width: 25px;
+        height: 25px;
+      }
+
+      input {
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+        outline: none;
+        // border: 1px solid #000;
+        border: 0;
+        padding: 0 20px 0 60px;
+        font-size: 24px;
+      }
+    }
+
+    .blogs {
+      margin: 50px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .numbers {
+        margin: 0 50px;
+
+        & > * {
+          margin-right: 15px;
+        }
+        & > *:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -43,9 +43,9 @@ const Footer = () => {
             <li className={styles.item}>
               <Link href="/">Blog</Link>
             </li>
-            <li className={styles.item}>
+            {/* <li className={styles.item}>
               <Link href="/">FAQ</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className={styles.rightSide}>

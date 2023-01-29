@@ -45,14 +45,14 @@ const Header = ({
             <></>
           ) : (
             <>
-              {/* <ul>
-              <Link href="#home">
-              <li>Home</li>
-            </Link>
-            <Link href="#overview">
-              <li>Overview</li>
-            </Link>
-              </ul> */}
+              <ul>
+                <Link href="/#portfolio">
+                  <li>Portfolio</li>
+                </Link>
+                <Link href="/blog">
+                  <li>Blog</li>
+                </Link>
+              </ul>
               <Button type="nav" onClick={handleFormChange}>
                 Contact us
               </Button>

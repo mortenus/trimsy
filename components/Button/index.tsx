@@ -11,6 +11,7 @@ interface TButtonBase {
   //   className?: string;
   disabled?: boolean;
   status?: 'success' | 'fail';
+  style?: React.CSSProperties;
 }
 
 interface TButtonOnClick extends TButtonBase {
@@ -34,6 +35,7 @@ const Button = ({
   // @ts-ignore
   onClick,
   disabled,
+  style,
 }: TButton) => {
   const stylying = clsx(
     styles.wrapper,
@@ -41,6 +43,7 @@ const Button = ({
     // { [styles[className]]: className },
     { [styles.black]: black },
     { [styles.nav]: type === 'nav' },
+    { [styles.search]: type === 'search' },
     { [styles.submit]: type === 'submit' },
     { [styles.success]: status === 'success' },
     { [styles.fail]: status === 'fail' },
@@ -49,12 +52,14 @@ const Button = ({
   return (
     <>
       {onClick !== undefined ? (
-        <div onClick={onClick} className={stylying}>
+        <div style={style && style} onClick={onClick} className={stylying}>
           {children}
         </div>
       ) : (
         <Link href={to ? to : '#'}>
-          <div className={stylying}>{children}</div>
+          <div style={style && style} className={stylying}>
+            {children}
+          </div>
         </Link>
       )}
     </>
