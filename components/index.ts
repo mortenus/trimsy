@@ -5,5 +5,6 @@ export { default as CartItem } from './CartItem';
 export { default as Header } from './Header';
 export { default as Banner } from './Banner';
 export { default as FormOverflow } from './FormOverflow';
+export { default as ContactFormOverflow } from './ContactFormOverflow';
 export { default as Footer } from './Footer';
 export { default as FooterLinks } from './FooterLinks';

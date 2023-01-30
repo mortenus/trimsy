@@ -7,7 +7,7 @@ import BlogImg from 'public/static/img/blog/blog-img.jpg';
 import BlogImg2 from 'public/static/img/blog/blog-img2.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlogButton, BlogItem } from 'containers/Blog';
+import { BlogButton, BlogItem } from 'components/Blog';
 
 const itemArr = [
   {

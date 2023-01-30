@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import ContactFormOverflowContainer from 'components/ContactFormOverflow/containers';
+import ContactFormOverflowContainer from '../ContactFormOverflow';
 import React from 'react';
 
 import styles from './FormOverflow.module.scss';

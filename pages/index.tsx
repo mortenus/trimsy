@@ -1,4 +1,4 @@
-import { Accomplish, ContactForm, Influence, Intro, Product } from 'containers/Home';
+import { Accomplish, ContactForm, Influence, Intro, Product } from 'components/Home';
 
 Home.title = 'Web Development';
 
