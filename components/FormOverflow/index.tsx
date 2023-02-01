@@ -6,7 +6,7 @@ import styles from './FormOverflow.module.scss';
 
 type TFormOverflow = {
   open: boolean;
-  handleOpen: Function;
+  handleOpen: () => void;
 };
 
 const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFormOverflow) {
