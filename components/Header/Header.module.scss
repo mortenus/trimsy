@@ -1,46 +1,30 @@
 $navHeight: 75px;
 
-@media (min-width: 1450px) and (max-width: 1600px) {
-  .wrapper,
-  .nav {
-    height: calc($navHeight + 25px) !important;
-  }
-}
+// @media (min-width: 1450px) and (max-width: 1600px) {
+//   .wrapper,
+//   .nav {
+//     height: calc($navHeight + 15px) !important;
+//   }
+// }
 
-@media only screen and (min-width: 1600px) {
-  .wrapper,
-  .nav {
-    height: calc($navHeight + 50px) !important;
-  }
-}
+// @media only screen and (min-width: 1600px) {
+//   .wrapper,
+//   .nav {
+//     height: calc($navHeight + 25px) !important;
+//   }
+// }
 
 .wrapper {
   height: $navHeight;
 
-  svg {
-    width: 160px;
-    height: 65px;
-  }
-
-  @media only screen and (max-width: 1600px) {
-    svg {
-      width: 192px;
-      height: 78px;
-    }
-  }
-
-  @media only screen and (min-width: 1600px) {
-    svg {
-      width: 250px;
-      height: 101px;
-    }
-  }
+  user-select: none;
 
   .nav {
+    border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 75px;
+    height: $navHeight;
     padding: 0 clamp(0rem, 3.5vw, 5rem);
     position: fixed;
     width: 100%;
@@ -51,9 +35,28 @@ $navHeight: 75px;
       display: flex;
       margin-right: 75px;
 
-      @media (min-width: 1000px) and (max-width: 1200px) {
-        margin-right: 40px;
+      svg {
+        width: 160px;
+        height: 65px;
       }
+
+      //   @media only screen and (max-width: 1600px) {
+      //     svg {
+      //       width: 192px;
+      //       height: 78px;
+      //     }
+      //   }
+
+      //   @media only screen and (min-width: 1600px) {
+      //     svg {
+      //       width: 250px;
+      //       height: 101px;
+      //     }
+      //   }
+
+      //   @media (min-width: 1000px) and (max-width: 1200px) {
+      //     margin-right: 40px;
+      //   }
     }
 
     .wrap {
@@ -61,6 +64,7 @@ $navHeight: 75px;
       justify-content: space-between;
       align-items: center;
       height: 100%;
+      width: 100%;
 
       @media (max-width: 650px) {
         a {
@@ -73,18 +77,20 @@ $navHeight: 75px;
         align-items: center;
         height: 100%;
 
+        position: relative;
+
         &:empty {
           justify-content: flex-end;
         }
 
-        a {
+        & > a {
           display: flex;
-          margin-right: 100px;
+          margin-right: 40px;
           height: 100%;
 
-          @media (min-width: 1000px) and (max-width: 1200px) {
-            margin-right: 40px;
-          }
+          //   @media (min-width: 1000px) and (max-width: 1200px) {
+          //     margin-right: 40px;
+          //   }
         }
 
         li {
@@ -92,8 +98,11 @@ $navHeight: 75px;
           display: inline-flex;
           align-items: center;
 
-          font-size: 18px;
-          font-weight: bold;
+          //   font-size: 18px;
+          //   font-weight: bold;
+
+          font-size: 16px;
+          font-weight: 500;
 
           cursor: pointer;
 
@@ -108,25 +117,31 @@ $navHeight: 75px;
             margin-right: 0;
           }
 
-          @media (min-width: 1000px) and (max-width: 1200px) {
-            font-size: 16px;
-
-            margin-right: 60px;
+          svg {
+            margin-left: 15px;
+            position: relative;
+            top: -1.5px;
           }
 
-          @media (min-width: 1200px) and (max-width: 1450px) {
-            font-size: 18px;
-          }
+          //   @media (min-width: 1000px) and (max-width: 1200px) {
+          //     font-size: 16px;
 
-          @media (min-width: 1450px) and (max-width: 1600px) {
-            font-size: 22px;
-          }
+          //     margin-right: 60px;
+          //   }
 
-          @media only screen and (min-width: 1600px) {
-            font-size: 24px;
+          //   @media (min-width: 1200px) and (max-width: 1450px) {
+          //     font-size: 18px;
+          //   }
 
-            margin-right: 160px;
-          }
+          //   @media (min-width: 1450px) and (max-width: 1600px) {
+          //     font-size: 22px;
+          //   }
+
+          //   @media only screen and (min-width: 1600px) {
+          //     font-size: 24px;
+
+          //     margin-right: 160px;
+          //   }
         }
       }
     }

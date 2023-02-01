@@ -11,6 +11,13 @@ import 'swiper/css/navigation';
 
 import CarouselSlide from 'components/CarouselSlide';
 
+const slidesArr = [
+  '/static/img/carousel/capacity.jpg',
+  '/static/img/carousel/reactChat1.jpg',
+  '/static/img/carousel/reactPizza.jpg',
+  '/static/img/carousel/shiningSun.jpg',
+];
+
 const Influence = () => {
   return (
     <section id="portfolio" className={styles.section}>
@@ -38,16 +45,11 @@ const Influence = () => {
           loop={true}
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper">
-          <SwiperSlide>
-            <CarouselSlide imgSrc={'/static/img/carousel/capacity.jpg'} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CarouselSlide imgSrc={'/static/img/carousel/reactChat1.jpg'} />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <CarouselSlide imgSrc={'/static/img/carousel/reactPizza.jpg'} />
-          </SwiperSlide>
+          {slidesArr.map((img) => (
+            <SwiperSlide key={img}>
+              <CarouselSlide imgSrc={img} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

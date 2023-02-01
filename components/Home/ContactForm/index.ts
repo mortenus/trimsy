@@ -1,3 +1,3 @@
-import ContactForm from './components';
+import ContactForm from './containers';
 
 export default ContactForm;

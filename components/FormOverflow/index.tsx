@@ -6,28 +6,42 @@ import styles from './FormOverflow.module.scss';
 
 type TFormOverflow = {
   open: boolean;
-  handleOpen: () => void;
+  handleOpen: Function;
 };
 
-const FormOverflow = ({ open, handleOpen }: TFormOverflow) => {
-  //   const overflowRef = React.useRef(null);
+const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFormOverflow) {
+  const overflowRef = React.useRef(null);
+  const [event, setEvent] = React.useState<null | MouseEvent>(null);
 
-  //   const handleOutsideClick = (event: any) => {
-  //     const path = event.path || (event.composedPath && event.composedPath());
-  //     if (!path.includes(overflowRef.current)) {
-  //       handleOpen();
-  //     }
-  //   };
+  const checkChangeFormVisibility = (event: MouseEvent) => {
+    const path = event.composedPath();
+    if (overflowRef.current === null) return;
+    if (!path.includes(overflowRef.current)) {
+      console.log(event.composedPath());
+      console.log(overflowRef.current);
+      //   handleOpen();
+    }
+  };
 
-  //   React.useEffect(() => {
-  //     document.body.addEventListener('click', handleOutsideClick);
+  React.useEffect(() => {
+    if (open && event !== null) checkChangeFormVisibility(event);
 
-  //     // eslint-disable-next-line react-hooks/exhaustive-deps
-  //   }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [event]);
+
+  const handleOutsideClick = (e: MouseEvent) => setEvent(e);
+
+  React.useEffect(() => {
+    document.body.addEventListener('click', handleOutsideClick);
+
+    return () => document.body.removeEventListener('click', handleOutsideClick);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className={clsx(styles.overflow, { [styles.overlayVisible]: open })}>
-      <div className={styles.form}>
+      <div ref={overflowRef} className={styles.form}>
         <div className={styles.leftSide}>
           <svg
             width="141"
@@ -78,7 +92,7 @@ const FormOverflow = ({ open, handleOpen }: TFormOverflow) => {
                   viewBox="0 0 50 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_421_34)">
+                  <g clipPath="url(#clip0_421_34)">
                     <path
                       d="M15.4225 3.80162H30.8498C31.2551 3.80162 31.5836 3.48675 31.5836 3.09832C31.5836 2.70989 31.2551 2.39502 30.8498 2.39502H15.4225C15.0171 2.39502 14.6885 2.70989 14.6885 3.09832C14.6885 3.48675 15.0171 3.80162 15.4225 3.80162Z"
                       fill="black"
@@ -123,48 +137,48 @@ const FormOverflow = ({ open, handleOpen }: TFormOverflow) => {
                   viewBox="0 0 50 34"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_423_9)">
+                  <g clipPath="url(#clip0_423_9)">
                     <path
                       d="M14.667 1.5H48.2503"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M14.667 17H48.2503"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M14.667 32.5H48.2503"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M1.75 1.5H1.77542"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M1.75 17H1.77542"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M1.75 32.5H1.77542"
                       stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </g>
                   <defs>
@@ -201,6 +215,6 @@ const FormOverflow = ({ open, handleOpen }: TFormOverflow) => {
       </div>
     </div>
   );
-};
+});
 
 export default FormOverflow;

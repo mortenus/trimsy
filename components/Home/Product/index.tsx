@@ -43,18 +43,6 @@ const arr = [
     price: 499,
     imageUrl: '/static/img/sneakers/8.jpg',
   },
-  {
-    id: 7,
-    title: 'Nike Lebron XVIII Low',
-    price: 249,
-    imageUrl: '/static/img/sneakers/9.jpg',
-  },
-  {
-    id: 8,
-    title: 'Nike Air Jordan 10',
-    price: 149,
-    imageUrl: '/static/img/sneakers/10.jpg',
-  },
 ];
 
 const Product = () => {
