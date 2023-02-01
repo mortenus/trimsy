@@ -15,7 +15,7 @@ const slidesArr = [
   '/static/img/carousel/capacity.jpg',
   '/static/img/carousel/reactChat1.jpg',
   '/static/img/carousel/reactPizza.jpg',
-  '/static/img/carousel/shiningsun.jpg',
+  '/static/img/carousel/shiningSun.jpg',
 ];
 
 const Influence = () => {
