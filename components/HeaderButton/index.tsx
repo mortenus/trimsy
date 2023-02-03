@@ -34,15 +34,18 @@ const HeaderButton = ({ children, href }: THeaderButton) => {
           )}
         </li>
       </a>
+
       <div className={clsx(styles.popup, { [styles.visible]: open })}>
-        <Link className={styles.item} href="/#contact" onClick={handleOpenChange}>
-          <h4>Web Development</h4>
-          <p>Discover all the ways to get your presence in Web</p>
-        </Link>
-        <Link className={styles.item} href="/">
-          <h4>Get Hired</h4>
-          <p>Get a professional to help you in your IT journey</p>
-        </Link>
+        <div className={styles.text}>
+          <Link className={styles.item} href="/#contact" onClick={handleOpenChange}>
+            <h4>Web Development</h4>
+            <p>Discover all the ways to get your presence in Web</p>
+          </Link>
+          <Link className={styles.item} href="/">
+            <h4>Get Hired</h4>
+            <p>Get a professional to help you in your IT journey</p>
+          </Link>
+        </div>
       </div>
     </>
   );

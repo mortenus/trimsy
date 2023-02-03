@@ -44,6 +44,7 @@ const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFor
       <div ref={overflowRef} className={styles.form}>
         <div className={styles.leftSide}>
           <svg
+            className={styles.formSvg}
             width="141"
             height="141"
             viewBox="0 0 141 141"
