@@ -7,6 +7,8 @@ import type { NextComponentType } from 'next';
 import React from 'react';
 import Script from 'next/script';
 
+import * as gtag from '../lib/gtag';
+
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string };
 };
@@ -17,6 +19,16 @@ export default function App({ Component, pageProps }: CustomAppProps) {
   const handleFormOpenChange = () => setFormOpen(!formOpen);
 
   const router = useRouter();
+
+  React.useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -39,34 +51,54 @@ export default function App({ Component, pageProps }: CustomAppProps) {
       </Head>
 
       {/* Google Tag Manager Code */}
-      <Script id="google-tag-manager" strategy={'afterInteractive'}>
-        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WFBCBDV');
-`}
-      </Script>
-
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
-        id="google-tag-managerG"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script
+        strategy="afterInteractive"
+        id="google-tag-manager"
         dangerouslySetInnerHTML={{
           __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-F4L8VZ3NDT');
-        `,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
         }}
       />
 
-      <Script
-        strategy="afterInteractive"
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-F4L8VZ3NDT"
-      />
+      {/* //       <Script id="google-tag-manager" strategy={'afterInteractive'}>
+//         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+// new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+// j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+// 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+// })(window,document,'script','dataLayer','GTM-WFBCBDV');
+// `}
+//       </Script>
+
+//       <Script
+//         strategy="afterInteractive"
+//         id="google-tag-managerG"
+//         dangerouslySetInnerHTML={{
+//           __html: `
+//           window.dataLayer = window.dataLayer || [];
+//           function gtag(){dataLayer.push(arguments);}
+//           gtag('js', new Date());
+        
+//           gtag('config', 'G-F4L8VZ3NDT');
+//         `,
+//         }}
+//       />
+
+//       <Script
+//         strategy="afterInteractive"
+//         async
+//         src="https://www.googletagmanager.com/gtag/js?id=G-F4L8VZ3NDT"
+//       /> */}
 
       {/* End */}
 
