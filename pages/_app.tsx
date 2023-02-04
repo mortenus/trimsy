@@ -38,6 +38,7 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
+      {/* Google Tag Manager Code */}
       <Script id="google-tag-manager" strategy={'afterInteractive'}>
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -48,8 +49,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </Script>
 
       <Script
-        id="google-tag-manager"
         strategy="afterInteractive"
+        id="google-tag-managerG"
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];
@@ -57,7 +58,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           gtag('js', new Date());
         
           gtag('config', 'G-F4L8VZ3NDT');
-        }};
         `,
         }}
       />
@@ -67,6 +67,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-F4L8VZ3NDT"
       />
+
+      {/* End */}
 
       {router.pathname === '/stands-with-ukraine' ? (
         <Header clean />
