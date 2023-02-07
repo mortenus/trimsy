@@ -3,9 +3,10 @@ import React from 'react';
 import styles from './ContactFormOverflow.module.scss';
 
 import ContactInput from 'components/Form/Input';
+import ButtonType from 'components/Careers/Button';
 import { Button } from 'components';
 
-const ContactFormOverflow = (props: any) => {
+const ContactForm = (props: any) => {
   const { values, status, touched, errors, handleChange, handleBlur, handleSubmit, isSubmitting } =
     props;
 
@@ -29,20 +30,16 @@ const ContactFormOverflow = (props: any) => {
             onBlur={handleBlur}
             placeholder={'Type your email*'}
           />
-          <textarea
-            value={values?.description}
-            name="description"
-            id="description"
-            onInput={handleChange}
-            maxLength={400}
-            placeholder={'Describe your objective'}
-          />
+          <div className={styles.buttons}>
+            <ButtonType value={values?.type} name={'type'} handleChange={handleChange} />
+          </div>
         </div>
         <Button
           status={status && status}
+          size={'medium'}
           disabled={isSubmitting}
           type="submit"
-          color="black"
+          color="white"
           onClick={handleSubmit}>
           Submit
         </Button>
@@ -51,4 +48,4 @@ const ContactFormOverflow = (props: any) => {
   );
 };
 
-export default ContactFormOverflow;
+export default ContactForm;

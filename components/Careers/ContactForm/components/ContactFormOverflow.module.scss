@@ -1,0 +1,32 @@
+.wrapper {
+  //   display: flex;
+  //   flex-direction: column;
+  //   text-align: center;
+  //   align-items: center;
+  //   justify-content: center;
+
+  padding: 50px 70px;
+  text-align: center;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+
+  .content {
+    .form {
+      //   flex-wrap: wrap;
+      //   justify-content: center;
+
+      // width: clamp(31.25rem, 2vw, 60rem);
+      //   width: max(40vw, 30rem);
+
+      @media (max-width: 500px) {
+        width: auto;
+        margin: 0 20px;
+      }
+
+      & > * {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

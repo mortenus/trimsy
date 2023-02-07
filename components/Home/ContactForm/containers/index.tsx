@@ -33,7 +33,7 @@ const ContactFormContainer = withFormik({
         resetForm();
         setStatus('success');
 
-        const delayDebounceFn = setTimeout(() => {
+        setTimeout(() => {
           setStatus(null);
         }, 5000);
       })
@@ -41,7 +41,7 @@ const ContactFormContainer = withFormik({
         setSubmitting(false);
         setStatus('fail');
 
-        const delayDebounceFn = setTimeout(() => {
+        setTimeout(() => {
           setStatus(null);
         }, 5000);
       });

@@ -6,12 +6,13 @@ import styles from './Button.module.scss';
 
 interface TButtonBase {
   children: React.ReactNode;
-  black?: boolean;
   type?: string;
   //   className?: string;
   disabled?: boolean;
   status?: 'success' | 'fail';
   style?: React.CSSProperties;
+  size?: 'small' | 'medium' | 'large';
+  color?: 'black' | 'white';
 }
 
 interface TButtonOnClick extends TButtonBase {
@@ -28,7 +29,6 @@ const Button = ({
   children,
   type,
   status,
-  black,
   //   className = '',
   // @ts-ignore
   to,
@@ -36,18 +36,24 @@ const Button = ({
   onClick,
   disabled,
   style,
+  size,
+  color,
 }: TButton) => {
   const stylying = clsx(
     styles.wrapper,
     { [styles.disabled]: disabled },
     // { [styles[className]]: className },
-    { [styles.black]: type === 'black' },
-    { [styles.white]: type === 'white' },
+    { [styles.black]: color === 'black' },
+    { [styles.white]: color === 'white' },
     { [styles.nav]: type === 'nav' },
     { [styles.search]: type === 'search' },
+    { [styles.modern]: type === 'modern' },
     { [styles.submit]: type === 'submit' },
     { [styles.success]: status === 'success' },
     { [styles.fail]: status === 'fail' },
+    { [styles.small]: size === 'small' },
+    { [styles.medium]: size === 'medium' },
+    { [styles.large]: size === 'large' },
   );
 
   return (

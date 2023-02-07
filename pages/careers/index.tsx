@@ -1,4 +1,5 @@
 import { Button } from 'components';
+import ContactForm from 'components/Careers/ContactForm';
 import Image from 'next/image';
 import React from 'react';
 
@@ -36,7 +37,7 @@ export function Careers() {
               </div>
             </div>
             <Button to="#" type="white">
-              Let`&apos;`s Talk
+              Let&apos;s Talk
             </Button>
           </div>
         </div>
@@ -73,7 +74,9 @@ export function Careers() {
             <span>Cover Letter</span>
             <span>LinkedIn optimization</span>
           </div>
-          <Button to="#">Start Now</Button>
+          <Button to="#" type="modern">
+            Start Now
+          </Button>
         </div>
       </section>
 
@@ -109,7 +112,7 @@ export function Careers() {
               </div>
 
               <Button to="#" type={'black'}>
-                Let`&apos;`s Talk
+                Let&apos;s Talk
               </Button>
             </div>
           </div>
@@ -126,6 +129,26 @@ export function Careers() {
               <h6>Expert consultation</h6>
               <p>Get direct access to recruiting experts on career guidance </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.contact}>
+        <h2>Let&apos;s Talk</h2>
+
+        <div className={styles.container}>
+          <div className={styles.left}>
+            <p>
+              Find candidates that will fit your organization, whether you’re an enterprise
+              customer, software vendor, or startup.
+            </p>
+            <p>
+              That’s why 90% of the professionals we place in permanent jobs stay in the role for
+              two or more years.
+            </p>
+          </div>
+          <div className={styles.right}>
+            <ContactForm />
           </div>
         </div>
       </section>

@@ -79,11 +79,11 @@ export default function TestBlog() {
             <h5 className={styles.name}>Oleksii Pylypenko</h5>
             <span className={styles.position}>CEO</span>
             <p className={styles.description}>
-              I`&apos;`m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
-              expertise in engineering, management, traffic marketing, and analytics working for
-              large game development studios with a $1M+ monthly income. With a clear vision of how
-              game development should work, I run Whimsy Games, being responsible for the marketing
-              and sales of our products and services.
+              I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my expertise
+              in engineering, management, traffic marketing, and analytics working for large game
+              development studios with a $1M+ monthly income. With a clear vision of how game
+              development should work, I run Whimsy Games, being responsible for the marketing and
+              sales of our products and services.
             </p>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function TestBlog() {
                 <span className={styles.nextDate}>Apr 26, 2022</span>
                 <h5>How to get more client to get to your business</h5>
                 <p>
-                  I`&apos;`m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
+                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
                   expertise in engineering, management, traffic marketing, and analytics working for
                   large game development studios with a $1M+ monthly income. With a clear vision of
                   how game development should work, I run Whimsy Games, being responsible for the
@@ -116,7 +116,7 @@ export default function TestBlog() {
                 <span className={styles.nextDate}>Apr 26, 2022</span>
                 <h5>How to get more client to get to your business</h5>
                 <p>
-                  I`&apos;`m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
+                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
                   expertise in engineering, management, traffic marketing, and analytics working for
                   large game development studios with a $1M+ monthly income. With a clear vision of
                   how game development should work, I run Whimsy Games, being responsible for the
@@ -132,7 +132,7 @@ export default function TestBlog() {
                 <span className={styles.nextDate}>Apr 26, 2022</span>
                 <h5>How to get more client to get to your business</h5>
                 <p>
-                  I`&apos;`m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
+                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
                   expertise in engineering, management, traffic marketing, and analytics working for
                   large game development studios with a $1M+ monthly income. With a clear vision of
                   how game development should work, I run Whimsy Games, being responsible for the

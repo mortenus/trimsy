@@ -89,7 +89,7 @@ const Accomplish = () => {
             life
           </p>
         </div>
-        <Button to="#contact" type="black">
+        <Button to="#contact" color="black">
           Contact us
         </Button>
       </div>
