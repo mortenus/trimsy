@@ -41,7 +41,7 @@ const HeaderButton = ({ children, href }: THeaderButton) => {
             <h4>Web Development</h4>
             <p>Discover all the ways to get your presence in Web</p>
           </Link>
-          <Link className={styles.item} href="/">
+          <Link className={styles.item} href="/careers" onClick={handleOpenChange}>
             <h4>Get Hired</h4>
             <p>Get a professional to help you in your IT journey</p>
           </Link>

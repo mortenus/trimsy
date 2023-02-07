@@ -1,3 +1,5 @@
+$blogBackground: #f3efe5;
+
 .wrapper {
   .intro {
     position: relative;
@@ -42,7 +44,7 @@
   .content {
     padding: 200px 400px;
 
-    background: #f3efe5;
+    background: $blogBackground;
 
     .search {
       position: relative;

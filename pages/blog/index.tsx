@@ -15,7 +15,7 @@ const itemArr = [
     title: 'SEO HOW IT WORKS AND ETC SDA SA',
     text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
     img: BlogImg,
-    link: '/blog/www',
+    link: '/blog/test',
   },
 ];
 

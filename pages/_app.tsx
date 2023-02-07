@@ -1,13 +1,16 @@
-import '../styles/globals.scss';
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { Footer, FormOverflow, Header } from 'components';
-import type { NextComponentType } from 'next';
 import React from 'react';
+import type { AppProps } from 'next/app';
+
+import '../styles/globals.scss';
+
+import Head from 'next/head';
+import type { NextComponentType } from 'next';
 import Script from 'next/script';
 
-import * as gtag from '../lib/gtag';
+import { Footer, FormOverflow, Header } from 'components';
+
+import * as gtag from 'lib/gtag';
+import useGtag from 'hooks/useGtag';
 
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string };
@@ -18,17 +21,7 @@ export default function App({ Component, pageProps }: CustomAppProps) {
 
   const handleFormOpenChange = () => setFormOpen(!formOpen);
 
-  const router = useRouter();
-
-  React.useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      gtag.pageview(url);
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
+  useGtag();
 
   return (
     <>
@@ -102,13 +95,8 @@ export default function App({ Component, pageProps }: CustomAppProps) {
 
       {/* End */}
 
-      {router.pathname === '/stands-with-ukraine' ? (
-        <Header clean />
-      ) : (
-        //   ) : router.pathname === '/' ? (
-        //     <Header />
-        <Header handleFormChange={handleFormOpenChange} />
-      )}
+      <Header handleFormChange={handleFormOpenChange} />
+
       <Component {...pageProps} />
       <Footer />
 

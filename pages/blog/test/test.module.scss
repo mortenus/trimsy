@@ -1,0 +1,170 @@
+$blogBackground: #f3efe5;
+
+.wrapper {
+  padding: 50px 350px 150px 350px;
+
+  position: relative;
+
+  background: $blogBackground;
+
+  .content {
+    .title {
+      margin-bottom: 40px;
+
+      font-size: 36px;
+    }
+
+    .headerImg {
+      height: 550px;
+      position: relative;
+
+      img {
+        border-radius: 30px;
+        object-fit: cover;
+      }
+    }
+
+    .date {
+      display: flex;
+      align-items: center;
+
+      font-size: 16px;
+
+      margin: 30px 0;
+
+      .line {
+        height: 1px;
+        background: #000;
+        flex: 1;
+        margin: 0 20px;
+      }
+    }
+
+    section {
+      margin-top: 60px;
+      position: relative;
+
+      h4 {
+        font-size: 28px;
+      }
+
+      p {
+        margin-top: 15px;
+      }
+
+      .img {
+        height: 600px;
+        position: relative;
+
+        margin: 30px 0;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+
+    .author {
+      display: flex;
+      position: relative;
+
+      border-radius: 30px;
+
+      margin: 100px 0;
+      padding: 30px 40px;
+
+      background: #fff;
+
+      display: flex;
+
+      .img {
+        position: relative;
+        width: 300px;
+        height: 90px;
+
+        margin-right: 30px;
+
+        img {
+          border-radius: 50%;
+          border: 3px solid #000;
+          object-fit: contain;
+        }
+      }
+
+      .name {
+        font-size: 24px;
+
+        margin: 10px 0;
+
+        font-weight: 600;
+      }
+
+      .position {
+        font-weight: 500;
+      }
+
+      .description {
+        margin: 20px 0;
+      }
+    }
+
+    .further {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      margin: 50px 0;
+
+      h3 {
+        font-size: 36px;
+
+        margin-bottom: 40px;
+
+        font-weight: 500;
+
+        text-transform: uppercase;
+      }
+
+      .items {
+        display: flex;
+        justify-content: space-between;
+
+        flex-wrap: wrap;
+
+        .item {
+          width: 32%;
+
+          .img {
+            height: 200px;
+            position: relative;
+
+            img {
+              border-top-left-radius: 30px;
+              border-top-right-radius: 30px;
+            }
+          }
+
+          .content {
+            background: #fff;
+            padding: 20px 25px;
+
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+            .nextDate {
+              font-size: 12px;
+
+              opacity: 0.8;
+            }
+
+            h5 {
+              font-size: 18px;
+
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
