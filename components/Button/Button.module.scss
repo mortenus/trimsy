@@ -61,6 +61,11 @@ $blue: rgb(22, 106, 234);
     }
   }
 
+  &.white {
+    background: #fff;
+    color: #000;
+  }
+
   &.submit {
     color: #fff;
     background: #000;
