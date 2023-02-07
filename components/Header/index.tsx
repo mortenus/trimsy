@@ -41,6 +41,8 @@ const Header = ({
 
   React.useEffect(() => {
     handleCheckCurrentDepartment();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router]);
 
   return (

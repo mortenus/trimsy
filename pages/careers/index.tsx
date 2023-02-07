@@ -15,7 +15,9 @@ export function Careers() {
         <div className={styles.wrapper}>
           <div className={styles.intro}>
             <h2>Help your team and yourself thrive with HR and training experts </h2>
-            <Button type="white">Get Started</Button>
+            <Button to="#" type="white">
+              Get Started
+            </Button>
           </div>
         </div>
         <div className={styles.wrapper}>
@@ -33,7 +35,9 @@ export function Careers() {
                 <p>Scale seamlessly with recruiting and business solutions.</p>
               </div>
             </div>
-            <Button type="white">Let's Talk</Button>
+            <Button to="#" type="white">
+              Let`&apos;`s Talk
+            </Button>
           </div>
         </div>
 
@@ -69,7 +73,7 @@ export function Careers() {
             <span>Cover Letter</span>
             <span>LinkedIn optimization</span>
           </div>
-          <Button>Start Now</Button>
+          <Button to="#">Start Now</Button>
         </div>
       </section>
 
@@ -104,7 +108,9 @@ export function Careers() {
                 <h4>your business</h4>
               </div>
 
-              <Button type={'black'}>Let's Talk</Button>
+              <Button to="#" type={'black'}>
+                Let`&apos;`s Talk
+              </Button>
             </div>
           </div>
           <div className={styles.additional}>
