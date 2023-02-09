@@ -1,13 +1,19 @@
 .wrapper {
-  padding: 0 300px;
-  width: 100%;
+  //   padding: 0 300px;
+  //   padding: 0 clamp(7rem, 1.3vw, 15rem);
+  //   padding: 0px max(22px, 15%);
+  //   width: 100%;
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  // }
 }
 
 .introWrap {
   position: relative;
 
   color: #fff;
-  padding: 200px 0;
+  padding: 250px 0;
 
   .intro {
     display: flex;
@@ -17,14 +23,14 @@
     align-items: flex-end;
 
     h2 {
-      font-size: 36px;
+      font-size: 32px;
 
       margin-bottom: 50px;
     }
   }
 
   .platform {
-    margin-top: 200px;
+    margin-top: 270px;
 
     h2 {
       font-size: 48px;
@@ -46,12 +52,6 @@
       font-weight: 400;
 
       margin: 50px 0;
-
-      .item {
-        padding-top: 20px;
-        border-top: 1px solid #fff;
-        width: 28%;
-      }
     }
   }
 
@@ -82,7 +82,8 @@
 
   position: relative;
 
-  padding: 300px 150px;
+  //   padding: 300px 150px;
+  padding: 300px max(120px, 5%);
 
   background: #000;
   color: #fff;
@@ -107,19 +108,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .items {
-      margin-bottom: 50px;
-      span {
-        margin-right: 25px;
-
-        font-size: 28px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
+    width: 800px;
+    justify-content: space-between;
   }
 }
 
@@ -212,9 +202,12 @@
   flex-direction: column;
   align-items: center;
 
+  scroll-margin-top: 5vh;
+
   color: #fff;
 
-  padding: 100px 300px;
+  //   padding: 100px 300px;
+  padding: 100px max(80px, 10%);
 
   background: #000;
 

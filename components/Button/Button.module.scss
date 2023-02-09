@@ -109,18 +109,6 @@ $blue: rgb(22, 106, 234);
     transition: all 0.3s ease;
   }
 
-  &.modern {
-    border: 0;
-    background: transparent;
-
-    border-bottom: 1px solid #fff;
-
-    border-radius: 0;
-    padding: 0;
-    padding-bottom: 5px;
-    font-size: 24px;
-  }
-
   // status
   &.success {
     background: rgb(6, 146, 13) !important;

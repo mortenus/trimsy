@@ -1,0 +1,29 @@
+.text {
+  font-size: 28px;
+
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: -5px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: #fff;
+      animation: blinker 0.65s step-start infinite;
+    }
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

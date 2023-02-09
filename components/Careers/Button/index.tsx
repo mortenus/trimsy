@@ -3,29 +3,23 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type TButton = {
-  //   children: React.ReactNode;
   name: string;
   value: string;
   handleChange: (e: any) => string;
 };
 
 const Button = ({ name, handleChange }: TButton) => {
-  const [activeType, setActiveType] = React.useState<number | null>(null);
+  const [activeType, setActiveType] = React.useState<number | null>(0);
 
   const handleChangeType = (e: any, activeTypeId: number) => {
     handleChange(e);
     setActiveType(activeTypeId);
   };
 
-  //   React.useEffect(() => {
-
-  //   }, [activeType])
-
   return (
     <div className={styles.wrapper}>
       <button
         className={styles.button}
-        // onClick={() => setActiveType(0)}
         name={name}
         id={name}
         value={`Career Opportunities`}
@@ -63,7 +57,6 @@ const Button = ({ name, handleChange }: TButton) => {
       </button>
       <button
         className={styles.button}
-        // onClick={() => setActiveType(1)}
         name={name}
         id={name}
         value={`Partnerships`}

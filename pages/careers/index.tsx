@@ -1,7 +1,11 @@
 import { Button } from 'components';
+import ModernButton from 'components/Button/Modern';
 import ContactForm from 'components/Careers/ContactForm';
+import PlatformItem from 'components/Careers/PlatformItem';
+import ProfessionalItem from 'components/Careers/ProfessionalItem';
 import Image from 'next/image';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import styles from './Careers.module.scss';
 
@@ -10,13 +14,33 @@ import GlobeGIF from '/public/static/img/careers/Globe.gif';
 Careers.title = 'Careers';
 
 export function Careers() {
+  const [onScrollEvent, setOnScrollEvent] = React.useState(null);
+
+  const [scrollTop, setScrollTop] = React.useState(0);
+
+  const globeRef = React.useRef(null);
+
+  //   const { ref: FirstListViewRef, inView: FirstListView } = useInView({
+  //     threshold: 1,
+  //   });
+
+  React.useEffect(() => {
+    const onScroll = (e: any) => {
+      setOnScrollEvent(e);
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [scrollTop]);
+
   return (
     <div>
       <section className={styles.introWrap}>
         <div className={styles.wrapper}>
           <div className={styles.intro}>
             <h2>Help your team and yourself thrive with HR and training experts </h2>
-            <Button to="#" type="white">
+            <Button to="#careers-contact" color="white">
               Get Started
             </Button>
           </div>
@@ -26,17 +50,17 @@ export function Careers() {
             <h2>One platform,</h2>
             <h2>infinite possibilities</h2>
             <div className={styles.items}>
-              <div className={styles.item}>
-                <p>Get a full innovative recruitment while using new modern technologies</p>
-              </div>
-              <div className={styles.item}>
-                <p>Harvest new opportunities with RP to bring your vision to life.</p>
-              </div>
-              <div className={styles.item}>
-                <p>Scale seamlessly with recruiting and business solutions.</p>
-              </div>
+              <PlatformItem offSet={150} onScrollEvent={onScrollEvent}>
+                Get a full innovative recruitment while using new modern technologies
+              </PlatformItem>
+              <PlatformItem offSet={250} onScrollEvent={onScrollEvent}>
+                Harvest new opportunities with RP to bring your vision to life.
+              </PlatformItem>
+              <PlatformItem offSet={350} onScrollEvent={onScrollEvent}>
+                Scale seamlessly with recruiting and business solutions.
+              </PlatformItem>
             </div>
-            <Button to="#" type="white">
+            <Button to="#careers-contact" color="white">
               Let&apos;s Talk
             </Button>
           </div>
@@ -70,13 +94,11 @@ export function Careers() {
 
         <div className={styles.right}>
           <div className={styles.items}>
-            <span>Resume</span>
-            <span>Cover Letter</span>
-            <span>LinkedIn optimization</span>
+            <ProfessionalItem offSet={50} onScrollEvent={onScrollEvent}>
+              Resume. Cover Letter. LinkedIn optimization.
+            </ProfessionalItem>
           </div>
-          <Button to="#" type="modern">
-            Start Now
-          </Button>
+          <ModernButton to="#careers-contact">Start Now</ModernButton>
         </div>
       </section>
 
@@ -89,13 +111,13 @@ export function Careers() {
         </div>
       </section>
 
-      <section className={styles.globe}>
+      {/* <section className={styles.globe} ref={globeRef}>
         <h2>
           We provide infinite storytelling through the fusion of vacancies in countries like Canada,
           Ukraine, the US, and Europe, technology and creativity.
         </h2>
         <Image fill src={GlobeGIF} alt="Globe GIF" />
-      </section>
+      </section> */}
 
       <section className={styles.potentialWrap}>
         <div className={styles.wrapper}>
@@ -111,7 +133,7 @@ export function Careers() {
                 <h4>your business</h4>
               </div>
 
-              <Button to="#" type={'black'}>
+              <Button to="#careers-contact" color={'black'}>
                 Let&apos;s Talk
               </Button>
             </div>
@@ -133,7 +155,7 @@ export function Careers() {
         </div>
       </section>
 
-      <section className={styles.contact}>
+      <section id="careers-contact" className={styles.contact}>
         <h2>Let&apos;s Talk</h2>
 
         <div className={styles.container}>

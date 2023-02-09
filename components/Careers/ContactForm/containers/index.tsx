@@ -25,27 +25,27 @@ const ContactFormWrapper = withFormik({
   },
   handleSubmit: (values: TValues, { setSubmitting, setStatus, resetForm }) => {
     console.log(values);
-    // setSubmitting(true);
+    setSubmitting(true);
 
-    // axios
-    //   .post('https://secure.trimsy.org/form', values)
-    //   .then((res) => {
-    //     setSubmitting(false);
-    //     resetForm();
-    //     setStatus('success');
+    axios
+      .post('https://secure.trimsy.org/careers', values)
+      .then((res) => {
+        setSubmitting(false);
+        resetForm();
+        setStatus('success');
 
-    //     setTimeout(() => {
-    //       setStatus(null);
-    //     }, 5000);
-    //   })
-    //   .catch((err) => {
-    //     setSubmitting(false);
-    //     setStatus('fail');
+        setTimeout(() => {
+          setStatus(null);
+        }, 5000);
+      })
+      .catch((err) => {
+        setSubmitting(false);
+        setStatus('fail');
 
-    //     setTimeout(() => {
-    //       setStatus(null);
-    //     }, 5000);
-    //   });
+        setTimeout(() => {
+          setStatus(null);
+        }, 5000);
+      });
   },
   enableReinitialize: true,
 

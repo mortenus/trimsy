@@ -37,7 +37,7 @@ const HeaderButton = ({ children, href }: THeaderButton) => {
 
       <div className={clsx(styles.popup, { [styles.visible]: open })}>
         <div className={styles.text}>
-          <Link className={styles.item} href="/#contact" onClick={handleOpenChange}>
+          <Link className={styles.item} href="/" onClick={handleOpenChange}>
             <h4>Web Development</h4>
             <p>Discover all the ways to get your presence in Web</p>
           </Link>
