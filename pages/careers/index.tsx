@@ -5,7 +5,6 @@ import PlatformItem from 'components/Careers/PlatformItem';
 import ProfessionalItem from 'components/Careers/ProfessionalItem';
 import Image from 'next/image';
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
 
 import styles from './Careers.module.scss';
 
