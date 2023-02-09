@@ -44,19 +44,8 @@ const ProfessionalItem = ({ children, onScrollEvent, offSet = 0 }: TProfessional
 
   const handleCheckPosition = () => {
     if (!onScrollEvent) return;
-    // console.log(
-    //   onScrollEvent.target.documentElement.scrollTop,
-    //   refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight,
-    //   refer.current.getBoundingClientRect().top -
-    //     onScrollEvent.target.documentElement.clientHeight +
-    //     0 <=
-    //     onScrollEvent.target.documentElement.scrollTop,
-    // );
 
-    console.log(
-      refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight,
-    );
-
+    // @ts-ignore
     refer.current.getBoundingClientRect().top -
       onScrollEvent.target.documentElement.clientHeight +
       offSet <=
@@ -64,6 +53,7 @@ const ProfessionalItem = ({ children, onScrollEvent, offSet = 0 }: TProfessional
       ? setInView(true)
       : '';
 
+    // @ts-ignore
     refer.current.getBoundingClientRect().top -
       onScrollEvent.target.documentElement.clientHeight +
       offSet >=

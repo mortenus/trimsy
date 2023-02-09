@@ -18,6 +18,7 @@ interface TButtonLink extends TButtonBase {
 
 type TButton = TButtonOnClick | TButtonLink;
 
+// @ts-ignore
 const ModernButton = ({ children, style, to }: TButton) => {
   return (
     <Link href={to}>

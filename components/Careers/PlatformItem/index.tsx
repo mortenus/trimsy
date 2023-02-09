@@ -20,6 +20,7 @@ const PlatformItem = ({ onScrollEvent, offSet, children }: TPlatformItem) => {
     //   refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight,
     // );
 
+    // @ts-ignore
     refer.current.getBoundingClientRect().top -
       onScrollEvent.target.documentElement.clientHeight +
       offSet <=
@@ -27,6 +28,7 @@ const PlatformItem = ({ onScrollEvent, offSet, children }: TPlatformItem) => {
       ? setInView(true)
       : '';
 
+    // @ts-ignore
     refer.current.getBoundingClientRect().top -
       onScrollEvent.target.documentElement.clientHeight +
       offSet >=
