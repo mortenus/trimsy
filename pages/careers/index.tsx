@@ -23,7 +23,7 @@ export function Careers() {
 
   React.useEffect(() => {
     const onScroll = (e: any) => {
-      setOnScrollEvent(e);
+      e;
     };
 
     window.addEventListener('scroll', onScroll);

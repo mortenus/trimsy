@@ -12,60 +12,6 @@ type TPotential = {
 };
 
 const Potential = ({ onScrollEvent }: TPotential) => {
-  //   const potentialRef = React.useRef(null);
-  //   const additionalRef = React.useRef(null);
-
-  //   const [potentialInView, setPotentialInView] = React.useState(false);
-  //   const [additionalInView, setAdditionalInView] = React.useState(false);
-
-  //   const handleCheckPositionPotential = () => {
-  //     if (!onScrollEvent) return;
-  //     // console.log(
-  //     //   onScrollEvent.target.documentElement.scrollTop,
-  //     //   refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight,
-  //     // );
-
-  //     // @ts-ignore
-  //     potentialRef.current.getBoundingClientRect().top -
-  //       onScrollEvent.target.documentElement.clientHeight +
-  //       300 <=
-  //     0
-  //       ? setAdditionalInView(true)
-  //       : '';
-
-  //     // @ts-ignore
-  //     potentialRef.current.getBoundingClientRect().top -
-  //       onScrollEvent.target.documentElement.clientHeight +
-  //       350 >=
-  //     0
-  //       ? setAdditionalInView(false)
-  //       : '';
-  //   };
-
-  //   const handleCheckPositionAdditional = () => {
-  //     if (!onScrollEvent) return;
-  //     // console.log(
-  //     //   onScrollEvent.target.documentElement.scrollTop,
-  //     //   refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight,
-  //     // );
-
-  //     // @ts-ignore
-  //     additionalRef.current.getBoundingClientRect().top -
-  //       onScrollEvent.target.documentElement.clientHeight -
-  //       200 <=
-  //     0
-  //       ? setPotentialInView(true)
-  //       : '';
-
-  //     // @ts-ignore
-  //     additionalRef.current.getBoundingClientRect().top -
-  //       onScrollEvent.target.documentElement.clientHeight -
-  //       0 >=
-  //     0
-  //       ? setPotentialInView(false)
-  //       : '';
-  //   };
-
   const potentialRef = React.useRef(null);
   const additionalRef = React.useRef(null);
 
