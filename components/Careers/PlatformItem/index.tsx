@@ -15,30 +15,18 @@ const PlatformItem = ({ onScrollEvent, offSet, children }: TPlatformItem) => {
 
   const handleCheckPosition = () => {
     if (!onScrollEvent) return;
-    // console.log(
-    //   onScrollEvent.target.documentElement.scrollTop,
-    //   refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight,
-    // );
 
-    // @ts-ignore
-    refer.current.getBoundingClientRect().top -
-      onScrollEvent.target.documentElement.clientHeight +
-      offSet <=
-    0
-      ? setInView(true)
-      : '';
+    const currentPositionFromTheBottom =
+      // @ts-ignore
+      refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight;
 
-    // @ts-ignore
-    refer.current.getBoundingClientRect().top -
-      onScrollEvent.target.documentElement.clientHeight +
-      offSet >=
-    0
-      ? setInView(false)
-      : '';
+    currentPositionFromTheBottom + offSet <= 0 ? setInView(true) : setInView(false);
   };
 
   React.useEffect(() => {
     handleCheckPosition();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [onScrollEvent]);
 
   return (
