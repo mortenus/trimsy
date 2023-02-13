@@ -41,6 +41,18 @@ $navHeight: 75px;
       height: $navHeight;
       background: #fff;
 
+      @media (max-width: 1440px) {
+        max-width: 1024px;
+      }
+
+      @media (max-width: 1250px) {
+        max-width: 900px;
+      }
+
+      @media (max-width: 1068px) {
+        max-width: 692px;
+      }
+
       .logo {
         display: flex;
         align-items: center;

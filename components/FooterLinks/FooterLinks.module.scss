@@ -27,6 +27,10 @@
       width: 150px;
       height: 100%;
 
+      @media (max-width: 1440px) {
+        width: 100px;
+      }
+
       @media (max-width: 950px) {
         width: 75px;
       }

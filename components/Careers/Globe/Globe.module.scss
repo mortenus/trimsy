@@ -52,5 +52,11 @@
 
     height: auto !important;
     z-index: 4;
+
+    @media (max-width: 1250px) {
+      opacity: 0.25 !important;
+      transform: matrix(1, 0, 0, 1, 0, 0) !important;
+      height: 100% !important;
+    }
   }
 }

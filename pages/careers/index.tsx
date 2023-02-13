@@ -37,15 +37,17 @@ export function Careers() {
         <div className={styles.wrapper}>
           <div className={styles.intro}>
             <h2>Help your team and yourself thrive with HR and training experts </h2>
-            <Button to="#careers-contact" color="white">
+            <Button to="#contact" color="white">
               Get Started
             </Button>
           </div>
         </div>
         <div className={styles.wrapper}>
           <div className={styles.platform}>
-            <h2>One platform,</h2>
-            <h2>infinite possibilities</h2>
+            <div className={styles.platform_text}>
+              <h2>One platform,</h2>
+              <h2>infinite possibilities</h2>
+            </div>
             <div className={styles.items}>
               <PlatformItem offSet={150} onScrollEvent={onScrollEvent}>
                 Get a full innovative recruitment while using new modern technologies
@@ -57,7 +59,7 @@ export function Careers() {
                 Scale seamlessly with recruiting and business solutions.
               </PlatformItem>
             </div>
-            <Button to="#careers-contact" color="white">
+            <Button to="#contact" color="white">
               Let&apos;s Talk
             </Button>
           </div>
@@ -96,7 +98,7 @@ export function Careers() {
                 Resume. Cover Letter. LinkedIn optimization.
               </ProfessionalItem>
             </div>
-            <ModernButton to="#careers-contact">Start Now</ModernButton>
+            <ModernButton to="#contact">Start Now</ModernButton>
           </div>
         </div>
       </section>
@@ -114,22 +116,26 @@ export function Careers() {
 
       <Potential onScrollEvent={onScrollEvent} />
 
-      <section id="careers-contact" className={styles.contact}>
-        <h2>Let&apos;s Talk</h2>
+      <section id="contact" className={styles.contact}>
+        <div className={styles.wrapper}>
+          <div className={styles.container}>
+            <h2>Let&apos;s Talk</h2>
 
-        <div className={styles.container}>
-          <div className={styles.left}>
-            <p>
-              Find candidates that will fit your organization, whether you’re an enterprise
-              customer, software vendor, or startup.
-            </p>
-            <p>
-              That’s why 90% of the professionals we place in permanent jobs stay in the role for
-              two or more years.
-            </p>
-          </div>
-          <div className={styles.right}>
-            <ContactForm />
+            <div className={styles.content}>
+              <div className={styles.left}>
+                <p>
+                  Find candidates that will fit your organization, whether you’re an enterprise
+                  customer, software vendor, or startup.
+                </p>
+                <p>
+                  That’s why 90% of the professionals we place in permanent jobs stay in the role
+                  for two or more years.
+                </p>
+              </div>
+              <div className={styles.right}>
+                <ContactForm />
+              </div>
+            </div>
           </div>
         </div>
       </section>

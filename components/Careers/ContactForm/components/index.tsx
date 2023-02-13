@@ -30,7 +30,7 @@ const ContactForm = (props: any) => {
             onBlur={handleBlur}
             placeholder={'Type your email*'}
           />
-          <div className={styles.buttons}>
+          <div className={styles.form_buttons}>
             <ButtonType value={values?.type} name={'type'} handleChange={handleChange} />
           </div>
         </div>

@@ -13,6 +13,7 @@ const Globe = ({ onScrollEvent }: TGlobe) => {
   const globeRef = React.useRef(null);
 
   const [inView, setInView] = React.useState(false);
+  const [globeOpacity, setGlobeOpacity] = React.useState(0);
   const [globeToMoveVal, setGlobeToMoveVal] = React.useState(0);
 
   const handleCheckPosition = () => {
@@ -47,8 +48,6 @@ const Globe = ({ onScrollEvent }: TGlobe) => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [onScrollEvent]);
-
-  const [globeOpacity, setGlobeOpacity] = React.useState(0);
 
   const handleUpdate = () => {
     // @ts-ignore
