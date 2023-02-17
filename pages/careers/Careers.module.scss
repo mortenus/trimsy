@@ -244,6 +244,12 @@
         @media (max-width: 1280px) {
           left: 340px;
         }
+
+        @media (max-width: 600px) {
+          visibility: hidden;
+          opacity: 0;
+          display: none;
+        }
       }
     }
 

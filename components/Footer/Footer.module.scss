@@ -31,6 +31,12 @@
       display: block;
     }
 
+    @media (max-width: 734px) {
+      max-width: 100%;
+
+      padding: 0 20px;
+    }
+
     .leftSide {
       .logo {
         width: 200px;
