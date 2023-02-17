@@ -6,6 +6,8 @@ import Button from '../Button';
 
 import styles from './Header.module.scss';
 import HeaderButton from 'components/HeaderButton';
+import HamburgerMenu from 'components/Careers/HamburgerMenu';
+import Hamburger from 'components/Hamburger';
 
 // type THeaderBase = {};
 
@@ -23,10 +25,36 @@ type THeader = {
   handleFormChange: Function;
 };
 
-const Header = ({
-  // @ts-ignore
-  handleFormChange,
-}: THeader) => {
+const linkRows = [
+  {
+    id: 0,
+    title: 'Services',
+    links: [
+      {
+        title: 'Web Development',
+        description: 'Discover all the ways to get your presence in Web',
+        href: '/',
+      },
+      {
+        title: 'Get Hired',
+        description: 'Get a professional to help you in your IT journey',
+        href: '/careers',
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Portfolio',
+    href: '/#portfolio',
+  },
+  {
+    id: 2,
+    title: 'Blog',
+    href: '/blog',
+  },
+];
+
+const Header = ({ handleFormChange }: THeader) => {
   const [currentDepartment, setCurrentDepartment] = React.useState<string | undefined>(undefined);
 
   const router = useRouter();
@@ -113,13 +141,15 @@ const Header = ({
             ) : (
               <>
                 <ul>
-                  <HeaderButton href="">Services</HeaderButton>
-                  <Link href="/#portfolio">
-                    <li>Portfolio</li>
-                  </Link>
-                  <Link href="/blog">
-                    <li>Blog</li>
-                  </Link>
+                  {linkRows.map((obj) => {
+                    return obj.links ? (
+                      <HeaderButton links={obj.links ? obj.links : []}>{obj.title}</HeaderButton>
+                    ) : (
+                      <Link href={obj.href ? obj.href : ''}>
+                        <li>{obj.title}</li>
+                      </Link>
+                    );
+                  })}
                 </ul>
                 {handleOverflowForm() ? (
                   <Button type="nav" onClick={handleFormChange}>
@@ -131,6 +161,7 @@ const Header = ({
               </>
             )}
           </div>
+          <Hamburger handleFormChange={handleFormChange} />
         </nav>
       </div>
     </header>

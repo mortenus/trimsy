@@ -26,7 +26,7 @@ $navHeight: 75px;
     background: #fff;
 
     position: fixed;
-    z-index: 100;
+    z-index: 20;
     border-bottom: 1px solid #000;
 
     .nav {
@@ -61,6 +61,10 @@ $navHeight: 75px;
 
         height: 50px;
 
+        @media (max-width: 734px) {
+          height: 30px;
+        }
+
         svg {
           width: 100%;
           height: 100%;
@@ -91,6 +95,17 @@ $navHeight: 75px;
         align-items: center;
         height: 100%;
         width: 100%;
+        visibility: visible;
+
+        @media (max-width: 1250px) {
+          justify-content: flex-end;
+          margin-right: 30px;
+        }
+
+        @media (max-width: 734px) {
+          display: none;
+          visibility: hidden;
+        }
 
         @media (max-width: 650px) {
           a {
@@ -102,8 +117,11 @@ $navHeight: 75px;
           display: flex;
           align-items: center;
           height: 100%;
-
           position: relative;
+
+          @media (max-width: 1250px) {
+            display: none;
+          }
 
           &:empty {
             justify-content: flex-end;
@@ -148,26 +166,6 @@ $navHeight: 75px;
               position: relative;
               top: -1.5px;
             }
-
-            //   @media (min-width: 1000px) and (max-width: 1200px) {
-            //     font-size: 16px;
-
-            //     margin-right: 60px;
-            //   }
-
-            //   @media (min-width: 1200px) and (max-width: 1450px) {
-            //     font-size: 18px;
-            //   }
-
-            //   @media (min-width: 1450px) and (max-width: 1600px) {
-            //     font-size: 22px;
-            //   }
-
-            //   @media only screen and (min-width: 1600px) {
-            //     font-size: 24px;
-
-            //     margin-right: 160px;
-            //   }
           }
         }
       }

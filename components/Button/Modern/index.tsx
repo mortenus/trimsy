@@ -3,23 +3,10 @@ import React from 'react';
 
 import styles from './Modern.module.scss';
 
-interface TButtonBase {
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-}
-
-interface TButtonOnClick extends TButtonBase {
-  onClick: Function;
-}
-
-interface TButtonLink extends TButtonBase {
-  to: string;
-}
-
-type TButton = TButtonOnClick | TButtonLink;
+import TModern from './Modern.types';
 
 // @ts-ignore
-const ModernButton = ({ children, style, to }: TButton) => {
+const ModernButton = ({ children, style, to }: TModern) => {
   return (
     <Link href={to}>
       <div className={styles.wrapper}>

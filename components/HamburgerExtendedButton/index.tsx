@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import React from 'react';
 
-import styles from './Button.module.scss';
+import styles from './HamburgerExtendedButton.module.scss';
 
-type THeaderButton = {
+type THamburgerExtendedButton = {
   children: React.ReactNode;
   links: {
     title: string;
@@ -13,15 +13,15 @@ type THeaderButton = {
   }[];
 };
 
-const HeaderButton = ({ children, links }: THeaderButton) => {
+const HamburgerExtendedButton = ({ children, links }: THamburgerExtendedButton) => {
   const [open, setOpen] = React.useState(false);
 
   const handleOpenChange = () => setOpen(!open);
 
   return (
     <>
-      <a className={styles.iten}>
-        <li onClick={handleOpenChange}>
+      <a>
+        <li className={clsx(styles.item, { [styles.active]: open })} onClick={handleOpenChange}>
           {children}
           {open ? (
             <svg
@@ -40,17 +40,16 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
       </a>
 
       <div className={clsx(styles.popup, { [styles.visible]: open })}>
-        <div className={styles.text}>
+        <ul className={styles.text}>
           {links.map((obj) => (
             <Link key={obj.href} className={styles.item} href={obj.href} onClick={handleOpenChange}>
               <h4>{obj.title}</h4>
-              <p>{obj.description}</p>
             </Link>
           ))}
-        </div>
+        </ul>
       </div>
     </>
   );
 };
 
-export default HeaderButton;
+export default HamburgerExtendedButton;

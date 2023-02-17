@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './ContactFormOverflow.module.scss';
+import styles from './ContactForm.module.scss';
 
 import ContactInput from 'components/Form/Input';
 import ButtonType from 'components/Careers/Button';

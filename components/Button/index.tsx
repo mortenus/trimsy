@@ -4,32 +4,12 @@ import React from 'react';
 
 import styles from './Button.module.scss';
 
-interface TButtonBase {
-  children: React.ReactNode;
-  type?: string;
-  //   className?: string;
-  disabled?: boolean;
-  status?: 'success' | 'fail';
-  style?: React.CSSProperties;
-  size?: 'small' | 'medium' | 'large';
-  color?: 'black' | 'white';
-}
-
-interface TButtonOnClick extends TButtonBase {
-  onClick: Function;
-}
-
-interface TButtonLink extends TButtonBase {
-  to: string;
-}
-
-type TButton = TButtonOnClick | TButtonLink;
+import TButton from './Button.types';
 
 const Button = ({
   children,
   type,
   status,
-  //   className = '',
   // @ts-ignore
   to,
   // @ts-ignore
@@ -42,7 +22,6 @@ const Button = ({
   const stylying = clsx(
     styles.wrapper,
     { [styles.disabled]: disabled },
-    // { [styles[className]]: className },
     { [styles.black]: color === 'black' },
     { [styles.white]: color === 'white' },
     { [styles.nav]: type === 'nav' },

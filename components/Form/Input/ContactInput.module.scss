@@ -67,6 +67,10 @@
 
     user-select: none;
 
+    @media (max-width: 1250px) {
+      top: -45%;
+    }
+
     @media (max-width: 500px) {
       top: -5vw;
     }
