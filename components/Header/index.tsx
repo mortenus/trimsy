@@ -75,6 +75,19 @@ const Header = ({ handleFormChange }: THeader) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router]);
 
+  const handleWindowResize = React.useCallback((event: any) => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }, []);
+
+  React.useEffect(() => {
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, [handleWindowResize]);
+
   return (
     <header className={styles.wrapper}>
       <div className={styles.container}>
