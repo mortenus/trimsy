@@ -4,19 +4,17 @@ import React from 'react';
 
 import styles from './HamburgerExtendedButton.module.scss';
 
-type THamburgerExtendedButton = {
-  children: React.ReactNode;
-  links: {
-    title: string;
-    description: string;
-    href: string;
-  }[];
-};
+import THamburgerExtendedButton from './HamburgerExtendedButton.types';
 
-const HamburgerExtendedButton = ({ children, links }: THamburgerExtendedButton) => {
+const HamburgerExtendedButton = ({ children, links, onClick }: THamburgerExtendedButton) => {
   const [open, setOpen] = React.useState(false);
 
   const handleOpenChange = () => setOpen(!open);
+
+  const handleOnClick = () => {
+    onClick();
+    handleOpenChange();
+  };
 
   return (
     <>
@@ -42,7 +40,7 @@ const HamburgerExtendedButton = ({ children, links }: THamburgerExtendedButton) 
       <div className={clsx(styles.popup, { [styles.visible]: open })}>
         <ul className={styles.text}>
           {links.map((obj) => (
-            <Link key={obj.href} className={styles.item} href={obj.href} onClick={handleOpenChange}>
+            <Link key={obj.href} className={styles.item} href={obj.href} onClick={handleOnClick}>
               <h4>{obj.title}</h4>
             </Link>
           ))}

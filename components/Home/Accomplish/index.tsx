@@ -2,83 +2,40 @@ import React from 'react';
 import { Button } from 'components';
 
 import styles from './Accomplish.module.scss';
-import useOnScreen from 'hooks/useOnScreen';
+import useInView from 'hooks/useInView';
+import useAccomplish from 'hooks/useAccomplish';
 
-const Accomplish = () => {
-  const [scrollHeight, setScrollHeight] = React.useState(0);
-  const [scrollMove, setScrollMove] = React.useState<number | boolean>(false);
+type TAccomplish = {
+  onScrollEvent: any;
+};
 
+const Accomplish = ({ onScrollEvent }: TAccomplish) => {
   const AccomplishRef = React.useRef(null);
-  const isVisible = useOnScreen(AccomplishRef);
-
-  const handleScrollHeightChange = () => {
-    setScrollHeight(window.scrollY);
-  };
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScrollHeightChange);
-
-    return () => {
-      window.removeEventListener('scroll', handleScrollHeightChange);
-    };
+  const { inView: AccomplishInView } = useInView({
+    ref: AccomplishRef,
+    onScrollEvent,
+    offset: 200,
   });
 
-  React.useEffect(() => {
-    // handleMove();
-
-    if (isVisible) {
-      //   setScrollMove((scrollHeight / 30) * 4);
-      setScrollMove(scrollHeight);
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scrollHeight]);
-
-  //   const handleMove = () => {
-  // if (scrollHeight <= 700) {
-  //   setScrollMove(false);
-  // }
-
-  // if (scrollHeight >= 1400) {
-  //   setScrollMove(true);
-  // }
-
-  // if (scrollHeight <= 1600 && scrollHeight >= 400) {
-  // if (isVisible) {
-  //   const a = (scrollHeight / 30) * 4;
-  //   setScrollMove(a);
-  // }
-  //   };
+  const { scrollMove } = useAccomplish({ onScrollEvent, AccomplishInView });
 
   return (
     <section
-      className={styles.wrapper}
+      className={styles.content}
       ref={AccomplishRef}
       style={{
-        //   marginTop:
-        //     scrollMove === false
-        //       ? '-50px'
-        //       : scrollMove === true
-        //       ? '-210px'
-        //       : `${-Math.abs(+scrollMove)}px`,
         transform: `translate3d(0px, ${
-          !scrollMove ? '-100' : -Math.abs(+scrollMove / 8)
-        }px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+          !scrollMove ? '-100' : -Math.abs(+scrollMove / 7.5)
+        }px, 0px)`,
         willChange: 'transform',
         transformStyle: 'preserve-3d',
       }}>
       <div
-        className="wrapper"
+        className={styles.wrapper}
         style={{
-          //   marginTop:
-          //     scrollMove === false
-          //       ? '-50px'
-          //       : scrollMove === true
-          //       ? '-210px'
-          //       : `${-Math.abs(+scrollMove)}px`,
           transform: `translate3d(0px, ${
-            !scrollMove ? '-100' : -Math.abs(+scrollMove / 7.5)
-          }px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,
+            !scrollMove ? '-100' : -Math.abs(+scrollMove / 8.5)
+          }px, 0px)`,
           willChange: 'transform',
           transformStyle: 'preserve-3d',
         }}>

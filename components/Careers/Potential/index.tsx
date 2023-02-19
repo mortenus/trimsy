@@ -2,10 +2,9 @@ import React from 'react';
 
 import styles from './Potential.module.scss';
 
-import ProfessionalItem from 'components/Careers/ProfessionalItem';
-import ModernButton from 'components/Button/Modern';
-
 import Button from 'components/Button';
+
+import useInView from 'hooks/useInView';
 
 type TPotential = {
   onScrollEvent: any;
@@ -15,43 +14,12 @@ const Potential = ({ onScrollEvent }: TPotential) => {
   const potentialRef = React.useRef(null);
   const additionalRef = React.useRef(null);
 
-  const [potentialInView, setPotentialInView] = React.useState(false);
-  const [additionalInView, setAdditionalInView] = React.useState(false);
-
-  const handleCheckPositionPotential = () => {
-    if (!onScrollEvent) return;
-
-    const offset = 200;
-
-    const isSeen =
-      // @ts-ignore
-      potentialRef.current.getBoundingClientRect().top -
-      onScrollEvent.target.documentElement.clientHeight +
-      offset;
-
-    isSeen <= 0 ? setPotentialInView(true) : setPotentialInView(false);
-  };
-
-  const handleCheckPositionAdditional = () => {
-    if (!onScrollEvent) return;
-
-    const offset = 200;
-
-    const isSeen =
-      // @ts-ignore
-      additionalRef.current.getBoundingClientRect().top -
-      onScrollEvent.target.documentElement.clientHeight +
-      offset;
-
-    isSeen <= 0 ? setAdditionalInView(true) : setAdditionalInView(false);
-  };
-
-  React.useEffect(() => {
-    handleCheckPositionPotential();
-    handleCheckPositionAdditional();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onScrollEvent]);
+  const { inView: potentialInView } = useInView({ ref: potentialRef, onScrollEvent, offset: 200 });
+  const { inView: additionalInView } = useInView({
+    ref: additionalRef,
+    onScrollEvent,
+    offset: 200,
+  });
 
   const activeStyles = {
     opacity: 1,

@@ -8,3 +8,4 @@ export { default as FormOverflow } from './FormOverflow';
 export { default as ContactFormOverflow } from './ContactFormOverflow';
 export { default as Footer } from './Footer';
 export { default as FooterLinks } from './FooterLinks';
+export { default as Script } from './Script';

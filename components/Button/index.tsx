@@ -6,19 +6,7 @@ import styles from './Button.module.scss';
 
 import TButton from './Button.types';
 
-const Button = ({
-  children,
-  type,
-  status,
-  // @ts-ignore
-  to,
-  // @ts-ignore
-  onClick,
-  disabled,
-  style,
-  size,
-  color,
-}: TButton) => {
+const Button = ({ children, type, status, to, onClick, disabled, style, size, color }: TButton) => {
   const stylying = clsx(
     styles.wrapper,
     { [styles.disabled]: disabled },
@@ -37,16 +25,16 @@ const Button = ({
 
   return (
     <>
-      {onClick !== undefined ? (
-        <div style={style && style} onClick={onClick} className={stylying}>
-          {children}
-        </div>
-      ) : (
+      {!onClick ? (
         <Link href={to ? to : '#'}>
           <div style={style && style} className={stylying}>
             {children}
           </div>
         </Link>
+      ) : (
+        <div style={style && style} onClick={onClick} className={stylying}>
+          {children}
+        </div>
       )}
     </>
   );

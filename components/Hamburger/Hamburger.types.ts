@@ -1,5 +1,5 @@
 type THamburger = {
-  handleFormChange: Function;
+  handleFormChange: () => void;
 };
 
 export default THamburger;

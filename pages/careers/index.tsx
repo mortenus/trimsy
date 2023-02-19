@@ -1,35 +1,18 @@
-import { Button } from 'components';
-import ModernButton from 'components/Button/Modern';
-import ContactForm from 'components/Careers/ContactForm';
-import Globe from 'components/Careers/Globe';
-import PlatformItem from 'components/Careers/PlatformItem';
-import Potential from 'components/Careers/Potential';
-import ProfessionalItem from 'components/Careers/ProfessionalItem';
 import Image from 'next/image';
 import React from 'react';
+
+import { Button } from 'components';
+import ModernButton from 'components/Button/Modern';
+import { PlatformItem, Potential, ProfessionalItem, ContactForm, Globe } from 'components/Careers';
+
+import { useOnScroll } from 'hooks/useOnScroll';
 
 import styles from './Careers.module.scss';
 
 Careers.title = 'Careers';
 
 export function Careers() {
-  const [onScrollEvent, setOnScrollEvent] = React.useState(null);
-
-  const [scrollTop, setScrollTop] = React.useState(0);
-
-  //   const { ref: FirstListViewRef, inView: FirstListView } = useInView({
-  //     threshold: 1,
-  //   });
-
-  React.useEffect(() => {
-    const onScroll = (e: any) => {
-      setOnScrollEvent(e);
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [scrollTop]);
+  const { onScrollEvent } = useOnScroll();
 
   return (
     <div>
@@ -49,13 +32,13 @@ export function Careers() {
               <h2>infinite possibilities</h2>
             </div>
             <div className={styles.items}>
-              <PlatformItem offSet={150} onScrollEvent={onScrollEvent}>
+              <PlatformItem offset={150} onScrollEvent={onScrollEvent}>
                 Get a full innovative recruitment while using new modern technologies
               </PlatformItem>
-              <PlatformItem offSet={250} onScrollEvent={onScrollEvent}>
+              <PlatformItem offset={250} onScrollEvent={onScrollEvent}>
                 Harvest new opportunities with RP to bring your vision to life.
               </PlatformItem>
-              <PlatformItem offSet={350} onScrollEvent={onScrollEvent}>
+              <PlatformItem offset={350} onScrollEvent={onScrollEvent}>
                 Scale seamlessly with recruiting and business solutions.
               </PlatformItem>
             </div>
@@ -94,7 +77,7 @@ export function Careers() {
 
           <div className={styles.right}>
             <div className={styles.items}>
-              <ProfessionalItem offSet={50} onScrollEvent={onScrollEvent}>
+              <ProfessionalItem offset={50} onScrollEvent={onScrollEvent}>
                 Resume. Cover Letter. LinkedIn optimization.
               </ProfessionalItem>
             </div>

@@ -4,46 +4,7 @@ import Image from 'next/image';
 import styles from './Product.module.scss';
 
 import { Card, Cart } from 'components';
-
-const arr = [
-  {
-    id: 1,
-    title: 'Nike Blazer Mid Suede',
-    price: 300,
-    imageUrl: '/static/img/sneakers/1.jpg',
-  },
-  {
-    id: 2,
-    title: 'Puma X Aka Boku Future Rider',
-    price: 349,
-    imageUrl: '/static/img/sneakers/4.jpg',
-  },
-  {
-    id: 3,
-    title: 'Under Armour Curry 8',
-    price: 349,
-    imageUrl: '/static/img/sneakers/5.jpg',
-    added: true,
-  },
-  {
-    id: 4,
-    title: 'Nike Kyrie 7',
-    price: 249,
-    imageUrl: '/static/img/sneakers/6.jpg',
-  },
-  {
-    id: 5,
-    title: 'Jordan Air Jordan 11',
-    price: 499,
-    imageUrl: '/static/img/sneakers/7.jpg',
-  },
-  {
-    id: 6,
-    title: 'Nike LeBron XVIII',
-    price: 499,
-    imageUrl: '/static/img/sneakers/8.jpg',
-  },
-];
+import ProductItems from '../ProductItems';
 
 const Product = () => {
   return (
@@ -103,9 +64,7 @@ const Product = () => {
             </div>
           </header>
           <div className={styles.items}>
-            {arr.map((item, id) => (
-              <Card key={id} {...item} />
-            ))}
+            <ProductItems />
           </div>
         </div>
       </div>

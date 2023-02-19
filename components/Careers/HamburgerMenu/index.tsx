@@ -10,17 +10,29 @@ import HamburgerExtendedButton from 'components/HamburgerExtendedButton';
 
 import Button from 'components/Button';
 
-const HamburgerMenu = ({ links, handleFormChange, hamburgerActive }: THamburgerMenu) => {
+const HamburgerMenu = ({
+  links,
+  handleFormChange,
+  hamburgerActive,
+  handleHamburgerChange,
+}: THamburgerMenu) => {
   return (
     <div className={clsx(styles.popup, { [styles.visible]: hamburgerActive })}>
       <ul className={styles.text}>
         {links.map((obj) => {
           return obj.links ? (
-            <HamburgerExtendedButton links={obj.links ? obj.links : []}>
+            <HamburgerExtendedButton
+              key={obj.title}
+              links={obj.links ? obj.links : []}
+              onClick={handleHamburgerChange}>
               {obj.title}
             </HamburgerExtendedButton>
           ) : (
-            <Link key={obj.id} className={styles.item} href={obj.href}>
+            <Link
+              key={obj.id}
+              className={styles.item}
+              href={obj.href}
+              onClick={handleHamburgerChange}>
               <h4>{obj.title}</h4>
             </Link>
           );

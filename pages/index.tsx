@@ -1,8 +1,12 @@
 import { Accomplish, ContactForm, Influence, Intro, Product } from 'components/Home';
 
+import { useOnScroll } from 'hooks/useOnScroll';
+
 Home.title = 'Web Development';
 
 export default function Home() {
+  const { onScrollEvent } = useOnScroll();
+
   return (
     <>
       <main>
@@ -10,7 +14,7 @@ export default function Home() {
 
         <Product />
 
-        <Accomplish />
+        <Accomplish onScrollEvent={onScrollEvent} />
 
         <Influence />
 

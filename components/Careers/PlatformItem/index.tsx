@@ -1,36 +1,21 @@
+import useInView from 'hooks/useInView';
 import React from 'react';
 
 import styles from './PlatformItem.module.scss';
 
 type TPlatformItem = {
   onScrollEvent: any;
-  offSet: number;
+  offset: number;
   children: React.ReactNode;
 };
 
-const PlatformItem = ({ onScrollEvent, offSet, children }: TPlatformItem) => {
-  const refer = React.useRef(null);
+const PlatformItem = ({ onScrollEvent, offset, children }: TPlatformItem) => {
+  const ref = React.useRef(null);
 
-  const [inView, setInView] = React.useState(false);
-
-  const handleCheckPosition = () => {
-    if (!onScrollEvent) return;
-
-    const currentPositionFromTheBottom =
-      // @ts-ignore
-      refer.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight;
-
-    currentPositionFromTheBottom + offSet <= 0 ? setInView(true) : setInView(false);
-  };
-
-  React.useEffect(() => {
-    handleCheckPosition();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onScrollEvent]);
+  const { inView } = useInView({ ref, onScrollEvent, offset });
 
   return (
-    <div style={{ opacity: inView ? '1' : '0' }} className={styles.item} ref={refer}>
+    <div style={{ opacity: inView ? '1' : '0' }} className={styles.item} ref={ref}>
       <p>{children}</p>
     </div>
   );

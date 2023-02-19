@@ -8,7 +8,7 @@ export default function Custom404() {
     router.replace('/');
   });
 
-  return null;
+  return <h2>Error!</h2>;
 }
 
 Custom404.title = '404';

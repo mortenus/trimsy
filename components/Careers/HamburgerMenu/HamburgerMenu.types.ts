@@ -21,6 +21,7 @@ type TLinks = TSingleLink | TMultipleLinks;
 
 export default interface THamburgerMenu {
   links: TLinks[];
-  handleFormChange: Function;
+  handleFormChange: () => void;
   hamburgerActive: boolean;
+  handleHamburgerChange: () => void;
 }

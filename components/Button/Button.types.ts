@@ -9,11 +9,13 @@ type TButtonBase = {
 };
 
 interface TButtonOnClick extends TButtonBase {
-  onClick: Function;
+  onClick: () => void | Function;
+  to?: never;
 }
 
 interface TButtonLink extends TButtonBase {
   to: string;
+  onClick?: never;
 }
 
 type TButton = TButtonOnClick | TButtonLink;

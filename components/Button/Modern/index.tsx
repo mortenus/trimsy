@@ -5,10 +5,9 @@ import styles from './Modern.module.scss';
 
 import TModern from './Modern.types';
 
-// @ts-ignore
 const ModernButton = ({ children, style, to }: TModern) => {
   return (
-    <Link href={to}>
+    <Link href={to ? to : ''}>
       <div className={styles.wrapper}>
         <div className={styles.button} style={style}>
           {children}
@@ -30,4 +29,4 @@ const ModernButton = ({ children, style, to }: TModern) => {
   );
 };
 
-export default ModernButton;
+export default React.memo(ModernButton);

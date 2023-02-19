@@ -5,6 +5,7 @@ import styles from './Hamburger.module.scss';
 import THamburger from './Hamburger.types';
 
 import HamburgerMenu from 'components/Careers/HamburgerMenu';
+import useHideScrollOnTrue from 'hooks/useHideScrollOnTrue';
 
 const linkRows = [
   {
@@ -39,6 +40,8 @@ const Hamburger = ({ handleFormChange }: THamburger) => {
   const [hamburgerActive, setHamburgerActive] = React.useState(false);
 
   const handleHamburgerChange = () => setHamburgerActive(!hamburgerActive);
+
+  useHideScrollOnTrue(hamburgerActive);
 
   return (
     <div className={styles.hamburger}>
@@ -79,6 +82,7 @@ const Hamburger = ({ handleFormChange }: THamburger) => {
       <HamburgerMenu
         links={linkRows}
         handleFormChange={handleFormChange}
+        handleHamburgerChange={handleHamburgerChange}
         hamburgerActive={hamburgerActive}
       />
     </div>

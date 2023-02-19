@@ -4,40 +4,37 @@ import React from 'react';
 
 import styles from './FormOverflow.module.scss';
 
-type TFormOverflow = {
-  open: boolean;
-  handleOpen: () => void;
-};
+import TFormOverflow from './FormOverflow.types';
 
 const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFormOverflow) {
   const overflowRef = React.useRef(null);
-  const [event, setEvent] = React.useState<null | MouseEvent>(null);
+  //   const [event, setEvent] = React.useState<null | MouseEvent>(null);
 
-  const checkChangeFormVisibility = (event: MouseEvent) => {
-    const path = event.composedPath();
-    if (overflowRef.current === null) return;
-    if (!path.includes(overflowRef.current)) {
-      console.log(event.composedPath());
-      console.log(overflowRef.current);
-      //   handleOpen();
-    }
-  };
+  //   const checkChangeFormVisibility = (event: MouseEvent) => {
+  //     const path = event.composedPath();
+  //     if (overflowRef.current === null) return;
+  //     if (!path.includes(overflowRef.current)) {
+  //       console.log(event.composedPath());
+  //       console.log(overflowRef.current);
+  //       //   handleOpen();
+  //     }
+  //   };
 
-  React.useEffect(() => {
-    if (open && event !== null) checkChangeFormVisibility(event);
+  //   React.useEffect(() => {
+  //     if (open && event !== null) checkChangeFormVisibility(event);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [event]);
+  //     // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   }, [event]);
 
-  const handleOutsideClick = (e: MouseEvent) => setEvent(e);
+  //   const handleOutsideClick = (e: MouseEvent) => setEvent(e);
 
-  React.useEffect(() => {
-    document.body.addEventListener('click', handleOutsideClick);
+  //   React.useEffect(() => {
+  //     document.body.addEventListener('click', handleOutsideClick);
 
-    return () => document.body.removeEventListener('click', handleOutsideClick);
+  //     return () => document.body.removeEventListener('click', handleOutsideClick);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  //     // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   }, []);
 
   return (
     <div className={clsx(styles.overflow, { [styles.overlayVisible]: open })}>
@@ -218,4 +215,4 @@ const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFor
   );
 });
 
-export default FormOverflow;
+export default React.memo(FormOverflow);

@@ -51,4 +51,4 @@ const ContactFormOverflow = (props: any) => {
   );
 };
 
-export default ContactFormOverflow;
+export default React.memo(ContactFormOverflow);

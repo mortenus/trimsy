@@ -1,3 +1,5 @@
+import useGlobe from 'hooks/useGlobe';
+import useInView from 'hooks/useInView';
 import Image from 'next/image';
 import React from 'react';
 
@@ -12,49 +14,9 @@ type TGlobe = {
 const Globe = ({ onScrollEvent }: TGlobe) => {
   const globeRef = React.useRef(null);
 
-  const [inView, setInView] = React.useState(false);
-  const [globeOpacity, setGlobeOpacity] = React.useState(0);
-  const [globeToMoveVal, setGlobeToMoveVal] = React.useState(0);
+  const { inView } = useInView({ ref: globeRef, onScrollEvent });
 
-  const handleCheckPosition = () => {
-    if (!onScrollEvent) return;
-
-    const isSeen =
-      // @ts-ignore
-      globeRef.current.getBoundingClientRect().top -
-      onScrollEvent.target.documentElement.clientHeight;
-
-    isSeen <= 0 ? setInView(true) : setInView(false);
-  };
-
-  const handleMove = () => {
-    if (!inView) return;
-
-    const scrolledVal =
-      // @ts-ignore
-      (globeRef.current.offsetTop -
-        onScrollEvent.target.documentElement.clientHeight -
-        window.document.documentElement.scrollTop) /
-      3.5;
-
-    setGlobeToMoveVal(scrolledVal);
-  };
-
-  React.useEffect(() => {
-    handleCheckPosition();
-    handleMove();
-
-    handleUpdate();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onScrollEvent]);
-
-  const handleUpdate = () => {
-    // @ts-ignore
-    const number = ((globeToMoveVal / globeRef.current.offsetHeight) * 100) / 55 + 1;
-    const parsedNumber = Math.min(Math.max(number, 0), 1);
-    setGlobeOpacity(parsedNumber);
-  };
+  const { globeToMoveVal, globeOpacity } = useGlobe({ globeRef, inView, onScrollEvent });
 
   return (
     <section className={styles.globeWrap} ref={globeRef}>
@@ -67,7 +29,11 @@ const Globe = ({ onScrollEvent }: TGlobe) => {
         </div>
       </div>
       <Image
-        style={{ transform: `matrix(1, 0, 0, 1, 0, ${globeToMoveVal})`, opacity: globeOpacity }}
+        style={{
+          transform: `matrix(1, 0, 0, 1, 0, ${globeToMoveVal})`,
+          opacity: globeOpacity,
+          willChange: 'transform',
+        }}
         fill
         src={GlobeJPG}
         unoptimized={true}
