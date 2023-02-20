@@ -37,7 +37,7 @@ const linkRows = [
 ];
 
 const Hamburger = ({ handleFormChange }: THamburger) => {
-  const [hamburgerActive, setHamburgerActive] = React.useState(false);
+  const [hamburgerActive, setHamburgerActive] = React.useState<boolean>(false);
 
   const handleHamburgerChange = () => setHamburgerActive(!hamburgerActive);
 

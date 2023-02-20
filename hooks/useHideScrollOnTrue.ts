@@ -1,17 +1,24 @@
 import React from 'react';
 
-export default function useHideScrollOnTrue(stateBool: boolean) {
-  React.useEffect(() => {
-    function preventDefault(e: any) {
-      e.preventDefault();
-    }
+function preventDefault(e: any) {
+  e.preventDefault();
+}
 
+export default function useHideScrollOnTrue(stateBool: boolean) {
+  function disableScroll() {
+    document.body.addEventListener('touchmove', preventDefault, { passive: false });
+  }
+  function enableScroll() {
+    document.body.removeEventListener('touchmove', preventDefault);
+  }
+
+  React.useEffect(() => {
     if (stateBool) {
-      document.body.style.setProperty('overflow-y', `hidden !important`);
-      document.body.addEventListener('touchmove', preventDefault, { passive: false });
+      window.document.body.style.setProperty('overflow-y', `hidden`);
+      disableScroll();
     } else {
-      document.body.style.removeProperty('overflow-y');
-      document.body.removeEventListener('touchmove', preventDefault);
+      window.document.body.style.removeProperty('overflow-y');
+      enableScroll();
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
