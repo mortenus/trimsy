@@ -4,7 +4,7 @@ import React from 'react';
 
 import styles from './BlogButton.module.scss';
 
-interface TButton {
+interface TBlogButton {
   children: React.ReactNode;
   type?: string;
   style?: React.CSSProperties;
@@ -12,7 +12,7 @@ interface TButton {
   onClick?: Function;
 }
 
-const Button = ({ children, type, onClick, style, selected }: TButton) => {
+const BlogButton = ({ children, type, onClick, style, selected }: TBlogButton) => {
   const stylying = clsx(
     styles.wrapper,
     { [styles.nav]: type === 'nav' },
@@ -29,4 +29,4 @@ const Button = ({ children, type, onClick, style, selected }: TButton) => {
   );
 };
 
-export default React.memo(Button);
+export default React.memo(BlogButton);

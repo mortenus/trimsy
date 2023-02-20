@@ -104,7 +104,13 @@ $blue: rgb(22, 106, 234);
   }
 
   &.search {
-    border: 1px solid #000;
+    border: 2px solid #000;
+    padding: 15px 25px;
+
+    @media (max-width: 450px) {
+      padding: 15px 15px;
+      font-size: 14px;
+    }
 
     transition: all 0.3s ease;
   }
