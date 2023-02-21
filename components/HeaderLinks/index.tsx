@@ -19,13 +19,13 @@ const linkRows = [
       },
     ],
   },
+  //   {
+  //     id: 1,
+  //     title: 'Portfolio',
+  //     href: '/#portfolio',
+  //   },
   {
     id: 1,
-    title: 'Portfolio',
-    href: '/#portfolio',
-  },
-  {
-    id: 2,
     title: 'Blog',
     href: '/blog',
   },

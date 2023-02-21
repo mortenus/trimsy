@@ -54,11 +54,11 @@ const Footer = () => {
       </div>
       <div className={styles.notice}>
         <ul className={styles.links}>
-          <li>
+          {/* <li>
             <Link href="#">Legal</Link>
-          </li>
+          </li> */}
           <li>
-            <Link href="#">Privacy Policy</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </li>
         </ul>
         <p className={styles.copyright}>©2023 Trimsy</p>

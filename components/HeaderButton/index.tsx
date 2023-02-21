@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import useHideOnOutsideClick from 'hooks/useHideOnOutsideClick';
 import Link from 'next/link';
 import React from 'react';
 
@@ -14,13 +15,18 @@ type THeaderButton = {
 };
 
 const HeaderButton = ({ children, links }: THeaderButton) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const handleOpenChange = () => setOpen(!open);
 
+  const ref = React.useRef(null);
+  const toNotCloseRef = React.useRef(null);
+
+  useHideOnOutsideClick(open, handleOpenChange, ref, toNotCloseRef);
+
   return (
     <>
-      <a className={styles.iten}>
+      <a className={styles.iten} ref={toNotCloseRef}>
         <li onClick={handleOpenChange}>
           {children}
           {open ? (
@@ -40,7 +46,7 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
       </a>
 
       <div className={clsx(styles.popup, { [styles.visible]: open })}>
-        <div className={styles.text}>
+        <div className={styles.text} ref={ref}>
           {links.map((obj) => (
             <Link key={obj.href} className={styles.item} href={obj.href} onClick={handleOpenChange}>
               <h4>{obj.title}</h4>
