@@ -15,7 +15,7 @@ type THeaderButton = {
 };
 
 const HeaderButton = ({ children, links }: THeaderButton) => {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleOpenChange = () => setOpen(!open);
 
