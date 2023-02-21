@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 
-import styles from './test.module.scss';
+import styles from './Post.module.scss';
 
-TestBlog.title = 'Test';
+Post.title = 'Test';
 
 const test = {
   title: 'How to get more client to get to your business',
@@ -12,7 +12,7 @@ const test = {
   minToRead: 2,
 };
 
-export default function TestBlog() {
+export default function Post() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
