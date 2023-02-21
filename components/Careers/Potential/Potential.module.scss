@@ -45,6 +45,9 @@
 
         @media (max-width: 734px) {
           padding-bottom: 30px;
+
+          opacity: 1;
+          transform: translateY(0);
         }
 
         h2 {
@@ -79,6 +82,9 @@
         @media (max-width: 734px) {
           flex-direction: column;
           align-items: center;
+
+          opacity: 1;
+          transform: translateY(0);
         }
 
         .text {
@@ -117,6 +123,11 @@
       flex-wrap: wrap;
 
       margin-top: 100px;
+
+      @media (max-width: 734px) {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
       .item {
         width: 25%;

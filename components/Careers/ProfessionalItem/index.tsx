@@ -19,9 +19,18 @@ const ProfessionalItem = ({ children, onScrollEvent, offset = 0 }: TProfessional
   const { text, active } = useCodingEffect({ inView, children });
 
   return (
-    <span ref={ref} className={clsx(styles.text, { [styles.active]: active })}>
-      {text}
-    </span>
+    <>
+      <span ref={ref} className={clsx(styles.text, { [styles.active]: active })}>
+        {text}
+      </span>
+      {children.split('. ').map((item) => {
+        return (
+          <span key={item} className={styles.backup}>
+            {item}
+          </span>
+        );
+      })}
+    </>
   );
 };
 
