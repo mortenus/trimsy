@@ -122,17 +122,26 @@ $blue: rgb(22, 106, 234);
   &.success {
     background: rgb(6, 146, 13) !important;
     color: #fff !important;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid rgb(6, 146, 13) !important;
+    }
   }
 
   &.fail {
     background: rgb(146, 6, 6) !important;
     color: #fff !important;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
+    &:hover {
+      border: 2px solid rgb(146, 6, 6) !important;
+    }
   }
 
   &.disabled {
-    border: 1px solid transparent;
+    border: 2px solid transparent !important;
+
+    color: #fff;
 
     cursor: not-allowed;
 
@@ -143,16 +152,18 @@ $blue: rgb(22, 106, 234);
     animation-timing-function: ease-in-out;
 
     &:hover {
-      color: #fff;
+      //   border: 2px solid transparent !important;
     }
   }
 }
 
 @keyframes pulse {
   from {
-    background: rgba(0, 0, 0, 0.35);
+    // background: rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.6);
   }
   to {
-    background: rgba(0, 0, 0, 0.6);
+    // background: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.35);
   }
 }
