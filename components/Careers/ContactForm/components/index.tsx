@@ -37,7 +37,7 @@ const ContactForm = (props: any) => {
         <Button
           status={status && status}
           size={'medium'}
-          disabled={isSubmitting}
+          disabled={isSubmitting ? 'white' : false}
           type="submit"
           color="white"
           onClick={handleSubmit}>

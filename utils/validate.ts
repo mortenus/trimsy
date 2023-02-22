@@ -24,7 +24,7 @@ const validations = ({ values, errors }: TValidations) => {
         errors.fullname = 'Fill your name';
       } else if (value.split('').length < 4) {
         errors.fullname = 'Name is too short';
-      } else if (value.split('').length > 16) {
+      } else if (value.split('').length > 20) {
         errors.fullname = 'Name is too long';
         //   } else if (!/^(?=[a-zA-Z ]*$)(?!.*[<>'"/;`%])/i.test(value)) {
       } else if (
@@ -33,6 +33,8 @@ const validations = ({ values, errors }: TValidations) => {
         )
       ) {
         errors.fullname = 'No special characters';
+      } else if (value.toString().match(/\s{3,}/g)) {
+        errors.fullname = 'Please, remove spaces';
       }
     },
   };

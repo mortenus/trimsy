@@ -1,7 +1,7 @@
 type TButtonBase = {
   children: React.ReactNode;
   type?: string;
-  disabled?: boolean;
+  disabled?: boolean | 'black' | 'white';
   status?: 'success' | 'fail';
   style?: React.CSSProperties;
   size?: 'small' | 'medium' | 'large';

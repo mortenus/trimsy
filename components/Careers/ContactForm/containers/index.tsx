@@ -27,6 +27,11 @@ const ContactFormWrapper = withFormik({
     console.log(values);
     setSubmitting(true);
 
+    // remove unnecessary spacing the end
+    if (values.fullname.match(/\s$/)?.[0]) {
+      values.fullname = values.fullname.slice(0, -1);
+    }
+
     axios
       .post('https://secure.trimsy.org/careers', values)
       .then((res) => {
@@ -48,6 +53,7 @@ const ContactFormWrapper = withFormik({
       });
   },
   enableReinitialize: true,
+  //   validateOnChange: false,
 
   displayName: 'ContactFormWrapper',
 })(ContactForm);

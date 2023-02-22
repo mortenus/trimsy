@@ -9,13 +9,13 @@ import TButton from './Button.types';
 const Button = ({ children, type, status, to, onClick, disabled, style, size, color }: TButton) => {
   const stylying = clsx(
     styles.wrapper,
-    { [styles.disabled]: disabled },
+    { [styles['wrapper--disabled_black']]: disabled === 'black' },
+    { [styles['wrapper--disabled_white']]: disabled === 'white' },
     { [styles.black]: color === 'black' },
     { [styles.white]: color === 'white' },
-    { [styles.nav]: type === 'nav' },
-    { [styles.search]: type === 'search' },
-    { [styles.modern]: type === 'modern' },
-    { [styles.submit]: type === 'submit' },
+    { [styles.wrapper_nav]: type === 'nav' },
+    { [styles.wrapper_search]: type === 'search' },
+    { [styles.wrapper_submit]: type === 'submit' },
     { [styles.success]: status === 'success' },
     { [styles.fail]: status === 'fail' },
     { [styles.small]: size === 'small' },
