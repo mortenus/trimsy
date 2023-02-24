@@ -34,18 +34,17 @@ export function PrivacyPolicyPage() {
         <div className={styles.wrapper}>
           <h4>Privacy Policy</h4>
           <p>This Privacy Policy is effective from Jan 1, 2023.</p>
-          <p> This Privacy Policy was updated on Feb 21, 2023.</p>
+          <p> This Privacy Policy was updated on Feb 24, 2023.</p>
           <h4>Introduction</h4>
           <p>
-            Welcome to whimsygames.co. We, at Whimsy Games (hereinafter – “we”, “us”, “Whimsy Games
-            LTD”), have created a Privacy Policy that aims to help you understand what Data we
-            collect, what we use it for and how you can exercise your rights. Reading Privacy Policy
-            is important, so we hope you will give it time and attention.
+            Welcome to trimsy.org. We, at Trimsy, have created a Privacy Policy that aims to help
+            you understand what Data we collect, what we use it for and how you can exercise your
+            rights. Reading Privacy Policy is important, so we hope you will give it time.
           </p>
           <p>
             {' '}
             Our Privacy Policy explains how we collect, safeguard and disclose information that
-            results from your use of our Service..
+            results from your use of our Service.
           </p>
           <p> We use your data to provide and improve Service.</p>
           <p>
@@ -71,10 +70,13 @@ export function PrivacyPolicyPage() {
             identifiable information that can be used to contact or identify you (“Personal Data”).
             Personally identifiable information may include, but is not limited to:
           </p>
-          <p>1. Email address</p>
-          <p>2. First name and last name</p>
-          <p>3. Phone number</p>
-          <p>4. Cookies and Usage Data</p>
+          <br />
+          <ul>
+            <li>1. Email address</li>
+            <li>2. First name and last name</li>
+            <li>3. Phone number</li>
+            <li>4. Cookies and Usage Data</li>
+          </ul>
           <p>
             We may use your Personal Data to contact you with newsletters, marketing or promotional
             materials and other information that may be of interest to you. You may opt out of
@@ -161,9 +163,6 @@ export function PrivacyPolicyPage() {
 
           <p>
             Google Analytics is a web analytics service offered by Google that tracks and reports
-          </p>
-          <p>
-            {' '}
             website traffic. Google uses the data collected to track and monitor the use of our
             Service. This data is shared with other Google services. Google may use the collected
             data to contextualize and personalize the ads of its own advertising network.
@@ -171,7 +170,10 @@ export function PrivacyPolicyPage() {
           <p>
             {' '}
             For more information on the privacy practices of Google, please visit the Google Privacy
-            Terms web page: https://policies.google.com/privacy?hl=en
+            Terms web page:{' '}
+            <Link target={'_blank'} href="https://policies.google.com/privacy?hl=en">
+              https://policies.google.com/privacy?hl=en
+            </Link>
           </p>
 
           <h5>Behavioral Remarketing</h5>

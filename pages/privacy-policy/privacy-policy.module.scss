@@ -3,7 +3,7 @@
 
   .wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 80vh;
 
@@ -48,6 +48,13 @@
 
       & > * {
         margin-right: 0;
+      }
+
+      a {
+        pointer-events: none;
+        user-select: none;
+
+        cursor: default;
       }
 
       @media (max-width: 1068px) {

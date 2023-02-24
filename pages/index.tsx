@@ -1,4 +1,4 @@
-import { Accomplish, ContactForm, Influence, Intro, Product } from 'components/Home';
+import { Accomplish, ContactForm, FAQ, Influence, Intro, Product } from 'components/Home';
 
 import { useOnScroll } from 'hooks/useOnScroll';
 
@@ -17,6 +17,8 @@ export default function Home() {
         <Accomplish onScrollEvent={onScrollEvent} />
 
         <Influence />
+
+        <FAQ />
 
         <ContactForm />
       </main>
