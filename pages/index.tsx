@@ -18,7 +18,7 @@ export default function Home() {
 
         <Influence />
 
-        <FAQ />
+        {/* <FAQ /> */}
 
         <ContactForm />
       </main>
