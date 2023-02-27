@@ -16,6 +16,11 @@ const HamburgerMenu = ({
   hamburgerActive,
   handleHamburgerChange,
 }: THamburgerMenu) => {
+  const handleContactUsPressed = () => {
+    handleHamburgerChange();
+    handleFormChange();
+  };
+
   return (
     <div className={clsx(styles.popup, { [styles.visible]: hamburgerActive })}>
       <ul className={styles.text}>
@@ -38,7 +43,7 @@ const HamburgerMenu = ({
           );
         })}
       </ul>
-      <Button type="nav" onClick={handleFormChange}>
+      <Button type="nav" onClick={handleContactUsPressed}>
         Contact us
       </Button>
     </div>

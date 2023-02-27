@@ -55,8 +55,8 @@
             font-size: 32px;
           }
 
-          @media (max-width: 500px) {
-            font-size: 24px;
+          @media (max-width: 372px) {
+            font-size: 28px;
           }
         }
       }
@@ -67,14 +67,14 @@
 
       flex-wrap: wrap;
 
-      padding-top: 60px;
+      padding-top: 80px;
 
       @media (max-width: 1068px) {
         justify-content: space-between;
       }
 
       @media (max-width: 734px) {
-        padding-top: 40px;
+        padding-top: 50px;
       }
     }
   }

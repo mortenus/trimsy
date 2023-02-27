@@ -2,6 +2,8 @@ import HeaderButton from 'components/HeaderButton';
 import Link from 'next/link';
 import React from 'react';
 
+import styles from './HeaderLinks.module.scss';
+
 const linkRows = [
   {
     id: 0,
@@ -40,14 +42,16 @@ const HeaderLinks = () => {
   return (
     <>
       {linkRows.map((obj) => {
-        return obj.links ? (
-          <HeaderButton key={obj.id} links={obj.links ? obj.links : []}>
-            {obj.title}
-          </HeaderButton>
-        ) : (
-          <Link key={obj.id} href={obj.href ? obj.href : ''}>
-            <li>{obj.title}</li>
-          </Link>
+        return (
+          <div key={obj.id} className={styles.temp}>
+            {obj.links ? (
+              <HeaderButton links={obj.links ? obj.links : []}>{obj.title}</HeaderButton>
+            ) : (
+              <Link href={obj.href ? obj.href : ''}>
+                <li>{obj.title}</li>
+              </Link>
+            )}
+          </div>
         );
       })}
     </>

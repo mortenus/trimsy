@@ -3,7 +3,7 @@ import useHideOnOutsideClick from 'hooks/useHideOnOutsideClick';
 import Link from 'next/link';
 import React from 'react';
 
-import styles from './Button.module.scss';
+import styles from './HeaderButton.module.scss';
 
 type THeaderButton = {
   children: React.ReactNode;
@@ -26,7 +26,7 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
 
   return (
     <>
-      <a className={styles.iten} ref={toNotCloseRef}>
+      <a className={styles.item} ref={toNotCloseRef}>
         <li onClick={handleOpenChange}>
           {children}
           {open ? (

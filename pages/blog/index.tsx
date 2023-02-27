@@ -11,11 +11,11 @@ import { BlogButton, BlogItem } from 'components/Blog';
 
 const itemArr = [
   {
-    date: 'Dec 5, 2022',
-    title: 'SEO HOW IT WORKS AND ETC SDA SA',
-    text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    date: 'Feb 27, 2023',
+    title: 'How to improve SEO of your website in 5 steps',
+    text: "SEO when used correctly could lead to a successful stream of new users to a web app. It's a part of app that isn't essential, but could boost your site, so why not use it. Late notice: There will be no obvious advices, as you should buy Google Ads...",
     img: BlogImg,
-    link: '/blog/test',
+    link: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
   },
 ];
 
@@ -64,7 +64,7 @@ export default function Blog() {
               return <BlogItem key={item.link} {...item} />;
             })}
           </div>
-          <div className={styles.nav}>
+          {/* <div className={styles.nav}>
             <BlogButton type={'nav'}>Prev</BlogButton>
 
             <div className={styles.numbers}>
@@ -77,7 +77,7 @@ export default function Blog() {
               <BlogButton type={'number'}>5</BlogButton>
             </div>
             <BlogButton type={'nav'}>Next</BlogButton>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
