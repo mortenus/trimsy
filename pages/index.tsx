@@ -1,4 +1,13 @@
-import { Accomplish, ContactForm, FAQ, Influence, Intro, Product } from 'components/Home';
+import {
+  Accomplish,
+  Boost,
+  ContactForm,
+  FAQ,
+  Here,
+  Influence,
+  Intro,
+  Product,
+} from 'components/Home';
 
 import { useOnScroll } from 'hooks/useOnScroll';
 
@@ -18,7 +27,11 @@ export default function Home() {
 
         <Influence />
 
-        {/* <FAQ /> */}
+        <Boost onScrollEvent={onScrollEvent} />
+
+        <FAQ />
+
+        <Here onScrollEvent={onScrollEvent} />
 
         <ContactForm />
       </main>

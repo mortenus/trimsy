@@ -10,6 +10,11 @@ import useHideScrollOnTrue from 'hooks/useHideScrollOnTrue';
 const linkRows = [
   {
     id: 0,
+    title: 'About',
+    href: '/about',
+  },
+  {
+    id: 1,
     title: 'Services',
     links: [
       {
@@ -25,12 +30,12 @@ const linkRows = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: 'Portfolio',
     href: '/#portfolio',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Blog',
     href: '/blog',
   },

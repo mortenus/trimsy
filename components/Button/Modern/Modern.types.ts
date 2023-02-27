@@ -1,6 +1,7 @@
 interface TButtonBase {
   children: React.ReactNode;
   style?: React.CSSProperties;
+  color?: 'black' | 'white';
 }
 
 interface TButtonOnClick extends TButtonBase {

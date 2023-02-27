@@ -29,6 +29,10 @@ $navHeight: 75px;
     z-index: 20;
     border-bottom: 1px solid #000;
 
+    @media (max-width: 350px) {
+      width: 100vw !important;
+    }
+
     .nav {
       max-width: 1280px;
       width: 100%;

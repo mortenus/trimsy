@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import React from 'react';
 
@@ -5,10 +6,16 @@ import styles from './Modern.module.scss';
 
 import TModern from './Modern.types';
 
-const ModernButton = ({ children, style, to }: TModern) => {
+const ModernButton = ({ children, style, to, color }: TModern) => {
+  const stylying = clsx(
+    styles.wrapper,
+    { [styles.black]: color === 'black' },
+    { [styles.white]: color === 'white' },
+  );
+
   return (
     <Link href={to ? to : ''}>
-      <div className={styles.wrapper}>
+      <div className={stylying}>
         <div className={styles.button} style={style}>
           {children}
         </div>

@@ -5,6 +5,11 @@ import React from 'react';
 const linkRows = [
   {
     id: 0,
+    title: 'About',
+    href: '/about',
+  },
+  {
+    id: 1,
     title: 'Services',
     links: [
       {
@@ -25,7 +30,7 @@ const linkRows = [
   //     href: '/#portfolio',
   //   },
   {
-    id: 1,
+    id: 2,
     title: 'Blog',
     href: '/blog',
   },

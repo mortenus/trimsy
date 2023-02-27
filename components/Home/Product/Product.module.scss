@@ -69,6 +69,15 @@
       width: clamp(29ch, 2vw, 75ch);
     }
 
+    @media (max-width: 500px) {
+      max-width: 250px;
+      width: 100%;
+
+      padding: 0 20px;
+
+      height: 80vh;
+    }
+
     .content {
       .items {
         display: flex;
@@ -156,11 +165,19 @@
         .text {
           h3 {
             text-transform: uppercase;
+
+            @media (max-width: 500px) {
+              font-size: 12px;
+            }
           }
 
           p {
             font-weight: 500;
             opacity: 0.5;
+
+            @media (max-width: 500px) {
+              font-size: 10px;
+            }
           }
         }
       }
