@@ -31,7 +31,7 @@ export default function Home() {
 
         <FAQ />
 
-        <Here onScrollEvent={onScrollEvent} />
+        <Here />
 
         <ContactForm />
       </main>
