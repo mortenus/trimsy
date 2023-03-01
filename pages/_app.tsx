@@ -249,14 +249,17 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <meta name="theme-color" content="#ffffff" />
         <script
           type="application/ld+json"
+          async
           dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationSchema) }}
         />
         <script
           type="application/ld+json"
+          async
           dangerouslySetInnerHTML={{ __html: JSON.stringify(WebSiteSchema) }}
         />
         <script
           type="application/ld+json"
+          async
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQSchema) }}
         />
       </Head>
