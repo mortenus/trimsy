@@ -27,7 +27,13 @@ export default function About() {
       </div>
 
       <div className={styles.background}>
-        <Image unoptimized={true} fill src={'/static/img/about/background.jpg'} alt="Intro JPG" />
+        <Image
+          unoptimized={true}
+          priority
+          fill
+          src={'/static/img/about/background.jpg'}
+          alt="Intro JPG"
+        />
       </div>
     </section>
   );

@@ -44,6 +44,9 @@ const linksArr = [
 ];
 
 StandsWithUkraine.title = 'Trimsy stands with Ukraine';
+StandsWithUkraine.description =
+  "We, at Trimsy, condemn the war in Ukraine. Let's support the people of Ukraine, any way we can. Join us in helping those in need.";
+
 export default function StandsWithUkraine() {
   return (
     <>

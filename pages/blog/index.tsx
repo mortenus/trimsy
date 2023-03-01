@@ -4,10 +4,7 @@ import styles from './blog.module.scss';
 
 import { Button } from 'components';
 import BlogImg from 'public/static/img/blog/blog-img.jpg';
-import BlogImg2 from 'public/static/img/blog/blog-img2.jpg';
-import Image from 'next/image';
-import Link from 'next/link';
-import { BlogButton, BlogItem } from 'components/Blog';
+import { BlogItem } from 'components/Blog';
 
 const itemArr = [
   {
@@ -20,6 +17,7 @@ const itemArr = [
 ];
 
 Blog.title = 'Blog';
+Blog.description = 'Get the latest news about Web, SEO and Design in Trimsy Blog';
 
 export default function Blog() {
   return (

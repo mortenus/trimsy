@@ -5,6 +5,7 @@ import React from 'react';
 import styles from './privacy-policy.module.scss';
 
 PrivacyPolicyPage.title = 'Privacy Policy';
+PrivacyPolicyPage.description = 'Trimsy Privacy Policy.';
 
 export function PrivacyPolicyPage() {
   return (

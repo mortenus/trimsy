@@ -2,8 +2,6 @@ import React from 'react';
 
 import styles from './Here.module.scss';
 
-import Button from 'components/Button';
-
 import HereItem from './HereItem';
 
 const itemsArr = [

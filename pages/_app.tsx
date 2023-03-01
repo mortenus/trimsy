@@ -12,7 +12,7 @@ import useGtag from 'hooks/useGtag';
 import useHideScrollOnTrue from 'hooks/useHideScrollOnTrue';
 
 type CustomAppProps = AppProps & {
-  Component: NextComponentType & { title: string };
+  Component: NextComponentType & { title: string; description?: string };
 };
 
 //https://neilpatel.com/blog/get-started-using-schema/
@@ -123,7 +123,7 @@ const OrganizationSchema = {
   '@type': 'Organization',
   name: 'Trimsy',
   url: 'https://trimsy.org/',
-  logo: 'https://trimsy.org/images/logo.svg',
+  logo: 'https://trimsy.org/images/mini-logo.png',
   description: 'Trimsy is a web development studio that builds outstanding apps.',
   address: {
     '@type': 'PostalAddress',
@@ -217,6 +217,9 @@ const WebSiteSchema = {
 //   },
 // };
 
+const defaultDescription =
+  'Discover your presence in Web the way you want. Trimsy has developers to help you achieve anything in the world of Web.';
+
 export default function App({ Component, pageProps }: CustomAppProps) {
   const [formOpen, setFormOpen] = React.useState<boolean>(false);
 
@@ -229,10 +232,11 @@ export default function App({ Component, pageProps }: CustomAppProps) {
     <>
       <Head>
         <title>{Component.title + ' - Trimsy'}</title>
-        <meta
-          name="description"
-          content="Discover your presence in Web the way you want. Trimsy has developers to help you achieve anything in the world of Web"
-        />
+        <meta name="description" content={Component.description || defaultDescription} />
+        <meta content={Component.title} property={'og:title'} />
+        <meta content={Component.description || defaultDescription} property={'og:description'} />
+        <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
+        <meta property="og:type" content="website" />
         <meta name="robots" content="noodp,noydir" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
