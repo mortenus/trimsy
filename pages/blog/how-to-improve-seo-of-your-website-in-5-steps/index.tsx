@@ -8,7 +8,7 @@ const test = {
   title: 'How To Improve SEO of your Website in 5 Steps',
   headerImg: '/static/img/blog/test/header.jpg',
   date: 'March 2, 2023',
-  minToRead: 6,
+  minToRead: 8,
 };
 
 Post.title = test.title;
@@ -52,7 +52,7 @@ export default function Post() {
 
           <p>
             Google receives 90% of all online searches. That’s why we’re going to talk about setting
-            up SEO for Googling and connect to Google Search Console for detailed anlysis.
+            up SEO for Googling and connect to Google Search Console for detailed analysis.
           </p>
 
           <h4>Inside of Google’s Search Engine.</h4>
@@ -260,7 +260,7 @@ export default function Post() {
             </li>
           </ul>
 
-          <h4>Bottom Line.</h4>
+          <h4>Bottom Line</h4>
           <p>
             Google Search is a powerful tool for users to discover requested sources of information.
           </p>
@@ -283,7 +283,7 @@ export default function Post() {
               I&apos;m a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment and
               mutual benefit from the associates I am given a chance to have a journey with. We are
               thinkers and doers, difficulties could be challanging, but that is the beauty of it.
-              Doing things with speed does not mean doing it imperfectly, the only way to not fall
+              Doing things with speed does not mean doing them imperfectly, the only way to not fall
               back - is to go forward.
             </p>
           </div>
