@@ -49,13 +49,7 @@ export function Careers() {
         </div>
 
         <div className={styles.background}>
-          <Image
-            unoptimized={true}
-            priority
-            fill
-            src={'/static/img/careers/intro2.jpg'}
-            alt="Intro JPG"
-          />
+          <Image priority fill src={'/static/img/careers/intro2.jpg'} alt="Intro JPG" />
         </div>
       </section>
       <section className={styles.wrapper}>

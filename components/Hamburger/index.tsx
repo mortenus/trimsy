@@ -31,11 +31,6 @@ const linkRows = [
   },
   {
     id: 2,
-    title: 'Portfolio',
-    href: '/#portfolio',
-  },
-  {
-    id: 3,
     title: 'Blog',
     href: '/blog',
   },

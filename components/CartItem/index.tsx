@@ -14,10 +14,10 @@ type TCartItem = {
 
 const CartItem = ({ obj }: TCartItem) => {
   return (
-    <div key={obj.id} className={styles.cartItem}>
+    <div key={obj.id} className={styles.item}>
       <div style={{ backgroundImage: `url(${obj.imageUrl})` }} className={styles.image} />
 
-      <div className={styles.cartTitle}>
+      <div className={styles.title}>
         <p>{obj.title}</p>
         <b>${obj.price}</b>
       </div>

@@ -1,4 +1,4 @@
-.cartItem {
+.item {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
@@ -9,26 +9,19 @@
   padding: 10px;
 
   .image {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 10px;
 
-    @media only screen and (min-width: 1450px) {
-      & {
-        width: 60px;
-        height: 60px;
-      }
+    @media (min-width: 1450px) {
+      width: 40px;
+      height: 40px;
     }
   }
 
-  @media only screen and (min-width: 1450px) {
-    & {
-    }
-  }
-
-  .cartTitle {
+  .title {
     margin-right: 10px;
     flex: 1;
 
@@ -42,8 +35,12 @@
   }
 
   p {
-    font-size: 0.7em;
+    font-size: 12px;
     margin: 0;
+
+    @media (max-width: 1330px) {
+      font-size: 10px;
+    }
   }
   b {
     font-size: 0.6em;

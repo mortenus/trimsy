@@ -246,13 +246,55 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 
-        <link rel="preload" href="/styles/fonts/Spartan-Thin.woff" as="font" type="font/woff" />
-        <link rel="preload" href="styles/fonts/Spartan-ExtraLight.ttf" as="font" type="font/ttf" />
-        <link rel="preload" href="styles/fonts/Spartan-Light.ttf" as="font" type="font/ttf" />
-        <link rel="preload" href="styles/fonts/Spartan-Regular.woff" as="font" type="font/woff" />
-        <link rel="preload" href="styles/fonts/Spartan-Medium.ttf" as="font" type="font/ttf" />
-        <link rel="preload" href="styles/fonts/Spartan-SemiBold.ttf" as="font" type="font/ttf" />
-        <link rel="preload" href="styles/fonts/Spartan-Bold.woff" as="font" type="font/woff" />
+        <link
+          rel="preload"
+          href="/styles/fonts/Spartan-Thin.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="styles/fonts/Spartan-ExtraLight.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="styles/fonts/Spartan-Light.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="styles/fonts/Spartan-Regular.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="styles/fonts/Spartan-Medium.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="styles/fonts/Spartan-SemiBold.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="styles/fonts/Spartan-Bold.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin=""
+        />
         <link
           rel="preload"
           href="/styles/fonts/Spartan-ExtraBold.woff"

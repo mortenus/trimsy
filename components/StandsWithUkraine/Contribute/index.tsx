@@ -17,7 +17,7 @@ const Contribute = () => {
       </div>
       <div className={styles.flag}>
         <div className={styles.img}>
-          <Image fill src={UkraineFlag} alt="Ukraine Flag" />
+          <Image fill priority src={UkraineFlag} alt="Ukraine Flag" />
         </div>
         {/* <Image width={400} height={200} src={UkraineFlag} alt="Ukraine Flag" /> */}
       </div>

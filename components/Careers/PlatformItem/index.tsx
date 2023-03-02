@@ -12,7 +12,7 @@ type TPlatformItem = {
 const PlatformItem = ({ onScrollEvent, offset, children }: TPlatformItem) => {
   const ref = React.useRef(null);
 
-  const { inView } = useInView({ ref, onScrollEvent, offset });
+  const { inView } = useInView({ ref, onScrollEvent, offset, mobileDisabled: true });
 
   return (
     <div style={{ opacity: inView ? '1' : '0' }} className={styles.item} ref={ref}>
