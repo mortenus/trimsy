@@ -8,9 +8,9 @@ import { BlogItem } from 'features/Blog';
 
 const itemArr = [
   {
-    date: 'Feb 27, 2023',
-    title: 'How to improve SEO of your website in 5 steps',
-    text: "SEO when used correctly could lead to a successful stream of new users to a web app. It's a part of app that isn't essential, but could boost your site, so why not use it. Late notice: There will be no obvious advices, as you should buy Google Ads...",
+    date: 'March 2, 2023',
+    title: 'How To Improve SEO of your Website in 5 Steps',
+    text: 'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed anlysis.',
     img: BlogImg,
     link: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
   },
@@ -26,7 +26,7 @@ export default function Blog() {
         <h2>Trimsy Blog</h2>
         <p>Get the latest news about Web, SEO and Design in our Blog</p>
       </div>
-      <div className={styles.content}>
+      <div className={styles.content} id="search">
         <div className={styles.wrapper}>
           <div className={styles.search}>
             <svg
