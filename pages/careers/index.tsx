@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Button } from 'components';
 import ModernButton from 'components/Button/Modern';
-import { PlatformItem, Potential, ProfessionalItem, ContactForm, Globe } from 'components/Careers';
+import { PlatformItem, Potential, ProfessionalItem, ContactForm, Globe } from 'features/Careers';
 
 import { useOnScroll } from 'hooks/useOnScroll';
 
@@ -49,7 +49,13 @@ export function Careers() {
         </div>
 
         <div className={styles.background}>
-          <Image priority fill src={'/static/img/careers/intro2.jpg'} alt="Intro JPG" />
+          <Image
+            unoptimized={true}
+            priority
+            fill
+            src={'/static/img/careers/intro2.jpg'}
+            alt="Intro JPG"
+          />
         </div>
       </section>
       <section className={styles.wrapper}>

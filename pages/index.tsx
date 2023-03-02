@@ -7,7 +7,7 @@ import {
   Influence,
   Intro,
   Product,
-} from 'components/Home';
+} from 'features/Home';
 
 import { useOnScroll } from 'hooks/useOnScroll';
 

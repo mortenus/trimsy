@@ -8,30 +8,24 @@ type TUseInView = {
   mobileDisabled?: boolean;
 };
 
-export default function useInView({
-  ref,
-  onScrollEvent,
-  offset,
-  oneTime = false,
-  mobileDisabled,
-}: TUseInView) {
+export default function useInView({ ref, onScrollEvent, offset, oneTime = false }: TUseInView) {
   const [inView, setInView] = React.useState(false);
 
   const [alwaysTrue, setAlwaysTrue] = React.useState(false);
 
-  const [windowWidth, setWindowWidth] = React.useState(0);
+  //   const [windowWidth, setWindowWidth] = React.useState(0);
 
-  React.useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+  //   React.useEffect(() => {
+  //     const handleWindowResize = () => {
+  //       setWindowWidth(window.innerWidth);
+  //     };
 
-    window.addEventListener('resize', handleWindowResize);
+  //     window.addEventListener('resize', handleWindowResize);
 
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
+  //     return () => {
+  //       window.removeEventListener('resize', handleWindowResize);
+  //     };
+  //   }, []);
 
   React.useEffect(() => {
     if (inView && oneTime) setAlwaysTrue(true);
@@ -60,9 +54,9 @@ export default function useInView({
     return { inView: true };
   }
 
-  if (mobileDisabled && windowWidth <= 734) {
-    return { inView: true };
-  }
+  //   if (mobileDisabled && windowWidth <= 734) {
+  //     return { inView: true };
+  //   }
 
   return { inView };
 }

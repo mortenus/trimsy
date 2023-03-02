@@ -1,4 +1,4 @@
-import { Contribute, Intro, SupportItem } from 'components/StandsWithUkraine';
+import { Contribute, Intro, SupportItem } from 'features/StandsWithUkraine';
 import React from 'react';
 import Head from 'next/head';
 

@@ -4,7 +4,7 @@ import styles from './blog.module.scss';
 
 import { Button } from 'components';
 import BlogImg from 'public/static/img/blog/blog-img.jpg';
-import { BlogItem } from 'components/Blog';
+import { BlogItem } from 'features/Blog';
 
 const itemArr = [
   {
