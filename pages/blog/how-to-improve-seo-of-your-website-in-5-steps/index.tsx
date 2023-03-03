@@ -6,7 +6,7 @@ import styles from './Post.module.scss';
 
 const test = {
   title: 'How To Improve SEO of your Website in 5 Steps',
-  headerImg: '/static/img/blog/test/header.jpg',
+  headerImg: 'https://trimsy.org/uploads/1666542894623.jpg',
   date: 'March 2, 2023',
   minToRead: 8,
 };
@@ -34,7 +34,7 @@ export default function Post() {
             width="0"
             height="0"
             sizes="100vw"
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
             src={test.headerImg}
             alt={'Header IMG'}
           />
@@ -77,7 +77,7 @@ export default function Post() {
             height="0"
             sizes="100vw"
             style={{ width: '100%', height: 'auto' }}
-            src={'/static/img/blog/steps/seo.png'}
+            src={'https://trimsy.org/uploads/8459359022794.png'}
             alt={'Image'}
           />
           <p>
@@ -123,7 +123,7 @@ export default function Post() {
             height="0"
             sizes="100vw"
             style={{ width: '100%', height: 'auto' }}
-            src={'/static/img/blog/steps/description.png'}
+            src={'https://trimsy.org/uploads/5735159490278.png'}
             alt={'Image'}
           />
 
@@ -158,7 +158,7 @@ export default function Post() {
             height="0"
             sizes="100vw"
             style={{ width: '100%', height: 'auto' }}
-            src={'/static/img/blog/steps/title.png'}
+            src={'https://trimsy.org/uploads/8131405422084.png'}
             alt={'Image'}
           />
 
@@ -168,7 +168,7 @@ export default function Post() {
             show, what is the website’s Logo and which pages to show in sitemap, so we can help
             Google understand your site better.
           </p>
-          <p>Setting up a Schema is going to help us with this.</p>
+          <p>Setting up a Schema for structured data is going to be a solution.</p>
           <p>
             For example, this would help Google identify which is the logo, so it could show it next
             time your site appears in search.
@@ -297,7 +297,14 @@ export default function Post() {
 
         <div className={styles.author}>
           <div className={styles.img}>
-            <Image fill src={'/static/img/blog/test/author.jpg'} alt={'Author image'} />
+            {/* <Image fill src={'https://trimsy.org/static/img/blog/test/author.jpg'} alt={'Author image'} /> */}
+            <Image
+              fill
+              src={
+                'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg'
+              }
+              alt={'Author image'}
+            />
           </div>
           <div className={styles.info}>
             <span>Written by</span>

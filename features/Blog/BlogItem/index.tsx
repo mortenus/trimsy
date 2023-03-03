@@ -8,16 +8,24 @@ type TBlogItem = {
   date: string;
   title: string;
   text: string;
-  img: any;
-  link: string;
+  imgLink: any;
+  slug: string;
 };
 
-const BlogItem = ({ date, title, text, img, link }: TBlogItem) => {
+const BlogItem = ({ date, title, text, imgLink, slug }: TBlogItem) => {
   return (
     <div className={styles.item}>
-      <Link href={link}></Link>
+      <Link href={slug} />
       <div className={styles.imageWrap}>
-        <Image className={styles.img} src={img} alt={'blog-cover'} />
+        <Image
+          className={styles.img}
+          width="0"
+          height="0"
+          sizes="100vw"
+          //   style={{ width: '100%', height: 'auto' }}
+          src={imgLink}
+          alt={'blog-cover'}
+        />
       </div>
       <div className={styles.text}>
         <span>{date}</span>

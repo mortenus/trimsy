@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './blog.module.scss';
 
 import { Button } from 'components';
-import BlogImg from 'public/static/img/blog/blog-img.jpg';
 import { BlogItem } from 'features/Blog';
 
 const itemArr = [
@@ -11,8 +10,8 @@ const itemArr = [
     date: 'March 2, 2023',
     title: 'How To Improve SEO of your Website in 5 Steps',
     text: 'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
-    img: BlogImg,
-    link: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
+    imgLink: 'https://trimsy.org/uploads/1666542894623.jpg',
+    slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
   },
 ];
 
@@ -59,7 +58,7 @@ export default function Blog() {
 
           <div className={styles.blogs}>
             {itemArr.map((item) => {
-              return <BlogItem key={item.link} {...item} />;
+              return <BlogItem key={item.slug} {...item} />;
             })}
           </div>
           {/* <div className={styles.nav}>

@@ -97,7 +97,7 @@ const FAQSchema = {
       name: 'What is Domain and VPS?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'It is simpler than you think. To host your application, you would need to use Virtual Private Server, it is simply a private computer that runs your application. Domain is the link in the browser to direct user to that computer so they could experience the app in the browser. We provide such service, to get more details get in contact with us.',
+        text: 'It is simple. To host your application, you would need to use Virtual Private Server, it is simply a private computer that runs your application. Domain is the link in the browser to direct user to that computer so they could experience the app in the browser. We provide such service, to get more details get in contact with us.',
       },
     },
   ],
@@ -167,7 +167,11 @@ const WebSiteSchema = {
     {
       '@type': 'BreadcrumbList',
       '@id': 'https://trimsy.org/#breadcrumb',
-      itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home' }],
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'About us', item: 'https://trimsy.org/about' },
+        { '@type': 'ListItem', position: 2, name: 'Carrers', item: 'https://trimsy.org/careers' },
+        { '@type': 'ListItem', position: 3, name: 'Blog', item: 'https://trimsy.org/blog' },
+      ],
     },
   ],
 };
