@@ -29,7 +29,15 @@ export default function Post() {
         </Link>
         <h2 className={styles.title}>{test.title}</h2>
         <div className={styles.headerImg}>
-          <Image fill src={test.headerImg} alt={'Header IMG'} />
+          <Image
+            priority
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            src={test.headerImg}
+            alt={'Header IMG'}
+          />
         </div>
 
         <div className={styles.date}>
@@ -93,7 +101,11 @@ export default function Post() {
               'In <head> section of our page, we can use <meta> tag to directly tell Google how to understand and treat certain items of our page.'
             }
           </p>
-          <p>This code tells Google the description current page has.</p>
+          <h6>This code tells Google the description current page has.</h6>
+
+          <div className={styles.note}>
+            <span>Note that description has to be unique.</span>
+          </div>
 
           <div className={styles.code}>
             <code>
@@ -105,10 +117,6 @@ export default function Post() {
             </code>
           </div>
 
-          <div className={styles.note}>
-            <span>Note that description has to be unique.</span>
-          </div>
-
           {/* <div className={styles.img}> */}
           <Image
             width="0"
@@ -118,14 +126,15 @@ export default function Post() {
             src={'/static/img/blog/steps/description.png'}
             alt={'Image'}
           />
+
           {/* </div> */}
 
           <p>
-            Google will crawl your page, and if description of a page is absent or Googlebot finds a
-            way that it could be used in any other webpage (isn’t unique), it is going to ignore the
-            tag and find text inside of page to use and show it instead.
+            Google will crawl your page, and if description of a page is absent or Googlebot finds
+            it very common (could be used in any other webpage, isn’t unique), it is going to ignore
+            the tag and find relative text inside of a page to use and show it instead.
           </p>
-          <p>This can be simply disabled by this meta tag</p>
+          <p>This behaviour can be disabled:</p>
           <div className={styles.code}>
             <code>
               {`        <meta name="robots" content="noodp,noydir" />
@@ -137,10 +146,10 @@ export default function Post() {
             when showing your site in the search results.
           </p>
 
-          <p>Title of page isn’t exactly a meta tag, but is used by Search Engines also:</p>
+          <h6>Title of page isn’t exactly a meta tag, but is used by Search Engines also:</h6>
           <div className={styles.code}>
             <code>
-              {`         <title>'Lorem ipsum dolor sit amet'</title>
+              {`         <title>{"Lorem ipsum dolor sit amet"}</title>
           `}
             </code>
           </div>
@@ -166,15 +175,25 @@ export default function Post() {
           </p>
           <div className={styles.code}>
             <code>
-              {`        { '@context': 'http://www.schema.org',
-  '@type': 'Organization',
-  name: 'Trimsy',
-  url: 'https://trimsy.org/',
-  logo: 'https://trimsy.org/images/logo.svg',
-  description: 'Trimsy is a web development studio that builds outstanding apps.'
-        }
-
-          `}
+              {`<script type="application/ld+json">`}
+              <br />
+              {`{`}
+              <br />
+              {`'@context': 'http://www.schema.org',`}
+              <br />
+              {`'@type': 'Organization',`}
+              <br />
+              {`name: 'Trimsy',`}
+              <br />
+              {`url: 'https://trimsy.org/',`}
+              <br />
+              {`logo: 'https://trimsy.org/images/logo.svg',`}
+              <br />
+              {`description: 'Trimsy is a web development studio that builds outstanding apps.'`}
+              <br />
+              {`}`}
+              <br />
+              {`</script>`}
             </code>
           </div>
           <div className={styles.code}>
@@ -210,7 +229,12 @@ export default function Post() {
           </div>
 
           <p>
-            Google has a guide for managing your crawl budget <Link href="#">here.</Link>
+            Google has a guide for managing your crawl budget{' '}
+            <Link
+              href="https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget"
+              target={'_blank'}>
+              here.
+            </Link>
           </p>
           <p>
             Using CDN is going to take the workload down, since it’s not the actual code that’s

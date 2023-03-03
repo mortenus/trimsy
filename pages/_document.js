@@ -157,7 +157,7 @@ const WebSiteSchema = {
       url: 'https://trimsy.org/',
       name: 'Web Development | Trimsy',
       isPartOf: { '@id': 'https://trimsy.org/#website' },
-      primaryImageOfPage: { '@id': 'https://trimsy.org/#primaryimage' },
+      primaryImageOfPage: { '@id': 'https://trimsy.org/images/mini-logo.png' },
       description:
         'Web Studio \u2705 Discover your presence in Web the way you want. \u261b One of the top growing development company in the industry.',
       breadcrumb: { '@id': 'https://trimsy.org/#breadcrumb' },
