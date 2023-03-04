@@ -106,14 +106,14 @@ export default function Post() {
               analysis.
             </p>
 
-            <h4>Inside of Google’s Search Engine.</h4>
+            <h4>Inside of Google’s Search Engine</h4>
             <p>
               Google uses crawl bots, we are going to talk more about which technologies improve how
               good your page is for crawlers later on.
             </p>
             <p>
               This picture from Google is going to help us understand the way Google Search Engine
-              Works.
+              works.
             </p>
             <Image
               width="0"
@@ -129,11 +129,23 @@ export default function Post() {
             </p>
             <p>
               This was implemented and is a smart move from Google because Javascript is expensive
-              and Googlebots need to look at over hundreds of trillion webpages.
+              and Googlebots need to look at over{' '}
+              <Link
+                href="https://www.kevin-indig.com/googles-index-is-smaller-than-we-think-and-might-not-grow-at-all/"
+                target={'_blank'}>
+                hundreds of trillion webpages.
+              </Link>
             </p>
             <p>So it parses HTML immediately and puts Javascript in queue to run it later.</p>
 
-            <h5>1. Setting up your future website</h5>
+            <p>
+              That is a reason, why Google prefer different types of modern technologies more, than
+              old ones.
+            </p>
+
+            <p>Let&apos;s talk more about this.</p>
+
+            <h5>1. Setting up your future website perfectly</h5>
 
             <p>
               Search Engine Optimization needs help setting up, so we need to align our code
@@ -141,7 +153,7 @@ export default function Post() {
             </p>
             <p>
               {
-                'In <head> section of our page, we can use <meta> tag to directly tell Google how to understand and treat certain items of our page.'
+                'In <head> section of our page, we can use <meta> tag to directly tell Google how to understand and treat our page.'
               }
             </p>
             <h6>This code tells Google the description current page has.</h6>
@@ -160,6 +172,11 @@ export default function Post() {
               </code>
             </div>
 
+            <p>
+              Where <span>content</span> is a text of meta tag and <span>name</span> tells to put it
+              in description section of Google Search:
+            </p>
+
             {/* <div className={styles.img}> */}
             <Image
               width="0"
@@ -177,7 +194,9 @@ export default function Post() {
               it very common (could be used in any other webpage, isn’t unique), it is going to
               ignore the tag and find relative text inside of a page to use and show it instead.
             </p>
-            <p>This behaviour can be disabled:</p>
+
+            <h6>This behaviour can be disabled:</h6>
+
             <div className={styles.code}>
               <code>
                 {`        <meta name="robots" content="noodp,noydir" />
@@ -189,7 +208,7 @@ export default function Post() {
               when showing your site in the search results.
             </p>
 
-            <h6>Title of page isn’t exactly a meta tag, but is used by Search Engines also:</h6>
+            <h6>Title of page isn’t exactly a meta tag, but is used by Search Engines:</h6>
             <div className={styles.code}>
               <code>
                 {`         <title>{"Lorem ipsum dolor sit amet"}</title>
@@ -205,21 +224,49 @@ export default function Post() {
               alt={'Image'}
             />
 
+            <h6>To set up icon for a page:</h6>
+
+            <div className={styles.code}>
+              <code>
+                {`         <link rel="icon" href="/favicon.ico" />
+          `}
+              </code>
+            </div>
+
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '75%', height: 'auto' }}
+              //   src={'https://trimsy.org/uploads/5454256022794.png'}
+              src={'/uploads/5454256022794.png'}
+              alt={'Image'}
+            />
+
+            <p>
+              Uploading web application icon to{' '}
+              <Link href="https://realfavicongenerator.net/" target={'_blank'}>
+                this
+              </Link>{' '}
+              service will help optimizing it for different sizes and types of devices.
+            </p>
+
             <h5>2. Enhancements</h5>
             <p>
-              Google Search Engine is a smart machine, but many times it confuses what description
-              to show, what is the website’s Logo and which pages to show in sitemap, so we can help
-              Google understand your site better.
+              Google Search Engine is a smart machine, but many times it confuses what is the
+              website’s main picture is, so we can help Google understand your site better.
             </p>
             <p>Setting up a Schema for structured data is going to be a solution.</p>
-            <p>
-              For example, this would help Google identify which is the logo or desired image for a
-              current page, so it could show it next time your page appears in search.
-            </p>
+            <p>{`These are now <script> tags and they go to <head> section as well.`}</p>
+            <h6>
+              For example, this would help Google identify which is the desired image for current
+              page, so it could show it next time your page appears in search.
+            </h6>
             <div className={styles.note}>
               <span>
                 If primary image is absent or incorect Google will try to find relavant picture
-                inside the page to show - that is why this might be important part.
+                inside the page to show for specific search, regardless - that is why this might be
+                important part.
               </span>
             </div>
             <div className={styles.code}>
@@ -265,30 +312,6 @@ export default function Post() {
               <span>Logo or Primary Image.</span>
             </p>
 
-            <div className={styles.code}>
-              <code>
-                {`<script type="application/ld+json">`}
-                <br />
-                {`{`}
-                <br />
-                {`'@context': 'http://www.schema.org',`}
-                <br />
-                {`'@type': 'WebPage',`}
-                <br />
-                {`'@id': 'https://trimsy.org/#webpage',`}
-                <br />
-                {`url: 'https://trimsy.org/'`}
-                <br />
-                {`name: 'Web Development | Trimsy'`}
-                <br />
-                {`primaryImageOfPage: { '@id': 'https://trimsy.org/images/logo.svg' }`}
-                <br />
-                {`}`}
-                <br />
-                {`</script>`}
-              </code>
-            </div>
-
             <h5>3. Load Time</h5>
             <p>
               GoogleBots also look at how long it takes to load webpage, so it ranks it up
@@ -311,22 +334,44 @@ export default function Post() {
                 here.
               </Link>
             </p>
+
+            <h6>Using CDN</h6>
             <p>
-              Using CDN is going to take the workload down, since it’s not the actual code that’s
-              heave to load, but mostly the images and additional libraries that we can load from
-              CDN that is located closer to the user, not the page server.
+              Content Delivery Network (CDN) is going to take the workload down, since it’s not the
+              actual code that’s heave to load, but mostly the images and additional libraries that
+              can be loaded from servers that are closer to the user.
             </p>
 
-            <h5>4. Right Technologies</h5>
+            <h6>Unnecessary code</h6>
+            <p>Page should not execute any additional code that is not essential for page.</p>
+            <p>At least doing it later, when user is using the app.</p>
+            <p>
+              Loading code asynchronously will speed up the app&apos;s loading time. Using KISS and
+              YAGNI principles while developing an app also would help.
+            </p>
+            <div className={styles.note}>
+              <span>
+                There is a great{' '}
+                <Link href="https://gtmetrix.com/" target={'_blank'}>
+                  tool
+                </Link>{' '}
+                to test the website speed loading time.
+              </span>
+            </div>
+
+            <h5>4. New Technologies</h5>
             <p>
               Frameworks like NextJS are one of the best solutions for SEO and GoogleBots to crawl
-              since the content is loaded on the SSR (server-side rendering).
+              since the content is loaded using the SSR (server-side rendering).
             </p>
             <p>
               This approach enables the server to render the app and send the rendered version to
-              the user already, while other Javascript code loads in the background, so search
-              engines will receive HTML directly from the server and doesn’t need generating HTML
-              while crawling.
+              the user already, while other Javascript code loads in the background.
+            </p>
+            <p>Sounds pretty good, right?</p>
+            <p>
+              While search engines will receive HTML directly from the server and doesn’t need
+              generating HTML while crawling.
             </p>
 
             <h5>5. Principles</h5>
@@ -366,9 +411,9 @@ export default function Post() {
             </p>
             <p>
               Google found smart ways to rank up different websites and surely most of the time
-              Google needs our help setting up different more or less important things for our site,
-              Googlebots are smart, but not perfect... yet.
+              Google needs our help setting up different less or more important things for our site,
             </p>
+            <p>Googlebots are smart, but not perfect... yet.</p>
           </section>
 
           <div className={styles.author}>
