@@ -12,7 +12,6 @@ import Footer from 'features/Footer';
 import Header from 'features/Header';
 import FormOverflow from 'features/FormOverflow';
 import Script from 'features/Script';
-import NextScript from 'next/script';
 
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string; description?: string };

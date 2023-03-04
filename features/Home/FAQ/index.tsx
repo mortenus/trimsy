@@ -24,7 +24,7 @@ const FAQ = () => {
         </Item>
         <Item
           description={
-            'It is simple. To host your application, you would need to use Virtual Private Server, it is simply a private computer that runs your application. Domain is the link in the browser to direct user to that computer so they could experience the app in the browser. We provide such service, to get more details get in contact with us.'
+            'It is simple, to host your application, you would need to use Virtual Private Server, it is simply a private computer that runs your application. Domain is the link in the browser to direct user to that computer so they could experience the app in the browser. We provide such service, to get more details get in contact with us.'
           }>
           What is Domain and VPS?
         </Item>
