@@ -95,27 +95,27 @@ const WebSiteSchema = {
       url: 'https://trimsy.org/',
       name: 'Web Development | Trimsy',
       isPartOf: { '@id': 'https://trimsy.org/#website' },
-      primaryImageOfPage: { '@id': 'https://trimsy.org/images/mini-logo.png' },
+      primaryImageOfPage: { '@id': 'https://trimsy.org/images/logo.svg' },
       description:
         'Web Studio \u2705 Discover your presence in Web the way you want. \u261b One of the top growing development company in the industry.',
       breadcrumb: { '@id': 'https://trimsy.org/#breadcrumb' },
       inLanguage: 'en-US',
       potentialAction: [{ '@type': 'ReadAction', target: ['https://trimsy.org/'] }],
     },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://trimsy.org/#breadcrumb',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'About us', item: 'https://trimsy.org/about' },
-        { '@type': 'ListItem', position: 2, name: 'Carrers', item: 'https://trimsy.org/careers' },
-        { '@type': 'ListItem', position: 3, name: 'Blog', item: 'https://trimsy.org/blog' },
-      ],
-    },
+    // {
+    //   '@type': 'BreadcrumbList',
+    //   '@id': 'https://trimsy.org/#breadcrumb',
+    //   itemListElement: [
+    //     { '@type': 'ListItem', position: 1, name: 'About us', item: 'https://trimsy.org/about' },
+    //     { '@type': 'ListItem', position: 2, name: 'Carrers', item: 'https://trimsy.org/careers' },
+    //     { '@type': 'ListItem', position: 3, name: 'Blog', item: 'https://trimsy.org/blog' },
+    //   ],
+    // },
   ],
 };
 
 const OrganizationSchema = {
-  '@context': 'http://www.schema.org',
+  '@context': 'http://schema.org',
   '@type': 'Organization',
   name: 'Trimsy',
   url: 'https://trimsy.org/',

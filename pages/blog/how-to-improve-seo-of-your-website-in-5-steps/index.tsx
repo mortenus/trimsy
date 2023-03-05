@@ -10,6 +10,7 @@ const test = {
   headerImg: 'https://trimsy.org/uploads/1666542894623.jpg',
   date: 'March 2, 2023',
   createdAt: '2023-03-02T12:00:00+0000',
+  modifiedAt: '2023-03-04T12:00:00+0000',
   minToRead: 8,
   slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
 };
@@ -32,7 +33,7 @@ const ArticleSchema = {
   headline: test.title,
   image: [test.headerImg],
   datePublished: test.createdAt,
-  // "dateModified": "2022-03-23T15:04:37+0000",
+  dateModified: test.modifiedAt,
   author: { '@type': 'Person', name: author.fullname },
   speakable: {
     '@type': 'SpeakableSpecification',
@@ -94,6 +95,8 @@ export default function Post() {
               Optimization for Search Engines to show your site to users.
             </p>
 
+            <p>Making SEO involves a combination of technical and content optimization.</p>
+
             <p>
               When SEO is set up and used correctly – it could bring lots of new traffic to the web
               page. It is not complex to accomplish, while optimizing your website could play
@@ -106,7 +109,7 @@ export default function Post() {
               analysis.
             </p>
 
-            <h4>Inside of Google’s Search Engine</h4>
+            <h3>Inside of Google’s Search Engine</h3>
             <p>
               Google uses crawl bots, we are going to talk more about which technologies improve how
               good your page is for crawlers later on.
@@ -145,7 +148,25 @@ export default function Post() {
 
             <p>Let&apos;s talk more about this.</p>
 
-            <h5>1. Setting up your future website perfectly</h5>
+            <h3>Here are some steps to set up SEO perfectly:</h3>
+
+            <h4>1. Content optimization</h4>
+            <p>This is important step from the whole Search Engine Optimization perspective.</p>
+            <p>
+              Create high-quality, informative, and engaging content that your target audience is
+              looking for, using your chosen keywords in a natural and strategic way.
+            </p>
+            <p>
+              Researching and selecting the most relevant and valuable keywords for your website
+              would improve the way Search Engines treat your page.
+            </p>
+            <p>
+              Because it helps find relative content to the user, and ease the load on Google
+              Servers to get the right information from the user&apos;s input.
+            </p>
+
+            <h4>2. On-page optimization</h4>
+            <p>{`Optimizing your website's title tags, meta descriptions, URLs, image "alt" tags and header tags will make it easy for search engines to understand what your site is about.`}</p>
 
             <p>
               Search Engine Optimization needs help setting up, so we need to align our code
@@ -156,7 +177,28 @@ export default function Post() {
                 'In <head> section of our page, we can use <meta> tag to directly tell Google how to understand and treat our page.'
               }
             </p>
-            <h6>This code tells Google the description current page has.</h6>
+
+            <h5>Title</h5>
+            <div className={styles.code}>
+              <code>
+                {`         <title>{"Lorem ipsum dolor sit amet"}</title>
+`}
+              </code>
+            </div>
+            <p>
+              {`<title> isn’t exactly a meta tag, but is used by Search Engines and is important
+              part:`}
+            </p>
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              src={'https://trimsy.org/uploads/8131405422084.png'}
+              alt={'Image'}
+            />
+
+            <h5>Description</h5>
 
             <div className={styles.note}>
               <span>Note that description has to be unique.</span>
@@ -165,16 +207,16 @@ export default function Post() {
             <div className={styles.code}>
               <code>
                 {`        <meta
-          name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus elit. In magna nisi, pulvinar et commodo vitae, elefiend in est. Sed eget diam metus"
-          />
-          `}
+name="description"
+content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus elit. In magna nisi, pulvinar et commodo vitae, elefiend in est. Sed eget diam metus"
+/>
+`}
               </code>
             </div>
 
             <p>
-              Where <span>content</span> is a text of meta tag and <span>name</span> tells to put it
-              in description section of Google Search:
+              Where <span>name</span> tells to put it in description section of Google Search and{' '}
+              <span>content</span> is a text of meta tag:
             </p>
 
             {/* <div className={styles.img}> */}
@@ -200,7 +242,7 @@ export default function Post() {
             <div className={styles.code}>
               <code>
                 {`        <meta name="robots" content="noodp,noydir" />
-          `}
+`}
               </code>
             </div>
             <p>
@@ -208,40 +250,7 @@ export default function Post() {
               when showing your site in the search results.
             </p>
 
-            <h6>Title of page isn’t exactly a meta tag, but is used by Search Engines:</h6>
-            <div className={styles.code}>
-              <code>
-                {`         <title>{"Lorem ipsum dolor sit amet"}</title>
-          `}
-              </code>
-            </div>
-            <Image
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-              src={'https://trimsy.org/uploads/8131405422084.png'}
-              alt={'Image'}
-            />
-
-            <h6>To set up icon for a page:</h6>
-
-            <div className={styles.code}>
-              <code>
-                {`         <link rel="icon" href="/favicon.ico" />
-          `}
-              </code>
-            </div>
-
-            <Image
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '75%', height: 'auto' }}
-              //   src={'https://trimsy.org/uploads/5454256022794.png'}
-              src={'/uploads/5454256022794.png'}
-              alt={'Image'}
-            />
+            <h5>Icon</h5>
 
             <p>
               Uploading web application icon to{' '}
@@ -251,17 +260,35 @@ export default function Post() {
               service will help optimizing it for different sizes and types of devices.
             </p>
 
-            <h5>2. Enhancements</h5>
+            <div className={styles.code}>
+              <code>
+                {`         <link rel="icon" href="/favicon.ico" />
+`}
+              </code>
+            </div>
+
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '75%', height: 'auto' }}
+              src={'https://trimsy.org/uploads/5454256022794.png'}
+              alt={'Image'}
+            />
+
+            <h6>Additional:</h6>
+
             <p>
               Google Search Engine is a smart machine, but many times it confuses what is the
               website’s main picture is, so we can help Google understand your site better.
             </p>
+
             <p>Setting up a Schema for structured data is going to be a solution.</p>
             <p>{`These are now <script> tags and they go to <head> section as well.`}</p>
-            <h6>
+            <h5>
               For example, this would help Google identify which is the desired image for current
               page, so it could show it next time your page appears in search.
-            </h6>
+            </h5>
             <div className={styles.note}>
               <span>
                 If primary image is absent or incorect Google will try to find relavant picture
@@ -275,17 +302,22 @@ export default function Post() {
                 <br />
                 {`{`}
                 <br />
-                {`'@context': 'http://www.schema.org',`}
+                {`'@context': 'http://schema.org',`}
                 <br />
+                &nbsp;&nbsp;&nbsp;
                 {`'@type': 'WebPage',`}
                 <br />
-                {`'@id': 'https://trimsy.org/#webpage',`}
+                &nbsp;&nbsp;&nbsp;
+                {`'@id': 'https://example.com/#webpage',`}
                 <br />
-                {`url: 'https://trimsy.org/'`}
+                &nbsp;&nbsp;&nbsp;
+                {`url: 'https://example.com/',`}
                 <br />
-                {`name: 'Web Development | Trimsy'`}
+                &nbsp;&nbsp;&nbsp;
+                {`name: 'Example',`}
                 <br />
-                {`primaryImageOfPage: { '@id': 'https://trimsy.org/images/logo.svg' }`}
+                &nbsp;&nbsp;&nbsp;
+                {`primaryImageOfPage: { '@id': 'https://img.example.com/logo.svg' },`}
                 <br />
                 {`}`}
                 <br />
@@ -312,10 +344,106 @@ export default function Post() {
               <span>Logo or Primary Image.</span>
             </p>
 
-            <h5>3. Load Time</h5>
+            <h5>To Show Frequently Asked Question in Google.</h5>
             <p>
-              GoogleBots also look at how long it takes to load webpage, so it ranks it up
-              accordingly.
+              {' '}
+              It might be good thought to tell your FAQ of page directly to Google so it could show
+              it next time with appropriate request from user.
+            </p>
+            <div className={styles.note}>
+              <span>Note that there has to be at least three FAQ items.</span>
+            </div>
+            <div className={styles.code}>
+              <code>
+                {`<script type="application/ld+json">`}
+                <br />
+                {`{`}
+                <br />
+                &nbsp;&nbsp;&nbsp;
+                {`'@context': 'https://schema.org',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;
+                {`'@type': 'FAQPage',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`mainEntity: [`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`{`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`'@type': 'Question',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`name: 'What?',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`acceptedAnswer: {`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`'@type': 'Answer',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`text: 'Nothing!',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`},`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`{`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`'@type': 'Question',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`name: 'What?',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`acceptedAnswer: {`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`'@type': 'Answer',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`text: 'Nothing!',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`},`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`{`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`'@type': 'Question',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`name: 'What?',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`acceptedAnswer: {`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`'@type': 'Answer',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`text: 'Nothing!',`}
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {`},`}
+                <br />
+                &nbsp;&nbsp;&nbsp;
+                {`],`}
+                <br />
+                {`};`}
+                <br />
+                {`</script>`}
+              </code>
+            </div>
+
+            <h4>3. Technical optimization</h4>
+            <p>
+              Ensure that website is technically sound - meaning that it is fast, mobile-friendly,
+              and has a clean and organized code structure.
             </p>
 
             <div className={styles.note}>
@@ -335,14 +463,18 @@ export default function Post() {
               </Link>
             </p>
 
-            <h6>Using CDN</h6>
+            <h5>Using CDN</h5>
+            <p>
+              GoogleBots also look at how long it takes to load webpage, so it ranks it up
+              accordingly.
+            </p>
             <p>
               Content Delivery Network (CDN) is going to take the workload down, since it’s not the
               actual code that’s heave to load, but mostly the images and additional libraries that
               can be loaded from servers that are closer to the user.
             </p>
 
-            <h6>Unnecessary code</h6>
+            <h5>Unnecessary code</h5>
             <p>Page should not execute any additional code that is not essential for page.</p>
             <p>At least doing it later, when user is using the app.</p>
             <p>
@@ -359,7 +491,7 @@ export default function Post() {
               </span>
             </div>
 
-            <h5>4. New Technologies</h5>
+            <h4>4. New Technologies</h4>
             <p>
               Frameworks like NextJS are one of the best solutions for SEO and GoogleBots to crawl
               since the content is loaded using the SSR (server-side rendering).
@@ -374,7 +506,25 @@ export default function Post() {
               generating HTML while crawling.
             </p>
 
-            <h5>5. Principles</h5>
+            <h4>5. Link building</h4>
+            <p>
+              Building links to your website from other reputable websites can help boost your
+              site&apos;s authority and ranking.
+            </p>
+
+            <p>
+              This can even be monitored through Google Search Console, in Links tab - List of
+              website&apos;s that has linked your page somewhere.
+            </p>
+
+            <h4>More steps:</h4>
+            <h4>6. Monitor and analyze</h4>
+            <p>
+              Tools such as Google Analytics and Google Search Console will give opportunity to
+              monitor your website&apos;s perfomance and identify areas for improvement.
+            </p>
+
+            <h3>7. Principles</h3>
             <p>
               We should use these principles to understand the way Google ranks our page and align
               our site in favor:
@@ -404,26 +554,26 @@ export default function Post() {
               </li>
             </ul>
 
-            <h4>Bottom Line</h4>
+            <h3>Conclusion</h3>
             <p>
               Google Search is a powerful tool for users to discover requested sources of
-              information.
+              information, Google found smart ways to rank up different websites and surely most of
+              the time Google needs our help setting up different less or more important things for
+              our site for our own benefit.
             </p>
             <p>
-              Google found smart ways to rank up different websites and surely most of the time
-              Google needs our help setting up different less or more important things for our site,
+              Remember that SEO is an onging process and requires ongoing effort and optimization to
+              achieve and maintain high rankings in search engines.
             </p>
-            <p>Googlebots are smart, but not perfect... yet.</p>
           </section>
 
           <div className={styles.author}>
             <div className={styles.img}>
-              {/* <Image fill src={'https://trimsy.org/static/img/blog/test/author.jpg'} alt={'Author image'} /> */}
               <Image fill src={author.img} alt={'Author image'} />
             </div>
             <div className={styles.info}>
               <span>Written by</span>
-              <h5 className={styles.name}>{author.fullname}</h5>
+              <h4 className={styles.name}>{author.fullname}</h4>
               <span className={styles.position}>{author.position}</span>
               <p className={styles.description}>{author.description}</p>
             </div>
@@ -439,7 +589,7 @@ export default function Post() {
               </div>
               <div className={styles.content}>
                 <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h5>How to get more client to get to your business</h5>
+                <h4>How to get more client to get to your business</h4>
                 <p>
                   I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
                   expertise in engineering, management, traffic marketing, and analytics working for
@@ -455,7 +605,7 @@ export default function Post() {
               </div>
               <div className={styles.content}>
                 <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h5>How to get more client to get to your business</h5>
+                <h4>How to get more client to get to your business</h4>
                 <p>
                   I&apos;m a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment
                   and mutual benefit from the associates I am given a chance to have a journey with.
@@ -473,7 +623,7 @@ export default function Post() {
               </div>
               <div className={styles.content}>
                 <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h5>How to get more client to get to your business</h5>
+                <h4>How to get more client to get to your business</h4>
                 <p>
                   I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
                   expertise in engineering, management, traffic marketing, and analytics working for
