@@ -7,12 +7,12 @@ import styles from './BlogItem.module.scss';
 type TBlogItem = {
   date: string;
   title: string;
-  text: string;
-  imgLink: any;
+  description: string;
+  imgUrl: any;
   slug: string;
 };
 
-const BlogItem = ({ date, title, text, imgLink, slug }: TBlogItem) => {
+const BlogItem = ({ date, title, description, imgUrl, slug }: TBlogItem) => {
   return (
     <div className={styles.item}>
       <Link href={slug} />
@@ -23,14 +23,14 @@ const BlogItem = ({ date, title, text, imgLink, slug }: TBlogItem) => {
           height="0"
           sizes="100vw"
           //   style={{ width: '100%', height: 'auto' }}
-          src={imgLink}
+          src={imgUrl}
           alt={'blog-cover'}
         />
       </div>
       <div className={styles.text}>
         <span>{date}</span>
         <h3>{title}</h3>
-        <p>{text}</p>
+        <p>{description}</p>
       </div>
     </div>
   );

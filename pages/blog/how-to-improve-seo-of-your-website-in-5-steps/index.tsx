@@ -13,17 +13,16 @@ const test = {
   modifiedAt: '2023-03-04T12:00:00+0000',
   minToRead: 8,
   slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
-};
-
-const author = {
-  fullname: 'Oleksii Pylypenko',
-  position: 'CEO',
-  description: `I'm a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment and
-mutual benefit from the associates I am given a chance to have a journey with. We are
-thinkers and doers, difficulties could be challanging, but that is the beauty of it.
-Doing things with speed does not mean doing them imperfectly, the only way to not fall
-back - is to go forward.`,
-  img: 'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
+  author: {
+    fullname: 'Oleksii Pylypenko',
+    position: 'CEO',
+    description: `I'm a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment and
+  mutual benefit from the associates I am given a chance to have a journey with. We are
+  thinkers and doers, difficulties could be challanging, but that is the beauty of it.
+  Doing things with speed does not mean doing them imperfectly, the only way to not fall
+  back - is to go forward.`,
+    img: 'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
+  },
 };
 
 const ArticleSchema = {
@@ -34,7 +33,7 @@ const ArticleSchema = {
   image: [test.headerImg],
   datePublished: test.createdAt,
   dateModified: test.modifiedAt,
-  author: { '@type': 'Person', name: author.fullname },
+  author: { '@type': 'Person', name: test.author.fullname },
   speakable: {
     '@type': 'SpeakableSpecification',
     xPath: ['//title', "/html/head/meta[@name='description']/@content"],
@@ -531,8 +530,8 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
             </p>
             <ul>
               <li>It should be quick to load the page (Using CDN)</li>
-              <li>User should use the site as soon as it is possible.</li>
               <li>It should not execute any code that’s not essential for page.</li>
+              <li>User should use the site as soon as it is possible.</li>
             </ul>
             <p>Roughly, it is referred to the following:</p>
             <ul>
@@ -569,13 +568,13 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
 
           <div className={styles.author}>
             <div className={styles.img}>
-              <Image fill src={author.img} alt={'Author image'} />
+              <Image fill src={test.author.img} alt={'Author image'} />
             </div>
             <div className={styles.info}>
               <span>Written by</span>
-              <h4 className={styles.name}>{author.fullname}</h4>
-              <span className={styles.position}>{author.position}</span>
-              <p className={styles.description}>{author.description}</p>
+              <h4 className={styles.name}>{test.author.fullname}</h4>
+              <span className={styles.position}>{test.author.position}</span>
+              <p className={styles.description}>{test.author.description}</p>
             </div>
           </div>
 

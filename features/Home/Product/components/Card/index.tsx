@@ -43,7 +43,7 @@ const Card = ({
           (min-width: 1450px) and (max-width: 1600px)
           "
             src={imageUrl}
-            alt="Shoes Picture"
+            alt="Additional pictures for portfolio"
           />
         </div>
       </div>

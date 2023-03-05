@@ -5,12 +5,17 @@ import styles from './blog.module.scss';
 import { Button } from 'components';
 import { BlogItem } from 'features/Blog';
 
+import { useFetchBlogs } from 'features/Blog/hooks';
+
 const itemArr = [
   {
-    date: 'March 2, 2023',
-    title: 'How To Improve SEO of your Website in 5 Steps',
-    text: 'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
-    imgLink: 'https://trimsy.org/uploads/1666542894623.jpg',
+    data: {
+      date: 'March 2, 2023',
+      title: 'How To Improve SEO of your Website in 5 Steps',
+      description:
+        'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
+      imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
+    },
     slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
   },
 ];
@@ -19,6 +24,8 @@ Blog.title = 'Blog';
 Blog.description = 'Get the latest news about Web, SEO and Design in Trimsy Blog';
 
 export default function Blog() {
+  const { items } = useFetchBlogs();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.intro}>
@@ -57,9 +64,10 @@ export default function Blog() {
           </div>
 
           <div className={styles.blogs}>
-            {itemArr.map((item) => {
-              return <BlogItem key={item.slug} {...item} />;
-            })}
+            {items.length > 0 &&
+              items.map((item) => {
+                return <BlogItem key={item.slug} slug={item.slug} {...item.data} />;
+              })}
           </div>
           {/* <div className={styles.nav}>
             <BlogButton type={'nav'}>Prev</BlogButton>
