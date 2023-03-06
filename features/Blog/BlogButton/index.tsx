@@ -8,21 +8,21 @@ interface TBlogButton {
   children: React.ReactNode;
   type?: string;
   style?: React.CSSProperties;
-  selected?: boolean;
-  onClick?: Function;
+  active?: boolean;
+  onClick?: () => void;
 }
 
-const BlogButton = ({ children, type, onClick, style, selected }: TBlogButton) => {
+const BlogButton = ({ children, type, onClick, style, active }: TBlogButton) => {
   const stylying = clsx(
     styles.wrapper,
     { [styles.nav]: type === 'nav' },
     { [styles.number]: type === 'number' },
-    { [styles.selected]: selected },
+    { [styles.selected]: active },
   );
 
   return (
     <>
-      <div style={style && style} className={stylying}>
+      <div style={style && style} className={stylying} onClick={onClick}>
         {children}
       </div>
     </>

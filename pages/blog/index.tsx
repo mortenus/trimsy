@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './blog.module.scss';
 
 import { Button } from 'components';
-import { BlogItem } from 'features/Blog';
+import { BlogButton, BlogItem } from 'features/Blog';
 
 import { useFetchBlogs } from 'features/Blog/hooks';
 
@@ -24,7 +24,8 @@ Blog.title = 'Blog';
 Blog.description = 'Get the latest news about Web, SEO and Design in Trimsy Blog';
 
 export default function Blog() {
-  const { items } = useFetchBlogs();
+  const { items, totalPages, currentPage, setPageNumber, incrementPage, decrementPage } =
+    useFetchBlogs();
 
   return (
     <div className={styles.wrapper}>
@@ -69,20 +70,26 @@ export default function Blog() {
                 return <BlogItem key={item.slug} slug={item.slug} {...item.data} />;
               })}
           </div>
-          {/* <div className={styles.nav}>
-            <BlogButton type={'nav'}>Prev</BlogButton>
+          <div className={styles.nav}>
+            <BlogButton type={'nav'} onClick={decrementPage}>
+              Prev
+            </BlogButton>
 
             <div className={styles.numbers}>
-              <BlogButton type={'number'} selected>
-                1
-              </BlogButton>
-              <BlogButton type={'number'}>2</BlogButton>
-              <BlogButton type={'number'}>3</BlogButton>
-              <BlogButton type={'number'}>4</BlogButton>
-              <BlogButton type={'number'}>5</BlogButton>
+              {Array.from(Array(totalPages).keys()).map((num: number) => (
+                <BlogButton
+                  active={num + 1 === currentPage}
+                  key={num + 1}
+                  type={'number'}
+                  onClick={() => setPageNumber(num + 1)}>
+                  {num + 1}
+                </BlogButton>
+              ))}
             </div>
-            <BlogButton type={'nav'}>Next</BlogButton>
-          </div> */}
+            <BlogButton type={'nav'} onClick={incrementPage}>
+              Next
+            </BlogButton>
+          </div>
         </div>
       </div>
     </div>

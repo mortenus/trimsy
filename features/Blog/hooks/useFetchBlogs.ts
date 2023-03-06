@@ -14,12 +14,31 @@ type TData = {
 
 const useFetchBlogs = () => {
   const [items, setItems] = React.useState<[] | TData[]>([]);
+  const [totalPages, setTotalPages] = React.useState<number>(1);
+
+  const [currentPage, setPageNumber] = React.useState<number>(1);
+
+  const incrementPage = () => {
+    if (currentPage < totalPages) setPageNumber(currentPage + 1);
+  };
+
+  const decrementPage = () => {
+    if (currentPage > 1) {
+      setPageNumber(currentPage - 1);
+    }
+  };
 
   React.useEffect(() => {
-    axios.get('https://secure.trimsy.org/blogs').then((data: any) => setItems(data.data));
-  }, []);
+    axios
+      .get('https://secure.trimsy.org/blogs')
+      .then(({ data }: any) => {
+        setItems(data.items);
+        setTotalPages(data.totalPages);
+      })
+      .catch((err) => console.error('Request Blogs err: ', err));
+  }, [currentPage]);
 
-  return { items };
+  return { items, totalPages, currentPage, setPageNumber, incrementPage, decrementPage };
 };
 
 export default useFetchBlogs;
