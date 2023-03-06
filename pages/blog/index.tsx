@@ -70,26 +70,28 @@ export default function Blog() {
                 return <BlogItem key={item.slug} slug={item.slug} {...item.data} />;
               })}
           </div>
-          <div className={styles.nav}>
-            <BlogButton type={'nav'} onClick={decrementPage}>
-              Prev
-            </BlogButton>
+          {totalPages > 1 && (
+            <div className={styles.nav}>
+              <BlogButton type={'nav'} onClick={decrementPage}>
+                Prev
+              </BlogButton>
 
-            <div className={styles.numbers}>
-              {Array.from(Array(totalPages).keys()).map((num: number) => (
-                <BlogButton
-                  active={num + 1 === currentPage}
-                  key={num + 1}
-                  type={'number'}
-                  onClick={() => setPageNumber(num + 1)}>
-                  {num + 1}
-                </BlogButton>
-              ))}
+              <div className={styles.numbers}>
+                {Array.from(Array(totalPages).keys()).map((num: number) => (
+                  <BlogButton
+                    active={num + 1 === currentPage}
+                    key={num + 1}
+                    type={'number'}
+                    onClick={() => setPageNumber(num + 1)}>
+                    {num + 1}
+                  </BlogButton>
+                ))}
+              </div>
+              <BlogButton type={'nav'} onClick={incrementPage}>
+                Next
+              </BlogButton>
             </div>
-            <BlogButton type={'nav'} onClick={incrementPage}>
-              Next
-            </BlogButton>
-          </div>
+          )}
         </div>
       </div>
     </div>

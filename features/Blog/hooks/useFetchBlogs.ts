@@ -30,7 +30,7 @@ const useFetchBlogs = () => {
 
   React.useEffect(() => {
     axios
-      .get('https://secure.trimsy.org/blogs')
+      .get(`https://secure.trimsy.org/blogs?page=${currentPage}`)
       .then(({ data }: any) => {
         setItems(data.items);
         setTotalPages(data.totalPages);
