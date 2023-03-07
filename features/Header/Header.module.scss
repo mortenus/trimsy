@@ -15,7 +15,7 @@ $navHeight: 75px;
 // }
 
 .wrapper {
-  height: $navHeight;
+  height: $navHeight !important;
 
   user-select: none;
 

@@ -5,7 +5,7 @@ import React from 'react';
 
 import styles from './Post.module.scss';
 
-const test = {
+const info = {
   title: 'How To Improve SEO of your Website in 5 Steps',
   headerImg: 'https://trimsy.org/uploads/1666542894623.jpg',
   date: 'March 2, 2023',
@@ -24,17 +24,19 @@ const test = {
     avatarUrl:
       'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
   },
+  description:
+    'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
 };
 
 const ArticleSchema = {
   '@context': 'https://schema.org',
-  '@id': `https://trimsy.org${test.slug}#article`,
+  '@id': `https://trimsy.org${info.slug}#article`,
   '@type': 'NewsArticle',
-  headline: test.title,
-  image: [test.headerImg],
-  datePublished: test.createdAt,
-  dateModified: test.modifiedAt,
-  author: { '@type': 'Person', name: test.author.fullname },
+  headline: info.title,
+  image: [info.headerImg],
+  datePublished: info.createdAt,
+  dateModified: info.modifiedAt,
+  author: { '@type': 'Person', name: info.author.fullname },
   speakable: {
     '@type': 'SpeakableSpecification',
     xPath: ['//title', "/html/head/meta[@name='description']/@content"],
@@ -53,7 +55,8 @@ const ArticleSchema = {
   },
 };
 
-Post.title = test.title;
+Post.title = info.title;
+Post.description = info.description;
 
 export default function Post() {
   return (
@@ -70,7 +73,7 @@ export default function Post() {
             </svg>{' '}
             <span>Return</span>
           </Link>
-          <h2 className={styles.title}>{test.title}</h2>
+          <h2 className={styles.title}>{info.title}</h2>
           <div className={styles.headerImg}>
             <Image
               priority
@@ -78,15 +81,15 @@ export default function Post() {
               height="0"
               sizes="100vw"
               style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
-              src={test.headerImg}
+              src={info.headerImg}
               alt={'Header IMG'}
             />
           </div>
 
           <div className={styles.date}>
-            <span>{test.date}</span>
+            <span>{info.date}</span>
             <div className={styles.line} />
-            <span>{test.minToRead} mins read</span>
+            <span>{info.minToRead} mins read</span>
           </div>
 
           <section>
@@ -487,7 +490,7 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
                 <Link href="https://gtmetrix.com/" target={'_blank'}>
                   tool
                 </Link>{' '}
-                to test the website speed loading time.
+                to info the website speed loading time.
               </span>
             </div>
 
@@ -569,13 +572,13 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
 
           <div className={styles.author}>
             <div className={styles.img}>
-              <Image fill src={test.author.avatarUrl} alt={'Author image'} />
+              <Image fill src={info.author.avatarUrl} alt={'Author image'} />
             </div>
             <div className={styles.info}>
               <span>Written by</span>
-              <h4 className={styles.name}>{test.author.fullname}</h4>
-              <span className={styles.position}>{test.author.position}</span>
-              <p className={styles.description}>{test.author.description}</p>
+              <h4 className={styles.name}>{info.author.fullname}</h4>
+              <span className={styles.position}>{info.author.position}</span>
+              <p className={styles.description}>{info.author.description}</p>
             </div>
           </div>
 
@@ -585,7 +588,7 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
           <div className={styles.items}>
             <div className={styles.item}>
               <div className={styles.img}>
-                <Image fill src={'/static/img/blog/test/1.jpg'} alt={'Next to Read IMG'} />
+                <Image fill src={'/static/img/blog/info/1.jpg'} alt={'Next to Read IMG'} />
               </div>
               <div className={styles.content}>
                 <span className={styles.nextDate}>Apr 26, 2022</span>
@@ -601,7 +604,7 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
             </div>
             <div className={styles.item}>
               <div className={styles.img}>
-                <Image fill src={'/static/img/blog/test/2.jpg'} alt={'Next to Read IMG'} />
+                <Image fill src={'/static/img/blog/info/2.jpg'} alt={'Next to Read IMG'} />
               </div>
               <div className={styles.content}>
                 <span className={styles.nextDate}>Apr 26, 2022</span>
@@ -619,7 +622,7 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
             </div>
             <div className={styles.item}>
               <div className={styles.img}>
-                <Image fill src={'/static/img/blog/test/3.jpg'} alt={'Next to Read IMG'} />
+                <Image fill src={'/static/img/blog/info/3.jpg'} alt={'Next to Read IMG'} />
               </div>
               <div className={styles.content}>
                 <span className={styles.nextDate}>Apr 26, 2022</span>

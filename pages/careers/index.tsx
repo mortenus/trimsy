@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-import { Button } from 'components';
+import { Button, ImageUnoptimized } from 'components';
 import ModernButton from 'components/Button/Modern';
 import { PlatformItem, Potential, ProfessionalItem, ContactForm, Globe } from 'features/Careers';
 
@@ -49,12 +49,19 @@ export function Careers() {
         </div>
 
         <div className={styles.background}>
-          <Image
-            unoptimized={true}
+          {/* <Image
+            placeholder="blur"
+            blurDataURL="/static/img/careers/intro2.jpg"
             priority
             fill
             src={'/static/img/careers/intro2.jpg'}
             alt="Intro JPG"
+          /> */}
+          <ImageUnoptimized
+            src={'/static/img/careers/intro2.jpg'}
+            fill
+            priority
+            alt={'Intro Image'}
           />
         </div>
       </section>

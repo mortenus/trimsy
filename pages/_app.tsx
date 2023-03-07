@@ -12,6 +12,7 @@ import Footer from 'features/Footer';
 import Header from 'features/Header';
 import FormOverflow from 'features/FormOverflow';
 import Script from 'features/Script';
+import { useRouter } from 'next/router';
 
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string; description?: string };
@@ -27,6 +28,8 @@ export default function App({ Component, pageProps }: CustomAppProps) {
 
   useHideScrollOnTrue(formOpen);
   useGtag();
+
+  const router = useRouter();
 
   return (
     <>
@@ -47,7 +50,9 @@ export default function App({ Component, pageProps }: CustomAppProps) {
       <Component {...pageProps} />
       <Footer />
 
-      <FormOverflow open={formOpen} handleOpen={handleFormOverflowChange} />
+      {router.pathname === '/' && (
+        <FormOverflow open={formOpen} handleOpen={handleFormOverflowChange} />
+      )}
     </>
   );
 }
