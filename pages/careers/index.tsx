@@ -49,14 +49,6 @@ export function Careers() {
         </div>
 
         <div className={styles.background}>
-          {/* <Image
-            placeholder="blur"
-            blurDataURL="/static/img/careers/intro2.jpg"
-            priority
-            fill
-            src={'/static/img/careers/intro2.jpg'}
-            alt="Intro JPG"
-          /> */}
           <ImageUnoptimized
             src={'/static/img/careers/intro2.jpg'}
             fill

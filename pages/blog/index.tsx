@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './blog.module.scss';
 
-import { Button } from 'components';
+import { Button, ImageUnoptimized } from 'components';
 import { BlogButton, BlogItem } from 'features/Blog';
 
 import { useFetchBlogs } from 'features/Blog/hooks';
@@ -32,6 +32,14 @@ export default function Blog() {
       <div className={styles.intro}>
         <h2>Trimsy Blog</h2>
         <p>Get the latest news about Web, SEO and Design in our Blog</p>
+        <div className={styles.background}>
+          <ImageUnoptimized
+            src={'/static/img/blog/blog-background.jpg'}
+            fill
+            priority
+            alt={'Intro Image'}
+          />
+        </div>
       </div>
       <div className={styles.content} id="search">
         <div className={styles.wrapper}>

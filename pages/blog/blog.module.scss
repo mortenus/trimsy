@@ -17,20 +17,33 @@ $blogBackground: #f3efe5;
       overflow: hidden;
     }
 
-    &::before {
-      content: '';
+    .background {
+      height: 100%;
+      width: 100%;
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
       z-index: -1;
 
-      background-image: url('../../public/static/img/blog/blog-background.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      width: 100%;
-      height: 100%;
+      img {
+        object-fit: cover;
+      }
     }
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   z-index: -1;
+
+    //   background-image: url('../../public/static/img/blog/blog-background.jpg');
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+
+    //   width: 100%;
+    //   height: 100%;
+    // }
 
     h2 {
       font-size: 48px;

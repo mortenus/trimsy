@@ -1,3 +1,4 @@
+import { ImageUnoptimized } from 'components';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -75,7 +76,7 @@ export default function Post() {
           </Link>
           <h2 className={styles.title}>{info.title}</h2>
           <div className={styles.headerImg}>
-            <Image
+            {/* <Image
               priority
               width="0"
               height="0"
@@ -83,6 +84,15 @@ export default function Post() {
               style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
               src={info.headerImg}
               alt={'Header IMG'}
+            /> */}
+            <ImageUnoptimized
+              src={info.headerImg}
+              width="0"
+              height="0"
+              sizes="100vw"
+              priority
+              style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
+              alt={'Header Blog Image'}
             />
           </div>
 

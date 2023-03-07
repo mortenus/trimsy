@@ -1,5 +1,4 @@
-import { Button } from 'components';
-import Image from 'next/image';
+import { Button, ImageUnoptimized } from 'components';
 import React from 'react';
 
 import styles from './about.module.scss';
@@ -27,12 +26,11 @@ export default function About() {
       </div>
 
       <div className={styles.background}>
-        <Image
-          unoptimized={true}
-          priority
-          fill
+        <ImageUnoptimized
           src={'/static/img/about/background.jpg'}
-          alt="Intro JPG"
+          fill
+          priority
+          alt={'Intro Image'}
         />
       </div>
     </section>
