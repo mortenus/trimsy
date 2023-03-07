@@ -1,17 +1,26 @@
 import React from 'react';
 
 import Image from 'next/image';
-// import { SwiperSlide } from 'swiper/react';
 
 import styles from './CarouselSlide.module.scss';
+import { ImageUnoptimized } from 'components';
 
 type TCarouselSlideProps = {
-  imgSrc: string;
+  imgUrl: string;
   text?: string;
 };
 
-const CarouselSlide = ({ imgSrc, text }: TCarouselSlideProps) => (
-  <Image className={styles.slide} objectFit="contain" src={imgSrc} alt="Carousel img" fill />
+const CarouselSlide = ({ imgUrl, text }: TCarouselSlideProps) => (
+  <ImageUnoptimized
+    // className={styles.slide}
+    loading={'lazy'}
+    src={imgUrl}
+    alt="Carousel img"
+    width="0"
+    height="0"
+    style={{ maxHeight: '60vh', width: '100%', height: 'auto', objectFit: 'cover' }}
+  />
+  //   <Image className={styles.slide} objectFit="contain" src={imgUrl} alt="Carousel img" fill />
 );
 
 export default CarouselSlide;

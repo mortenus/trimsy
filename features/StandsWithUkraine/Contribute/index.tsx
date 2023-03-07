@@ -1,9 +1,8 @@
+import { ImageUnoptimized } from 'components';
 import Image from 'next/image';
 import React from 'react';
 
 import styles from './Contribute.module.scss';
-
-import UkraineFlag from '/public/static/img/standsWithUkraine/ukraine-flag.jpg';
 
 const Contribute = () => {
   return (
@@ -17,7 +16,13 @@ const Contribute = () => {
       </div>
       <div className={styles.flag}>
         <div className={styles.img}>
-          <Image fill priority src={UkraineFlag} alt="Ukraine Flag" />
+          <ImageUnoptimized
+            fill
+            priority
+            src={'/static/img/standsWithUkraine/ukraine-flag.jpg'}
+            alt={'Intro Flag'}
+          />
+          {/*   <Image fill priority src={UkraineFlag} alt="Ukraine Flag" /> */}
         </div>
         {/* <Image width={400} height={200} src={UkraineFlag} alt="Ukraine Flag" /> */}
       </div>

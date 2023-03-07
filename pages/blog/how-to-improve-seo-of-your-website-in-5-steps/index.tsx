@@ -8,7 +8,7 @@ import styles from './Post.module.scss';
 
 const info = {
   title: 'How To Improve SEO of your Website in 5 Steps',
-  headerImg: 'https://trimsy.org/uploads/1666542894623.jpg',
+  headerImg: '/uploads/1666542894623.jpg',
   date: 'March 2, 2023',
   createdAt: '2023-03-02T12:00:00+0000',
   modifiedAt: '2023-03-04T12:00:00+0000',
@@ -89,7 +89,7 @@ export default function Post() {
               src={info.headerImg}
               width="0"
               height="0"
-              sizes="100vw"
+              //   sizes="100vw"
               priority
               style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
               alt={'Header Blog Image'}

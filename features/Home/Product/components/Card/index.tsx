@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { ImageUnoptimized } from 'components';
 import Image from 'next/image';
 import React from 'react';
 
@@ -32,19 +33,12 @@ const Card = ({
                 ? '/static/img/sneakers/heart-liked.svg'
                 : '/static/img/sneakers/heart-unliked.svg'
             }
-            alt="Heart svg"
+            alt="Liked item icon"
           />
         </div>
 
         <div className={styles.image}>
-          <Image
-            fill
-            sizes="
-          (min-width: 1450px) and (max-width: 1600px)
-          "
-            src={imageUrl}
-            alt="Additional pictures for portfolio"
-          />
+          <ImageUnoptimized fill src={imageUrl} loading={'lazy'} alt="Additional Item" />
         </div>
       </div>
       <h5>{title}</h5>
@@ -59,7 +53,7 @@ const Card = ({
             src={
               added ? '/static/img/sneakers/btn-checked.svg' : '/static/img/sneakers/btn-plus.svg'
             }
-            alt="Plus"
+            alt="Added item icon"
           />
         </div>
       </div>

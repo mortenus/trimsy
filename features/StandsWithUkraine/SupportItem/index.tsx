@@ -1,12 +1,12 @@
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
 import styles from './SupportItem.module.scss';
+import { ImageUnoptimized } from 'components';
 
 type TSupportItem = {
   title: string;
-  imgUrl: StaticImageData;
+  imgUrl: string;
   href: string;
 };
 
@@ -16,7 +16,13 @@ const SupportItem = ({ title, href, imgUrl }: TSupportItem) => {
       <div className={styles.image}>
         <div className={styles.wrap}>
           {/* <Image width={500} height={250} src={imgUrl} alt="Supporting Website" /> */}
-          <Image fill src={imgUrl} alt="Supporting Website" />
+          <ImageUnoptimized
+            fill
+            loading={'lazy'}
+            src={imgUrl}
+            alt={'additional, support referenced website img'}
+          />
+          {/* <Image fill src={imgUrl} alt="Supporting Website" /> */}
         </div>
       </div>
       <Link target={'_blank'} className={styles.link} href={href}>

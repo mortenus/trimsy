@@ -1,17 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
-
-type TImageUnoptimized = {
-  src: string;
-  alt: string;
-  priority?: boolean;
-  fill?: boolean;
-  style?: React.CSSProperties;
-  width?: string | number;
-  height?: string | number;
-  sizes?: string;
-};
+import TImageUnoptimzed from './ImageUnoptimized.types';
 
 const ImageUnoptimized = ({
   src,
@@ -22,7 +12,9 @@ const ImageUnoptimized = ({
   width,
   height,
   sizes,
-}: TImageUnoptimized) => {
+  loading,
+  className,
+}: TImageUnoptimzed) => {
   const [loaded, setLoaded] = React.useState(false);
 
   React.useEffect(() => {
@@ -33,9 +25,11 @@ const ImageUnoptimized = ({
     <>
       {fill ? (
         <Image
+          className={className}
           placeholder="blur"
           blurDataURL={src}
           priority={priority}
+          loading={loading}
           fill={fill}
           src={src}
           alt={alt}
@@ -43,9 +37,11 @@ const ImageUnoptimized = ({
         />
       ) : (
         <Image
+          className={className}
           placeholder="blur"
           blurDataURL={src}
           priority={priority}
+          loading={loading}
           width={Math.round(+!width)}
           height={Math.round(+!height)}
           sizes={sizes}
@@ -57,15 +53,19 @@ const ImageUnoptimized = ({
 
       {loaded && fill ? (
         <Image
+          className={className}
           unoptimized
           fill={fill}
+          loading={loading}
           src={src}
           alt={alt}
           style={{ position: 'absolute', left: 0, top: 0, ...style }}
         />
       ) : (
         <Image
+          className={className}
           unoptimized
+          loading={loading}
           sizes={sizes}
           width={Math.round(+!width)}
           height={Math.round(+!height)}

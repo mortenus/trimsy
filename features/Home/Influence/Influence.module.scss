@@ -42,6 +42,23 @@
   .wrapper {
     width: 100%;
 
+    .item {
+      padding: 25px 100px 0 50px;
+
+      //   @media (max-width: 650px) {
+      //     padding: 0 20px;
+      //   }
+    }
+
+    :global(.swiper-slide) {
+      //   max-height: 500px;
+    }
+
+    :global(.swiper-slide-active) {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
     :global(.swiper) {
       //   width: 1200px;
       //   height: 100vh;
@@ -67,9 +84,6 @@
       bottom: 20px;
       @media (min-width: 1000px) and (max-width: 1200px) {
         bottom: 10px;
-      }
-
-      @media (min-width: 125em) {
       }
     }
 

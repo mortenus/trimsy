@@ -1,44 +1,37 @@
 import { Contribute, Intro, SupportItem } from 'features/StandsWithUkraine';
 import React from 'react';
-import Head from 'next/head';
 
 import styles from './standsWithUkraine.module.scss';
-import ComeBackAliveJpg from 'public/static/img/standsWithUkraine/comeBackAlive.jpg';
-import United24Jpg from 'public/static/img/standsWithUkraine/united24.jpg';
-import serhiyPrytulaJpg from 'public/static/img/standsWithUkraine/prytula.jpg';
-import breatheFoundationJpg from 'public/static/img/standsWithUkraine/breathe.jpg';
-import razomFoundationJpg from 'public/static/img/standsWithUkraine/razom.jpg';
-import armySosJpg from 'public/static/img/standsWithUkraine/armysos.jpg';
 
 const linksArr = [
   {
     title: 'Come Back Alive',
-    imgUrl: ComeBackAliveJpg,
+    imgUrl: '/static/img/standsWithUkraine/comeBackAlive.jpg',
     href: 'https://savelife.in.ua/en/',
   },
   {
     title: 'United24',
-    imgUrl: United24Jpg,
+    imgUrl: '/static/img/standsWithUkraine/united24.jpg',
     href: 'https://u24.gov.ua/',
   },
   {
     title: 'Serhiy Prytula Foundation',
-    imgUrl: serhiyPrytulaJpg,
+    imgUrl: '/static/img/standsWithUkraine/prytula.jpg',
     href: 'https://prytulafoundation.org/en',
   },
   {
     title: 'Breathe Charity Foundation',
-    imgUrl: breatheFoundationJpg,
+    imgUrl: '/static/img/standsWithUkraine/breathe.jpg',
     href: 'https://dyhai.org/en/',
   },
   {
     title: 'Razom Foundation',
-    imgUrl: razomFoundationJpg,
+    imgUrl: '/static/img/standsWithUkraine/razom.jpg',
     href: 'https://www.razomforukraine.org/',
   },
   {
     title: 'ArmySOS',
-    imgUrl: armySosJpg,
+    imgUrl: '/static/img/standsWithUkraine/armysos.jpg',
     href: 'https://armysos.com.ua/',
   },
 ];

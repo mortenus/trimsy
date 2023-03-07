@@ -15,7 +15,7 @@ const slidesArr = [
   '/static/img/carousel/capacity.jpg',
   '/static/img/carousel/reactChat1.jpg',
   '/static/img/carousel/reactPizza.jpg',
-  //   '/static/img/carousel/shiningSun.jpg',
+  '/static/img/carousel/shiningSun.jpg',
 ];
 
 const Influence = () => {
@@ -35,7 +35,7 @@ const Influence = () => {
           resistanceRatio={0.2}
           effect="creative"
           autoplay={{
-            delay: 5000,
+            delay: 200000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -44,10 +44,10 @@ const Influence = () => {
           navigation={true}
           loop={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper">
+          className={styles.item}>
           {slidesArr.map((img) => (
             <SwiperSlide key={img}>
-              <CarouselSlide imgSrc={img} />
+              <CarouselSlide imgUrl={img} />
             </SwiperSlide>
           ))}
         </Swiper>
