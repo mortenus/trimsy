@@ -16,6 +16,7 @@ export function Careers() {
 
   return (
     <div>
+      <h1 className={'hidden'}>Trimsy Careers</h1>
       <section className={styles.introWrap}>
         <div className={styles.wrapper}>
           <div className={styles.intro}>

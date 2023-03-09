@@ -30,7 +30,7 @@ export default function Blog() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.intro}>
-        <h2>Trimsy Blog</h2>
+        <h1>Trimsy Blog</h1>
         <p>Get the latest news about Web, SEO and Design in our Blog</p>
         <div className={styles.background}>
           <ImageUnoptimized

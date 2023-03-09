@@ -74,7 +74,7 @@ export default function Post() {
             </svg>{' '}
             <span>Return</span>
           </Link>
-          <h2 className={styles.title}>{info.title}</h2>
+          <h1 className={styles.title}>{info.title}</h1>
           <div className={styles.headerImg}>
             {/* <Image
               priority

@@ -59,4 +59,4 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
   );
 };
 
-export default HeaderButton;
+export default React.memo(HeaderButton);

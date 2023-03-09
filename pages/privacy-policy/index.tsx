@@ -10,6 +10,7 @@ PrivacyPolicyPage.description = 'Trimsy Privacy Policy.';
 export function PrivacyPolicyPage() {
   return (
     <>
+      <h1 className={'hidden'}>Trimsy Privacy Policy</h1>
       <div className={styles.intro}>
         <div className={styles.wrapper}>
           <h2 className={styles.headline}>Privacy Policy</h2>

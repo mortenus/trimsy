@@ -50,4 +50,4 @@ const HamburgerExtendedButton = ({ children, links, onClick }: THamburgerExtende
   );
 };
 
-export default HamburgerExtendedButton;
+export default React.memo(HamburgerExtendedButton);

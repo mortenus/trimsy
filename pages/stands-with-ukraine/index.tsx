@@ -43,6 +43,7 @@ StandsWithUkraine.description =
 export default function StandsWithUkraine() {
   return (
     <>
+      <h1 className={'hidden'}>Trimsy stands with Ukraine</h1>
       <Intro />
       <Contribute />
 
