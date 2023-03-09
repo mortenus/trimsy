@@ -24,7 +24,7 @@ About.title = 'About us';
 export default function About() {
   return (
     <>
-    <h1>Trimsy</h1>
+      <h1 className={'hidden'}>About Us | Trimsy</h1>
       <section className={styles.introWrap}>
         <div className="global-wrapper ">
           <div className={styles.intro}>
