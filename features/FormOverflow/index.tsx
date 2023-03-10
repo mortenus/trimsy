@@ -5,8 +5,13 @@ import React from 'react';
 import styles from './FormOverflow.module.scss';
 
 import TFormOverflow from './FormOverflow.types';
+import Link from 'next/link';
 
-const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFormOverflow) {
+const FormOverflow = React.memo(function FormOverflow({
+  open,
+  handleOpen,
+  handleKeyDownOverflowChange,
+}: TFormOverflow) {
   const overflowRef = React.useRef(null);
   //   const [event, setEvent] = React.useState<null | MouseEvent>(null);
 
@@ -192,7 +197,7 @@ const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFor
 
             <div className={styles.additional}>
               <h3>Contact us</h3>
-              <p>support@trimsy.org</p>
+              <Link href="mailto:support@trimsy.org">support@trimsy.org</Link>
             </div>
           </div>
         </div>
@@ -200,6 +205,8 @@ const FormOverflow = React.memo(function FormOverflow({ open, handleOpen }: TFor
         <svg
           className={styles.close}
           onClick={handleOpen}
+          onKeyDown={handleKeyDownOverflowChange}
+          tabIndex={1}
           width="35"
           height="35"
           viewBox="0 0 35 35"

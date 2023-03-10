@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import useChangeStateOnSpace from 'hooks/useChangeStateOnSpace';
 import useHideOnOutsideClick from 'hooks/useHideOnOutsideClick';
 import Link from 'next/link';
 import React from 'react';
@@ -15,9 +16,11 @@ type THeaderButton = {
 };
 
 const HeaderButton = ({ children, links }: THeaderButton) => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpenChange = () => setOpen(!open);
+  const {
+    handleStateChange: handleOpenChange,
+    handleKeyDown,
+    state: open,
+  } = useChangeStateOnSpace();
 
   const ref = React.useRef(null);
   const toNotCloseRef = React.useRef(null);
@@ -26,7 +29,7 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
 
   return (
     <>
-      <a className={styles.item} ref={toNotCloseRef}>
+      <a className={styles.item} ref={toNotCloseRef} tabIndex={0} onKeyDown={handleKeyDown}>
         <li onClick={handleOpenChange}>
           {children}
           {open ? (

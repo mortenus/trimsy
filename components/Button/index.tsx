@@ -6,7 +6,19 @@ import styles from './Button.module.scss';
 
 import TButton from './Button.types';
 
-const Button = ({ children, type, status, to, onClick, disabled, style, size, color }: TButton) => {
+const Button = ({
+  children,
+  type,
+  status,
+  to,
+  onClick,
+  disabled,
+  style,
+  size,
+  color,
+  tabIndex,
+  onKeyDown,
+}: TButton) => {
   const stylying = clsx(
     styles.wrapper,
     { [styles['wrapper--disabled_black']]: disabled === 'black' },
@@ -32,7 +44,12 @@ const Button = ({ children, type, status, to, onClick, disabled, style, size, co
           </div>
         </Link>
       ) : (
-        <div style={style && style} onClick={onClick} className={stylying}>
+        <div
+          style={style && style}
+          onClick={onClick}
+          className={stylying}
+          tabIndex={tabIndex || 0}
+          onKeyDown={onKeyDown}>
           {children}
         </div>
       )}

@@ -23,9 +23,10 @@ import { useInnerHeightResize } from 'hooks/useInnerHeightResize';
 
 type THeader = {
   handleFormChange: () => void;
+  handleKeyDownOverflowChange: (e: any) => void;
 };
 
-const Header = ({ handleFormChange }: THeader) => {
+const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
   const router = useRouter();
 
   const handleCleanNav = () => router.pathname === '/stands-with-ukraine';
@@ -48,7 +49,10 @@ const Header = ({ handleFormChange }: THeader) => {
                   <HeaderLinks />
                 </ul>
                 {handleOverflowForm() ? (
-                  <Button type="nav" onClick={handleFormChange}>
+                  <Button
+                    type="nav"
+                    onClick={handleFormChange}
+                    onKeyDown={handleKeyDownOverflowChange}>
                     Contact us
                   </Button>
                 ) : (

@@ -13,6 +13,7 @@ import Header from 'features/Header';
 import FormOverflow from 'features/FormOverflow';
 import Script from 'features/Script';
 import { useRouter } from 'next/router';
+import useChangeStateOnSpace from 'hooks/useChangeStateOnSpace';
 
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string; description?: string };
@@ -22,9 +23,11 @@ const defaultDescription =
   'Discover your presence in Web the way you want. Trimsy has developers to help you achieve anything in the world of Web.';
 
 export default function App({ Component, pageProps }: CustomAppProps) {
-  const [formOpen, setFormOpen] = React.useState<boolean>(false);
-
-  const handleFormOverflowChange = () => setFormOpen(!formOpen);
+  const {
+    handleStateChange: handleFormOverflowChange,
+    handleKeyDown: handleKeyDownOverflowChange,
+    state: formOpen,
+  } = useChangeStateOnSpace();
 
   useHideScrollOnTrue(formOpen);
   useGtag();
@@ -45,13 +48,20 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <Header handleFormChange={handleFormOverflowChange} />
+      <Header
+        handleFormChange={handleFormOverflowChange}
+        handleKeyDownOverflowChange={handleKeyDownOverflowChange}
+      />
 
       <Component {...pageProps} />
       <Footer />
 
       {router.pathname === '/' && (
-        <FormOverflow open={formOpen} handleOpen={handleFormOverflowChange} />
+        <FormOverflow
+          open={formOpen}
+          handleOpen={handleFormOverflowChange}
+          handleKeyDownOverflowChange={handleKeyDownOverflowChange}
+        />
       )}
     </>
   );

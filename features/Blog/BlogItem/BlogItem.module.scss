@@ -52,13 +52,18 @@
     }
   }
 
-  a {
+  & > a {
     width: 100%;
     height: 100%;
     z-index: 10;
     position: absolute;
     left: 0;
     top: 0;
+
+    &:focus {
+      border: 5px solid #eef;
+      border-radius: 30px;
+    }
   }
 
   .imageWrap {

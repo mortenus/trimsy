@@ -1,3 +1,4 @@
+import useChangeStateOnSpace from 'hooks/useChangeStateOnSpace';
 import React from 'react';
 
 import styles from './Item.module.scss';
@@ -8,12 +9,18 @@ type TItem = {
 };
 
 const Item = ({ description, children }: TItem) => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpenChange = () => setOpen(!open);
+  const {
+    handleStateChange: handleOpenChange,
+    state: open,
+    handleKeyDown,
+  } = useChangeStateOnSpace();
 
   return (
-    <div className={styles.wrapper} onClick={handleOpenChange}>
+    <div
+      className={styles.wrapper}
+      onClick={handleOpenChange}
+      tabIndex={0}
+      onKeyDown={handleKeyDown}>
       <div className={styles.header}>
         <h4 className={styles.headline}>{children}</h4>
         <svg

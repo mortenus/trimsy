@@ -20,6 +20,7 @@ const ContactFormOverflow = (props: any) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder={'Type your name*'}
+            tabIndex={1}
           />
           <ContactInput
             name="email"
@@ -28,6 +29,7 @@ const ContactFormOverflow = (props: any) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder={'Type your email*'}
+            tabIndex={1}
           />
           <textarea
             value={values?.description}
@@ -36,6 +38,7 @@ const ContactFormOverflow = (props: any) => {
             onInput={handleChange}
             maxLength={400}
             placeholder={'Describe your objective'}
+            tabIndex={1}
           />
         </div>
         <Button
@@ -43,7 +46,8 @@ const ContactFormOverflow = (props: any) => {
           disabled={isSubmitting ? 'black' : false}
           type="submit"
           color="black"
-          onClick={handleSubmit}>
+          onClick={handleSubmit}
+          tabIndex={1}>
           Submit
         </Button>
       </div>

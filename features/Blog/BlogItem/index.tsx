@@ -15,7 +15,7 @@ type TBlogItem = {
 const BlogItem = ({ date, title, description, imgUrl, slug }: TBlogItem) => {
   return (
     <div className={styles.item}>
-      <Link href={slug} />
+      <Link href={slug} tabIndex={0} />
       <div className={styles.imageWrap}>
         <Image
           className={styles.img}

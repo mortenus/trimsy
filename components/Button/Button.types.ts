@@ -6,6 +6,8 @@ type TButtonBase = {
   style?: React.CSSProperties;
   size?: 'small' | 'medium' | 'large';
   color?: 'black' | 'white';
+  tabIndex?: number;
+  onKeyDown?: React.KeyboardEventHandler;
 };
 
 interface TButtonOnClick extends TButtonBase {

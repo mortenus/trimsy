@@ -11,6 +11,7 @@ type TContactInput = {
   onBlur: (e: any) => void;
   name: string;
   help?: boolean;
+  tabIndex?: number;
 };
 
 const ContactInput = ({
@@ -21,6 +22,7 @@ const ContactInput = ({
   onChange,
   help = false,
   onBlur,
+  tabIndex,
 }: TContactInput) => {
   return (
     <div
@@ -39,6 +41,7 @@ const ContactInput = ({
         onChange={onChange}
         onBlur={onBlur}
         type="text"
+        tabIndex={tabIndex}
       />
     </div>
   );
