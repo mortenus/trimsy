@@ -2,6 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 import TImageUnoptimzed from './ImageUnoptimized.types';
+import useLoaded from './hooks/useLoaded';
 
 const ImageUnoptimized = ({
   src,
@@ -15,11 +16,7 @@ const ImageUnoptimized = ({
   loading,
   className,
 }: TImageUnoptimzed) => {
-  const [loaded, setLoaded] = React.useState(false);
-
-  React.useEffect(() => {
-    setLoaded(true);
-  }, []);
+  const loaded = useLoaded();
 
   return (
     <>

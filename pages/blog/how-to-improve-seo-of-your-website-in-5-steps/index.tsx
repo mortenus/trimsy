@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import styles from './Post.module.scss';
+import styles from '../Post.module.scss';
 
 const info = {
   title: 'How To Improve SEO of your Website in 5 Steps',

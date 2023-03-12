@@ -1,0 +1,332 @@
+import { ImageUnoptimized } from 'components';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+
+import styles from '../Post.module.scss';
+
+const info = {
+  title: 'Setting Up Google Analytics Fast and Easy',
+  headerImg: '/uploads/google_analytics_logo.webp',
+  date: 'March 09, 2023',
+  createdAt: '2023-03-09T12:00:00+0000',
+  modifiedAt: '2023-03-09T12:00:00+0000',
+  minToRead: 4,
+  slug: '/blog/setting-up-google-analytics-fast-and-easy',
+  author: {
+    fullname: 'Oleksii Pylypenko',
+    position: 'CEO',
+    description: `I'm a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment and
+  mutual benefit from the associates I am given a chance to have a journey with. We are
+  thinkers and doers, difficulties could be challanging, but that is the beauty of it.
+  Doing things with speed does not mean doing them imperfectly, the only way to not fall
+  back - is to go forward.`,
+    avatarUrl:
+      'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
+  },
+  description:
+    'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
+};
+
+const ArticleSchema = {
+  '@context': 'https://schema.org',
+  '@id': `https://trimsy.org${info.slug}#article`,
+  '@type': 'NewsArticle',
+  headline: info.title,
+  image: [info.headerImg],
+  datePublished: info.createdAt,
+  dateModified: info.modifiedAt,
+  author: { '@type': 'Person', name: info.author.fullname },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    xPath: ['//title', "/html/head/meta[@name='description']/@content"],
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Trimsy',
+    url: 'https://trimsy.org',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://trimsy.org/images/logo.svg',
+      width: 112,
+      height: 112,
+    },
+    sameAs: ['https://www.linkedin.com/company/trimsy'],
+  },
+};
+
+Post.title = info.title;
+Post.description = info.description;
+
+export default function Post() {
+  return (
+    <>
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          <Link href="/blog#search" className={styles.return}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              viewBox="6 6 12 12"
+              style={{ rotate: '90deg' }}>
+              <path d="M7 9.79a.5.5 0 0 1 .854-.353L12 13.584l4.146-4.147a.5.5 0 1 1 .708.708L12 14.998l-4.854-4.853A.5.5 0 0 1 7 9.79Z"></path>
+            </svg>{' '}
+            <span>Return</span>
+          </Link>
+          <h1 className={styles.title}>{info.title}</h1>
+          <div className={styles.headerImg}>
+            {/* <Image
+              priority
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
+              src={info.headerImg}
+              alt={'Header IMG'}
+            /> */}
+            <ImageUnoptimized
+              src={info.headerImg}
+              width="0"
+              height="0"
+              //   sizes="100vw"
+              priority
+              style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
+              alt={'Header Blog Image'}
+            />
+          </div>
+
+          <div className={styles.date}>
+            <span>{info.date}</span>
+            <div className={styles.line} />
+            <span>{info.minToRead} mins read</span>
+          </div>
+
+          <section>
+            <p>
+              Tracking website could give a valuable information on how it is used, how well website
+              keeps visitors on different pages, amd even more.
+            </p>
+
+            <p>{`The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.`}</p>
+
+            <h3>Overview</h3>
+            <p>
+              Google Analytics, is a web analytics service provided by Google that allows website
+              owners to track and analyze website traffic and user behavior.
+            </p>
+            <p>
+              It provides information such as the number of visitors, pages they visit, how long
+              they stay on each page, their approximate location and also device information.
+            </p>
+            <p>
+              Website owners can use this data to optimize their website, improve user experience,
+              and increase conversions.
+            </p>
+
+            <div className={styles.note}>
+              <span>
+                Notice: While connecting a Google Analytics to a website or mobile app user should
+                be informed that the data of his/her actions is being stored and going to be used in
+                the future. The information includes location of the user, the pages visited and
+                more.
+              </span>
+            </div>
+
+            <h4>Signing Up for Google Analytics</h4>
+            <p>
+              First we need to sign up{`  `}
+              <Link href="https://analytics.google.com/analytics/web/">
+                at Google Analytics site.
+              </Link>
+            </p>
+            <p>If you have a Google account, you can use it to sign up for Analytics.</p>
+            <p>
+              Ensure to use well secured Google Account to defend the information that is being
+              collected and to keep it safe for the future.
+            </p>
+
+            <h4>Create a new property</h4>
+            <p>{`Once signed up for Google Analytics, we'd need to create a new property.`}</p>
+            <p>{`To do this, click on the "Start Measuring". Follow the prompts to enter your website's information with setting up Account Details.`}</p>
+
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
+              src={'/uploads/1556542894625.jpg'}
+              alt={'Image'}
+              loading={'lazy'}
+            />
+
+            <h5>Property</h5>
+
+            <p>
+              Property is a website or mobile app that is going to be tracked by a unique tracking
+              ID. Basically it represents the digital entity to analyze data.
+            </p>
+
+            <p>
+              Each Property can have multiple views, which are different ways to look at the data
+              collected by the tracking ID.
+            </p>
+
+            <h4>Add the tracking code to your website</h4>
+
+            <p>After creating a new property, Google will generate and hand a tracking code.</p>
+            <p>
+              This code needs to be added to every page of your website so that Google Analytics can
+              track your vistors.
+            </p>
+            <p>{`The code can be added to website's HTML code in the <head> tag.`}</p>
+
+            <h4>Verify tracking</h4>
+            <p>
+              After adding the tracking code to a website, it should be clear that it is working
+              properly.
+            </p>
+            <p>{`To track a real time users, that are on the website right now proceed to "Reports"`}</p>
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '25%', height: 'auto' }}
+              src={'/uploads/1556542894626.jpg'}
+              alt={'Image'}
+              loading={'lazy'}
+            />
+            <p>{`Then "Real Time":`}</p>
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              style={{ width: '25%', height: 'auto' }}
+              src={'/uploads/1556542894627.jpg'}
+              alt={'Image'}
+              loading={'lazy'}
+            />
+            <p>{`Maybe there isn't anyone on the website right now, so it might be good idea to open the website in a new tab and browse around, new activity should appear in the Real Time report in Google Analytics.`}</p>
+
+            <div className={styles.note}>
+              <span>
+                Worth noting that Ad Blockers will suppress any requests to the Google Analytics.{' '}
+                <br />
+                <br />
+                That is why some data may be lost. Nevertheless not many people use ad blocker on
+                phones, while{' '}
+                <Link
+                  href="https://earthweb.com/how-many-people-use-ad-blockers/"
+                  target={'_blank'}>
+                  around 40% of users are using it on laptops and computers.
+                </Link>
+              </span>
+            </div>
+
+            {/* <h4>Goals and Conversion tracking</h4>
+            <p>
+              Once tracking code is working correctly, setting up goals and conversion tracking
+              might be a good idea.
+            </p>
+            <p>
+              Goals allow to track specific actions on your website, such as form submissions or
+              product purchases.
+            </p>
+            <p>
+              Conversion tracking allows you to track the success of your marketing campaigns by
+              measuring the number of conversions they generate.
+            </p>
+            <p>
+              More about this topic is discussed in another blog <Link href="#">here.</Link>
+            </p> */}
+
+            <h3>Bottom Line</h3>
+            <p>
+              {`Setting up Google Analytics for your website can be a powerful tool to track user' behaviour and more for future analysis of website's perfomance, which could play important part in the future.`}
+            </p>
+            <p>
+              Important piece is to inform your visitors about what data you are collecting and what
+              for, so there would be no legal issues any futher.
+            </p>
+          </section>
+
+          <div className={styles.author}>
+            <div className={styles.img}>
+              <Image fill src={info.author.avatarUrl} alt={'Author image'} />
+            </div>
+            <div className={styles.info}>
+              <span>Written by</span>
+              <h4 className={styles.name}>{info.author.fullname}</h4>
+              <span className={styles.position}>{info.author.position}</span>
+              <p className={styles.description}>{info.author.description}</p>
+            </div>
+          </div>
+
+          {/* <div className={styles.further}>
+          <h3>Next to Read</h3>
+
+          <div className={styles.items}>
+            <div className={styles.item}>
+              <div className={styles.img}>
+                <Image fill src={'/static/img/blog/info/1.jpg'} alt={'Next to Read IMG'} />
+              </div>
+              <div className={styles.content}>
+                <span className={styles.nextDate}>Apr 26, 2022</span>
+                <h4>How to get more client to get to your business</h4>
+                <p>
+                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
+                  expertise in engineering, management, traffic marketing, and analytics working for
+                  large game development studios with a $1M+ monthly income. With a clear vision of
+                  how game development should work, I run Whimsy Games, being responsible for the
+                  marketing and sales of our products and services.
+                </p>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.img}>
+                <Image fill src={'/static/img/blog/info/2.jpg'} alt={'Next to Read IMG'} />
+              </div>
+              <div className={styles.content}>
+                <span className={styles.nextDate}>Apr 26, 2022</span>
+                <h4>How to get more client to get to your business</h4>
+                <p>
+                  I&apos;m a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment
+                  and mutual benefit from the associates I am given a chance to have a journey with.
+                  Before that, I advanced my expertise in engineering, management, traffic
+                  marketing, and analytics working for large game development studios with a $1M+
+                  monthly income. With a clear vision of how game development should work, I run
+                  Whimsy Games, being responsible for the marketing and sales of our products and
+                  services.
+                </p>
+              </div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.img}>
+                <Image fill src={'/static/img/blog/info/3.jpg'} alt={'Next to Read IMG'} />
+              </div>
+              <div className={styles.content}>
+                <span className={styles.nextDate}>Apr 26, 2022</span>
+                <h4>How to get more client to get to your business</h4>
+                <p>
+                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
+                  expertise in engineering, management, traffic marketing, and analytics working for
+                  large game development studios with a $1M+ monthly income. With a clear vision of
+                  how game development should work, I run Whimsy Games, being responsible for the
+                  marketing and sales of our products and services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        </div>
+      </div>
+      <Head>
+        <script
+          type="application/ld+json"
+          async
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ArticleSchema) }}
+        />
+      </Head>
+    </>
+  );
+}
