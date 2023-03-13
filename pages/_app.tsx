@@ -43,8 +43,8 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <meta name="description" content={Component.description || defaultDescription} />
         <meta content={Component.title} property={'og:title'} />
         <meta content={Component.description || defaultDescription} property={'og:description'} />
-        <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
-        <meta property="og:type" content="website" />
+        {/* <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
+        <meta property="og:type" content="website" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
