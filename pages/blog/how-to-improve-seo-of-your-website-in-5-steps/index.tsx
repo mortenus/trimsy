@@ -57,6 +57,30 @@ const ArticleSchema = {
   },
 };
 
+const nextToReadArr = [
+  {
+    date: 'March 9, 2023',
+    title: 'Setting Up Google Analytics Fast and Easy',
+    description: `Tracking website could give a valuable information on how it is used, how well website keeps visitors on different pages, amd even more. The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.`,
+    imgUrl: 'https://trimsy.org/uploads/google_analytics_logo.webp',
+    slug: '/blog/setting-up-google-analytics-fast-and-easy',
+  },
+  {
+    date: 'March 14, 2023',
+    title: 'Why Website Security is Important for Your Business',
+    description: `Tracking website could give a valuable information on how it is used, how well website keeps visitors on different pages, amd even more. The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.`,
+    imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
+    slug: '/blog/why-website-security-is-important-for-your-business',
+  },
+  {
+    date: 'March 12, 2023',
+    title: 'How To Create a Winning Social Media Strategy for Your Website',
+    description: `Creating a winning social media strategy is a crucial component of any successful website marketing plan. It gives confident opportunities for a website grown and expansion.`,
+    imgUrl: 'https://trimsy.org/uploads/1556542894629.jpg',
+    slug: '/blog/how-to-create-a-winning-social-media-strategy',
+  },
+];
+
 Post.title = info.title;
 Post.description = info.description;
 
@@ -593,7 +617,7 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
               <p className={styles.description}>{info.author.description}</p>
             </div>
           </div>
-          <NextToRead />
+          <NextToRead arr={nextToReadArr} />
         </div>
       </div>
       <Head>

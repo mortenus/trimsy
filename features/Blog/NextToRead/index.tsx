@@ -3,15 +3,23 @@ import Item from './components/Item';
 
 import styles from './NextToRead.module.scss';
 
-const NextToRead = () => {
+type TNextToRead = {
+  arr: {
+    date: string;
+    title: string;
+    description: string;
+    imgUrl: string;
+    slug: string;
+  }[];
+};
+
+const NextToRead = ({ arr }: TNextToRead) => {
   return (
     <div className={styles.further}>
       <h3>Next to Read</h3>
 
       <div className={styles.items}>
-        <Item />
-        <Item />
-        <Item />
+        {arr && arr.map((item, i) => <Item key={i} {...item} />)}
 
         {/* <div className={styles.item}>
         <div className={styles.img}>

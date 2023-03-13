@@ -38,6 +38,8 @@ export default function Home() {
       </main>
 
       <Head>
+        <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
+        <meta property="og:type" content="website" />
         <script
           type="application/ld+json"
           async
