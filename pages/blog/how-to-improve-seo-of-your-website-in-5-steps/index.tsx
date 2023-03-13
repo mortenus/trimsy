@@ -1,4 +1,5 @@
 import { ImageUnoptimized } from 'components';
+import NextToRead from 'features/Blog/NextToRead';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -287,6 +288,7 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
               style={{ width: '75%', height: 'auto' }}
               src={'https://trimsy.org/uploads/5454256022794.png'}
               alt={'Image'}
+              loading={'lazy'}
             />
 
             <h6>Additional:</h6>
@@ -591,63 +593,7 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
               <p className={styles.description}>{info.author.description}</p>
             </div>
           </div>
-
-          {/* <div className={styles.further}>
-          <h3>Next to Read</h3>
-
-          <div className={styles.items}>
-            <div className={styles.item}>
-              <div className={styles.img}>
-                <Image fill src={'/static/img/blog/info/1.jpg'} alt={'Next to Read IMG'} />
-              </div>
-              <div className={styles.content}>
-                <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h4>How to get more client to get to your business</h4>
-                <p>
-                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
-                  expertise in engineering, management, traffic marketing, and analytics working for
-                  large game development studios with a $1M+ monthly income. With a clear vision of
-                  how game development should work, I run Whimsy Games, being responsible for the
-                  marketing and sales of our products and services.
-                </p>
-              </div>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.img}>
-                <Image fill src={'/static/img/blog/info/2.jpg'} alt={'Next to Read IMG'} />
-              </div>
-              <div className={styles.content}>
-                <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h4>How to get more client to get to your business</h4>
-                <p>
-                  I&apos;m a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment
-                  and mutual benefit from the associates I am given a chance to have a journey with.
-                  Before that, I advanced my expertise in engineering, management, traffic
-                  marketing, and analytics working for large game development studios with a $1M+
-                  monthly income. With a clear vision of how game development should work, I run
-                  Whimsy Games, being responsible for the marketing and sales of our products and
-                  services.
-                </p>
-              </div>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.img}>
-                <Image fill src={'/static/img/blog/info/3.jpg'} alt={'Next to Read IMG'} />
-              </div>
-              <div className={styles.content}>
-                <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h4>How to get more client to get to your business</h4>
-                <p>
-                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
-                  expertise in engineering, management, traffic marketing, and analytics working for
-                  large game development studios with a $1M+ monthly income. With a clear vision of
-                  how game development should work, I run Whimsy Games, being responsible for the
-                  marketing and sales of our products and services.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+          <NextToRead />
         </div>
       </div>
       <Head>

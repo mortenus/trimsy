@@ -7,15 +7,13 @@ import React from 'react';
 import styles from '../Post.module.scss';
 
 const info = {
-  title: 'How To Create a Winning Social Media Strategy for Your Website',
-  headerImg: '/uploads/1556542894629.jpg',
-  date: 'March 12, 2023',
-  createdAt: '2023-03-12T12:00:00+0000',
-  modifiedAt: '2023-03-12T12:00:00+0000',
+  title: 'Why Website Security is Important for Your Business',
+  headerImg: '/uploads/1556542894631.jpg',
+  date: 'March 14, 2023',
+  createdAt: '2023-03-14T12:00:00+0000',
+  modifiedAt: '2023-03-14T12:00:00+0000',
   minToRead: 6,
-  slug: '/blog/how-to-create-a-winning-social-media-strategy',
-  description:
-    'Creating a winning social media strategy is a crucial component of any successful website marketing plan. It gives confident opportunities for a website grown and expansion.',
+  slug: '/blog/why-website-security-is-important-for-your-business',
   author: {
     fullname: 'Oleksii Pylypenko',
     position: 'CEO',
@@ -27,6 +25,8 @@ const info = {
     avatarUrl:
       'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
   },
+  description:
+    'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
 };
 
 const ArticleSchema = {
@@ -95,116 +95,55 @@ export default function Post() {
 
           <section>
             <p>
-              Creating a winning social media strategy is a crucial component of any successful
-              website marketing plan.
+              Website security is crucial for any business that operates online, regardless of its
+              size or industry.
             </p>
 
-            <p>It gives confident opportunities for a website grown and expansion.</p>
-
-            <h3>1. Define Your Goals</h3>
-            <p>The first step in creating a social media strategy is to define your goals.</p>
             <p>
-              With clear goals it is much easier to achieve amazing things. Clear Objectives Narrows
-              different paths that could make business go through without need.
-            </p>
-            <Image
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '75%', height: 'auto' }}
-              src={'/uploads/1556542894628.jpg'}
-              alt={'Image'}
-              loading={'lazy'}
-            />
-            <p className={styles.underline_text}>(Shutterstock)</p>
-            <h5>What do you want to achieve?</h5>
-            <ul>
-              <li>Website Traffic?</li>
-              <li>Lead Generation?</li>
-              <li>Build brand awareness?</li>
-            </ul>
-
-            <p>Clear goals will help you guide the rest of the social media strategy.</p>
-
-            <h3>2. Identify Targeted Audience</h3>
-            <p>
-              Understanding your target audience will help you choose the right social media
-              platforms to focus on and create content that resonates with them .
+              Secure website creates strong connection between the users/audience because trust is
+              one of the main ingredients of successful entity, whether online or offline.
             </p>
 
-            <h5>To undetify target audience we should use these questions:</h5>
-            <ul>
-              <li>Who are my target customers?</li>
-              <li>What social media platforms do they use?</li>
-            </ul>
-            <p>These answers are going to help while moving any further of this blog.</p>
-
-            <h3>3. Choose Social Media Platforms</h3>
+            <h3>Protecting confidential data</h3>
             <p>
-              Once targeted audience is known, choose the social media platforms that are most
-              relevant to them.
+              Your website may store sensitive information such as customer data, financial
+              information, and business secrets.
             </p>
             <p>
-              For example, if your target audience is primarily professionals, then LinkedIn may be
-              a better choice than Instagram.
+              If that information falls into the wrong hands, it not only going to damage your
+              customers, but can have severe consequences for your business as well.
             </p>
 
-            <h3>4. Develop Content Strategy</h3>
+            <h3>Building trust</h3>
             <p>
-              Content Strategy should include the types of content you will create and share, the
-              frequency of posting, and the tone and style of the content.
-            </p>
-            <p>Please, consider the type of content that perfoms well on each platform.</p>
-
-            <h3>5. Create a Posting Schedule</h3>
-            <p>
-              Creating a social media posting schedule will insure that your company consistently
-              post content.
-            </p>
-            <Image
-              width="0"
-              height="0"
-              sizes="100vw"
-              style={{ width: '75%', height: 'auto' }}
-              src={'/uploads/1556542894630.jpg'}
-              alt={'Image'}
-              loading={'lazy'}
-            />
-            <p>Consistency is the key in growing solid social media presence.</p>
-            <p>Determine how often your company will post.</p>
-
-            <div className={styles.note}>
-              <span>
-                Important to know what time is the best to make a post for your audience to see.
-              </span>
-              <br />
-              <br />
-              <span>
-                {`Posting at the wrong time could lead to being in the bottom of all the new posts that other's has made.`}
-              </span>
-            </div>
-
-            <h3>6. Engage with Your Audience</h3>
-            <p>Social media is a two-way conversation.</p>
-            <p>Engage with your audience by responsing to comments, messages and mentions.</p>
-            <p>This helps build relationships and increases brand loyalty.</p>
-
-            <h3>7. Measure and Analyze Your Results</h3>
-            <p>{`Finally, measuring and analyzing social media results regularly will give a taste of what's working and what's not.`}</p>
-
-            <p>
-              Using analytics tools to track engagement, traffic, and conversions from social media
-              will help improving your social media strategy.
-            </p>
-
-            <h3>Final thoughts</h3>
-            <p>
-              While creating strong goals, defining the presence in social media, measuring and
-              analyzing the progress will result in inevitable progression.
+              Customers expect your website to be secure when they share their personal information
+              with you.
             </p>
             <p>
-              Following each step creates a winning social media strategy that drives traffic to
-              your website, builds brand awareness, and engages your target audience.
+              A secure website helps build trust with your customers, which is crucial for customer
+              retention and business growth.
+            </p>
+
+            <h3>Maintaining brand reputation</h3>
+            <p>A security breach can have severe consequences for your business reputation.</p>
+            <p>
+              If your website is hacked, it can result in a loss of trust, negative publicity, and
+              even legal actions.
+            </p>
+
+            <h3>Protecting against downtime</h3>
+            <p>A website breach can result in downtime, which can be costly for your business</p>
+            <p>
+              Downtime can lead to lost revenue, decreased productivity, and damage to your brand
+              reputation.
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>{`Website security is essential for your business' success and longevity. `}</p>
+            <p>
+              It protects your sensitive and valuable information, builds important trust with
+              customers that can be damaged forever, maintains your brand reputation and protects
+              against downtime.
             </p>
           </section>
 
@@ -281,8 +220,14 @@ export default function Post() {
       <Head>
         <meta property="og:type" content="article" />
         <meta property="og:title" content={info.title} />
-        <meta property="og:description" content={info.description} />
-        <meta property="og:url" content={info.slug} />
+        <meta
+          property="og:description"
+          content="Creating a marketing strategy for social media doesn't have to be painful. Here's an eight-step guide to build a successful social media strategy."
+        />
+        <meta
+          property="og:url"
+          content="https://simplyirfan.com/blog/how-to-create-a-social-media-marketing-plan/"
+        />
         <meta property="og:site_name" content="Social Media Blog" />
         <meta property="og:image" content={info.headerImg} />
         <meta property="og:image:secure_url" content={info.headerImg} />

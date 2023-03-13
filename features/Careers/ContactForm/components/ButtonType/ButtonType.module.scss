@@ -56,7 +56,7 @@
 
     cursor: pointer;
 
-    &:focus {
+    &:focus-visible {
       background: #bbb;
     }
 

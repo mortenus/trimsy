@@ -1,4 +1,3 @@
-export { default as Button } from './Button';
 export { default as ContactForm } from './ContactForm';
 export { default as ProfessionalItem } from './ProfessionalItem';
 export { default as Potential } from './Potential';

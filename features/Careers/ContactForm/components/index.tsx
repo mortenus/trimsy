@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './ContactForm.module.scss';
 
 import ContactInput from 'components/Form/Input';
-import ButtonType from 'features/Careers/Button';
+import ButtonType from './ButtonType';
 import { Button } from 'components';
 
 const ContactForm = (props: any) => {

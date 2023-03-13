@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Button.module.scss';
+import styles from './ButtonType.module.scss';
 
 type TButton = {
   name: string;
@@ -10,7 +10,7 @@ type TButton = {
 
 const buttonsArr = ['Career Opportunities', 'Partnerships'];
 
-const Button = ({ name, handleChange }: TButton) => {
+const ButtonType = ({ name, handleChange }: TButton) => {
   const [activeType, setActiveType] = React.useState<number | null>(0);
 
   const handleChangeType = (e: any, activeTypeId: number) => {
@@ -64,4 +64,4 @@ const Button = ({ name, handleChange }: TButton) => {
   );
 };
 
-export default React.memo(Button);
+export default React.memo(ButtonType);
