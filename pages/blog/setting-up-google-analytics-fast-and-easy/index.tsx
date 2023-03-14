@@ -1,4 +1,5 @@
 import { ImageUnoptimized } from 'components';
+import NextToRead from 'features/Blog/NextToRead';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -55,6 +56,30 @@ const ArticleSchema = {
     sameAs: ['https://www.linkedin.com/company/trimsy'],
   },
 };
+
+const nextToReadArr = [
+  {
+    date: 'March 2, 2023',
+    title: 'How To Improve SEO of your Website in 5 Steps',
+    description: `When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.`,
+    imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
+    slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
+  },
+  {
+    date: 'March 14, 2023',
+    title: 'Why Website Security is Important for Your Business',
+    description: `Tracking website could give a valuable information on how it is used, how well website keeps visitors on different pages, amd even more. The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.`,
+    imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
+    slug: '/blog/why-website-security-is-important-for-your-business',
+  },
+  {
+    date: 'March 12, 2023',
+    title: 'How To Create a Winning Social Media Strategy for Your Website',
+    description: `Creating a winning social media strategy is a crucial component of any successful website marketing plan. It gives confident opportunities for a website grown and expansion.`,
+    imgUrl: 'https://trimsy.org/uploads/1556542894629.jpg',
+    slug: '/blog/how-to-create-a-winning-social-media-strategy',
+  },
+];
 
 Post.title = info.title;
 Post.description = info.description;
@@ -262,62 +287,7 @@ export default function Post() {
             </div>
           </div>
 
-          {/* <div className={styles.further}>
-          <h3>Next to Read</h3>
-
-          <div className={styles.items}>
-            <div className={styles.item}>
-              <div className={styles.img}>
-                <Image fill src={'/static/img/blog/info/1.jpg'} alt={'Next to Read IMG'} />
-              </div>
-              <div className={styles.content}>
-                <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h4>How to get more client to get to your business</h4>
-                <p>
-                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
-                  expertise in engineering, management, traffic marketing, and analytics working for
-                  large game development studios with a $1M+ monthly income. With a clear vision of
-                  how game development should work, I run Whimsy Games, being responsible for the
-                  marketing and sales of our products and services.
-                </p>
-              </div>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.img}>
-                <Image fill src={'/static/img/blog/info/2.jpg'} alt={'Next to Read IMG'} />
-              </div>
-              <div className={styles.content}>
-                <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h4>How to get more client to get to your business</h4>
-                <p>
-                  I&apos;m a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment
-                  and mutual benefit from the associates I am given a chance to have a journey with.
-                  Before that, I advanced my expertise in engineering, management, traffic
-                  marketing, and analytics working for large game development studios with a $1M+
-                  monthly income. With a clear vision of how game development should work, I run
-                  Whimsy Games, being responsible for the marketing and sales of our products and
-                  services.
-                </p>
-              </div>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.img}>
-                <Image fill src={'/static/img/blog/info/3.jpg'} alt={'Next to Read IMG'} />
-              </div>
-              <div className={styles.content}>
-                <span className={styles.nextDate}>Apr 26, 2022</span>
-                <h4>How to get more client to get to your business</h4>
-                <p>
-                  I&apos;m a CEO and a Co-Founder of Whimsy Games. Before that, I advanced my
-                  expertise in engineering, management, traffic marketing, and analytics working for
-                  large game development studios with a $1M+ monthly income. With a clear vision of
-                  how game development should work, I run Whimsy Games, being responsible for the
-                  marketing and sales of our products and services.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+          <NextToRead arr={nextToReadArr} />
         </div>
       </div>
       <Head>
