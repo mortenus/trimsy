@@ -25,6 +25,7 @@ const info = {
     back - is to go forward.`,
     avatarUrl:
       'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
+    profileUrl: 'https://www.linkedin.com/in/alexey-pylypenko/',
   },
 };
 
@@ -39,7 +40,7 @@ const nextToReadArr = [
   {
     date: 'March 14, 2023',
     title: 'Why Website Security is Important for Your Business',
-    description: `Tracking website could give a valuable information on how it is used, how well website keeps visitors on different pages, amd even more. The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.`,
+    description: `Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.`,
     imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
     slug: '/blog/why-website-security-is-important-for-your-business',
   },

@@ -3,6 +3,7 @@ type TAuthor = {
   position: string;
   description: string;
   avatarUrl: string;
+  profileUrl: string;
 };
 
 type TBlogWrapper = {

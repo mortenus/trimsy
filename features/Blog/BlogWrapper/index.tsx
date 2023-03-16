@@ -18,7 +18,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
     image: [info.headerImg],
     datePublished: info.createdAt,
     dateModified: info.modifiedAt,
-    author: { '@type': 'Person', name: info.author.fullname },
+    author: { '@type': 'Person', name: info.author.fullname, url: info.author.profileUrl },
     speakable: {
       '@type': 'SpeakableSpecification',
       xPath: ['//title', "/html/head/meta[@name='description']/@content"],
@@ -36,6 +36,17 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
       sameAs: ['https://www.linkedin.com/company/trimsy'],
     },
   };
+
+  const WebSiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': 'https://trimsy.org/#breadcrumb',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Blog', item: 'https://trimsy.org/blog' },
+      { '@type': 'ListItem', position: 2, name: info.title, item: info.slug },
+    ],
+  };
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -98,6 +109,11 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
           type="application/ld+json"
           async
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ArticleSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          async
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(WebSiteSchema) }}
         />
       </Head>
     </>

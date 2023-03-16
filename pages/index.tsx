@@ -68,7 +68,7 @@ const WebSiteSchema = {
       '@id': 'https://trimsy.org/#website',
       url: 'https://trimsy.org/',
       name: 'Trimsy',
-      description: '',
+      description: 'Discover your presence in Web the way you want.',
       potentialAction: [
         {
           '@type': 'SearchAction',
