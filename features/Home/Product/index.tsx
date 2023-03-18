@@ -4,10 +4,11 @@ import Image from 'next/image';
 import styles from './Product.module.scss';
 
 import { Card, Cart, ProductItems } from './components';
+import clsx from 'clsx';
 
 const Product = () => {
   return (
-    <section id="product" className={styles.product}>
+    <section id="product" className={clsx(styles.product, 'no-index')}>
       <div className={styles.floating}>
         <Card
           title="Nike Kyrie Flytrap IV"

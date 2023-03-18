@@ -43,7 +43,12 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
     '@id': 'https://trimsy.org/#breadcrumb',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Blog', item: 'https://trimsy.org/blog' },
-      { '@type': 'ListItem', position: 2, name: info.title, item: info.slug },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: info.title,
+        item: `https://trimsy.org${info.slug}`,
+      },
     ],
   };
 
