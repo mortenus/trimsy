@@ -46,7 +46,6 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <meta name="googlebot" content="noindex" className="no-index" />
       </Head>
 
       <Header

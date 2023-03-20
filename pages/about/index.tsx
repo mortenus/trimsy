@@ -1,4 +1,5 @@
 import { Button, ImageUnoptimized } from 'components';
+import CommunityItem from 'features/About/community/Item';
 import IntroItem from 'features/About/Intro/Item';
 import Head from 'next/head';
 import React from 'react';
@@ -37,9 +38,14 @@ export default function About() {
                 Trimsy is a platform for people to bring their professional ideas into reality.
               </h4>
               <h4>
-                We provide web design, development, analytics and finding place for new talents.
+                We understand that every business is unique, which is why we work closely with our
+                clients to discover their specific goals and vision for their web presence or get
+                help from experts on careers.
               </h4>
-              <h4>Our team will take your ideas and make it happen.</h4>
+              <h4>
+                Whether you're looking to build a new website from scratch, optimize an existing
+                site for better performance, or establish new careers opportunities, we can help.
+              </h4>
             </div>
           </div>
 
@@ -61,12 +67,25 @@ export default function About() {
         <div className={styles.vision}>
           <div className={'global-wrapper'}>
             <h3>Vision</h3>
-            <h5>Trimsy is a platform for people to bring their professional ideas into reality.</h5>
             <h5>
               We provide web design, development, analytics and finding place for new talents.
             </h5>
             <h5>Our team will take your ideas and make it happen.</h5>
           </div>
+        </div>
+      </section>
+      <section className={styles.community}>
+        <div className={styles.text}>
+          <h2>Community Involvement</h2>
+          <p>We’re committed to making a difference in the communities where we operate.</p>
+          <p>
+            We believe that being actively involved in our community is an important part of who we
+            are as a business, and we will continue to seek out ways to give back and make a
+            positive impact.
+          </p>
+        </div>
+        <div className={styles.items}>
+          <CommunityItem />
         </div>
       </section>
       <Head>
