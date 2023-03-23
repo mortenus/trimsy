@@ -5,7 +5,13 @@
   justify-content: center;
 
   //   min-height: calc(100vh - 500px);
-  min-height: 700px;
+  min-height: 810px;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #4154c8);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 
   h1 {
     font-size: clamp(3.5rem, 6vw, 10rem);
@@ -28,5 +34,17 @@
     @media (max-width: 500px) {
       margin: 15px 0.9rem;
     }
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

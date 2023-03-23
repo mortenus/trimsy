@@ -88,14 +88,18 @@ export default function Post() {
           This picture from Google is going to help us understand the way Google Search Engine
           works.
         </p>
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
-          src={'https://trimsy.org/uploads/8459359022794.png'}
-          alt={'Image'}
-        />
+
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            src={'https://trimsy.org/uploads/8459359022794.png'}
+            alt={'Image'}
+          />
+        </div>
+
         <p>
           There is a difference between the Processing stage that parses HTML and Renderer stage
           which executes Javascript.
@@ -159,14 +163,19 @@ export default function Post() {
           {`<title> isn’t exactly a meta tag, but is used by Search Engines and is important
               part:`}
         </p>
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
-          src={'https://trimsy.org/uploads/8131405422084.png'}
-          alt={'Image'}
-        />
+
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            src={'https://trimsy.org/uploads/8131405422084.png'}
+            alt={'Image'}
+            loading={'lazy'}
+            quality={'100'}
+          />
+        </div>
 
         <h5>Description</h5>
 
@@ -189,17 +198,18 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
           <span>content</span> is a text of meta tag:
         </p>
 
-        {/* <div className={styles.img}> */}
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
-          src={'https://trimsy.org/uploads/5735159490278.png'}
-          alt={'Image'}
-        />
-
-        {/* </div> */}
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            src={'https://trimsy.org/uploads/5735159490278.png'}
+            alt={'Image'}
+            loading={'lazy'}
+            quality={'100'}
+          />
+        </div>
 
         <p>
           Google will crawl your page, and if description of a page is absent or Googlebot finds it
@@ -237,15 +247,18 @@ content="Lorem ipsum dolor sit amet, consectetur adipsing elit. Aliquam ac purus
           </code>
         </div>
 
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '75%', height: 'auto' }}
-          src={'https://trimsy.org/uploads/5454256022794.png'}
-          alt={'Image'}
-          loading={'lazy'}
-        />
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '75%', height: 'auto' }}
+            src={'https://trimsy.org/uploads/5454256022794.png'}
+            alt={'Image'}
+            loading={'lazy'}
+            quality={'100'}
+          />
+        </div>
 
         <h6>Additional:</h6>
 

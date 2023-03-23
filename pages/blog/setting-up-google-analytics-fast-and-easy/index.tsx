@@ -105,15 +105,17 @@ export default function Post() {
         <p>{`Once signed up for Google Analytics, we'd need to create a new property.`}</p>
         <p>{`To do this, click on the "Start Measuring". Follow the prompts to enter your website's information with setting up Account Details.`}</p>
 
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
-          src={'/uploads/1556542894625.jpg'}
-          alt={'Image'}
-          loading={'lazy'}
-        />
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            src={'/uploads/1556542894625.jpg'}
+            alt={'Image'}
+            loading={'lazy'}
+          />
+        </div>
 
         <h5>Property</h5>
 
@@ -142,6 +144,7 @@ export default function Post() {
           properly.
         </p>
         <p>{`To track a real time users, that are on the website right now proceed to "Reports"`}</p>
+
         <Image
           width="0"
           height="0"

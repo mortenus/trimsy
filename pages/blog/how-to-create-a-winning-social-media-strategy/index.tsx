@@ -73,15 +73,17 @@ export default function Post() {
           With clear goals it is much easier to achieve amazing things. Clear Objectives Narrows
           different paths that could make business go through without need.
         </p>
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '75%', height: 'auto' }}
-          src={'/uploads/1556542894628.jpg'}
-          alt={'Image'}
-          loading={'lazy'}
-        />
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '75%', height: 'auto' }}
+            src={'/uploads/1556542894628.jpg'}
+            alt={'Image'}
+            loading={'lazy'}
+          />
+        </div>
         <p className={styles.underline_text}>(Shutterstock)</p>
         <h5>What do you want to achieve?</h5>
         <ul>
@@ -127,15 +129,18 @@ export default function Post() {
           Creating a social media posting schedule will insure that your company consistently post
           content.
         </p>
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '75%', height: 'auto' }}
-          src={'/uploads/1556542894630.jpg'}
-          alt={'Image'}
-          loading={'lazy'}
-        />
+
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '75%', height: 'auto' }}
+            src={'/uploads/1556542894630.jpg'}
+            alt={'Image'}
+            loading={'lazy'}
+          />
+        </div>
         <p>Consistency is the key in growing solid social media presence.</p>
         <p>Determine how often your company will post.</p>
 

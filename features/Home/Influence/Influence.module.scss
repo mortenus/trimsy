@@ -16,14 +16,18 @@
     align-items: center;
 
     h2 {
-      font-size: clamp(2rem, 4vw, 5rem);
+      //   font-size: clamp(2rem, 4vw, 5rem);
+      font-size: clamp(2rem, 3.5vw, 5rem);
     }
 
     p {
       width: 60vw;
-      font-weight: 300;
+      //   max-width: 1194px;
+      //   width: 100%;
+      font-weight: 400;
 
-      font-size: clamp(1.25rem, 1.3vw, 2rem);
+      font-size: clamp(1.25rem, 1vw, 2rem);
+      text-align: center;
       margin: 15px 0;
     }
 

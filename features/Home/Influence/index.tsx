@@ -25,17 +25,17 @@ const Influence = () => {
         <h2>Influence the Internet</h2>
         <p>
           Bring your future web application to the next level with competitive UI, friendly SEO and
-          fast loading of content to user
+          fast loading of content to user.
         </p>
       </div>
       <div className={styles.wrapper}>
         <Swiper
           spaceBetween={0}
-          speed={450}
-          resistanceRatio={0.2}
+          speed={600}
+          resistanceRatio={0.1}
           effect="creative"
           autoplay={{
-            delay: 200000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           pagination={{

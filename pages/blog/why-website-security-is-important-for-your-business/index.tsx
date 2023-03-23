@@ -1,4 +1,6 @@
+import { ImageUnoptimized } from 'components';
 import BlogWrapper from 'features/Blog/BlogWrapper';
+import Image from 'next/image';
 import React from 'react';
 
 import styles from '../Post.module.scss';
@@ -121,7 +123,7 @@ export default function Post() {
           perfomance of a website.
         </p>
 
-        <h4>2. Using HTTPS</h4>
+        <h4>2. Using HTTPS and SSL/TLS</h4>
         <p>
           Securing a website with HTTPS (Hypertext Transfer Protocol Secure) to encrypt data
           transmission between the server and the client.
@@ -139,6 +141,12 @@ export default function Post() {
           <span>{`Implementing HTTPS also help build trust as discussed earlier. When users see the "Secure" or "HTTPS" label in their browser's address bar, they know that their data is being transmitted securely, which can help to increase their confidence about the website.`}</span>
         </div>
 
+        <p>
+          Secure Socket Layer (SSL) or Transport Layer Security (TLS) encrypts the data transmitted
+          between the website and the users, preventing hackers from intercepting and stealing
+          sensitive information.
+        </p>
+
         <h4>3. Using secure hosting and strong passwords</h4>
         <p>
           Choosing a secure web hosting provider that offers features like DDoS protection,
@@ -149,6 +157,77 @@ export default function Post() {
         <p>
           Using strong and unique passwords not only for a hosting provider but for all the accounts
           will ensure indisputable security.
+        </p>
+
+        <h3>Additional Steps</h3>
+        <h4>4. Limit file uploads</h4>
+        <p>
+          Restrict file uploads to only allow certain file types and limit the maximum file size to
+          prevent hackers from uploading malicious files to your server.
+        </p>
+        <p>
+          Limiting file uploads is an essential security measure to protect your website from
+          malware and viruses that can be uploaded by attackers.
+        </p>
+
+        <h6>Allow only specific file types:</h6>
+        <p>
+          Limit the types of files that users can upload to your website. For instance, only allow
+          image files, PDFs, or certain document types, and block executable files, scripts, or
+          other dangerous file types.
+        </p>
+        <h6>Use file type verification:</h6>
+        <p>
+          Implement server-side file type verification to ensure that only allowed file types are
+          uploaded.
+        </p>
+        <p>
+          Attackers may try to bypass client-side restrictions and upload malicious files by
+          changing the file type in the request header.
+        </p>
+        <h6>Limit the file size:</h6>
+        <p>Restrict the maximum file size that users can upload to your website.</p>
+        <p>
+          Large files can consume a lot of server resources and take longer to scan for viruses or
+          malware.
+        </p>
+
+        <h4>5. Implement two-factor authentication (2FA)</h4>
+        {/* <Image fill src={'https://trimsy.org/uploads/1666542894624.jpg'} alt="2FA Image" /> */}
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '70%', height: 'auto' }}
+            src={'/uploads/1666542894624.png'}
+            alt="2FA Image"
+            loading={'lazy'}
+            quality={'100'}
+          />
+        </div>
+        <p className={styles.underline_text}>(Shutterstock)</p>
+
+        <p>
+          Two-factor authentication (2FA) is a security measure that adds an extra layer of
+          protection to the login process.
+        </p>
+        <p>
+          2FA is effective in preventing unauthorized access to user accounts, even if a hacker has
+          obtained the user's login credentials. This is because the hacker would also need to have
+          access to the second factor, which is typically something that only the legitimate user
+          has, like their phone or email account.
+        </p>
+        <p>
+          Implementing 2FA on your website is a relatively simple process. You can use third-party
+          services that provide 2FA functionality, such as Google Authenticator or Authy, or you can
+          implement your own 2FA system. Some popular CMS platforms, such as WordPress, offer
+          built-in support for 2FA.
+        </p>
+        <p>
+          It's important to note that while 2FA is an effective security measure, it's not
+          foolproof. Hackers have been known to use social engineering tactics to trick users into
+          providing both factors of authentication.
         </p>
 
         <h3>Conclusion</h3>

@@ -80,14 +80,18 @@ export default function Post() {
           Servers are typically located in various geographic locations, allowing content to be
           cached closer to end-users, resulting in faster delivery of content and lower latency.
         </p>
-        <Image
-          width="0"
-          height="0"
-          sizes="100vw"
-          style={{ width: '100%', height: 'auto' }}
-          src={'https://trimsy.org/uploads/8459359022794.png'}
-          alt={'Image'}
-        />
+        <div className={styles.img}>
+          <Image
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            src={'/uploads/1666542894625.png'}
+            alt={'Image'}
+          />
+        </div>
+        <p className={styles.underline_text}>(cloudflare)</p>
+
         <p>
           {`When a user requests content from a website or application, the CDN will direct the user's request to the closest server that has a cached copy of the content. This reduces the distance the content has to travel and highly improves the overall perfomance of the website application.`}
         </p>
