@@ -6,3 +6,4 @@ export { default as Product } from './Product';
 export { default as FAQ } from './FAQ';
 export { default as Boost } from './Boost';
 export { default as Here } from './Here';
+export { default as ContactUs } from './ContactUs';

@@ -53,7 +53,11 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         handleKeyDownOverflowChange={handleKeyDownOverflowChange}
       />
 
-      <Component {...pageProps} />
+      <Component
+        {...pageProps}
+        handleFormChange={handleFormOverflowChange}
+        handleKeyDownOverflowChange={handleKeyDownOverflowChange}
+      />
       <Footer />
 
       {router.pathname === '/' && (

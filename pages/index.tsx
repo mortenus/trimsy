@@ -1,7 +1,8 @@
 import {
   Accomplish,
   Boost,
-  ContactForm,
+  ContactUs,
+  //   ContactForm,
   FAQ,
   Here,
   Influence,
@@ -14,7 +15,12 @@ import Head from 'next/head';
 
 Home.title = 'Web Development';
 
-export default function Home() {
+type THome = {
+  handleFormChange: () => void;
+  handleKeyDownOverflowChange: (e: any) => void;
+};
+
+export default function Home({ handleFormChange, handleKeyDownOverflowChange }: THome) {
   const { onScrollEvent } = useOnScroll();
 
   return (
@@ -28,13 +34,18 @@ export default function Home() {
 
         <Influence />
 
+        <Here />
+
         <Boost onScrollEvent={onScrollEvent} />
 
         <FAQ />
 
-        <Here />
-
-        <ContactForm />
+        {/* <ContactForm /> */}
+        <ContactUs
+          handleFormChange={handleFormChange}
+          handleKeyDownOverflowChange={handleKeyDownOverflowChange}
+          onScrollEvent={onScrollEvent}
+        />
       </main>
 
       <Head>

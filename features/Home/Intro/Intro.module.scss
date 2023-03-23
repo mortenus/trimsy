@@ -5,7 +5,7 @@
   justify-content: center;
 
   //   min-height: calc(100vh - 500px);
-  min-height: 810px;
+  min-height: 875px;
 
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #4154c8);
   background-size: 400% 400%;
@@ -33,6 +33,36 @@
 
     @media (max-width: 500px) {
       margin: 15px 0.9rem;
+    }
+  }
+
+  .pause {
+    padding: 11px 12px;
+    border: 2px solid #000;
+    background: transparent;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+
+    cursor: pointer;
+
+    @media (max-width: 734px) {
+      //   display: none;
+      //   visibility: none;
+      //   opacity: 0;
+
+      right: 20px;
+      bottom: 20px;
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
     }
   }
 }

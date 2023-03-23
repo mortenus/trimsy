@@ -7,9 +7,12 @@ $bannerHeight: clamp(3rem, 3vw, 8rem);
   height: $bannerHeight;
   width: 100%;
 
-  background: #000;
+  //   background: #000;
+  background: rgba(0, 0, 0, 0.35);
 
   transition: all 0.3s ease;
+
+  position: absolute;
 
   h5 {
     color: #fff;
