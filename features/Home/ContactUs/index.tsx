@@ -28,7 +28,7 @@ const ContactUs = ({
       <div className={styles.wrapper}>
         <div className={styles.potential}>
           <h2>{`Let's chat about your next project`}</h2>
-          <p>Tell us how we can help you bring yourideas into reality.</p>
+          <p>Tell us how we can help you bring your ideas into reality.</p>
           <div className={clsx(styles.button, { [styles.active]: ButtonInView })} ref={ButtonRef}>
             <Button type="nav" onClick={handleFormChange} onKeyDown={handleKeyDownOverflowChange}>
               Let's work

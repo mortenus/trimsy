@@ -13,11 +13,11 @@ const Intro = () => {
 
   return (
     <>
-      <Banner />
       <div
         id="home"
         className={styles.wrapper}
         style={{ animationPlayState: isGradientAnimationPaused ? 'paused' : 'running' }}>
+        <Banner />
         <h1>Trimsy</h1>
         <h3>Success is near</h3>
         <p>Discover your presence in Web the way you want.</p>

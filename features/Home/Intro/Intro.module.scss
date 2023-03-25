@@ -5,7 +5,8 @@
   justify-content: center;
 
   //   min-height: calc(100vh - 500px);
-  min-height: 875px;
+  min-height: 900px;
+  position: relative;
 
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #4154c8);
   background-size: 400% 400%;
@@ -36,6 +37,12 @@
     }
   }
 
+  &:hover {
+    .pause {
+      opacity: 1;
+    }
+  }
+
   .pause {
     padding: 11px 12px;
     border: 2px solid #000;
@@ -50,6 +57,9 @@
     bottom: 40px;
 
     cursor: pointer;
+
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
 
     @media (max-width: 734px) {
       //   display: none;
