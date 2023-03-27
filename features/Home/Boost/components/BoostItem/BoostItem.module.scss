@@ -1,11 +1,15 @@
 $n: 3;
 
 .item {
-  width: 25%;
+  width: 33.333333%;
 
   opacity: 0;
   transform: translateX(-50px);
   transition: opacity 0.45s linear, transform 0.45s cubic-bezier(0.26, 0.67, 0.48, 0.91);
+
+  &:nth-child(4n) {
+    margin-top: 40px;
+  }
 
   @for $i from 1 through $n {
     &:nth-child(#{$i}) {
@@ -65,6 +69,8 @@ $n: 3;
 
   .description {
     font-weight: 500;
+
+    width: 75%;
 
     @media (max-width: 1250px) {
       font-size: 16px;

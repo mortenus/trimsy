@@ -9,7 +9,7 @@ $blogBackground: #f3efe5;
     position: relative;
 
     width: 100%;
-    height: 85vh;
+    height: calc(100vh - var(--navbar-height));
 
     display: flex;
     flex-direction: column;

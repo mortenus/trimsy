@@ -17,6 +17,10 @@ const itemsArr = [
     description: 'Get the SEO optimization your site need for perfect search visibility.',
   },
   {
+    title: 'UI and UX',
+    description: 'Loop forward for new UI and UI experience with the help of our experts.',
+  },
+  {
     title: 'Faster Loading',
     description: 'Our team ensures to bring the best loading of pages for the user.',
   },

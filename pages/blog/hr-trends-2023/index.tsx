@@ -6,7 +6,7 @@ import BlogWrapper from 'features/Blog/BlogWrapper';
 import styles from '../Post.module.scss';
 
 const info = {
-  title: 'Human Resources Trends 2023 ',
+  title: 'Human Resources Trends in 2023 ',
   headerImg: '/uploads/1556542894632.jpeg',
   date: 'March 27, 2023',
   createdAt: '2023-03-27T12:00:00+0000',
@@ -126,6 +126,58 @@ export default function Post() {
         <p>
           This will require HR teams to adapt their policies and processes to accommodate remote
           workers and ensure that they remain engaged and productive.
+        </p>
+
+        <h3>Employee wellness and mental health will become a top priority</h3>
+        <p>
+          The pandemic has highlighted the importance of mental health and wellness, and many
+          companies are investing in employee wellness programs and resources.
+        </p>
+        <p>
+          In 2023, HR teams will continue to prioritize employee well-being and seek new ways to
+          support their mental and physical health.
+        </p>
+
+        <h3>Automation and AI will transform HR processes</h3>
+        <p>
+          Automation and AI are already being used in many HR functions, such as recruiting and
+          onboarding.
+        </p>
+        <p>
+          In 2023, we can expect to see more HR tasks being automated, freeing up HR professionals
+          to focus on strategic initiatives.
+        </p>
+
+        <h3>Focus on upskilling and reskilling</h3>
+        <p>
+          As automation and AI continue to transform the workplace, there will be a growing need for
+          employees to acquire new skills and knowledge.
+          <p>
+            HR departments will need to play a key role in identifying skill gaps and providing
+            training and development opportunities to ensure that employees are prepared for the
+            jobs of the future.
+          </p>
+          <p>
+            The skills needed for many jobs are changing rapidly, and employees will need to
+            continually upskill and reskill to remain competitive.
+          </p>
+        </p>
+        <p>
+          HR teams will need to develop training and development programs that help employees
+          acquire new skills and advance in their careers.
+        </p>
+
+        <h3>Resume</h3>
+        <p>
+          In summary, the future of HR will be characterized by a focus on creating positive
+          employee experiences, greater use of technology and automation, a continued emphasis on
+          DEI, the adoption of hybrid work arrangements, and a growing focus on upskilling and
+          reskilling.
+        </p>
+        <p>
+          These are just a few potential HR trends for 2023. As the workplace continues to evolve,
+          HR teams will need to stay up-to-date on the latest trends and technologies to remain
+          effective and relevant.
         </p>
       </section>
     </BlogWrapper>

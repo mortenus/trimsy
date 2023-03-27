@@ -23,12 +23,12 @@ const Item = ({ description, children }: TItem) => {
   }, [open]);
 
   return (
-    <div
-      className={styles.wrapper}
-      onClick={handleOpenChange}
-      tabIndex={0}
-      onKeyDown={handleKeyDown}>
-      <div className={styles.header}>
+    <div className={styles.wrapper}>
+      <div
+        className={styles.header}
+        onClick={handleOpenChange}
+        tabIndex={0}
+        onKeyDown={handleKeyDown}>
         <h4 className={styles.headline}>{children}</h4>
         <svg
           className={styles.arrow}
