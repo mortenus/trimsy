@@ -152,15 +152,15 @@ export default function Post() {
         <p>
           As automation and AI continue to transform the workplace, there will be a growing need for
           employees to acquire new skills and knowledge.
-          <p>
-            HR departments will need to play a key role in identifying skill gaps and providing
-            training and development opportunities to ensure that employees are prepared for the
-            jobs of the future.
-          </p>
-          <p>
-            The skills needed for many jobs are changing rapidly, and employees will need to
-            continually upskill and reskill to remain competitive.
-          </p>
+        </p>
+        <p>
+          HR departments will need to play a key role in identifying skill gaps and providing
+          training and development opportunities to ensure that employees are prepared for the jobs
+          of the future.
+        </p>
+        <p>
+          The skills needed for many jobs are changing rapidly, and employees will need to
+          continually upskill and reskill to remain competitive.
         </p>
         <p>
           HR teams will need to develop training and development programs that help employees
