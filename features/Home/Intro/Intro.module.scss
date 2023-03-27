@@ -5,7 +5,7 @@
   justify-content: center;
 
   //   min-height: calc(100vh - 500px);
-  min-height: 900px;
+  min-height: calc(100vh - var(--navbar-height));
   position: relative;
 
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #4154c8);
@@ -14,8 +14,14 @@
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
 
+  padding: 175px 0;
+
+  @media (max-width: 734px) {
+    min-height: 0;
+  }
+
   h1 {
-    font-size: clamp(3.5rem, 6vw, 10rem);
+    font-size: clamp(3.5rem, 6vw, 8.5rem);
     font-weight: bold;
 
     margin: 50px 0 30px 0;
@@ -65,6 +71,8 @@
       //   display: none;
       //   visibility: none;
       //   opacity: 0;
+
+      opacity: 1;
 
       right: 20px;
       bottom: 20px;

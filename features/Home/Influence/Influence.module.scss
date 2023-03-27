@@ -18,15 +18,45 @@
     h2 {
       //   font-size: clamp(2rem, 4vw, 5rem);
       font-size: clamp(2rem, 3.5vw, 5rem);
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#f06844),
+        color-stop(25%, #ee4c54),
+        color-stop(50%, #d45e95),
+        color-stop(75%, #9c6ca6),
+        to(#6583c1)
+      );
+      background: -webkit-linear-gradient(
+        left,
+        #f06844 0%,
+        #ee4c54 25%,
+        #d45e95 50%,
+        #9c6ca6 75%,
+        #6583c1 100%
+      );
+      background: linear-gradient(
+        to right,
+        #f06844 0%,
+        #ee4c54 25%,
+        #d45e95 50%,
+        #9c6ca6 75%,
+        #6583c1 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p {
       width: 60vw;
       //   max-width: 1194px;
       //   width: 100%;
-      font-weight: 400;
+      //   font-weight: 400;
 
-      font-size: clamp(1.25rem, 1vw, 2rem);
+      //   font-size: clamp(1.25rem, 1vw, 2rem);
+      font-weight: 500;
+      font-size: 24px;
       text-align: center;
       margin: 15px 0;
     }

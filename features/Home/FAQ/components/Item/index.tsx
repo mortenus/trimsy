@@ -15,6 +15,13 @@ const Item = ({ description, children }: TItem) => {
     handleKeyDown,
   } = useChangeStateOnSpace();
 
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  const [height, setHeight] = React.useState(0);
+
+  React.useEffect(() => {
+    setHeight(open ? contentRef.current?.scrollHeight || 0 : 0);
+  }, [open]);
+
   return (
     <div
       className={styles.wrapper}
@@ -38,11 +45,17 @@ const Item = ({ description, children }: TItem) => {
         </svg>
       </div>
 
-      {open && (
-        <p className={styles.description} style={{ height: `${open ? '100%' : '0'}` }}>
-          {description}
-        </p>
-      )}
+      <div
+        className={styles.description}
+        ref={contentRef}
+        style={{
+          maxHeight: open ? `${height}px` : '0px',
+          overflow: 'hidden',
+          transition: 'max-height 0.3s ease-in-out',
+          minHeight: '0px',
+        }}>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const FAQ = () => {
     <section className="global-wrapper">
       <div className={styles.wrapper}>
         <div className={styles.intro}>
-          <h2>FAQs</h2>
+          <h2>Questions?</h2>
         </div>
         <Item
           description={

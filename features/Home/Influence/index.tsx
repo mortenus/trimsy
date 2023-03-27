@@ -22,11 +22,8 @@ const Influence = () => {
   return (
     <section id="portfolio" className={styles.section}>
       <div className={styles.intro}>
-        <h2>Influence the Internet</h2>
-        <p>
-          Bring your future web application to the next level with competitive UI, friendly SEO and
-          fast loading of content to user.
-        </p>
+        <h2>Believing in seeing</h2>
+        <p>Expand trending User Experience with substantial Level Up.</p>
       </div>
       <div className={styles.wrapper}>
         <Swiper

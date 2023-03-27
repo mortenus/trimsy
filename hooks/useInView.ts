@@ -10,7 +10,6 @@ type TUseInView = {
 
 export default function useInView({ ref, onScrollEvent, offset, oneTime = false }: TUseInView) {
   const [inView, setInView] = React.useState(false);
-
   const [alwaysTrue, setAlwaysTrue] = React.useState(false);
 
   //   const [windowWidth, setWindowWidth] = React.useState(0);
@@ -34,14 +33,22 @@ export default function useInView({ ref, onScrollEvent, offset, oneTime = false 
   const handleCheckPosition = () => {
     if (!onScrollEvent) return;
 
-    const currentPositionFromTheBottom =
-      ref.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight;
+    const { top } = ref.current.getBoundingClientRect();
+    const viewportHeight = onScrollEvent.target.documentElement.clientHeight;
+    const currentPositionFromTheBottom = top - viewportHeight;
 
-    if (offset) {
-      return currentPositionFromTheBottom + offset <= 0 ? setInView(true) : setInView(false);
-    }
+    const inView = offset
+      ? currentPositionFromTheBottom + offset <= 0
+      : currentPositionFromTheBottom <= 0;
+    setInView(inView);
+    // const currentPositionFromTheBottom =
+    //   ref.current.getBoundingClientRect().top - onScrollEvent.target.documentElement.clientHeight;
 
-    currentPositionFromTheBottom <= 0 ? setInView(true) : setInView(false);
+    // if (offset) {
+    //   return currentPositionFromTheBottom + offset <= 0 ? setInView(true) : setInView(false);
+    // }
+
+    // currentPositionFromTheBottom <= 0 ? setInView(true) : setInView(false);
   };
 
   React.useEffect(() => {

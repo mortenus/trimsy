@@ -25,7 +25,7 @@ const Globe = ({ onScrollEvent }: TGlobe) => {
           <p>We provide infinite storytelling</p>
           <p>through the fusion of vacancies</p>
           <p>in countries like Canada, Ukraine,</p>
-          <p>the US, and Europe,technology and creativity.</p>
+          <p>the US, and Europe, technology and creativity.</p>
         </div>
       </div>
       <Image
