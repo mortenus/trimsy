@@ -6,7 +6,7 @@ import { Button, ImageUnoptimized } from 'components';
 import { BlogButton, BlogItem } from 'features/Blog';
 
 import { useFetchBlogs } from 'features/Blog/hooks';
-import useAnimateBackgroundPosition from 'features/Blog/hooks/useAnimateEaseInOut';
+import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
 
 import Logo from 'public/images/mini-logo.png';
 import Image from 'next/image';

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 270px;
   padding-bottom: 100px;
 
   color: #fff;
@@ -49,12 +49,18 @@
     }
 
     p {
-      width: 60vw;
       //   max-width: 1194px;
       //   width: 100%;
       //   font-weight: 400;
 
       //   font-size: clamp(1.25rem, 1vw, 2rem);
+
+      @media (max-width: 734px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 87.5%;
+      }
+
       font-weight: 500;
       font-size: 24px;
       text-align: center;
@@ -75,82 +81,11 @@
 
   .wrapper {
     width: 100%;
+    position: relative;
+    padding: 25px 0;
 
     .item {
       padding: 25px 100px 0 50px;
-
-      //   @media (max-width: 650px) {
-      //     padding: 0 20px;
-      //   }
-    }
-
-    :global(.swiper-slide) {
-      //   max-height: 500px;
-    }
-
-    :global(.swiper-slide-active) {
-      margin-right: 20px;
-      margin-left: 20px;
-    }
-
-    :global(.swiper) {
-      //   width: 1200px;
-      //   height: 100vh;
-      width: clamp(60rem, 70vw, 85rem);
-      height: clamp(55vh, 40rem, 80vh);
-
-      max-width: 1800px;
-
-      transition: width 0.2s ease;
-
-      @media (max-width: 1000px) {
-        width: max(30%, 600px);
-        height: clamp(25vh, 20rem, 40vh);
-      }
-
-      @media (max-width: 650px) {
-        height: clamp(33vh, 17rem, 34vh);
-        width: 100%;
-      }
-    }
-
-    :global(.swiper-pagination-bullets) {
-      //   bottom: 20px;
-      @media (min-width: 1000px) and (max-width: 1200px) {
-        bottom: 10px;
-      }
-    }
-
-    :global(.swiper-pagination-bullet) {
-      background: #fff;
-      opacity: 0.8;
-
-      @media (max-width: 650px) {
-        display: none;
-      }
-    }
-
-    :global(.swiper-pagination-bullet-active) {
-      background: rgb(22, 106, 234);
-      opacity: 1;
-    }
-
-    :global(.swiper-button-next) {
-      height: 100%;
-      top: 0;
-
-      @media (max-width: 650px) {
-        display: none;
-      }
-    }
-
-    :global(.swiper-button-prev) {
-      height: 100%;
-      top: 0;
-
-      @media (max-width: 650px) {
-        display: none;
-      }
     }
   }
 }

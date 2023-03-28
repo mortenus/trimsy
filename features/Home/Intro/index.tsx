@@ -1,22 +1,21 @@
 import React from 'react';
 
 import Banner from './components/Banner';
+import useAnimation from './hooks/useAnimation';
 
 import styles from './Intro.module.scss';
 
 const Intro = () => {
-  const [isGradientAnimationPaused, setIsGradientAnimationPaused] = React.useState(false);
-
-  const handleToggleAnimation = () => {
-    setIsGradientAnimationPaused(!isGradientAnimationPaused);
-  };
+  const ref = React.useRef(null);
+  const { isGradientAnimationPaused, handleToggleAnimation } = useAnimation({ ref });
 
   return (
     <>
       <div
         id="home"
         className={styles.wrapper}
-        style={{ animationPlayState: isGradientAnimationPaused ? 'paused' : 'running' }}>
+        style={{ animationPlayState: isGradientAnimationPaused ? 'paused' : 'running' }}
+        ref={ref}>
         <Banner />
         <h1>Trimsy</h1>
         <h3>Success is near</h3>

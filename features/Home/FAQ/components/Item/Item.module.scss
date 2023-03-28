@@ -1,5 +1,4 @@
 .wrapper {
-  padding: 0px 40px 0px 30px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 
   overflow: hidden;
@@ -41,9 +40,8 @@
       margin-top: 25px;
       flex: 1;
 
-      @media (max-width: 900px) {
-        font-size: 18px;
-        padding-right: 10px;
+      @media (max-width: 1068px) {
+        font-size: 16px;
       }
 
       @media (max-width: 734px) {
