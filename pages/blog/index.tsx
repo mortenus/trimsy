@@ -18,6 +18,39 @@ export default function Blog() {
   const { items, totalPages, currentPage, setPageNumber, incrementPage, decrementPage } =
     useFetchBlogs();
 
+  const layouts = [
+    {
+      count: 1,
+      classes: [1],
+    },
+    {
+      count: 2,
+      classes: [1, 1],
+    },
+    {
+      count: 3,
+      classes: [1, 2, 3],
+    },
+    {
+      count: 4,
+      classes: [1, 2, 3, 1],
+    },
+    {
+      count: 5,
+      classes: [1, 2, 3, 1, 1],
+    },
+    {
+      count: 6,
+      classes: [1, 2, 3, 1, 1, 1],
+    },
+    {
+      count: 7,
+      classes: [1, 2, 3, 1, 1, 6, 7],
+    },
+  ];
+
+  const layout = layouts.find((layout) => layout.count === items.length);
+
   const currentValue = useAnimateBackgroundPosition(0, -440, 1750, 600);
 
   return (
@@ -84,36 +117,82 @@ export default function Blog() {
                 Search
               </Button>
             </div>
-
-            <div className={styles.blogs}>
-              {items.length > 0 &&
-                items.map((item) => {
-                  return <BlogItem key={item.slug} slug={item.slug} {...item.data} />;
-                })}
-            </div>
-            {totalPages > 1 && (
-              <div className={styles.nav}>
-                <BlogButton type={'nav'} onClick={decrementPage}>
-                  Prev
-                </BlogButton>
-
-                <div className={styles.numbers}>
-                  {Array.from(Array(totalPages).keys()).map((num: number) => (
-                    <BlogButton
-                      active={num + 1 === currentPage}
-                      key={num + 1}
-                      type={'number'}
-                      onClick={() => setPageNumber(num + 1)}>
-                      {num + 1}
-                    </BlogButton>
-                  ))}
-                </div>
-                <BlogButton type={'nav'} onClick={incrementPage}>
-                  Next
-                </BlogButton>
-              </div>
-            )}
           </div>
+
+          <div className={styles[`grid-container`]}>
+            <div className={styles[`grid-items`]}>
+              {items.length > 0 &&
+                (() => {
+                  const components = [];
+                  for (let i = 0; i < items.length; i++) {
+                    const item = items[i];
+                    const itemCount: number = layout!.classes[i];
+
+                    // Check if itemCount for current and next items is equal to 2
+                    const isFlex =
+                      itemCount !== 1 && i + 1 < items.length && layout!.classes[i + 1] !== 1;
+
+                    // Add a flex parent for the two consecutive items with itemCount === 2
+                    const itemComponent = (
+                      <BlogItem
+                        key={item.slug}
+                        itemCount={itemCount}
+                        slug={item.slug}
+                        featured={i === 0}
+                        {...item.data}
+                      />
+                    );
+
+                    if (isFlex) {
+                      components.push(
+                        <div key={`${item.slug}-flex`} className={styles.flex}>
+                          {itemComponent}
+                          <BlogItem
+                            key={items[i + 1].slug}
+                            itemCount={layout!.classes[i + 1]}
+                            slug={items[i + 1].slug}
+                            {...items[i + 1].data}
+                          />
+                        </div>,
+                      );
+                      i++; // Skip the next item if it's already rendered inside the `isFlex` block
+                    } else {
+                      components.push(itemComponent);
+                    }
+                  }
+                  return components;
+                })()}
+              {/* <div className={styles.container}>
+      {items.map((item, index) => (
+        <div key={index} className={gridClasses[items.length][index] + ' ' + styles.item}>
+        <BlogItem key={item.slug} slug={item.slug} {...item.data} /
+        </div>
+      ))}
+    </div> */}
+            </div>
+          </div>
+          {totalPages > 1 && (
+            <div className={styles.nav}>
+              <BlogButton type={'nav'} onClick={decrementPage}>
+                Prev
+              </BlogButton>
+
+              <div className={styles.numbers}>
+                {Array.from(Array(totalPages).keys()).map((num: number) => (
+                  <BlogButton
+                    active={num + 1 === currentPage}
+                    key={num + 1}
+                    type={'number'}
+                    onClick={() => setPageNumber(num + 1)}>
+                    {num + 1}
+                  </BlogButton>
+                ))}
+              </div>
+              <BlogButton type={'nav'} onClick={incrementPage}>
+                Next
+              </BlogButton>
+            </div>
+          )}
         </div>
       </div>
     </>

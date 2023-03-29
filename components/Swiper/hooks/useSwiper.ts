@@ -8,7 +8,7 @@ interface TUseSwiper {
 
 const useSwiper = ({ images, autoPlayDuration = 3500, isVisible }: TUseSwiper) => {
   const [activeIndex, setActiveIndex] = React.useState(0);
-  const [isPlaying, setIsPlaying] = React.useState(false);
+  const [isPlaying, setIsPlaying] = React.useState(true);
   const [isStoppedByUser, setIsStoppedByUser] = React.useState(false);
   const [lastUpdateTime, setLastUpdateTime] = React.useState(Date.now());
 
