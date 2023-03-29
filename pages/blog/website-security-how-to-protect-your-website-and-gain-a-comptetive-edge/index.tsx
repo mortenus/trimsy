@@ -1,4 +1,3 @@
-import { ImageUnoptimized } from 'components';
 import BlogWrapper from 'features/Blog/BlogWrapper';
 import Image from 'next/image';
 import React from 'react';
@@ -6,13 +5,13 @@ import React from 'react';
 import styles from '../Post.module.scss';
 
 const info = {
-  title: 'Why Website Security is Important for Your Business',
+  title: 'Website Security: How to Protect Your Website and Gain a Competitive Edge',
   headerImg: '/uploads/1556542894631.jpg',
   date: 'March 14, 2023',
   createdAt: '2023-03-14T12:00:00+0000',
   modifiedAt: '2023-03-14T12:00:00+0000',
   minToRead: 6,
-  slug: '/blog/why-website-security-is-important-for-your-business',
+  slug: '/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
   author: {
     fullname: 'Oleksii Pylypenko',
     position: 'CEO',

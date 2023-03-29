@@ -10,6 +10,7 @@ const useSwiper = ({ images, autoPlayDuration = 3500, isVisible }: TUseSwiper) =
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [isStoppedByUser, setIsStoppedByUser] = React.useState(false);
+  const [lastUpdateTime, setLastUpdateTime] = React.useState(Date.now());
 
   const numImages = images.length;
   const prevIndex = (activeIndex - 1 + numImages) % numImages;
@@ -28,19 +29,32 @@ const useSwiper = ({ images, autoPlayDuration = 3500, isVisible }: TUseSwiper) =
     setIsPlaying((prevIsPlaying) => !prevIsPlaying);
   };
 
+  const throttleFunction = (callback: Function) => {
+    if (Date.now() - lastUpdateTime > autoPlayDuration / 5) {
+      setLastUpdateTime(Date.now());
+      callback();
+    }
+  };
+
   const handlePrev = () => {
-    handleIsPlayingDisable();
-    setActiveIndex(prevIndex);
+    throttleFunction(() => {
+      handleIsPlayingDisable();
+      setActiveIndex(prevIndex);
+    });
   };
 
   const handleNext = () => {
-    handleIsPlayingDisable();
-    setActiveIndex(nextIndex);
+    throttleFunction(() => {
+      handleIsPlayingDisable();
+      setActiveIndex(nextIndex);
+    });
   };
 
   const handlePaginationClick = (index: number) => () => {
-    handleIsPlayingDisable();
-    setActiveIndex(index);
+    throttleFunction(() => {
+      handleIsPlayingDisable();
+      setActiveIndex(index);
+    });
   };
 
   const handlePlayPause = () => {
@@ -52,6 +66,7 @@ const useSwiper = ({ images, autoPlayDuration = 3500, isVisible }: TUseSwiper) =
     }
 
     handleIsPlayingChange();
+    setLastUpdateTime(Date.now());
   };
 
   React.useEffect(() => {

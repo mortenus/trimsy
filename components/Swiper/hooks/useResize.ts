@@ -13,16 +13,18 @@ const useResize = () => {
     [screenWidth],
   );
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     handleResize();
   }, []);
 
-  React.useLayoutEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, [handleResize]);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (screenWidth !== null) {
       if (screenWidth >= 1441) {
         setSize(1265);

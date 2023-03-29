@@ -1,14 +1,16 @@
 import useChangeStateOnSpace from 'hooks/useChangeStateOnSpace';
+import Link from 'next/link';
 import React from 'react';
 
 import styles from './Item.module.scss';
 
 type TItem = {
   description: string;
+  learnMoreUrl?: string;
   children: React.ReactNode;
 };
 
-const Item = ({ description, children }: TItem) => {
+const Item = ({ description, children, learnMoreUrl }: TItem) => {
   const {
     handleStateChange: handleOpenChange,
     state: open,
@@ -55,6 +57,7 @@ const Item = ({ description, children }: TItem) => {
           minHeight: '0px',
         }}>
         <p>{description}</p>
+        {learnMoreUrl && <Link href={learnMoreUrl}>Learn More</Link>}
       </div>
     </div>
   );

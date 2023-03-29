@@ -1,11 +1,8 @@
 .wrapper {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   overflow: hidden;
-
   transition: all 0.3s ease;
-
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   &:focus-visible {
     background-color: #eee;
@@ -76,6 +73,19 @@
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
     overflow: hidden;
+    margin-right: 80px;
+
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+
+      font-weight: bold;
+      color: #06c;
+
+      &:hover {
+        border-bottom: 1px solid #06c;
+      }
+    }
 
     p {
       font-size: 17px;
@@ -84,10 +94,10 @@
 
       color: rgb(29, 29, 31);
 
-      margin: 0px 80px 20px 0px;
+      margin-bottom: 20px;
 
       @media (max-width: 900px) {
-        margin: 0px 0px 20px 0px;
+        margin-bottom: 20px;
 
         font-size: 14px;
       }
