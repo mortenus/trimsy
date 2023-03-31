@@ -55,7 +55,7 @@ function NumberCounter({ endValue }: TNumberCounter) {
       easing: (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t),
     },
 
-    delay: 250,
+    delay: 600,
     // reset: true,
   });
 

@@ -7,13 +7,13 @@ import BlogWrapper from 'features/Blog/BlogWrapper';
 import styles from '../Post.module.scss';
 
 const info = {
-  title: 'How CDN Improves your Website',
-  headerImg: '/uploads/1666542894623.jpg',
-  date: 'March 20, 2023',
-  createdAt: '2023-03-20T12:00:00+0000',
-  modifiedAt: '2023-03-20T12:00:00+0000',
+  title: 'Maximizing Website Performance with CDN: Benefits and Advantages',
+  headerImg: '/uploads/1556542894636.png',
+  date: 'April 1, 2023',
+  createdAt: '2023-04-0T12:00:00+0000',
+  modifiedAt: '2023-04-20T12:00:00+0000',
   minToRead: 6,
-  slug: '/blog/how-cdn-improves-your-website',
+  slug: '/blog/maximizing-website-performance-with-cdn',
   author: {
     fullname: 'Oleksii Pylypenko',
     position: 'CEO',
@@ -27,7 +27,7 @@ const info = {
     profileUrl: 'https://www.linkedin.com/in/alexey-pylypenko/',
   },
   description:
-    'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
+    'A content delivery network (CDN) is a widely recognized solution that helps to improve website performance. By distributing website content across multiple servers around the globe, a CDN enhances website speed, security, and reliability.',
 };
 
 const nextToReadArr = [
@@ -61,6 +61,10 @@ export default function Post() {
   return (
     <BlogWrapper info={info} nextToReadArr={nextToReadArr}>
       <section className={styles.section}>
+        <p>
+          A content delivery network (CDN) is a widely recognized solution that helps to improve
+          website performance.
+        </p>
         <p>
           When maintaining a website, it is eassential to keep it safe and fast-loading. To resolve
           these main two problems, the CDN comes in.
@@ -107,6 +111,11 @@ export default function Post() {
 
         <h3>How CDN Improves Perfomance</h3>
         <p>
+          One of the main advantages of using a CDN is improved website speed. By caching and
+          delivering content from the server closest to the user, a CDN reduces latency and
+          decreases page load times, resulting in a faster and more responsive website experience.
+        </p>
+        <p>
           Content Delivery Network is design to bring only the best by distributing its servers
           across the globe.
         </p>
@@ -118,19 +127,52 @@ export default function Post() {
 
         <h4>1. Caching</h4>
         <p>
-          CDNs store copies of frequently accessed content in servers located in multiple locations.
+          CDN makes caching easy by storing website content on multiple servers located in different
+          geographic regions, which can be easily accessed by users. Caching involves temporarily
+          storing frequently accessed website content on the user's device or on the server.
         </p>
         <p>
-          So when a user requests the content, the CDN delivers the cached content from the server
-          closest to the user, reducing the time it take to load the content.
+          By doing so, subsequent requests for the same content can be served faster, improving
+          website speed and user experience.
+        </p>
+        <p>
+          With a CDN, website content is automatically cached on the CDN's servers when it is first
+          accessed. When a user requests the same content again, the CDN's server closest to the
+          user can serve the content from its cache, rather than fetching it from the website's
+          origin server.
+        </p>
+        <p>
+          This reduces the distance the data needs to travel, resulting in faster page load times
+          and a smoother user experience.
+        </p>
+        <p>
+          Moreover, a CDN's caching capabilities can be customized to suit a website's specific
+          needs. For example, website owners can choose how long content should be cached on the
+          CDN's servers before it expires, as well as which types of content should be cached. This
+          can help optimize website performance and improve user experience.
+        </p>
+        <p>
+          Additionally, CDNs can use advanced caching techniques such as dynamic caching and edge
+          caching. Dynamic caching involves caching content that changes frequently, such as social
+          media feeds or real-time data. Edge caching involves caching content on the CDN's servers
+          located at the edge of the network, which are closest to the user. This can reduce latency
+          even further, resulting in faster page load times.
         </p>
 
         <h4>2. Reduced latency</h4>
         <p>
-          By delivering content from a server closer to the user, CDNs reduce the distance that data
-          must travel.
+          Reducing latency is one of the main advantages of using a CDN. Latency refers to the time
+          it takes for a user's device to send a request to a website's server and receive a
+          response. When latency is high, it can result in slow page load times and a poor user
+          experience.
         </p>
-        <p>In result it reducec latency and improves the speed at which content is delivered.</p>
+        <p>
+          A CDN can reduce latency by caching website content on multiple servers located in
+          different geographic regions. When a user requests website content, the CDN's server
+          closest to the user can serve the content from its cache, rather than fetching it from the
+          website's origin server. This reduces the distance the data needs to travel, resulting in
+          faster page load times and a smoother user experience.
+        </p>
 
         <h4>3. Scalability</h4>
         <p>CDNs can handle large volumes of traffic without overloading the oirgin server.</p>
@@ -141,8 +183,46 @@ export default function Post() {
 
         <h4>4. DDoS protection</h4>
         <p>
+          When a website experiences a distributed denial-of-service (DDoS) attack, it means that a
+          large number of requests are sent to the website's server, causing it to overload and
+          potentially crash. This can result in the website being unavailable to users, which can
+          harm a business's reputation and revenue.
+        </p>
+        <p>
+          One way to mitigate the effects of a DDoS attack is by using a CDN. A CDN spreads traffic
+          across multiple servers located in different geographic regions, so when a user requests
+          to access the website, the request is directed to the server closest to the user. This not
+          only reduces latency and improves website speed but also ensures that traffic is spread
+          out across multiple servers.
+        </p>
+        <p>
+          In the event of a DDoS attack, a CDN can detect the surge in traffic and distribute it
+          across multiple servers, which can handle the load and prevent any one server from being
+          overwhelmed. Additionally, a CDN can filter out malicious traffic, blocking any requests
+          that are deemed suspicious or harmful. This can help keep a website online and protect it
+          from cyber attacks.
+        </p>
+        <p>
           CDNs can help protect website from DDoS attacks by spreading the traffic across multiple
           servers and filtering out malicious traffic.
+        </p>
+
+        <p>
+          CDN also enhances website security by mitigating cyber-attacks, particularly distributed
+          denial-of-service (DDoS) attacks that can cripple a website by overloading the servers. A
+          CDN spreads traffic across multiple servers, ensuring that a website can withstand a
+          massive traffic surge and stay online.
+        </p>
+
+        <h3>Conclusion</h3>
+        <p>
+          CDN is a powerful tool that can help businesses improve website performance, security,
+          reliability, and save money.
+        </p>
+        <p>
+          By using a CDN, businesses can enhance their users' experience, boost their online
+          reputation, and increase revenue by providing fast and reliable access to their content
+          and services.
         </p>
       </section>
     </BlogWrapper>

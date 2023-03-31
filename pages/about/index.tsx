@@ -68,7 +68,14 @@ export default function About() {
           <div className={'global-wrapper'}>
             <h3>Vision</h3>
             <h5>
-              We provide web design, development, analytics and finding place for new talents.
+              Our goal is to build long-term relationships with our clients based on trust,
+              transparency, and effective communication, and to help them achieve their business
+              objectives through effective web development strategies and solutions.
+            </h5>
+            <h5>
+              We foster a collaborative and creative work environment that attracts and retains top
+              talent, and we are committed to continuously improving our skills and knowledge to
+              stay ahead of the curve in the ever-evolving web development industry.
             </h5>
             <h5>Our team will take your ideas and make it happen.</h5>
           </div>

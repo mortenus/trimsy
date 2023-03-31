@@ -103,14 +103,14 @@ export default function Post() {
         <h3>Excel in Power Structures.</h3>
         <p>
           Developing your skills and knowledge can help you gain credibility and increase your
-          influence within the organization. Seek out opportunities for professional development,
-          stay up-to-date with the latest trends and best practices in your field, and share your
+          influence within the company. Seek out opportunities for professional development, stay
+          up-to-date with the latest trends and best practices in your field, and share your
           insights and expertise with others.
         </p>
         <p>
           To bring about meaningful change, it is important to be strategic in your approach.
-          Identify key issues and challenges facing the organization, and develop a clear plan for
-          how you can address them. Be open to feedback and adjust your approach as needed to ensure
+          Identify key issues and challenges facing the company, and develop a clear plan for how
+          you can address them. Be open to feedback and adjust your approach as needed to ensure
           that you are making progress towards your goals.
         </p>
         <p>

@@ -1,8 +1,9 @@
 .intro-alternative {
   position: -webkit-sticky;
   position: sticky;
-  height: 3.05882rem;
-
+  height: 60px;
+  display: flex;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
