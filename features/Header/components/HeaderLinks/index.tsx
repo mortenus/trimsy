@@ -61,13 +61,13 @@ const HeaderLinks = () => {
       {linkRows.map((obj) => {
         return (
           <div key={obj.id} className={styles.temp}>
-            {obj.links ? (
-              <HeaderButton links={obj.links ? obj.links : []}>{obj.title}</HeaderButton>
-            ) : (
+            {/* {obj.links ? ( */}
+            <HeaderButton links={obj.links ? obj.links : []}>{obj.title}</HeaderButton>
+            {/* ) : (
               <Link href={obj.href ? obj.href : ''}>
                 <li>{obj.title}</li>
               </Link>
-            )}
+            )} */}
           </div>
         );
       })}
