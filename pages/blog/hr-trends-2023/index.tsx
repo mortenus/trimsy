@@ -6,7 +6,7 @@ import BlogWrapper from 'features/Blog/BlogWrapper';
 import styles from '../Post.module.scss';
 
 const info = {
-  title: 'Human Resources Trends in 2023 ',
+  title: 'Human Resources Trends in 2023',
   headerImg: '/uploads/1556542894632.jpeg',
   date: 'March 27, 2023',
   createdAt: '2023-03-27T12:00:00+0000',

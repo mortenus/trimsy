@@ -11,7 +11,7 @@ const Logo = () => {
 
   return (
     <Link href={currentVisibleDepartment.link} className={styles.wrapper}>
-      {currentVisibleDepartment.name === 'blog' ? (
+      {/* {currentVisibleDepartment.name === 'blog' ? (
         <svg
           width="434"
           height="87"
@@ -27,7 +27,9 @@ const Logo = () => {
             fill="black"
           />
         </svg>
-      ) : currentVisibleDepartment.name === 'careers' ? (
+      ) :  */}
+
+      {currentVisibleDepartment.name === 'careers' ? (
         <svg
           width="538"
           height="87"

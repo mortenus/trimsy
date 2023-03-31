@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 
 import styles from './BlogItem.module.scss';
+import BlogImage from '../Image';
 
 type TBlogItem = {
   date: string;
@@ -19,11 +20,23 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
   const a = [
     {
       data: {
+        date: 'March 31, 2023',
+        title: 'Leading With Power and Influence',
+        description:
+          'Leading with power and influence involves using your position and personal qualities to persuade others to take action or achieve a common goal.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894635.jpg',
+        hashtags: ['HR'],
+      },
+      slug: '/blog/leading-with-power-and-influence',
+    },
+    {
+      data: {
         date: 'March 27, 2023',
-        title: 'Human Resources Trends 2023 ',
+        title: 'Human Resources Trends 2023',
         description:
           'The field of HR is constantly evolving, driven by advances in technology, changes in the workforce demographics, and shifting cultural norms. Here are some of the potential future developments in HR:',
         imgUrl: 'https://trimsy.org/uploads/1556542894632.jpeg',
+        hashtags: ['HR'],
       },
       slug: '/blog/hr-trends-2023',
     },
@@ -34,6 +47,7 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
         description:
           'Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.',
         imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
+        hashtags: ['Web', 'Dev', 'Security'],
       },
       slug: '/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
     },
@@ -44,6 +58,7 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
         description:
           'Creating a winning social media strategy is a crucial component of any successful website marketing plan. It gives confident opportunities for a website grown and expansion.',
         imgUrl: 'https://trimsy.org/uploads/1556542894629.jpg',
+        hashtags: ['Web', 'Social Media'],
       },
       slug: '/blog/how-to-create-a-winning-social-media-strategy',
     },
@@ -54,6 +69,7 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
         description:
           "Tracking website could give a valuable information on how it is used, how well website keeps visitors on different pages, amd even more. The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.'",
         imgUrl: 'https://trimsy.org/uploads/google_analytics_logo.webp',
+        hashtags: ['Web', 'Dev'],
       },
       slug: '/blog/setting-up-google-analytics-fast-and-easy',
     },
@@ -64,6 +80,7 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
         description:
           'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
         imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
+        hashtags: ['Web', 'Dev'],
       },
       slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
     },
@@ -74,6 +91,7 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
         description:
           'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
         imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
+        hashtags: ['Web', 'Dev'],
       },
       slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
     },
@@ -84,6 +102,7 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
         description:
           'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
         imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
+        hashtags: ['Web', 'Dev'],
       },
       slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
     },
@@ -96,15 +115,15 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
       })}>
       <Link href={slug} tabIndex={0} />
       <div className={styles.imageWrap}>
-        <Image
-          className={styles.img}
+        {/* <Image
           width="0"
           height="0"
           sizes="100vw"
           //   style={{ width: '100%', height: 'auto' }}
           src={imgUrl}
           alt={'blog-cover'}
-        />
+        /> */}
+        <BlogImage url={imgUrl} />
       </div>
       <div className={styles.text}>
         <span>{date}</span>

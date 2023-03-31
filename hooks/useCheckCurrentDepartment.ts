@@ -10,10 +10,10 @@ const possibleDepartments = [
     name: undefined,
     link: '/',
   },
-  {
-    name: 'blog',
-    link: '/blog',
-  },
+  //   {
+  //     name: 'blog',
+  //     link: '/blog',
+  //   },
   {
     name: 'careers',
     link: '/careers',

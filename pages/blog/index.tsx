@@ -2,21 +2,19 @@ import React from 'react';
 
 import styles from './blog.module.scss';
 
-import { Button, ImageUnoptimized } from 'components';
+import { Button, LocalNav } from 'components';
 import { BlogButton, BlogItem } from 'features/Blog';
 
 import { useFetchBlogs } from 'features/Blog/hooks';
 import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
-
-import Logo from 'public/images/mini-logo.png';
-import Image from 'next/image';
+import axios from 'axios';
 
 Blog.title = 'Blog';
 Blog.description = 'Get the latest news about Web, SEO and Design in Trimsy Blog';
 
-export default function Blog() {
-  const { items, totalPages, currentPage, setPageNumber, incrementPage, decrementPage } =
-    useFetchBlogs();
+export default function Blog({ items }: any) {
+  //   const { items, totalPages, currentPage, setPageNumber, incrementPage, decrementPage } =
+  //     useFetchBlogs();
 
   const layouts = [
     {
@@ -29,27 +27,28 @@ export default function Blog() {
     },
     {
       count: 3,
-      classes: [1, 2, 3],
+      classes: [1, 6, 7],
     },
     {
       count: 4,
-      classes: [1, 2, 3, 1],
+      classes: [1, 6, 7, 1],
     },
     {
       count: 5,
-      classes: [1, 2, 3, 1, 1],
+      classes: [1, 6, 7, 6, 7],
     },
     {
       count: 6,
-      classes: [1, 2, 3, 1, 1, 1],
+      classes: [1, 6, 7, 6, 7, 1],
     },
     {
       count: 7,
-      classes: [1, 2, 3, 1, 1, 6, 7],
+      classes: [1, 6, 7, 6, 7, 6, 7],
     },
   ];
 
-  const layout = layouts.find((layout) => layout.count === items.length);
+  const layout =
+    items && items.length > 0 && layouts.find((layout) => layout.count === items.length);
 
   const currentValue = useAnimateBackgroundPosition(0, -440, 1750, 600);
 
@@ -57,7 +56,10 @@ export default function Blog() {
     <>
       <div className={styles.wrapper}>
         <h1>Trimsy Blog</h1>
-        <div className={styles.intro}>
+
+        <LocalNav />
+
+        {/* <div className={styles.intro}>
           <div className={styles.logo}>
             <div className={styles.img}>
               <Image
@@ -74,21 +76,21 @@ export default function Blog() {
             <h2 style={{ backgroundPosition: currentValue && `${currentValue}px 50%` }}>Blog</h2>
           </div>
           {/* <p>Get the latest news about Web, SEO and Design in our Blog.</p> */}
-          {/* <p>
+        {/* <p>
             From the latest industry news to in-depth guides and tutorials, our blog has everything
             you need to succeed online and stay ahead of the curve.
           </p> */}
-          <div className={styles.background}>
+        {/* <div className={styles.background}>
             <ImageUnoptimized
               src={'/static/img/blog/blog-background.jpg'}
               fill
               priority
               alt={'Intro Image'}
             />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
         <div className={styles.content} id="search">
-          <div className={styles.wrapper}>
+          {/* <div className={'global-wrapper--small'}>
             <div className={styles.search}>
               <svg
                 className={styles.icon}
@@ -117,11 +119,13 @@ export default function Blog() {
                 Search
               </Button>
             </div>
-          </div>
+          </div> */}
 
-          <div className={styles[`grid-container`]}>
+          <div className={'global-wrapper--small'}>
+            <h2 className={styles.headline}>Latest</h2>
             <div className={styles[`grid-items`]}>
-              {items.length > 0 &&
+              {items &&
+                items.length > 0 &&
                 (() => {
                   const components = [];
                   for (let i = 0; i < items.length; i++) {
@@ -171,7 +175,7 @@ export default function Blog() {
     </div> */}
             </div>
           </div>
-          {totalPages > 1 && (
+          {/* {totalPages > 1 && (
             <div className={styles.nav}>
               <BlogButton type={'nav'} onClick={decrementPage}>
                 Prev
@@ -192,9 +196,21 @@ export default function Blog() {
                 Next
               </BlogButton>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await axios.get(`https://secure.trimsy.org/blogs?page=${1}`);
+
+  const items = res.data.items;
+
+  return {
+    props: {
+      items,
+    },
+  };
 }
