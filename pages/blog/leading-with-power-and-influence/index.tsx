@@ -16,13 +16,13 @@ const info = {
   author: {
     fullname: 'Lesia Pylypenko',
     position: 'Owner',
-    description: `'Hiring for attitude over skill is not a thing in the real world. For experienced roles, qualification is expected!'`,
+    description: `'By incorporating these strategies into your leadership approach, you can effectively lead with power and influence, and drive your team to success.'`,
     avatarUrl:
       'https://media.licdn.com/dms/image/D5603AQGVaopcwwlJpA/profile-displayphoto-shrink_200_200/0/1679896676522?e=1685577600&v=beta&t=SuM7T5dOuMgQ5wUgq9m-avPK47xnIaaLfzB8drpjPho',
     profileUrl: 'https://www.linkedin.com/in/lesia-careers/',
   },
   description:
-    'The field of HR is constantly evolving, driven by advances in technology, changes in the workforce demographics, and shifting cultural norms. Here are some of the potential future developments in HR:',
+    'Leading with power and influence involves using your position and personal qualities to persuade others to take action or achieve a common goal.',
 };
 
 const nextToReadArr = [

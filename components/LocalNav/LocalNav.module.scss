@@ -3,6 +3,13 @@
   position: sticky;
   height: 3.05882rem;
 
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1024px;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 1);
+
   .content {
     display: flex;
     justify-content: space-between;

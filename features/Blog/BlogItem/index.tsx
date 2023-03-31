@@ -5,6 +5,7 @@ import React from 'react';
 
 import styles from './BlogItem.module.scss';
 import BlogImage from '../Image';
+import { useIsVisible } from 'hooks/useIsVisible';
 
 type TBlogItem = {
   date: string;
@@ -84,35 +85,18 @@ const BlogItem = ({ date, title, description, imgUrl, slug, featured, itemCount 
       },
       slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
     },
-    {
-      data: {
-        date: 'March 2, 2023',
-        title: 'How To Improve SEO of your Website in 5 Steps',
-        description:
-          'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
-        imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
-        hashtags: ['Web', 'Dev'],
-      },
-      slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
-    },
-    {
-      data: {
-        date: 'March 2, 2023',
-        title: 'How To Improve SEO of your Website in 5 Steps',
-        description:
-          'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
-        imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
-        hashtags: ['Web', 'Dev'],
-      },
-      slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
-    },
   ];
+
+  const ref = React.useRef(null);
+  const isVisible = useIsVisible({ ref, once: true });
 
   return (
     <div
       className={clsx(styles.item, styles[`item-${itemCount}`], {
+        [styles.visible]: isVisible,
         [styles[`item--featured`]]: featured,
-      })}>
+      })}
+      ref={ref}>
       <Link href={slug} tabIndex={0} />
       <div className={styles.imageWrap}>
         {/* <Image

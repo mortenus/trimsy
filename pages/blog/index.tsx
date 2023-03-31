@@ -89,7 +89,7 @@ export default function Blog({ items }: any) {
             />
           </div> */}
         {/* </div> */}
-        <div className={styles.content} id="search">
+        <div className={styles.content}>
           {/* <div className={'global-wrapper--small'}>
             <div className={styles.search}>
               <svg

@@ -1,18 +1,22 @@
-import { useState, useEffect, RefObject } from 'react';
+import React from 'react';
 
 interface UseIsVisibleProps {
-  ref: RefObject<HTMLElement>;
+  ref: React.RefObject<HTMLElement>;
+  once?: boolean;
 }
 
-export const useIsVisible = ({ ref }: UseIsVisibleProps): boolean => {
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+export const useIsVisible = ({ ref, once }: UseIsVisibleProps): boolean => {
+  const [isVisible, setIsVisible] = React.useState<boolean>(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleScroll = () => {
       if (ref.current) {
         const { top, bottom } = ref.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         setIsVisible(top < windowHeight && bottom >= 0);
+      }
+      if (once && isVisible) {
+        window.removeEventListener('scroll', handleScroll);
       }
     };
 
@@ -20,7 +24,7 @@ export const useIsVisible = ({ ref }: UseIsVisibleProps): boolean => {
     handleScroll(); // Check visibility on mount
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [ref]);
+  }, [ref, once, isVisible]);
 
   return isVisible;
 };

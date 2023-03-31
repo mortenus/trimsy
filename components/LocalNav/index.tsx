@@ -2,10 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 import styles from './LocalNav.module.scss';
-import Button from 'components/Button';
 import clsx from 'clsx';
-
-const stylehidden = {};
 
 const localNav = () => {
   const [searchVisible, setSearchVisible] = React.useState(false);
@@ -19,7 +16,7 @@ const localNav = () => {
       <div className="global-wrapper--small">
         <div className={styles.content}>
           <span className={styles.headline}>
-            <Link href="https://trimsy.org/blog">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </span>
           <ul className={styles[`menu-items`]}>
             <li className={styles.items}>

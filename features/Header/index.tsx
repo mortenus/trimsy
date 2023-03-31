@@ -8,6 +8,7 @@ import Logo from 'components/Logo';
 
 import { Hamburger, HeaderLinks } from './components';
 import { useInnerHeightResize } from 'hooks/useInnerHeightResize';
+import clsx from 'clsx';
 
 // type THeaderBase = {};
 
@@ -30,13 +31,17 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
   const router = useRouter();
 
   const handleCleanNav = () => router.pathname === '/stands-with-ukraine';
+  const handlePositionFixedDisabled = () => router.pathname === '/blog';
   const handleOverflowForm = () => router.pathname === '/';
 
   useInnerHeightResize();
 
   return (
     <header className={styles.wrapper}>
-      <div className={styles.container}>
+      <div
+        className={clsx(styles.container, {
+          [styles.disablePosition]: handlePositionFixedDisabled(),
+        })}>
         <nav className={styles.nav}>
           <Logo />
 

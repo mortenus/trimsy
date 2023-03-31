@@ -13,7 +13,7 @@
 // }
 
 .wrapper {
-  height: var(--navbar-height) !important;
+  //   height: var(--navbar-height) !important;
 
   user-select: none;
 
@@ -29,6 +29,10 @@
 
     @media (max-width: 350px) {
       width: 100vw !important;
+    }
+
+    &.disablePosition {
+      position: relative;
     }
 
     .nav {
