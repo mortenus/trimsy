@@ -2,15 +2,14 @@ import React from 'react';
 
 import styles from './blog.module.scss';
 
-import { Button, LocalNav } from 'components';
-import { BlogButton, BlogItem } from 'features/Blog';
+import { BlogItem } from 'features/Blog';
 
 import { useFetchBlogs } from 'features/Blog/hooks';
 import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
 import axios from 'axios';
 
 Blog.title = 'Blog';
-Blog.description = 'Get the latest news about Web, SEO and Design in Trimsy Blog';
+Blog.description = 'Trimsy Blog - Read new releases, get updates and latest news.';
 
 export default function Blog({ items }: any) {
   //   const { items, totalPages, currentPage, setPageNumber, incrementPage, decrementPage } =
@@ -57,7 +56,7 @@ export default function Blog({ items }: any) {
       <div className={styles.wrapper}>
         <h1>Trimsy Blog</h1>
 
-        <LocalNav />
+        {/* <LocalNav /> */}
 
         {/* <div className={styles.intro}>
           <div className={styles.logo}>

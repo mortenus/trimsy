@@ -1,26 +1,14 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-// import BlogSVG from 'public/static/img/icons/Blog.svg';
-// import CareersSVG from 'public/static/img/icons/Careers.svg';
-// import DefaultSVG from 'public/static/img/icons/Icon.svg';
+type TUseCheckCurrentDepartment = {
+  possibleDepartments: {
+    name?: string;
+    link: string;
+  }[];
+};
 
-const possibleDepartments = [
-  {
-    name: undefined,
-    link: '/',
-  },
-  //   {
-  //     name: 'blog',
-  //     link: '/blog',
-  //   },
-  {
-    name: 'careers',
-    link: '/careers',
-  },
-];
-
-export function useCheckCurrentDepartment() {
+export function useCheckCurrentDepartment({ possibleDepartments }: TUseCheckCurrentDepartment) {
   const [currentDepartment, setCurrentDepartment] = React.useState<string | undefined>(undefined);
 
   const router = useRouter();

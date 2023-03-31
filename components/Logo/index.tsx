@@ -6,8 +6,23 @@ import styles from './Logo.module.scss';
 
 import { useCheckCurrentDepartment } from 'hooks/useCheckCurrentDepartment';
 
+const possibleDepartments = [
+  {
+    name: undefined,
+    link: '/',
+  },
+  //   {
+  //     name: 'blog',
+  //     link: '/blog',
+  //   },
+  {
+    name: 'careers',
+    link: '/careers',
+  },
+];
+
 const Logo = () => {
-  const { currentVisibleDepartment } = useCheckCurrentDepartment();
+  const { currentVisibleDepartment } = useCheckCurrentDepartment({ possibleDepartments });
 
   return (
     <Link href={currentVisibleDepartment.link} className={styles.wrapper}>

@@ -3,12 +3,13 @@ import { useRouter } from 'next/router';
 
 import styles from './Header.module.scss';
 
-import { Button } from 'components';
+import { Button, LocalNav } from 'components';
 import Logo from 'components/Logo';
 
 import { Hamburger, HeaderLinks } from './components';
 import { useInnerHeightResize } from 'hooks/useInnerHeightResize';
 import clsx from 'clsx';
+import { useCheckCurrentDepartment } from 'hooks/useCheckCurrentDepartment';
 
 // type THeaderBase = {};
 
@@ -22,6 +23,17 @@ import clsx from 'clsx';
 
 // type THeader = THeaderWithForm | THeaderClean;
 
+const possibleDepartments = [
+  {
+    name: undefined,
+    link: '/',
+  },
+  {
+    name: 'blog',
+    link: '/blog',
+  },
+];
+
 type THeader = {
   handleFormChange: () => void;
   handleKeyDownOverflowChange: (e: any) => void;
@@ -31,45 +43,49 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
   const router = useRouter();
 
   const handleCleanNav = () => router.pathname === '/stands-with-ukraine';
-  const handlePositionFixedDisabled = () => router.pathname === '/blog';
   const handleOverflowForm = () => router.pathname === '/';
 
   useInnerHeightResize();
 
-  return (
-    <header
-      className={clsx(styles.wrapper, {
-        [styles.disablePosition]: handlePositionFixedDisabled(),
-      })}>
-      <div className={styles.container}>
-        <nav className={styles.nav}>
-          <Logo />
+  const { currentVisibleDepartment } = useCheckCurrentDepartment({ possibleDepartments });
 
-          <div className={styles.wrap}>
-            {handleCleanNav() ? (
-              <></>
-            ) : (
-              <>
-                <ul>
-                  <HeaderLinks />
-                </ul>
-                {handleOverflowForm() ? (
-                  <Button
-                    type="nav"
-                    onClick={handleFormChange}
-                    onKeyDown={handleKeyDownOverflowChange}>
-                    Contact us
-                  </Button>
-                ) : (
-                  ''
-                )}
-              </>
-            )}
-          </div>
-          <Hamburger handleFormChange={handleFormChange} />
-        </nav>
-      </div>
-    </header>
+  return (
+    <>
+      <header
+        className={clsx(styles.wrapper, {
+          [styles.disablePosition]: currentVisibleDepartment.name === 'blog',
+        })}>
+        <div className={styles.container}>
+          <nav className={styles.nav}>
+            <Logo />
+
+            <div className={styles.wrap}>
+              {handleCleanNav() ? (
+                <></>
+              ) : (
+                <>
+                  <ul>
+                    <HeaderLinks />
+                  </ul>
+                  {handleOverflowForm() ? (
+                    <Button
+                      type="nav"
+                      onClick={handleFormChange}
+                      onKeyDown={handleKeyDownOverflowChange}>
+                      Contact us
+                    </Button>
+                  ) : (
+                    ''
+                  )}
+                </>
+              )}
+            </div>
+            <Hamburger handleFormChange={handleFormChange} />
+          </nav>
+        </div>
+      </header>
+      {currentVisibleDepartment.name === 'blog' && <LocalNav />}
+    </>
   );
 };
 

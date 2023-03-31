@@ -1,13 +1,13 @@
-import { ImageUnoptimized } from 'components';
+import { Button, ImageUnoptimized } from 'components';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import NextToRead from '../NextToRead';
 
 import TBlogWrapper from './BlogWrapper.types';
 
 import styles from './BlogWrapper.module.scss';
+import Link from 'next/link';
 
 const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
   const ArticleSchema = {
@@ -54,8 +54,8 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
   return (
     <>
       <div className={styles.wrapper}>
-        <div className={styles.content}>
-          <Link href="/blog#search" className={styles.return}>
+        <div className={'global-wrapper--small'}>
+          {/* <Link href="/blog#search" className={styles.return}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="12"
@@ -64,7 +64,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
               <path d="M7 9.79a.5.5 0 0 1 .854-.353L12 13.584l4.146-4.147a.5.5 0 1 1 .708.708L12 14.998l-4.854-4.853A.5.5 0 0 1 7 9.79Z"></path>
             </svg>{' '}
             <span>Return</span>
-          </Link>
+          </Link> */}
           <h1 className={styles.title}>{info.title}</h1>
           <div className={styles.headerImg}>
             <ImageUnoptimized
@@ -97,6 +97,37 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
           </div>
 
           <NextToRead arr={nextToReadArr} />
+
+          <Link href="/blog">
+            <section className={styles.moreWrap} id={'contact'}>
+              <div className={styles.potential}>
+                <div className={styles.logo}>
+                  <div className={styles.img}>
+                    <Image
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      style={{ width: '70%', height: 'auto' }}
+                      src={'/images/mini-logo.png'}
+                      alt="HR image"
+                      loading={'lazy'}
+                      quality={'100'}
+                    />
+                  </div>
+                  <h2>Blog</h2>
+                </div>
+                <p>Read new releases, get updates and latest news.</p>
+
+                <Button
+                  style={{ pointerEvents: 'none' }}
+                  color={'black'}
+                  to={'/blog'}
+                  size={'small'}>
+                  Read more
+                </Button>
+              </div>
+            </section>
+          </Link>
         </div>
       </div>
       <Head>

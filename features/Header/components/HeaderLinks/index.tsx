@@ -5,13 +5,13 @@ import React from 'react';
 import styles from './HeaderLinks.module.scss';
 
 const linkRows = [
+  //   {
+  //     id: 0,
+  //     title: 'About',
+  //     href: '/about',
+  //   },
   {
     id: 0,
-    title: 'About',
-    href: '/about',
-  },
-  {
-    id: 1,
     title: 'Services',
     links: [
       {
@@ -26,16 +26,33 @@ const linkRows = [
       },
     ],
   },
+  {
+    id: 1,
+    title: 'More',
+    links: [
+      {
+        title: 'About Us',
+        description: 'Get to know who we are and what we stand for.',
+        href: '/about',
+      },
+      {
+        title: 'Blog',
+        description: 'Read new releases, get updates and latest news.',
+        href: '/blog',
+      },
+    ],
+  },
+
   //   {
   //     id: 1,
   //     title: 'Portfolio',
   //     href: '/#portfolio',
   //   },
-  {
-    id: 2,
-    title: 'Blog',
-    href: '/blog',
-  },
+  //   {
+  //     id: 2,
+  //     title: 'Blog',
+  //     href: '/blog',
+  //   },
 ];
 
 const HeaderLinks = () => {
