@@ -13,9 +13,14 @@
 // }
 
 .wrapper {
-  //   height: var(--navbar-height) !important;
-
   user-select: none;
+
+  height: var(--navbar-height) !important;
+  &.disablePosition {
+    .container {
+      position: relative;
+    }
+  }
 
   //   display: flex;
   //   justify-content: center;
@@ -29,10 +34,6 @@
 
     @media (max-width: 350px) {
       width: 100vw !important;
-    }
-
-    &.disablePosition {
-      position: relative;
     }
 
     .nav {

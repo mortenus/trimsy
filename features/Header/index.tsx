@@ -37,11 +37,11 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
   useInnerHeightResize();
 
   return (
-    <header className={styles.wrapper}>
-      <div
-        className={clsx(styles.container, {
-          [styles.disablePosition]: handlePositionFixedDisabled(),
-        })}>
+    <header
+      className={clsx(styles.wrapper, {
+        [styles.disablePosition]: handlePositionFixedDisabled(),
+      })}>
+      <div className={styles.container}>
         <nav className={styles.nav}>
           <Logo />
 
