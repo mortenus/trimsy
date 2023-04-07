@@ -49,15 +49,15 @@ export default function Home({ handleFormChange, handleKeyDownOverflowChange }: 
       <main>
         <Intro />
 
-        <Product />
+        {/* <Product /> */}
 
-        <Accomplish onScrollEvent={onScrollEvent} />
+        {/* <Accomplish onScrollEvent={onScrollEvent} /> */}
 
         <Influence />
 
-        <Here />
-
         <Boost onScrollEvent={onScrollEvent} />
+
+        <Here />
 
         <FAQ arr={FAQArr} />
 

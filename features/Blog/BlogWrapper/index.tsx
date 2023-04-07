@@ -40,6 +40,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
   const WebSiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': 'https://trimsy.org/#breadcrumb',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Blog', item: 'https://trimsy.org/blog' },
       {

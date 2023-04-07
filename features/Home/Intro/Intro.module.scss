@@ -14,7 +14,7 @@
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
 
-  padding: 175px 0;
+  //   padding: 175px 0;
 
   @media (max-width: 734px) {
     min-height: 0;
@@ -24,7 +24,7 @@
     font-size: clamp(3.5rem, 6vw, 8.5rem);
     font-weight: bold;
 
-    margin: 50px 0 30px 0;
+    // margin: 50px 0 30px 0;
   }
 
   h3 {

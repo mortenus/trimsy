@@ -105,8 +105,9 @@ export default function Post() {
           protect websites from DDoS attack by distributing traffic across multiple servers and
           provdiing additional layers of securiy. More about Securing a website is in other post{' '}
           <Link href="http://localhost:3000/blog/why-website-security-is-important-for-your-business">
-            here.
+            here
           </Link>
+          .
         </p>
 
         <h3>How CDN Improves Perfomance</h3>
