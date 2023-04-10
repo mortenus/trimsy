@@ -85,6 +85,8 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
             <span>{info.minToRead} mins read</span>
           </div>
           {children}
+        </div>
+        <div className={'global-wrapper'}>
           <div className={styles.author}>
             <div className={styles.img}>
               <Image fill src={info.author.avatarUrl} alt={'Author image'} />
@@ -98,38 +100,33 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
           </div>
 
           <NextToRead arr={nextToReadArr} />
-
-          <Link href="/blog">
-            <section className={styles.moreWrap} id={'contact'}>
-              <div className={styles.potential}>
-                <div className={styles.logo}>
-                  <div className={styles.img}>
-                    <Image
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      style={{ width: '70%', height: 'auto' }}
-                      src={'/images/mini-logo.png'}
-                      alt="HR image"
-                      loading={'lazy'}
-                      quality={'100'}
-                    />
-                  </div>
-                  <h2>Blog</h2>
-                </div>
-                <p>Read new releases, get updates and latest news.</p>
-
-                <Button
-                  style={{ pointerEvents: 'none' }}
-                  color={'black'}
-                  to={'/blog'}
-                  size={'small'}>
-                  Read more
-                </Button>
-              </div>
-            </section>
-          </Link>
         </div>
+        <Link href="/blog">
+          <section className={styles.moreWrap} id={'contact'}>
+            <div className={styles.potential}>
+              <div className={styles.logo}>
+                <div className={styles.img}>
+                  <Image
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    style={{ width: '70%', height: 'auto' }}
+                    src={'/images/mini-logo.png'}
+                    alt="HR image"
+                    loading={'lazy'}
+                    quality={'100'}
+                  />
+                </div>
+                <h2>Blog</h2>
+              </div>
+              <p>Read new releases, get updates and latest news.</p>
+
+              <Button style={{ pointerEvents: 'none' }} color={'black'} to={'/blog'} size={'small'}>
+                Read more
+              </Button>
+            </div>
+          </section>
+        </Link>
       </div>
       <Head>
         <meta property="og:type" content="article" />
