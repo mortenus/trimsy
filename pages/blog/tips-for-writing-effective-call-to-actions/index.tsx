@@ -8,14 +8,14 @@ import Link from 'next/link';
 
 const info = {
   title: 'Tips for Writing Effective Call-to-Actions (CTAs)',
-  headerImg: '/uploads/1556542894636.jpg',
+  headerImg: '/uploads/1556542894644.jpg',
   date: 'April 12, 2023',
   createdAt: '2023-04-12T12:00:00+0000',
   modifiedAt: '2023-04-12T12:00:00+0000',
-  minToRead: 3,
+  minToRead: 4,
   slug: '/blog/tips-for-writing-effective-call-to-actions',
   description:
-    'PWAs are web applications that combine the capabilities of web technologies with the user experience of native mobile applications.Whilst using PWAs capabilities - it will retain users, not difficult to develop and more.',
+    'CTAs play a crucial role in the conversion process, as they guide users towards the desired action, helping to drive engagement, generate leads, and ultimately convert users into customers.',
   author: {
     fullname: 'Oleksii Pylypenko',
     position: 'CEO',
@@ -32,18 +32,18 @@ const info = {
 
 const nextToReadArr = [
   {
-    date: 'March 2, 2023',
-    title: 'How To Improve SEO of your Website in 5 Steps',
-    description: `When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.`,
-    imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
-    slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
+    date: 'March 12, 2023',
+    title: 'How To Create a Winning Social Media Strategy for Your Website',
+    description: `Creating a winning social media strategy is a crucial component of any successful website marketing plan. It gives confident opportunities for a website grown and expansion.`,
+    imgUrl: 'https://trimsy.org/uploads/1556542894629.jpg',
+    slug: '/blog/how-to-create-a-winning-social-media-strategy',
   },
   {
-    date: 'March 14, 2023',
-    title: 'Why Website Security is Important for Your Business',
-    description: `Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.`,
-    imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
-    slug: '/blog/why-website-security-is-important-for-your-business',
+    date: 'April 10, 2023',
+    title: 'Unlocking the Power of Progressive Web Apps: Benefits and Features Explained',
+    description: `'PWAs are web applications that combine the capabilities of web technologies with the user experience of native mobile applications.Whilst using PWAs capabilities - it will retain users, not difficult to develop and more.'`,
+    imgUrl: 'https://trimsy.org/uploads/1556542894637.jpg',
+    slug: '/blog/unlocking-the-power-of-progressive-web-apps',
   },
   {
     date: 'March 9, 2023',
@@ -72,23 +72,48 @@ export default function Post() {
           conversions.
         </p>
 
-        <h3>What is Progressive Web Apps (PWAs)?</h3>
+        <h3>Overview</h3>
         <p>
-          Progressive Web Apps (PWAs) are web applications that combine native mobile applications'
-          user experience with capabilities of web technologies. Basically, web applications that
-          look and feel like native mobile apps.
-        </p>
-        <p>
-          Any device or platform that uses a standards-complaint web browser, including desktops,
-          smartphones and tablets can be used with PWAs.
+          Call-to-Actions (CTAs) are prompts or buttons that encourage users to take a specific
+          action, such as signing up for a newsletter, downloading an ebook, making a purchase, or
+          contacting a company.
         </p>
 
-        <h4>In Depth</h4>
         <p>
-          They can be installed on the user's device like a native app. Which means they can work
-          offline or with poor internet connection.
+          CTAs are an essential component of any marketing or advertising strategy, as they help
+          guide users through the sales funnel and ultimately lead to conversions. It design to be
+          eye-catching and attention-grabbing.
         </p>
-        <div className={styles.img}>
+
+        <p>
+          Effective CTAs can improve click-through rates, conversion rates, and overall marketing
+          success.
+        </p>
+
+        <h3>1. Use clear and actionable language</h3>
+        <p>
+          Your CTA should be straightforward and clearly tell the user what they need to do. Use
+          action-oriented language that creates a sense of urgency.
+        </p>
+
+        <h5>Keep it Short</h5>
+        <p>
+          CTAs should be concise and to the point. Avoid lengthy or wordy CTAs that may dilute the
+          impact of the message. Short, punchy CTAs are more memorable and effective in driving
+          action.
+        </p>
+
+        <h5>Use Action-Oriented Language</h5>
+        <p>CTAs should use action verbs that prompt users to take immediate action.</p>
+        <p>Words like:</p>
+        <ul>
+          <li>"Shop", "Sign Up",</li>
+          <li>"Get", "Download".</li>
+        </ul>
+
+        <p>Will convey a sense of urgency and encourage users to take action.</p>
+
+        {/* <div className={styles.img}>
           <Image
             width="0"
             height="0"
@@ -98,166 +123,52 @@ export default function Post() {
             alt={'Image'}
             loading={'lazy'}
           />
-        </div>
-        <p className={styles.underline_text}>(bsscommerce)</p>
+        </div> */}
+        {/* <p className={styles.underline_text}>(bsscommerce)</p> */}
 
+        <h3>2. The message has to be specific</h3>
+        <p>Your CTA should have a specific about what user will get when they click on it.</p>
         <p>
-          Allowing users to access content and functionalities even without the stable connection to
-          the network is made possible through the use of Service Workers, which are scripts that
-          run in the background and can intercept network requests, cache content, and respond to
-          user actions even when there is no network connection.
+          For example, when saying just "Learn more", try to use "Discover 5 Steps to Make Better
+          SEO".
         </p>
+        <h3>3. Create sense of urgency</h3>
+        <p>Super important. It gets along with using clear and actionable language.</p>
+        <p>
+          Should be clear and easy for user to take urgent action, phrases like: 'Act Now", "Only
+          Few Spots Left" or "Limited Time Offer" will incoruage users to instantly click.
+        </p>
+        <h3>4. Place your CTA strategically</h3>
+        <p>The placement of your CTA can have a significant impact on its effectiveness.</p>
+        <p>It should be prominently placed on the page and easy to find as:</p>
 
-        <h4>Benefits of using PWA:</h4>
-        <p>
-          Overall, it offers many benefits for businesses and users alike. While becoming
-          increasingly popular as a way to deliver mobile experiences.
-        </p>
-        <h5>Increased Reach</h5>
-        <p>
-          PWAs can be accessed from any device with a web browser, allowing businesses to reach a
-          wider audience.
-        </p>
-        <p>
-          Unlike native apps, PWAs don't require users to download and install an app from an app
-          store, which can be a barrier to entry for some users.
-        </p>
-        <p>
-          PWAs can also be shared easily through links or social media, making it easier for
-          businesses to promote their products or services.
-        </p>
-
-        <h5>It's Modern!</h5>
-
-        <p>
-          PWAs use modern web technologies to provide reliable, engaging and fast user experience,
-          such as:
-        </p>
-
-        <ul>
-          <li>Service Workers</li>
-          <li>Web Push Notifications</li>
-          <li>Web App Manifest</li>
-        </ul>
-
-        <p>
-          Web App Manifests are another key component of PWAs. A manifest is a JSON file that
-          provides information about the app, such as its name, icons, and display mode. By
-          including a manifest in the app, developers can ensure that it looks and behaves like a
-          native app when installed on a user's device.
-        </p>
-
-        <h5>SEO Benefits</h5>
-        <p>
-          Since PWAs are web applications, they can be indexed by search engines, making it easier
-          for users to find them. This can help businesses increase their visibility and drive more
-          traffic to their website.
-        </p>
-        <p>
-          More about{' '}
-          <Link href="/blog/how-to-improve-seo-of-your-website-in-5-steps">
-            SEO and How To Improve it on Your Website
-          </Link>
-          .
-        </p>
-
-        <h5>Cost-effective</h5>
-        <p>
-          Developing and maintaining native apps can be expensive, particularly if businesses need
-          to create separate versions for different platforms.
-        </p>
-        <p>
-          PWAs, on the other hand, can be built using web technologies that are widely available and
-          well-understood, reducing development costs.
-        </p>
-        <p>
-          PWAs can also be updated and maintained more easily than native apps, since there's no
-          need to go through the app store approval process.
-        </p>
-
-        <h3>Examples of Progressive Web Apps:</h3>
-        <h4>1. Uber</h4>
         <div className={styles.img}>
           <Image
             width="0"
             height="0"
             sizes="100vw"
-            style={{ width: '75%', height: 'auto' }}
-            src={'/uploads/1556542894639.jpg'}
+            style={{ width: '50%', height: 'auto' }}
+            src={'/uploads/1556542894643.jpg'}
             alt={'Image'}
             loading={'lazy'}
           />
         </div>
-        <p>
-          Uber's PWA offers a streamlined experience for requesting rides and tracking their
-          progress, with features such as real-time updates and location tracking.
-        </p>
 
-        <h4>2. Flipboard</h4>
-        <div className={styles.img}>
-          <Image
-            width="0"
-            height="0"
-            sizes="100vw"
-            style={{ width: '75%', height: 'auto' }}
-            src={'/uploads/1556542894640.jpg'}
-            alt={'Image'}
-            loading={'lazy'}
-          />
-        </div>
+        <h3>5. Use contrasting colors</h3>
         <p>
-          Flipboard's PWA offers a fast and engaging experience for browsing news and other content,
-          with features such as offline mode and push notifications.
-        </p>
-
-        <h4>3. Pinterest</h4>
-        <div className={styles.img}>
-          <Image
-            width="0"
-            height="0"
-            sizes="100vw"
-            style={{ width: '75%', height: 'auto' }}
-            src={'/uploads/1556542894641.jpg'}
-            alt={'Image'}
-            loading={'lazy'}
-          />
-        </div>
-        <p>
-          Pinterest's PWA offers a fast and engaging user experience, with features such as push
-          notifications and an immersive full-screen mode.
-        </p>
-
-        <h4>4. Starbucks</h4>
-        <div className={styles.img}>
-          <Image
-            width="0"
-            height="0"
-            sizes="100vw"
-            style={{ width: '75%', height: 'auto' }}
-            src={'/uploads/1556542894642.jpg'}
-            alt={'Image'}
-            loading={'lazy'}
-          />
-        </div>
-        <p>
-          Starbucks' PWA allows users to order ahead and pay using their mobile device, as well as
-          providing features such as store locator and menu browsing.
+          Make sure your CTA stands out of the background. It will make user easy to find and click
+          on it.
         </p>
 
         <h3>Final Thoughts</h3>
-
         <p>
-          Progressive Web Apps are still a relatively new technology, and there are some limitations
-          to what they can do compared to native apps.
+          Call-to-Actions (CTAs) are powerful tools in any marketing or advertising strategy as they
+          guide users towards taking a desired action.
         </p>
+        <h5>Test and Optimize</h5>
         <p>
-          For example, they may not have access to all of the hardware features of a device, such as
-          the camera or accelerometer.
-        </p>
-        <p>
-          However, as the technology continues to evolve, it's likely that more and more
-          functionality will be added to PWAs, making them an even more compelling option for
-          developers and businesses alike.
+          Testing different CTAs will help you find the best one for you. A/B testing can help you
+          determing which language, colors and placement is mostly effective for your audience.
         </p>
       </section>
     </BlogWrapper>

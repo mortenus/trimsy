@@ -61,7 +61,7 @@ const FooterLinks = () => {
         </Link>
       </li>
       <li className={styles.item}>
-        <Link href="#">
+        <Link href="https://www.goodfirms.co/company/trimsy">
           <svg
             width="249"
             height="48"
