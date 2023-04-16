@@ -5,8 +5,10 @@ import styles from './Influence.module.scss';
 import { Swiper } from 'components';
 
 const slidesArr = [
-  '/static/img/carousel/reactChat1.jpg',
+  '/static/img/carousel/archakov.jpg',
   '/static/img/carousel/reactPizza.jpg',
+  '/static/img/carousel/talentForce.jpg',
+  '/static/img/carousel/reactChat1.jpg',
   '/static/img/carousel/capacity.jpg',
 ];
 

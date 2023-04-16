@@ -17,8 +17,8 @@ const FAQ = ({ arr }: TFAQ) => {
       <div className={styles.intro}>
         <h2>Questions?</h2>
       </div>
-      {arr.map((item) => (
-        <Item description={item.description} learnMoreUrl={item.learnMoreUrl}>
+      {arr.map((item, i) => (
+        <Item key={i} description={item.description} learnMoreUrl={item.learnMoreUrl}>
           {item.title}
         </Item>
       ))}
