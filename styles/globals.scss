@@ -98,6 +98,20 @@ button {
   }
 }
 
+.global-blog-wrapper {
+  width: 816.66667px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 1068px) {
+    width: 692px;
+  }
+
+  @media (max-width: 734px) {
+    width: 100%;
+  }
+}
+
 .hidden {
   display: none;
   visibility: hidden;

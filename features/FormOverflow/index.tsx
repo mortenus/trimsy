@@ -12,7 +12,7 @@ const FormOverflow = React.memo(function FormOverflow({
   handleOpen,
   handleKeyDownOverflowChange,
 }: TFormOverflow) {
-  const overflowRef = React.useRef(null);
+  //   const overflowRef = React.useRef(null);
   //   const [event, setEvent] = React.useState<null | MouseEvent>(null);
 
   //   const checkChangeFormVisibility = (event: MouseEvent) => {
@@ -43,7 +43,7 @@ const FormOverflow = React.memo(function FormOverflow({
 
   return (
     <div className={clsx(styles.overflow, { [styles.overlayVisible]: open })}>
-      <div ref={overflowRef} className={styles.form}>
+      <div className={styles.form}>
         <div className={styles.leftSide}>
           <svg
             className={styles.formSvg}

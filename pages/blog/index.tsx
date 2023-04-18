@@ -3,13 +3,40 @@ import React from 'react';
 import styles from './blog.module.scss';
 
 import { BlogItem } from 'features/Blog';
+import Modal from 'features/Modal';
+import useHideOnOutsideClick from 'hooks/useHideOnOutsideClick';
 
-import { useFetchBlogs } from 'features/Blog/hooks';
-import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
-import axios from 'axios';
+// import { useFetchBlogs } from 'features/Blog/hooks';
+// import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
+// import axios from 'axios';
 
 Blog.title = 'Blog';
 Blog.description = 'Trimsy Blog - Read new releases, get updates and latest news.';
+
+const info = {
+  title:
+    'Bridging Borders with Humanity: How Trimsy x Hart Facilitates Humanitarian Aid for Ukrainians',
+  headerImg: 'https://trimsy.org/uploads/1556542894637.jpg',
+  date: 'April 17, 2023',
+  createdAt: '2023-04-12T12:00:00+0000',
+  modifiedAt: '2023-04-12T12:00:00+0000',
+  minToRead: 2,
+  slug: '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+  description:
+    'In a world where crises and conflicts often disrupt the lives of vulnerable populations, the power of human compassion can transcend borders, bringing hope and assistance to those in need.',
+  author: {
+    fullname: 'Oleksii Pylypenko',
+    position: 'CEO',
+    description: `I'm a CEO and a Co-Founder of Trimsy. I deeply appreciate the encouragment and
+      mutual benefit from the associates I am given a chance to have a journey with. We are
+      thinkers and doers, difficulties could be challanging, but that is the beauty of it.
+      Doing things with speed does not mean doing them imperfectly, the only way to not fall
+      back - is to go forward.`,
+    avatarUrl:
+      'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
+    profileUrl: 'https://www.linkedin.com/in/alexey-pylypenko/',
+  },
+};
 
 export default function Blog({ items }: any) {
   //   const { items, totalPages, currentPage, setPageNumber, incrementPage, decrementPage } =
@@ -44,12 +71,31 @@ export default function Blog({ items }: any) {
       count: 7,
       classes: [1, 6, 7, 6, 7, 6, 7],
     },
+    {
+      count: 8,
+      classes: [1, 6, 7, 6, 7, 6, 7, 1],
+    },
+    {
+      count: 9,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7],
+    },
   ];
 
   const layout =
     items && items.length > 0 && layouts.find((layout) => layout.count === items.length);
 
-  const currentValue = useAnimateBackgroundPosition(0, -440, 1750, 600);
+  //   const currentValue = useAnimateBackgroundPosition(0, -440, 1750, 600);
+
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const ref = React.useRef(null);
+  const toNotCloseRef = React.useRef(null);
+
+  useHideOnOutsideClick(
+    isModalVisible,
+    () => setIsModalVisible(!isModalVisible),
+    ref,
+    toNotCloseRef,
+  );
 
   return (
     <>
@@ -140,7 +186,9 @@ export default function Blog({ items }: any) {
                       <BlogItem
                         key={item.slug}
                         itemCount={itemCount}
-                        slug={item.slug}
+                        slug={item.slug && item.slug}
+                        onClick={!item.slug ? () => setIsModalVisible(true) : undefined}
+                        customRef={!item.slug && toNotCloseRef}
                         featured={i === 0}
                         {...item.data}
                       />
@@ -198,14 +246,131 @@ export default function Blog({ items }: any) {
           )} */}
         </div>
       </div>
+      <Modal
+        info={info}
+        opened={isModalVisible}
+        setIsOpened={() => setIsModalVisible(!isModalVisible)}
+        customRef={ref}>
+        <p>
+          In a world where crises and conflicts often disrupt the lives of vulnerable populations,
+          the power of human compassion can transcend borders, bringing hope and assistance to those
+          in need.
+        </p>
+        <p>
+          Based in Canada, Hart has been working tirelessly to support the humanitarian efforts in
+          Ukraine, where the ongoing conflict has resulted in significant challenges for the
+          affected population. Hart has been instrumental in providing crucial assistance to those
+          displaced by the conflict, including medical supplies, food, and other essentials.
+        </p>
+        <p>
+          With a strong commitment to humanitarian causes, Hart has been partnering with various
+          organizations and non-profits. Their mission is to bridge the gap between the generosity
+          of the Canadian people and the urgent needs of the Ukrainian population.
+        </p>
+        <p>
+          In the midst of a humanitarian crisis Trimsy and Hart has been at the forefront, playing a
+          vital role in facilitating aid for Ukrainians from Canada to Ukraine, helping alleviate
+          suffering and providing much-needed support. One of the unique aspects of humanitarian
+          efforts is its strategic approach of utilizing Poland as a transit point for aid
+          distribution. With a mission to bring humanitarian aid from Canada to Ukraine, Trimsy has
+          been making a positive impact to support to Ukrainian communities.
+        </p>
+      </Modal>
     </>
   );
 }
 
 export async function getStaticProps() {
-  const res = await axios.get(`https://secure.trimsy.org/blogs?page=${1}`);
+  //   const res = await axios.get(`https://secure.trimsy.org/blogs?page=${1}`);
 
-  const items = res.data.items;
+  //   const items = res.data.items;
+
+  const items = [
+    {
+      data: {
+        date: 'April 17, 2023',
+        title:
+          'Bridging Borders with Humanity: How Trimsy x Hart Facilitates Humanitarian Aid for Ukrainians',
+        imgUrl: '/uploads/1556542894645.jpg',
+      },
+      modal:
+        '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+    },
+    {
+      data: {
+        date: 'April 12, 2023',
+        title: 'Tips for Writing Effective Call-to-Actions (CTAs)',
+        description:
+          'CTAs play a crucial role in the conversion process, as they guide users towards the desired action, helping to drive engagement, generate leads, and ultimately convert users into customers.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894644.jpg',
+      },
+      slug: '/blog/tips-for-writing-effective-call-to-actions',
+    },
+    {
+      data: {
+        date: 'April 10, 2023',
+        title: 'Unlocking the Power of Progressive Web Apps: Benefits and Features Explained',
+        description:
+          'PWAs are web applications that combine the capabilities of web technologies with the user experience of native mobile applications.Whilst using PWAs capabilities - it will retain users, not difficult to develop and more.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894637.jpg',
+      },
+      slug: '/blog/unlocking-the-power-of-progressive-web-apps',
+    },
+    {
+      data: {
+        date: 'April 1, 2023',
+        title: 'Maximizing Website Performance with CDN: Benefits and Advantages',
+        description:
+          'A content delivery network (CDN) is a widely recognized solution that helps to improve website performance. By distributing website content across multiple servers around the globe, a CDN enhances website speed, security, and reliability.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894636.png',
+      },
+      slug: '/blog/maximizing-website-performance-with-cdn',
+    },
+    {
+      data: {
+        date: 'March 14, 2023',
+        title: 'Website Security: How to Protect Your Website and Gain a Competitive Edge',
+        description:
+          'Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
+        hashtags: ['Web', 'Dev', 'Security'],
+      },
+      slug: '/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
+    },
+    {
+      data: {
+        date: 'March 12, 2023',
+        title: 'How To Create a Winning Social Media Strategy for Your Website',
+        description:
+          'Creating a winning social media strategy is a crucial component of any successful website marketing plan. It gives confident opportunities for a website grown and expansion.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894629.jpg',
+        hashtags: ['Web', 'Social Media'],
+      },
+      slug: '/blog/how-to-create-a-winning-social-media-strategy',
+    },
+    {
+      data: {
+        date: 'March 9, 2023',
+        title: 'Setting Up Google Analytics Fast and Easy',
+        description:
+          "Tracking website could give a valuable information on how it is used, how well website keeps visitors on different pages, amd even more. The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.'",
+        imgUrl: 'https://trimsy.org/uploads/google_analytics_logo.webp',
+        hashtags: ['Web', 'Dev'],
+      },
+      slug: '/blog/setting-up-google-analytics-fast-and-easy',
+    },
+    {
+      data: {
+        date: 'March 2, 2023',
+        title: 'How To Improve SEO of your Website in 5 Steps',
+        description:
+          'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
+        imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
+        hashtags: ['Web', 'Dev'],
+      },
+      slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
+    },
+  ];
 
   return {
     props: {
