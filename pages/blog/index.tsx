@@ -190,6 +190,7 @@ export default function Blog({ items }: any) {
                         onClick={!item.slug ? () => setIsModalVisible(true) : undefined}
                         customRef={!item.slug && toNotCloseRef}
                         featured={i === 0}
+                        type={item.type && item.type}
                         {...item.data}
                       />
                     );
@@ -295,6 +296,7 @@ export async function getStaticProps() {
       },
       modal:
         '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+      type: 'QUICK READ',
     },
     {
       data: {

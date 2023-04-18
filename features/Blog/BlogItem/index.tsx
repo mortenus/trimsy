@@ -15,6 +15,7 @@ type TBlogItemBase = {
   featured?: boolean;
   itemCount: number;
   customRef?: any;
+  type?: string;
 };
 
 interface TBlogItemOnClick extends TBlogItemBase {
@@ -39,6 +40,7 @@ const BlogItem = ({
   itemCount,
   onClick,
   customRef,
+  type,
 }: TBlogItem) => {
   //   const ref = React.useRef(null);
   const ref = customRef || React.useRef(null);
@@ -89,9 +91,26 @@ const BlogItem = ({
         <BlogImage url={imgUrl} />
       </div>
       <div className={styles.text}>
-        <span>{date}</span>
+        {type && (
+          <div className={styles.type}>
+            <svg
+              style={{ height: '15px' }}
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.9963 18H7.99627L8.9963 12.1667H5.49622C4.91621 12.1667 4.92621 11.9 5.11621 11.6167C5.30621 11.3333 5.16621 11.55 5.18621 11.5167C6.47624 9.61667 8.41628 6.78333 10.9963 3H11.9964L10.9963 8.83333H14.4964C14.9864 8.83333 15.0564 9.10833 14.9664 9.25833L14.8964 9.38333C10.9563 15.125 8.9963 18 8.9963 18Z"
+                fill="#6e6e73"
+              />
+            </svg>
+            {type}
+          </div>
+        )}
         <h3>{title}</h3>
         <p>{description}</p>
+        <span>{date}</span>
       </div>
     </div>
   );
