@@ -14,7 +14,7 @@ export default function useHideScrollOnTrue(stateBool: boolean) {
 
   React.useEffect(() => {
     if (stateBool) {
-      document.documentElement.style.setProperty('overflow', `hidden`, 'important');
+      document.documentElement.style.setProperty('overflow', `hidden`);
       disableScroll();
     } else {
       document.documentElement.style.removeProperty('overflow');
