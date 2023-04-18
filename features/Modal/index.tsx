@@ -4,11 +4,8 @@ import React from 'react';
 import styles from './Modal.module.scss';
 import PostStyles from '/styles/blog/Post.module.scss';
 import BlogWrapperStyles from '/styles/blog/BlogWrapper.module.scss';
-import { ImageUnoptimized } from 'components';
 import useHideScrollOnTrue from 'hooks/useHideScrollOnTrue';
 import Image from 'next/image';
-import useChangeStateOnSpace from 'hooks/useChangeStateOnSpace';
-import useHideOnOutsideClick from 'hooks/useHideOnOutsideClick';
 
 type TAuthor = {
   fullname: string;
@@ -75,13 +72,13 @@ const Modal = ({ opened, setIsOpened, children, info, customRef }: TModal) => {
               style={{ display: 'flex', justifyContent: 'center' }}>
               <Image
                 src={info.headerImg}
-                width="150"
-                height="150"
+                width="300"
+                height="300"
                 //   sizes="100vw"
                 loading="lazy"
                 style={{
-                  width: '150px',
-                  height: '150px',
+                  //   width: 'auto',
+                  //   height: '100%',
                   overflow: 'hidden',
                   borderRadius: '35px',
                 }}
