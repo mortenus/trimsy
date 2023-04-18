@@ -5,20 +5,20 @@ function preventDefault(e: any) {
 }
 
 export default function useHideScrollOnTrue(stateBool: boolean) {
-  function disableScroll() {
-    document.body.addEventListener('touchmove', preventDefault, { passive: false });
-  }
-  function enableScroll() {
-    document.body.removeEventListener('touchmove', preventDefault);
-  }
+  //   function disableScroll() {
+  //     document.body.addEventListener('touchmove', preventDefault, { passive: false });
+  //   }
+  //   function enableScroll() {
+  //     document.body.removeEventListener('touchmove', preventDefault);
+  //   }
 
   React.useEffect(() => {
     if (stateBool) {
       document.documentElement.style.setProperty('overflow', `hidden`);
-      disableScroll();
+      //   disableScroll();
     } else {
       document.documentElement.style.removeProperty('overflow');
-      enableScroll();
+      //   enableScroll();
     }
     console.log();
 
