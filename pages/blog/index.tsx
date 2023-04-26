@@ -16,7 +16,7 @@ Blog.description = 'Trimsy Blog - Read new releases, get updates and latest news
 const info = {
   title:
     'Bridging Borders with Humanity: How Trimsy x Hart Facilitates Humanitarian Aid for Ukrainians',
-  headerImg: 'https://trimsy.org/uploads/1556542894646.jpg',
+  headerImg: '/uploads/1556542894647.jpg',
   date: 'April 17, 2023',
   createdAt: '2023-04-12T12:00:00+0000',
   modifiedAt: '2023-04-12T12:00:00+0000',

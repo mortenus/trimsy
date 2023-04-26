@@ -12,6 +12,7 @@ type THeaderButton = {
     title: string;
     description: string;
     href: string;
+    target?: string;
   }[];
 };
 
@@ -51,7 +52,12 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
       <div className={clsx(styles.popup, { [styles.visible]: open })}>
         <div className={styles.text} ref={ref}>
           {links.map((obj) => (
-            <Link key={obj.href} className={styles.item} href={obj.href} onClick={handleOpenChange}>
+            <Link
+              key={obj.href}
+              className={styles.item}
+              target={obj.target && obj.target}
+              href={obj.href}
+              onClick={handleOpenChange}>
               <h4>{obj.title}</h4>
               <p>{obj.description}</p>
             </Link>

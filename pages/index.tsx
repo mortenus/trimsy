@@ -3,8 +3,6 @@ import { Accomplish, Boost, ContactUs, FAQ, Here, Influence, Intro, Product } fr
 import { useOnScroll } from 'hooks/useOnScroll';
 import Head from 'next/head';
 
-Home.title = 'Web Development';
-
 type THome = {
   handleFormChange: () => void;
   handleKeyDownOverflowChange: (e: any) => void;

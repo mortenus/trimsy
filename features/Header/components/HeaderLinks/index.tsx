@@ -23,6 +23,7 @@ const linkRows = [
         title: 'Get Hired',
         description: 'Get a professional to help you in your IT journey',
         href: '/careers',
+        target: '_blank',
       },
     ],
   },

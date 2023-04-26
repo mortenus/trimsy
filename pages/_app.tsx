@@ -40,9 +40,12 @@ export default function App({ Component, pageProps }: CustomAppProps) {
       <Script />
       <Head>
         <meta charSet="UTF-8" />
-        <title>{Component.title + ' - Trimsy'}</title>
+        <title>{Component.title ? Component.title + ' - Trimsy' : 'Trimsy'}</title>
         <meta name="description" content={Component.description || defaultDescription} />
-        <meta content={Component.title} property={'og:title'} />
+        <meta
+          content={Component.title ? Component.title + ' - Trimsy' : 'Trimsy'}
+          property={'og:title'}
+        />
         <meta content={Component.description || defaultDescription} property={'og:description'} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
