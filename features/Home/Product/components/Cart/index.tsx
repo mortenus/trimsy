@@ -56,7 +56,7 @@ const Cart = () => {
   }, [scrollRef]);
 
   return (
-    <div className={styles.drawer}>
+    <div className={styles.drawer} style={{ top: '250px' }}>
       <h2>Cart</h2>
 
       <div className={styles.wrapper}>

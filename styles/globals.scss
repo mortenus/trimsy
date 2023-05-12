@@ -1,3 +1,5 @@
+@import './comparing-table.scss';
+
 $global-wrapper: '.global-wrapper' !default;
 $global-wrapper--small: '.global-wrapper--small' !default;
 
@@ -116,4 +118,114 @@ button {
   display: none;
   visibility: hidden;
   opacity: 0;
+}
+
+.typography {
+  &-headline {
+    font-size: 48px;
+    color: #1d1d1f;
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+    &.spacing {
+      margin-bottom: 40px;
+    }
+
+    @media only screen and (max-width: 1068px) {
+      font-size: 32px;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &-title {
+    font-size: 48px;
+    color: #1d1d1f;
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    @media only screen and (max-width: 1068px) {
+      font-size: 38px;
+    }
+  }
+
+  &-description {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+
+    margin-bottom: 30px;
+
+    @media (max-width: 1068px) {
+      font-size: 16px;
+
+      line-height: 1.3333;
+
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    &.light {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    &.bold {
+      font-weight: 800;
+    }
+
+    &.smaller {
+      max-width: 350px;
+      width: 100%;
+
+      @media (max-width: 1068px) {
+        width: 260px;
+      }
+    }
+
+    &.small {
+      max-width: 400px;
+      width: 100%;
+
+      @media (max-width: 1068px) {
+        width: 300px;
+      }
+    }
+
+    &.medium {
+      max-width: 750px;
+      width: 100%;
+    }
+
+    &.large {
+      max-width: 1200px;
+      width: 100%;
+    }
+  }
+
+  &-section {
+    &-headline {
+      max-width: 83.3333333333%;
+
+      font-size: 56px;
+      color: #1d1d1f;
+      padding: 56px 0;
+      letter-spacing: -0.05em;
+      font-weight: 600;
+
+      text-align: center;
+
+      @media only screen and (max-width: 1068px) {
+        font-size: 40px;
+
+        line-height: 1.1;
+      }
+
+      @media only screen and (max-width: 734px) {
+        font-size: 32px;
+
+        line-height: 1.125;
+      }
+    }
+  }
 }

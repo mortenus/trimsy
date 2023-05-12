@@ -4,7 +4,7 @@ type TButtonBase = {
   disabled?: boolean | 'black' | 'white';
   status?: 'success' | 'fail';
   style?: React.CSSProperties;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'supersmall';
   color?: 'black' | 'white';
   tabIndex?: number;
   onKeyDown?: React.KeyboardEventHandler;

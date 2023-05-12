@@ -1,4 +1,4 @@
-import { Button, ImageUnoptimized } from 'components';
+import { Button, ImageUnoptimized, SwiperSmall } from 'components';
 import CommunityItem from 'features/About/community/Item';
 import IntroItem from 'features/About/Intro/Item';
 import Head from 'next/head';
@@ -94,6 +94,10 @@ export default function About() {
         <div className={styles.items}>
           <CommunityItem />
         </div>
+      </section>
+      <section className={styles.large}>
+        <h3 className={styles.title}>More from Trimsy</h3>
+        <SwiperSmall />
       </section>
       <Head>
         <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />

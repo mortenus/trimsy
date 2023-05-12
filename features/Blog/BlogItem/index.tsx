@@ -10,12 +10,13 @@ import { useIsVisible } from 'hooks/useIsVisible';
 type TBlogItemBase = {
   date: string;
   title: string;
-  description: string;
+  description?: string;
   imgUrl: any;
   featured?: boolean;
-  itemCount: number;
+  itemCount?: number;
   customRef?: any;
   type?: string;
+  animation?: string | boolean;
 };
 
 interface TBlogItemOnClick extends TBlogItemBase {
@@ -41,6 +42,7 @@ const BlogItem = ({
   onClick,
   customRef,
   type,
+  animation = true,
 }: TBlogItem) => {
   //   const ref = React.useRef(null);
   const ref = customRef || React.useRef(null);
@@ -49,7 +51,7 @@ const BlogItem = ({
   return slug ? (
     <div
       className={clsx(styles.item, styles[`item-${itemCount}`], {
-        [styles.visible]: isVisible,
+        [styles.visible]: !animation || isVisible,
         [styles[`item--featured`]]: featured,
       })}
       ref={ref}>
@@ -68,13 +70,13 @@ const BlogItem = ({
       <div className={styles.text}>
         <span>{date}</span>
         <h3>{title}</h3>
-        <p>{description}</p>
+        {description && <p>{description}</p>}
       </div>
     </div>
   ) : (
     <div
       className={clsx(styles.item, styles[`item-${itemCount}`], {
-        [styles.visible]: isVisible,
+        [styles.visible]: !animation || isVisible,
         [styles[`item--featured`]]: featured,
       })}
       ref={ref}

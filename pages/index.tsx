@@ -47,13 +47,13 @@ export default function Home({ handleFormChange, handleKeyDownOverflowChange }: 
       <main>
         <Intro />
 
-        {/* <Product /> */}
-
-        {/* <Accomplish onScrollEvent={onScrollEvent} /> */}
-
         <Influence />
 
         <Boost onScrollEvent={onScrollEvent} />
+
+        {/* <Product /> */}
+
+        {/* <Accomplish onScrollEvent={onScrollEvent} /> */}
 
         <Here />
 

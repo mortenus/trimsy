@@ -17,27 +17,27 @@ const Accomplish = ({ onScrollEvent }: TAccomplish) => {
     offset: 200,
   });
 
-  const { scrollMove } = useAccomplish({ onScrollEvent, AccomplishInView });
+  //   const { scrollMove } = useAccomplish({ onScrollEvent, AccomplishInView });
 
   return (
     <section
       className={styles.content}
       ref={AccomplishRef}
       style={{
-        transform: `translate3d(0px, ${
-          !scrollMove ? '-100' : -Math.abs(+scrollMove / 7.5)
-        }px, 0px)`,
-        willChange: 'transform',
-        transformStyle: 'preserve-3d',
+        // transform: `translate3d(0px, ${!scrollMove ? '-100' : -Math.abs(+scrollMove / 15)}px, 0px)`,
+        transform: 'translate3d(0px, -200px, 0px)',
+        // willChange: 'transform',
+        // transformStyle: 'preserve-3d',
       }}>
       <div
         className={styles.wrapper}
         style={{
-          transform: `translate3d(0px, ${
-            !scrollMove ? '-100' : -Math.abs(+scrollMove / 8.5)
-          }px, 0px)`,
-          willChange: 'transform',
-          transformStyle: 'preserve-3d',
+          //   transform: `translate3d(0px, ${
+          //     !scrollMove ? '-100' : -Math.abs(+scrollMove / 20)
+          //   }px, 0px)`,
+          //   willChange: 'transform',
+          //   transformStyle: 'preserve-3d',
+          transform: 'translate3d(0px, -50px, 0px)',
         }}>
         <div className={styles.text}>
           <h2>Accomplish your goals in one go</h2>

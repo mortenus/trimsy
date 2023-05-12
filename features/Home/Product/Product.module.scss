@@ -12,6 +12,7 @@
   background: rgb(231, 246, 255);
 
   padding-top: 100px;
+  width: 100%;
 
   .floating {
     position: absolute;
@@ -24,16 +25,16 @@
       box-shadow: -10px 4px 24px rgb(0 0 0 / 10%);
     }
 
-    @media (max-width: 960px) {
-      left: 30px;
-    }
+    // @media (max-width: 960px) {
+    //   left: 30px;
+    // }
 
-    @media (max-width: 650px) {
-      left: 20px;
-      top: 160px;
-    }
+    // @media (max-width: 650px) {
+    //   left: 20px;
+    //   top: 160px;
+    // }
 
-    @media (max-width: 550px) {
+    @media (max-width: 1280px) {
       display: none;
     }
 

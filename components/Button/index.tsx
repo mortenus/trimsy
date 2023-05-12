@@ -26,10 +26,13 @@ const Button = ({
     { [styles.black]: color === 'black' },
     { [styles.white]: color === 'white' },
     { [styles.wrapper_nav]: type === 'nav' },
+    { [styles.wrapper_default]: type === 'default' },
+    { [styles[`wrapper_default--bold`]]: type === 'default--bold' },
     { [styles.wrapper_search]: type === 'search' },
     { [styles.wrapper_submit]: type === 'submit' },
     { [styles.success]: status === 'success' },
     { [styles.fail]: status === 'fail' },
+    { [styles.supersmall]: size === 'supersmall' },
     { [styles.small]: size === 'small' },
     { [styles.medium]: size === 'medium' },
     { [styles.large]: size === 'large' },
@@ -38,7 +41,7 @@ const Button = ({
   return (
     <>
       {!onClick ? (
-        <Link href={to ? to : '#'}>
+        <Link href={to ? to : '#'} style={{ width: 'fit-content' }}>
           <div style={style && style} className={stylying}>
             {children}
           </div>

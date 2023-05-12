@@ -87,6 +87,28 @@ $blue: rgb(22, 106, 234);
 
   // sizes
 
+  &.supersmall {
+    font-size: 14px;
+
+    text-align: center;
+
+    font-weight: 400;
+    width: auto;
+    padding: 4px 12px;
+    line-height: 1.3333333333;
+  }
+
+  &.small {
+    font-size: 18px;
+
+    text-align: center;
+
+    font-weight: 400;
+
+    width: auto;
+    padding: 8px 20px;
+  }
+
   &.medium {
     width: 200px;
 
@@ -103,6 +125,23 @@ $blue: rgb(22, 106, 234);
   }
 
   // Types
+
+  &_default {
+    color: #0066cc;
+    font-size: 20px;
+
+    padding: 0;
+    background: none;
+
+    &--bold {
+      color: #2997ff;
+
+      font-size: 20px;
+
+      padding: 0;
+      background: none;
+    }
+  }
 
   &_submit {
     // border: 1px solid rgba(0, 0, 0, 1);

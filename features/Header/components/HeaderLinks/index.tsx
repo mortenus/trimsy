@@ -17,10 +17,10 @@ const linkRows = [
       {
         title: 'Web Development',
         description: 'Discover all the ways to get your presence in Web',
-        href: '/',
+        href: '/services',
       },
       {
-        title: 'Get Hired',
+        title: 'Marketplace',
         description: 'Get a professional to help you in your IT journey',
         href: '/careers',
         target: '_blank',
