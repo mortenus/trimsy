@@ -50,7 +50,7 @@ const ContactForm = (props: any) => {
         status={status && status}
         disabled={isSubmitting ? 'black' : false}
         type="submit"
-        color="black"
+        color="black-inverse"
         size="medium"
         onClick={handleSubmit}>
         Submit

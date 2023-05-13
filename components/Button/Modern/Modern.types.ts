@@ -5,7 +5,7 @@ interface TButtonBase {
 }
 
 interface TButtonOnClick extends TButtonBase {
-  onClick: Function;
+  onClick: () => void;
   to?: never;
 }
 

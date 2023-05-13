@@ -6,16 +6,10 @@ import React from 'react';
 import styles from './ContactUs.module.scss';
 
 type TContactUs = {
-  handleFormChange: () => void;
-  handleKeyDownOverflowChange: (e: any) => void;
   onScrollEvent: any;
 };
 
-const ContactUs = ({
-  handleFormChange,
-  handleKeyDownOverflowChange,
-  onScrollEvent,
-}: TContactUs) => {
+const ContactUs = ({ onScrollEvent }: TContactUs) => {
   const ButtonRef = React.useRef(null);
   const { inView: ButtonInView } = useInView({
     ref: ButtonRef,
@@ -30,7 +24,7 @@ const ContactUs = ({
           <h2>{`Let's chat about your next project`}</h2>
           <p>Tell us how we can help you bring your ideas into reality.</p>
           <div className={clsx(styles.button, { [styles.active]: ButtonInView })} ref={ButtonRef}>
-            <Button type="nav" onClick={handleFormChange} onKeyDown={handleKeyDownOverflowChange}>
+            <Button type="nav" to="/services">
               Let's work
             </Button>
           </div>

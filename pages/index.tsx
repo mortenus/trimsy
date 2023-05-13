@@ -1,4 +1,14 @@
-import { Accomplish, Boost, ContactUs, FAQ, Here, Influence, Intro, Product } from 'features/Home';
+import {
+  Accomplish,
+  Boost,
+  ContactUs,
+  FAQ,
+  Here,
+  Influence,
+  Intro,
+  Product,
+  Testimonials,
+} from 'features/Home';
 
 import { useOnScroll } from 'hooks/useOnScroll';
 import Head from 'next/head';
@@ -47,6 +57,8 @@ export default function Home({ handleFormChange, handleKeyDownOverflowChange }: 
       <main>
         <Intro />
 
+        <Testimonials />
+
         <Influence />
 
         <Boost onScrollEvent={onScrollEvent} />
@@ -55,16 +67,15 @@ export default function Home({ handleFormChange, handleKeyDownOverflowChange }: 
 
         {/* <Accomplish onScrollEvent={onScrollEvent} /> */}
 
-        <Here />
+        <Here
+          handleFormChange={handleFormChange}
+          handleKeyDownOverflowChange={handleKeyDownOverflowChange}
+        />
 
         <FAQ arr={FAQArr} />
 
         {/* <ContactForm /> */}
-        <ContactUs
-          handleFormChange={handleFormChange}
-          handleKeyDownOverflowChange={handleKeyDownOverflowChange}
-          onScrollEvent={onScrollEvent}
-        />
+        <ContactUs onScrollEvent={onScrollEvent} />
       </main>
 
       <Head>

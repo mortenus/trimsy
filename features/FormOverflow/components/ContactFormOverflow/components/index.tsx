@@ -45,7 +45,7 @@ const ContactFormOverflow = (props: any) => {
           status={status && status}
           disabled={isSubmitting ? 'black' : false}
           type="submit"
-          color="black"
+          color="black-inverse"
           onClick={handleSubmit}
           tabIndex={1}>
           Submit

@@ -65,9 +65,36 @@ $blue: rgb(22, 106, 234);
 
     &:hover {
       //   background: lighten($blue, 10%);
-      color: #000;
-      background: #fff;
+      //   color: #000;
+      //   background: #fff;
+      background: lighten(#000, 10%);
       border: 2px solid rgba(0, 0, 0, 0.35);
+    }
+
+    &__inverse {
+      background: #000;
+      color: #fff;
+      border: 2px solid transparent;
+
+      &:hover {
+        background: #fff;
+        color: #000;
+        background: #fff;
+        border: 2px solid rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+
+  &.transparent {
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: 2px solid transparent;
+
+    &:hover {
+      //   background: lighten($blue, 10%);
+      //   color: #000;
+      //   background: #fff;
+      background: rgba(0, 0, 0, 0.55);
     }
   }
 

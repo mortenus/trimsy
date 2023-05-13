@@ -10,7 +10,7 @@ const itemsArr = [
     description: 'Get assistance through connecting with us.',
     link: {
       title: 'Get in Contact',
-      href: '#contact',
+      onClick: true,
     },
   },
   {
@@ -23,7 +23,12 @@ const itemsArr = [
   },
 ];
 
-const Here = () => {
+type THere = {
+  handleFormChange: () => void;
+  handleKeyDownOverflowChange: (e: any) => void;
+};
+
+const Here = ({ handleFormChange, handleKeyDownOverflowChange }: THere) => {
   return (
     <section className={styles.potentialWrap}>
       <div className={styles.wrapper}>
@@ -34,7 +39,7 @@ const Here = () => {
         </div>
         <div className={styles.additional}>
           {itemsArr.map((item) => (
-            <HereItem key={item.title} {...item} />
+            <HereItem onClick={handleFormChange} key={item.title} {...item} />
           ))}
         </div>
       </div>

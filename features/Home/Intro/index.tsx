@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import useAnimation from './hooks/useAnimation';
 
 import styles from './Intro.module.scss';
+import { Button } from 'components';
 
 const Intro = () => {
   const ref = React.useRef(null);
@@ -17,9 +18,12 @@ const Intro = () => {
         style={{ animationPlayState: isGradientAnimationPaused ? 'paused' : 'running' }}
         ref={ref}>
         <Banner />
-        <h1>Trimsy</h1>
+        <h1 style={{ visibility: 'hidden', display: 'none' }}>Trimsy</h1>
         <h3>Success is near</h3>
         <p>Discover your presence in Web the way you want.</p>
+        <Button type="nav" color="transparent" to="/services">
+          Learn More
+        </Button>
 
         <div className={styles.pause} onClick={handleToggleAnimation}>
           {isGradientAnimationPaused ? (

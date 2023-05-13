@@ -59,7 +59,7 @@ const Boost = ({ onScrollEvent }: TBoost) => {
             <Item style={additionalInView ? activeStyles : undefined} key={item.title} {...item} />
           ))}
         </div>
-        <Button to="#contact" color={'black'} size={'medium'}>
+        <Button to="/services" color="black-inverse" size={'medium'}>
           Get Started
         </Button>
       </div>

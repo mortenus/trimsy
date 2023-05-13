@@ -46,7 +46,7 @@ const Accomplish = ({ onScrollEvent }: TAccomplish) => {
             life
           </p>
         </div>
-        <Button to="#contact" color="black">
+        <Button to="#contact" color="black-inverse">
           Contact us
         </Button>
       </div>

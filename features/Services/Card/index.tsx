@@ -38,8 +38,8 @@ const Card = ({
     <section className={styles.card} style={{ background: backgroundColor ? backgroundColor : '' }}>
       <div className={styles.text}>
         {isNew && <span className={styles.new}>New</span>}
-        <h4 className={styles.service}>{serviceName}</h4>
-        <h3 className={styles.service__headline}>{serviceHeadline}</h3>
+        <h4 className={'typography-hero-product'}>{serviceName}</h4>
+        <h3 className={'typography-hero-headline'}>{serviceHeadline}</h3>
       </div>
       <div className={styles.cta}>
         <Button to={href} size={'small'}>
