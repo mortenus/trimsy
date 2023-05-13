@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './advanced.module.scss';
 import { CompareTable } from 'features/Services';
 import { ContactForm, FAQ } from 'features/Home';
+import Banner from 'features/Services/Banner';
 
 const init = {
   isNew: true,
@@ -46,12 +47,57 @@ Advanced.title = 'Web Advanced';
 
 export default function Advanced({}) {
   return (
-    <div>
-      <div className={styles.wrapper}>
+    <div className={styles.wrapper}>
+      <Banner />
+      <div className={styles['info--wrapper']}>
         <div className={styles.info}>
-          {init.isNew && <span className={styles.new}>New</span>}
-          <h1 className={styles.product}>{init.name}</h1>
-          <span className={styles.pricing}>From ${init.price}</span>
+          <div className={styles.text}>
+            {init.isNew && <span className={styles.new}>New</span>}
+            <h1 className={styles.product}>Web {init.name}</h1>
+            <span className={styles.pricing}>From ${init.price}</span>
+          </div>
+          <svg
+            width="146"
+            height="106"
+            viewBox="0 0 146 106"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M142.032 54.732H134.76V62.184H130.944V54.732H123.672V51.276H130.944V43.824H134.76V51.276H142.032V54.732Z"
+              fill="black"
+            />
+            <g clip-path="url(#clip0_1761_1989)">
+              <path
+                d="M67.7637 106H40.2363V77.7227H67.7637V106ZM46.1162 100.111H61.9102V83.6381H46.0898L46.1162 100.111Z"
+                fill="black"
+              />
+              <path
+                d="M95.9502 89.474H12.0498C5.40527 89.474 0 84.036 0 77.3514V12.1226C0 5.43794 5.40527 0 12.0498 0H95.9502C102.595 0 108 5.43794 108 12.1226V77.3514C108 84.036 102.595 89.474 95.9502 89.474ZM12.0498 5.88889C8.62207 5.88889 5.85352 8.67417 5.85352 12.1226V77.3514C5.85352 80.7998 8.62207 83.5851 12.0498 83.5851H95.9502C99.3779 83.5851 102.146 80.7998 102.146 77.3514V12.1226C102.146 8.67417 99.3779 5.88889 95.9502 5.88889H12.0498Z"
+                fill="black"
+              />
+              <path
+                d="M86.0361 77.6962H21.9639C16.2949 77.6962 11.707 73.0806 11.707 67.3774V22.0967C11.707 16.3934 16.3213 11.7778 21.9639 11.7778H86.0098C91.6787 11.7778 96.2666 16.3934 96.2666 22.0967H90.4395C90.4395 19.6562 88.4619 17.6667 86.0361 17.6667H21.9639C19.5381 17.6667 17.5605 19.6562 17.5605 22.0967V67.3774C17.5605 69.8179 19.5381 71.8074 21.9639 71.8074H86.0098C88.4356 71.8074 90.4131 69.8179 90.4131 67.3774V42.0976H96.2666V67.3774C96.293 73.0806 91.7051 77.6962 86.0361 77.6962Z"
+                fill="black"
+              />
+              <path
+                d="M2.92676 63.584V77.3513C2.92676 82.4178 7.01367 86.5294 12.0498 86.5294H95.9502C100.986 86.5294 105.073 82.4178 105.073 77.3513V63.584H2.92676Z"
+                fill="#C2B5FF"
+              />
+              <path
+                d="M95.9502 89.474H12.0498C5.40527 89.474 0 84.036 0 77.3514V60.6396H108V77.3514C108 84.036 102.595 89.474 95.9502 89.474ZM5.85352 66.5285V77.3514C5.85352 80.7998 8.62207 83.5851 12.0498 83.5851H95.9502C99.3779 83.5851 102.146 80.7998 102.146 77.3514V66.5285H5.85352Z"
+                fill="black"
+              />
+              <path
+                d="M48.7266 72.1255H59.2471V78.0144H48.7266V72.1255ZM30.7441 100.111H77.2822V106H30.7441V100.111Z"
+                fill="black"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1761_1989">
+                <rect width="108" height="106" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
         </div>
 
         <ContactForm />

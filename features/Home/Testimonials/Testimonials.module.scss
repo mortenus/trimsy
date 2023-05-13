@@ -54,9 +54,9 @@
     //   width: 550px;
     // }
 
-    // @media (min-width: 1441px) {
-    //   width: 750px;
-    // }
+    @media (max-width: 1280px) {
+      height: 1200px;
+    }
 
     position: relative;
     display: flex;
@@ -99,9 +99,10 @@
     //   width: 450px;
     // }
 
-    // @media (max-width: 1068px) {
-    //   width: 400px;
-    // }
+    @media (max-width: 1280px) {
+      //   width: 400px;
+      flex-direction: column;
+    }
 
     // @media (max-width: 734px) {
     //   width: 350px;

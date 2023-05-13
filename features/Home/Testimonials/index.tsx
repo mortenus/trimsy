@@ -24,7 +24,7 @@ const items = [
         'The range of features provided exceeded my expectations and greatly enhanced my overall experience',
       quote: 'The customer support team was responsive and helpful throughout my journey.',
       author: 'Archakov',
-      position: '',
+      position: 'Personal',
     },
   ],
 ];
