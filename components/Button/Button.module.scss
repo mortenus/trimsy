@@ -10,6 +10,9 @@ $blue: rgb(22, 106, 234);
   user-select: none;
 
   background: $blue;
+  &:hover {
+    background: #0077ed;
+  }
   border-radius: 40px;
 
   transition: background 0.1s ease-in, padding 0.3s ease;

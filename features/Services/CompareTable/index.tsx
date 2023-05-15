@@ -4,7 +4,12 @@ import styles from './CompareTable.module.scss';
 import clsx from 'clsx';
 import { Button } from 'components';
 
-const CompareTable = () => {
+type TCompareTable = {
+  currentActive?: string;
+  nameClickable?: boolean;
+};
+
+const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) => {
   return (
     <section className={styles.which}>
       <h2 className={'comparing-table-title'}>Which Web is right for you?</h2>
@@ -16,7 +21,7 @@ const CompareTable = () => {
             viewBox="0 0 126 109"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_1741_276)">
+            <g clipPath="url(#clip0_1741_276)">
               <path
                 d="M114.237 109H11.7387C5.26641 109 0 103.732 0 97.2581V11.7419C0 5.26784 5.26641 0 11.7387 0H114.237C120.734 0 126 5.26784 126 11.7419C126 13.6127 124.474 15.1389 122.604 15.1635C120.734 15.1635 119.208 13.6373 119.183 11.7665C119.183 9.0341 116.968 6.84327 114.237 6.81865H11.7387C9.00703 6.81865 6.8168 9.0341 6.79219 11.7665V97.2581C6.79219 99.9905 9.00703 102.206 11.7387 102.206H114.237C116.968 102.206 119.183 99.9905 119.183 97.2581V51.5461C119.183 49.6752 120.709 48.1491 122.579 48.1244C124.45 48.1244 125.975 49.6506 126 51.5215V97.2335C126 103.732 120.734 109 114.237 109Z"
                 fill="black"
@@ -52,6 +57,7 @@ const CompareTable = () => {
             <Button to="/services/starter" size="supersmall">
               Select
             </Button>
+            {currentActive === 'Starter' && <div className={styles.current}>Currently viewing</div>}
           </div>
         </div>
         <div className={clsx(styles['item'], styles['page'])}>
@@ -136,7 +142,7 @@ const CompareTable = () => {
             viewBox="0 0 108 106"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_1741_283)">
+            <g clipPath="url(#clip0_1741_283)">
               <path
                 d="M67.7637 106H40.2363V77.7227H67.7637V106ZM46.1162 100.111H61.9102V83.6381H46.0898L46.1162 100.111Z"
                 fill="black"
@@ -175,6 +181,7 @@ const CompareTable = () => {
             <Button to="/services/basic" size="supersmall">
               Select
             </Button>
+            {currentActive === 'Basic' && <div className={styles.current}>Currently viewing</div>}
           </div>
         </div>
         <div className={clsx(styles['item'], styles['page'])}>
@@ -263,7 +270,7 @@ const CompareTable = () => {
               d="M142.032 54.732H134.76V62.184H130.944V54.732H123.672V51.276H130.944V43.824H134.76V51.276H142.032V54.732Z"
               fill="black"
             />
-            <g clip-path="url(#clip0_1761_1989)">
+            <g clipPath="url(#clip0_1761_1989)">
               <path
                 d="M67.7637 106H40.2363V77.7227H67.7637V106ZM46.1162 100.111H61.9102V83.6381H46.0898L46.1162 100.111Z"
                 fill="black"
@@ -299,9 +306,13 @@ const CompareTable = () => {
           <h3 className={'headline'}>Advanced</h3>
           <div className={styles.cta}>
             <span className={styles.pricing}>From $3500</span>
+
             <Button to="/services/advanced" size="supersmall">
               Select
             </Button>
+            {currentActive === 'Advanced' && (
+              <div className={styles.current}>Currently viewing</div>
+            )}
           </div>
         </div>
         <div className={clsx(styles['item'], styles['page'])}>
@@ -424,6 +435,9 @@ const CompareTable = () => {
             <Button to="/services/ecommerce" size="supersmall">
               Select
             </Button>
+            {currentActive === 'eCommerce' && (
+              <div className={styles.current}>Currently viewing</div>
+            )}
           </div>
         </div>
         <div className={clsx(styles['item'], styles['page'])}>
@@ -533,7 +547,7 @@ const CompareTable = () => {
             viewBox="0 0 132 103"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_1741_316)">
+            <g clipPath="url(#clip0_1741_316)">
               <path
                 d="M82.0811 101.901C68.836 101.934 56.1387 96.6656 46.7608 87.2608L40.7344 81.2172C34.5469 74.9797 34.6114 64.8639 40.8311 58.691C47.0186 52.5504 57.0089 52.5504 63.1964 58.691C63.6475 59.1435 64.3565 59.1435 64.8077 58.691C65.2589 58.2385 65.2589 57.5275 64.8077 57.0751L46.7608 38.9765C40.5733 32.739 40.5733 22.6879 46.7608 16.4503C66.5157 -2.84398 98.13 -2.39151 117.369 17.4199C136.222 36.8758 136.222 67.8372 117.369 87.2608C108.024 96.6656 95.3262 101.966 82.0811 101.901ZM51.9815 61.3088C47.212 61.3088 43.377 65.1871 43.377 69.938C43.377 72.2326 44.2794 74.4303 45.8907 76.0462L51.9171 82.0898C68.5782 98.7986 95.584 98.7986 112.245 82.0898C128.906 65.381 128.906 38.2979 112.245 21.589C95.584 4.88022 68.5782 4.88022 51.9493 21.589C48.5977 24.9502 48.5977 30.4121 51.9493 33.8055L69.9962 51.9041C73.2188 55.2652 73.1221 60.5978 69.7706 63.8297C66.5157 66.9646 61.3594 66.9646 58.1046 63.8297C56.461 62.2138 54.2696 61.3088 51.9815 61.3088Z"
                 fill="black"
@@ -584,6 +598,7 @@ const CompareTable = () => {
             <Button to="/services/custom" size="supersmall">
               Select
             </Button>
+            {currentActive === 'Custom' && <div className={styles.current}>Currently viewing</div>}
           </div>
         </div>
         <div className={clsx(styles['item'], styles['page'])}>

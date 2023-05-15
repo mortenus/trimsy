@@ -210,6 +210,14 @@
         font-size: 48px;
         font-weight: 500;
 
+        background: url('/static/img/careers/desktop@2x.png');
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        background-size: 100% 100%;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        width: 740px;
+
         @media (max-width: 1800px) {
           font-size: 38px;
         }

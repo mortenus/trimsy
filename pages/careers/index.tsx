@@ -51,7 +51,7 @@ export function Careers() {
 
         <div className={styles.background}>
           <ImageUnoptimized
-            src={'/static/img/careers/intro2.jpg'}
+            src={'/static/img/careers/intro5.jpg'}
             fill
             priority
             alt={'Intro Image'}
@@ -66,8 +66,7 @@ export function Careers() {
       <section className={styles.professional}>
         <div className={styles.container}>
           <div className={styles.left}>
-            <h2>Get your professional</h2>
-            <h2>resume to boost your career</h2>
+            <h2>Get your professional resume to boost your career</h2>
             <svg
               width="212"
               height="213"

@@ -6,7 +6,6 @@ import {
   Here,
   Influence,
   Intro,
-  Product,
   Testimonials,
 } from 'features/Home';
 
