@@ -32,10 +32,6 @@ const ContactFormContainer = withFormik({
   handleSubmit: (values: TValues, { setSubmitting, setStatus, resetForm }) => {
     setSubmitting(true);
 
-    console.log(values);
-
-    return setSubmitting(false);
-
     axios
       .post('https://secure.trimsy.org/form', values)
       //   .post('http://localhost:3001/form', values)
