@@ -112,9 +112,10 @@ export default function Advanced({}) {
             </svg>
           </div>
         </div>
-
-        <ContactForm productType={init.productType} />
       </div>
+
+      <ContactForm productType={init.productType} />
+
       <CompareTable currentActive={init.name} nameClickable={true} />
       <FAQ arr={FAQArr} />
     </div>

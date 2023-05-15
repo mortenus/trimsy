@@ -36,14 +36,15 @@ const ContactForm = (props: any & TContactForm) => {
   }, []);
 
   return (
-    <div id="contact" className={clsx(styles.wrapper, 'global-wrapper--small')}>
+    <div className={styles.wrapper}>
       {activeStage === 0 ? (
-        <div className={styles.intro}>
-          <div className={styles.text}>
-            <h4>Tell us more</h4>
-            <p>Let us know more about your project</p>
-          </div>
-          {/* <div onSubmit={handleSubmit} className={styles.form}>
+        <div className={'global-wrapper'}>
+          <div className={styles.intro}>
+            <div className={styles.text}>
+              <h4>Tell us more</h4>
+              <p>Let us know more about your project</p>
+            </div>
+            {/* <div onSubmit={handleSubmit} className={styles.form}>
         <ContactInput
           size="small"
           name="fullname"
@@ -71,28 +72,6 @@ const ContactForm = (props: any & TContactForm) => {
           placeholder={'Describe your objective'}
         />
       </div> */}
-          <Button
-            status={status && status}
-            disabled={isSubmitting ? 'black' : false}
-            // type="submit"
-            style={{ border: `2px solid #000` }}
-            color="white"
-            size="large"
-            onClick={handleNextStage}>
-            Next
-          </Button>
-        </div>
-      ) : activeStage === 1 ? (
-        <>
-          <div className={styles.more}>
-            <textarea
-              value={values?.description}
-              name="description"
-              id="description"
-              onInput={handleChange}
-              maxLength={400}
-              placeholder={'Any comments or additional information..'}
-            />
             <Button
               status={status && status}
               disabled={isSubmitting ? 'black' : false}
@@ -104,9 +83,33 @@ const ContactForm = (props: any & TContactForm) => {
               Next
             </Button>
           </div>
-        </>
+        </div>
+      ) : activeStage === 1 ? (
+        <div className={'global-wrapper--small'}>
+          <div className={styles.more}>
+            <h5>Additional information</h5>
+            <textarea
+              value={values?.description}
+              name="description"
+              id="description"
+              onInput={handleChange}
+              maxLength={400}
+              placeholder={'Our application should have..'}
+            />
+            <Button
+              status={status && status}
+              disabled={isSubmitting ? 'black' : false}
+              // type="submit"
+              style={{ border: `2px solid #000` }}
+              color="white"
+              size="medium"
+              onClick={handleNextStage}>
+              Next
+            </Button>
+          </div>
+        </div>
       ) : (
-        <>
+        <div className={'global-wrapper--small'}>
           <div onClick={handlePrevStage} className={styles.return}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -141,12 +144,12 @@ const ContactForm = (props: any & TContactForm) => {
               disabled={isSubmitting ? 'black' : false}
               //   type="submit"
               //   color="black-inverse"
-              size="large"
+              size="medium"
               onClick={handleSubmit}>
               Submit
             </Button>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

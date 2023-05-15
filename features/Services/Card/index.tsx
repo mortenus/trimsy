@@ -54,6 +54,7 @@ const Card = ({
           sizes="100vw"
           src={imgSrc}
           alt={'Image'}
+          priority
           quality={100}
         />
       )}

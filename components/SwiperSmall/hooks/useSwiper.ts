@@ -12,7 +12,7 @@ const useSwiper = ({ items, autoPlayDuration = 3500, isVisible }: TUseSwiper) =>
   const [isStoppedByUser, setIsStoppedByUser] = React.useState(false);
   const [lastUpdateTime, setLastUpdateTime] = React.useState(Date.now());
 
-  const numItems = items.length;
+  const numItems = items && items.length;
   const prevIndex = (activeIndex - 1 + numItems) % numItems;
   const nextIndex = (activeIndex + 1) % numItems;
 

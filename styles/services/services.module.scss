@@ -6,8 +6,8 @@
       width: 87.5%;
       margin: auto;
       max-width: 2632px;
-      min-height: calc(100vh - var(--navbar-height) - 100px);
-      padding: 100px 0;
+      //   min-height: calc(100vh - var(--navbar-height) - 100px);
+      padding-top: 100px;
     }
 
     display: flex;
