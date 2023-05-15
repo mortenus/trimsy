@@ -70,7 +70,7 @@ export default function Advanced({}) {
                 d="M142.032 54.732H134.76V62.184H130.944V54.732H123.672V51.276H130.944V43.824H134.76V51.276H142.032V54.732Z"
                 fill="black"
               />
-              <g clip-path="url(#clip0_1761_1989)">
+              <g clipPath="url(#clip0_1761_1989)">
                 <path
                   d="M67.7637 106H40.2363V77.7227H67.7637V106ZM46.1162 100.111H61.9102V83.6381H46.0898L46.1162 100.111Z"
                   fill="black"
