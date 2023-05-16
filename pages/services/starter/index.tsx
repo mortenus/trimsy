@@ -46,9 +46,9 @@ const FAQArr = [
   },
 ];
 
-Advanced.title = 'Web Advanced';
+Starter.title = init.name;
 
-export default function Advanced({}) {
+export default function Starter() {
   return (
     <div className={styles.wrapper}>
       {/* <Banner /> */}

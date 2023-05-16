@@ -95,10 +95,7 @@ export default function About({ items }: any) {
           <CommunityItem />
         </div>
       </section>
-      <section className={styles.large}>
-        <h3 className={styles.title}>More from Trimsy</h3>
-        <SwiperSmall items={items} />
-      </section>
+      <SwiperSmall items={items} />
       <Head>
         <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
         <meta property="og:type" content="website" />

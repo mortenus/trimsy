@@ -46,9 +46,9 @@ const FAQArr = [
   },
 ];
 
-Advanced.title = 'Web Advanced';
+eCommerce.title = init.name;
 
-export default function Advanced({}) {
+export default function eCommerce({}) {
   return (
     <div className={styles.wrapper}>
       {/* <Banner /> */}

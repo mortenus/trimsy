@@ -32,7 +32,6 @@ export default function Services({ items }: any) {
 
       <section className={styles.more}>
         <div className={styles.blog}>
-          <h3 className={'typography-headline spacing'}>More from Trimsy</h3>
           <SwiperSmall items={items} />
         </div>
         <div className={styles.featured}>

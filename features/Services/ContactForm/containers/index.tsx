@@ -3,6 +3,7 @@ import { axios } from 'core';
 
 import validateForm from 'utils/validate';
 import ContactForm from '../components';
+import { v4 as uuidv4 } from 'uuid';
 
 interface TValues {
   fullname: string;
@@ -39,6 +40,14 @@ const ContactFormContainer = withFormik({
         setSubmitting(false);
         resetForm();
         setStatus('success');
+
+        const submissionToken = uuidv4();
+
+        localStorage.setItem('formSubmissionToken', submissionToken);
+        localStorage.setItem('formSubmissionEmail', values.email);
+        setSubmitting(false);
+
+        window.location.href = `/services/${values.productType}/success?authToken=${submissionToken}`;
 
         setTimeout(() => {
           setStatus(null);

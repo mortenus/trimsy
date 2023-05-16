@@ -30,7 +30,7 @@ const useSwiper = ({ items, autoPlayDuration = 3500, isVisible }: TUseSwiper) =>
   };
 
   const throttleFunction = (callback: Function) => {
-    if (Date.now() - lastUpdateTime > autoPlayDuration / 5) {
+    if (Date.now() - lastUpdateTime > autoPlayDuration / 8) {
       setLastUpdateTime(Date.now());
       callback();
     }
