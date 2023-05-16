@@ -431,7 +431,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
 
           <h3 className={'headline'}>eCommerce</h3>
           <div className={styles.cta}>
-            <span className={styles.pricing}>From $6500</span>
+            <span className={styles.pricing}>From $7000</span>
             <Button to="/services/ecommerce" size="supersmall">
               Select
             </Button>

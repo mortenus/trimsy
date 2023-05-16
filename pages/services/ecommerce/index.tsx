@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'eCommerce',
   productType: '',
-  price: 6500,
+  price: 7000,
   logo: '',
 };
 
