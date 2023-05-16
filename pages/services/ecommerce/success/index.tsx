@@ -23,11 +23,11 @@ export default function SuccessPage({ items }: any) {
         const storedToken = localStorage.getItem('formSubmissionToken');
 
         if (authToken && authToken === storedToken) {
+          setStoredEmail(localStorage.getItem('formSubmissionEmail') || '');
+
           // Clear the stored token and email from local storage
           localStorage.removeItem('formSubmissionToken');
           localStorage.removeItem('formSubmissionEmail');
-
-          setStoredEmail(localStorage.getItem('formSubmissionEmail') || '');
         } else {
           router.push('/services');
         }
