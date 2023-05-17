@@ -67,16 +67,15 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
                   <ul>
                     <HeaderLinks />
                   </ul>
-                  {handleOverflowForm() ? (
-                    <Button
-                      type="nav"
-                      onClick={handleFormChange}
-                      onKeyDown={handleKeyDownOverflowChange}>
-                      Contact us
-                    </Button>
-                  ) : (
-                    ''
-                  )}
+                  {handleOverflowForm()
+                    ? ''
+                    : // <Button
+                      //   type="nav"
+                      //   onClick={handleFormChange}
+                      //   onKeyDown={handleKeyDownOverflowChange}>
+                      //   Contact us
+                      // </Button>
+                      ''}
                 </>
               )}
             </div>

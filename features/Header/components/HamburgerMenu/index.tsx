@@ -43,9 +43,9 @@ const HamburgerMenu = ({
           );
         })}
       </ul>
-      <Button type="nav" onClick={handleContactUsPressed}>
+      {/* <Button type="nav" onClick={handleContactUsPressed}>
         Contact us
-      </Button>
+      </Button> */}
     </div>
   );
 };
