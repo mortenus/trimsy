@@ -1,3 +1,4 @@
+import { SwiperSmall } from 'components';
 import {
   Accomplish,
   Boost,
@@ -7,84 +8,36 @@ import {
   Influence,
   Intro,
   Testimonials,
-} from 'features/Home';
+} from 'features/Development';
+import { Careers, Web } from 'features/Home';
 
-import { useOnScroll } from 'hooks/useOnScroll';
 import Head from 'next/head';
 
-type THome = {
+type TDevelopment = {
   handleFormChange: () => void;
   handleKeyDownOverflowChange: (e: any) => void;
+  items: any;
 };
 
-const FAQArr = [
-  {
-    title: 'What the difference between web design and development?',
-    description: `Web Development is about software and web design is about visuals. The combination of this both practices provides a great end result \u2013 a well-monetized web application with several thousands of views.`,
-  },
-  {
-    title: 'What is SEO?',
-    description: `SEO, or Search Engine Optimization, is the art and science of optimizing a website to rank higher on search engine results pages. It involves various techniques such as keyword research, content optimization, and link building to increase a website's visibility and attract more organic traffic.`,
-    learnMoreUrl: 'https://trimsy.org/blog/how-to-improve-seo-of-your-website-in-5-steps',
-  },
-  {
-    title: `How can analytics be used to improve a website's performance?`,
-    description: `Analytics can be used to improve a website's performance by providing valuable insights into user behavior and preferences. By analyzing data on website traffic, page views, bounce rates, conversion rates, and other metrics, website owners can make data-driven decisions to improve the user experience, optimize website design and content, identify areas for improvement, and ultimately increase engagement and conversion.`,
-    learnMoreUrl: 'https://trimsy.org/blog/setting-up-google-analytics-fast-and-easy',
-  },
-  {
-    title: 'What Technlogoies do you use whilst developing an Application?',
-    description: `Website could be developed in so many ways, without using many technologies to most modern Libraries and Frameworks. We select them based on the application requirements to boost and make your web page look the way you want it any way possible. Our team has practical experience in applying most popular libraries while developing. ReactJS under NextJS is mostly focused upon due to its high reliance and popularity. While Backend or 'server-side' is focused on pure NodeJS (or NestJS) to ensure fast and secure exchange between the sides.`,
-  },
-  {
-    title: 'What is Domain and VPS?',
-    description: `It is simple, to host your application, you would need to use Virtual Private Server, it is simply a private computer that runs your application. Domain is the link in the browser to direct user to that computer so they could experience the app in the browser. We provide such service, to get more details get in contact with us.`,
-  },
-  {
-    title: 'What is website security and what measures can be taken to ensure a website is secure?',
-    description: `Website security refers to the protection of a website from unauthorized access, use, modification, or destruction. It involves implementing measures to prevent cyberattacks and ensure the confidentiality, integrity, and availability of the website and its data. To ensure a website is secure, measures such as using strong passwords, keeping software up to date, using HTTPS encryption, implementing firewalls, conducting regular backups, and using security plugins can be taken.`,
-    learnMoreUrl:
-      'https://trimsy.org/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
-  },
-];
-
-export default function Home({ handleFormChange, handleKeyDownOverflowChange }: THome) {
-  const { onScrollEvent } = useOnScroll();
-
+export default function Development({
+  handleFormChange,
+  handleKeyDownOverflowChange,
+  items,
+}: TDevelopment) {
   return (
     <>
       <main>
-        <Intro />
+        <h1 style={{ display: 'none', visibility: 'hidden' }}>Trimsy</h1>
+        <Web />
 
-        <Testimonials />
+        <Careers />
 
-        <Influence />
-
-        <Boost onScrollEvent={onScrollEvent} />
-
-        {/* <Product /> */}
-
-        {/* <Accomplish onScrollEvent={onScrollEvent} /> */}
-
-        <Here
-          handleFormChange={handleFormChange}
-          handleKeyDownOverflowChange={handleKeyDownOverflowChange}
-        />
-
-        <FAQ arr={FAQArr} />
-
-        {/* <ContactForm /> */}
-        <ContactUs onScrollEvent={onScrollEvent} />
+        <SwiperSmall items={items} style={{ marginTop: '30px' }} />
       </main>
 
       <Head>
         <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
         <meta property="og:type" content="website" />
-        <script
-          type="application/ld+json"
-          async
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQSchema) }}
-        />
         <script
           type="application/ld+json"
           async
@@ -171,21 +124,6 @@ const OrganizationSchema = {
     addressCountry: 'Canada',
   },
   contactPoint: { '@type': 'ContactPoint', telephone: '+1 (530) 908-4279' },
-};
-
-const FAQSchemaArr = FAQArr.map((item) => ({
-  '@type': 'Question',
-  name: item.title,
-  acceptedAnswer: {
-    '@type': 'Answer',
-    text: `<p>${item.description}</p>`,
-  },
-}));
-
-const FAQSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQSchemaArr,
 };
 
 //https://neilpatel.com/blog/get-started-using-schema/
@@ -289,3 +227,68 @@ const FAQSchema = {
 //     },
 //   },
 // };
+
+export async function getStaticProps() {
+  const items = [
+    {
+      data: {
+        date: 'April 17, 2023',
+        title:
+          'Bridging Borders with Humanity: How Trimsy x Hart Facilitates Humanitarian Aid for Ukrainians',
+        imgUrl: '/uploads/1556542894645.jpg',
+      },
+      modal:
+        '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+      slug: '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+      type: 'QUICK READ',
+    },
+    {
+      data: {
+        date: 'March 14, 2023',
+        title: 'Website Security: How to Protect Your Website and Gain a Competitive Edge',
+        description:
+          'Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
+        hashtags: ['Web', 'Dev', 'Security'],
+      },
+      slug: '/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
+    },
+    {
+      data: {
+        date: 'March 12, 2023',
+        title: 'How To Create a Winning Social Media Strategy for Your Website',
+        description:
+          'Creating a winning social media strategy is a crucial component of any successful website marketing plan. It gives confident opportunities for a website grown and expansion.',
+        imgUrl: 'https://trimsy.org/uploads/1556542894629.jpg',
+        hashtags: ['Web', 'Social Media'],
+      },
+      slug: '/blog/how-to-create-a-winning-social-media-strategy',
+    },
+    {
+      data: {
+        date: 'March 9, 2023',
+        title: 'Setting Up Google Analytics Fast and Easy',
+        description:
+          "Tracking website could give a valuable information on how it is used, how well website keeps visitors on different pages, amd even more. The importance of resource about visitors' actions while interacting with a page could play very important part for any future analysis of website's perfomance or improvements of UI/UX features.'",
+        imgUrl: 'https://trimsy.org/uploads/google_analytics_logo.webp',
+        hashtags: ['Web', 'Dev'],
+      },
+      slug: '/blog/setting-up-google-analytics-fast-and-easy',
+    },
+    {
+      data: {
+        date: 'March 2, 2023',
+        title: 'How To Improve SEO of your Website in 5 Steps',
+        description:
+          'When SEO is set up and used correctly – it could bring lots of new traffic to the web page. It is not complex to accomplish, while optimizing your website could play important part in boosting your search presence. Google receives 90% of all online searches. That’s why we’re going to talk about setting up SEO for Googling and connect to Google Search Console for detailed analysis.',
+        imgUrl: 'https://trimsy.org/uploads/1666542894623.jpg',
+        hashtags: ['Web', 'Dev'],
+      },
+      slug: '/blog/how-to-improve-seo-of-your-website-in-5-steps',
+    },
+  ];
+
+  return {
+    props: { items },
+  };
+}

@@ -54,7 +54,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <h3>Starter</h3>
           <div className={styles.cta}>
             <span className={styles.pricing}>From $999</span>
-            <Button to="/services/starter" size="supersmall">
+            <Button to="/development/services/starter" size="supersmall">
               Select
             </Button>
             {currentActive === 'Starter' && <div className={styles.current}>Currently viewing</div>}
@@ -178,7 +178,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <h3 className={'headline'}>Basic</h3>
           <div className={styles.cta}>
             <span className={styles.pricing}>From $2500</span>
-            <Button to="/services/basic" size="supersmall">
+            <Button to="/development/services/basic" size="supersmall">
               Select
             </Button>
             {currentActive === 'Basic' && <div className={styles.current}>Currently viewing</div>}
@@ -307,7 +307,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <div className={styles.cta}>
             <span className={styles.pricing}>From $3500</span>
 
-            <Button to="/services/advanced" size="supersmall">
+            <Button to="/development/services/advanced" size="supersmall">
               Select
             </Button>
             {currentActive === 'Advanced' && (
@@ -432,7 +432,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <h3 className={'headline'}>eCommerce</h3>
           <div className={styles.cta}>
             <span className={styles.pricing}>From $7000</span>
-            <Button to="/services/ecommerce" size="supersmall">
+            <Button to="/development/services/ecommerce" size="supersmall">
               Select
             </Button>
             {currentActive === 'eCommerce' && (
@@ -595,7 +595,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <h3 className={'headline'}>Custom</h3>
           <div className={styles.cta}>
             <span className={styles.pricing}>From $9999</span>
-            <Button to="/services/custom" size="supersmall">
+            <Button to="/development/services/custom" size="supersmall">
               Select
             </Button>
             {currentActive === 'Custom' && <div className={styles.current}>Currently viewing</div>}

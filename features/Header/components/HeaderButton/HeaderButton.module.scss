@@ -1,7 +1,8 @@
 .popup {
   max-height: 0;
   position: absolute;
-  top: 48px;
+  //   top: 48px;
+  top: calc(108px - var(--navbar-height));
   left: -30px;
   background: #fff;
   box-shadow: 0 6px 18px 0 rgb(22 45 61 / 12%);

@@ -1,3 +1,5 @@
+import { HTMLAttributes } from 'react';
+
 type TButtonBase = {
   children: React.ReactNode;
   type?: string;
@@ -8,6 +10,7 @@ type TButtonBase = {
   color?: 'black' | 'white' | 'black-inverse' | 'transparent';
   tabIndex?: number;
   onKeyDown?: React.KeyboardEventHandler;
+  className?: HTMLAttributes<HTMLDivElement>;
 };
 
 interface TButtonOnClick extends TButtonBase {

@@ -9,15 +9,15 @@
   flex-direction: column;
   align-items: center;
 
-  background: rgb(231, 246, 255);
+  //   background: rgb(231, 246, 255);
 
-  padding-top: 100px;
+  //   padding-top: 100px;
   width: 100%;
 
   .floating {
     position: absolute;
     left: 75px;
-    top: 100px;
+    top: -50px;
 
     z-index: 2;
 
@@ -137,7 +137,6 @@
             position: relative;
             width: 22px;
             height: 22px;
-            z-index: 1;
           }
 
           .clear {

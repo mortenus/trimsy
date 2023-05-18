@@ -20,7 +20,7 @@ const linkRows = [
       {
         title: 'Web Development',
         description: 'Discover all the ways to get your presence in Web',
-        href: '/services',
+        href: '/development',
       },
       {
         title: 'Marketplace',

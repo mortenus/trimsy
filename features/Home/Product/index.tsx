@@ -9,7 +9,7 @@ import clsx from 'clsx';
 const Product = () => {
   return (
     <section id="product" className={clsx(styles.product, 'no-index')}>
-      <div className={styles.floating} style={{ top: '250px' }}>
+      <div className={styles.floating}>
         <Card
           title="Nike Kyrie Flytrap IV"
           price={499}

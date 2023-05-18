@@ -47,7 +47,7 @@ const ContactFormContainer = withFormik({
         localStorage.setItem('formSubmissionEmail', values.email);
         setSubmitting(false);
 
-        window.location.href = `/services/${values.productType}/success?authToken=${submissionToken}`;
+        window.location.href = `/development/services/${values.productType}/success?authToken=${submissionToken}`;
 
         setTimeout(() => {
           setStatus(null);

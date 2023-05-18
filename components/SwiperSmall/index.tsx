@@ -35,9 +35,10 @@ type TItems =
 
 interface SwiperProps {
   items: TItems[];
+  style?: Object;
 }
 
-const SwiperSmall: React.FC<SwiperProps> = ({ items }) => {
+const SwiperSmall: React.FC<SwiperProps> = ({ items, style }) => {
   const ref = React.useRef(null);
   const isVisible = useIsVisible({ ref });
 
@@ -56,7 +57,7 @@ const SwiperSmall: React.FC<SwiperProps> = ({ items }) => {
 
   return (
     <>
-      <div className={styles.large}>
+      <div className={styles.large} style={style}>
         <h3 className={styles.title}>More from Trimsy</h3>
         <div className={styles.swiper} ref={ref}>
           <div

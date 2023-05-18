@@ -17,13 +17,13 @@ const linkRows = [
       {
         title: 'Web Development',
         description: 'Discover all the ways to get your presence in Web',
-        href: '/services',
+        href: '/development',
       },
       {
         title: 'Marketplace',
         description: 'Get a professional to help you in your IT journey',
         href: '/careers',
-        target: '_blank',
+        // target: '_blank',
       },
     ],
   },

@@ -25,6 +25,10 @@ const Card = ({
   return (
     <div key={title} className={clsx([styles.wrapper, { [styles.hover]: hover }])}>
       <div className={styles.content}>
+        <div className={styles.image}>
+          <ImageUnoptimized fill src={imageUrl} loading={'lazy'} alt="Additional Item" />
+        </div>
+
         <div className={styles.favorite}>
           <Image
             fill
@@ -35,10 +39,6 @@ const Card = ({
             }
             alt="Liked item icon"
           />
-        </div>
-
-        <div className={styles.image}>
-          <ImageUnoptimized fill src={imageUrl} loading={'lazy'} alt="Additional Item" />
         </div>
       </div>
       <h5>{title}</h5>
