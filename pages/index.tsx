@@ -9,7 +9,7 @@ type TLanding = {
   items: any;
 };
 
-Landing.title = `Explore innovative solutions with Trimsy in Web Development and IT opportunities, plus support`;
+Landing.description = `Explore innovative solutions with Trimsy in Web Development, IT opportunities with support and more.`;
 
 export default function Landing({
   handleFormChange,
