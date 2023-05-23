@@ -21,6 +21,12 @@ export default function Web() {
           <Button type="default" to="/development" style={{ fontWeight: '600' }}>
             Learn more
           </Button>
+          <Button
+            type="default"
+            to="/development/services"
+            style={{ fontWeight: '600', position: 'relative', zIndex: 3, marginLeft: '25px' }}>
+            Get Started
+          </Button>
         </div>
         <Product />
       </div>

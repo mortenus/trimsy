@@ -38,13 +38,13 @@ const Footer = () => {
 
           <ul className={styles.nav}>
             <li className={styles.item}>
-              <Link href="/">Web Development</Link>
+              <Link href="/development">Web Development</Link>
             </li>
             <li className={styles.item}>
               <Link href="/careers">Careers</Link>
             </li>
             <li className={styles.item}>
-              <Link href="/#portfolio">Portfolio</Link>
+              <Link href="/stands-with-ukraine">We Stand with Ukraine</Link>
             </li>
           </ul>
         </div>

@@ -1,5 +1,5 @@
 .success {
-  height: calc(100vh - var(--navbar-height));
+  //   height: calc(100vh - var(--navbar-height));
 
   //   display: flex;
   //   flex-direction: column;
@@ -24,7 +24,7 @@
     flex-direction: column;
     align-items: center;
 
-    margin-top: 100px;
+    padding: 100px 0;
 
     .title {
       font-size: 28px;

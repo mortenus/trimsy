@@ -43,10 +43,8 @@ const Button = ({
   return (
     <>
       {!onClick ? (
-        <Link href={to ? to : '#'} style={{ width: 'fit-content' }}>
-          <div style={style && style} className={stylying}>
-            {children}
-          </div>
+        <Link href={to ? to : '#'} style={{ ...{ width: 'fit-content' }, ...(style && style) }}>
+          <div className={stylying}>{children}</div>
         </Link>
       ) : (
         <div

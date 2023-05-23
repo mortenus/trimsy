@@ -1,29 +1,21 @@
 import { SwiperSmall } from 'components';
-import {
-  Accomplish,
-  Boost,
-  ContactUs,
-  FAQ,
-  Here,
-  Influence,
-  Intro,
-  Testimonials,
-} from 'features/Development';
 import { Careers, Web } from 'features/Home';
 
 import Head from 'next/head';
 
-type TDevelopment = {
+type TLanding = {
   handleFormChange: () => void;
   handleKeyDownOverflowChange: (e: any) => void;
   items: any;
 };
 
-export default function Development({
+Landing.title = `Explore innovative solutions with Trimsy in Web Development and IT opportunities, plus support`;
+
+export default function Landing({
   handleFormChange,
   handleKeyDownOverflowChange,
   items,
-}: TDevelopment) {
+}: TLanding) {
   return (
     <>
       <main>

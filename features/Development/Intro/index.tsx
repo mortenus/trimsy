@@ -22,7 +22,7 @@ const Intro = () => {
         <h3>Success is near</h3>
         <p>Discover your presence in Web the way you want.</p>
         <Button type="nav" color="transparent" to="/development/services">
-          Learn More
+          Get Started
         </Button>
 
         <div className={styles.pause} onClick={handleToggleAnimation}>
