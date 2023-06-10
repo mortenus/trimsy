@@ -1,4 +1,4 @@
-import { Button, ImageUnoptimized } from 'components';
+import { ImageUnoptimized } from 'components';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
@@ -7,12 +7,10 @@ import NextToRead from '../NextToRead';
 import TBlogWrapper from './BlogWrapper.types';
 
 import styles from './BlogWrapper.module.scss';
-import Link from 'next/link';
 // import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
 // import useOnScreen from 'hooks/useOnScreen';
 // import { useIsVisible } from 'hooks/useIsVisible';
-import useInView from 'hooks/useInView';
-import { useOnScroll } from 'hooks/useOnScroll';
+import Banner from '../Banner';
 
 const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
   const ArticleSchema = {
@@ -55,75 +53,6 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
         item: `https://trimsy.org${info.slug}`,
       },
     ],
-  };
-
-  const blogHeadlineRef = React.useRef(null);
-
-  const { onScrollEvent } = useOnScroll();
-
-  const { inView: isHeadlineVisible } = useInView({
-    ref: blogHeadlineRef,
-    onScrollEvent,
-    oneTime: true,
-  });
-
-  const useAnimateBackgroundPosition = (
-    isVisible: boolean,
-    startValue: number,
-    endValue: number,
-    duration: number,
-    delay: number,
-  ) => {
-    const changeInValue = endValue - startValue;
-    const [currentValue, setCurrentValue] = React.useState<number>(startValue);
-    const animationRef = React.useRef<number | null>(null);
-
-    const easeInOut = (
-      currentTime: number,
-      startValue: number,
-      changeInValue: number,
-      duration: number,
-    ) => {
-      currentTime /= duration / 2;
-      if (currentTime < 1) {
-        return (changeInValue / 2) * currentTime * currentTime + startValue;
-      }
-      currentTime--;
-      return (-changeInValue / 2) * (currentTime * (currentTime - 2) - 1) + startValue;
-    };
-
-    React.useEffect(() => {
-      let startTime: number | null = null;
-
-      const animateBackgroundPosition = (timestamp: number) => {
-        if (!startTime) {
-          startTime = timestamp;
-        }
-
-        const elapsed = timestamp - startTime;
-
-        if (elapsed > delay) {
-          const newValue = easeInOut(elapsed - delay, startValue, changeInValue, duration);
-          setCurrentValue(newValue);
-        }
-
-        if (elapsed < duration + delay) {
-          animationRef.current = requestAnimationFrame(animateBackgroundPosition);
-        }
-      };
-
-      if (isVisible) {
-        animationRef.current = requestAnimationFrame(animateBackgroundPosition);
-      }
-
-      return () => {
-        if (animationRef.current) {
-          cancelAnimationFrame(animationRef.current);
-        }
-      };
-    }, [isVisible]); // Use isVisible as a dependency to trigger effect when it changes
-
-    return currentValue;
   };
 
   //   let currentValue = 0;
@@ -195,44 +124,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
 
           <NextToRead arr={nextToReadArr} />
         </div>
-        {/* <Link href="/blog"> */}
-        <div className={styles.moreWrap} id={'contact'}>
-          <div className={styles.potential}>
-            <div className={styles.logo}>
-              <div className={styles.img}>
-                <Image
-                  width="0"
-                  height="0"
-                  sizes="100vw"
-                  style={{ width: '70%', height: 'auto' }}
-                  src={'/images/mini-logo.png'}
-                  alt="HR image"
-                  loading={'lazy'}
-                  quality={'100'}
-                />
-              </div>
-              <h2
-                style={{
-                  backgroundPosition: `${useAnimateBackgroundPosition(
-                    isHeadlineVisible,
-                    0,
-                    -179,
-                    1750,
-                    600,
-                  )}px 50%`,
-                }}
-                ref={blogHeadlineRef}>
-                Blog
-              </h2>
-            </div>
-            <p>Read new releases, get updates and latest news.</p>
-
-            <Button style={{ pointerEvents: 'none' }} color={'black'} to={'/blog'} size={'small'}>
-              Read more
-            </Button>
-          </div>
-        </div>
-        {/* </Link> */}
+        <Banner />
       </div>
       <Head>
         <meta property="og:type" content="article" />
