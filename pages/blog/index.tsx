@@ -324,7 +324,7 @@ export async function getStaticProps() {
         title: 'Maximizing Website Performance with CDN: Benefits and Advantages',
         description:
           'A content delivery network (CDN) is a widely recognized solution that helps to improve website performance. By distributing website content across multiple servers around the globe, a CDN enhances website speed, security, and reliability.',
-        imgUrl: 'https://trimsy.org/uploads/1556542894636.png',
+        imgUrl: 'https://trimsy.org/uploads/1556542894636_original.png',
       },
       slug: '/blog/maximizing-website-performance-with-cdn',
     },
