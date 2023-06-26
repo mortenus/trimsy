@@ -11,7 +11,7 @@ const BlogSearch = () => {
   React.useEffect(() => {
     if (q !== undefined && q !== '') {
       axios
-        .get(`https://trimsy.org/blog/search?q=${q}`)
+        .get(`https://secure.trimsy.org/blog/search?q=${q}`)
         .then((response) => {
           setItems(response.data);
           console.log(response.data);
