@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import BlogWrapper from 'features/Blog/BlogWrapper';
+import BlogWrapper from 'features/Blog/BlogWrapper/standard';
 
 import styles from '../Post.module.scss';
 import Link from 'next/link';

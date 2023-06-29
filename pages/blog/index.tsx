@@ -289,6 +289,16 @@ export async function getStaticProps() {
   const items = [
     {
       data: {
+        date: 'May 15, 2023',
+        title: 'Trimsy introduces Starter, Basic and Advanced packages',
+        description:
+          'Trimsy announced today launch of cutting-edge web development packages. With each package, we harness the power of the most advanced technologies to deliver exceptional results in the digital realm.',
+        imgUrl: '/uploads/1666542894626.png',
+      },
+      slug: '/blog/trimsy-introduces-starter-basic-and-advanced-packages',
+    },
+    {
+      data: {
         date: 'April 17, 2023',
         title:
           'Bridging Borders with Humanity: How Trimsy x Hart Facilitates Humanitarian Aid for Ukrainians',

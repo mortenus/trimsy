@@ -1,4 +1,4 @@
-import BlogWrapper from 'features/Blog/BlogWrapper';
+import BlogWrapper from 'features/Blog/BlogWrapper/standard';
 import Image from 'next/image';
 import React from 'react';
 

@@ -25,7 +25,7 @@ export default function Web() {
             type="default"
             to="/development/services"
             style={{ fontWeight: '600', position: 'relative', zIndex: 3, marginLeft: '25px' }}>
-            Get Started
+            Get started
           </Button>
         </div>
         <Product />

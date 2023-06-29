@@ -2,7 +2,7 @@ import { ImageUnoptimized } from 'components';
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
-import NextToRead from '../NextToRead';
+import NextToRead from '../../NextToRead';
 
 import TBlogWrapper from './BlogWrapper.types';
 
@@ -10,7 +10,8 @@ import styles from './BlogWrapper.module.scss';
 // import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
 // import useOnScreen from 'hooks/useOnScreen';
 // import { useIsVisible } from 'hooks/useIsVisible';
-import Banner from '../Banner';
+import Banner from '../../Banner';
+import clsx from 'clsx';
 
 const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
   const ArticleSchema = {
@@ -78,7 +79,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
   return (
     <>
       <div className={styles.wrapper}>
-        <div className={'global-wrapper--small'}>
+        <div>
           {/* <Link href="/blog#search" className={styles.return}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +90,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
             </svg>{' '}
             <span>Return</span>
           </Link> */}
-          <h1 className={styles.title}>{info.title}</h1>
+          <h1 className={clsx(styles.title, 'global-wrapper--small')}>{info.title}</h1>
           <div className={styles.headerImg}>
             <ImageUnoptimized
               src={info.headerImg}
@@ -97,20 +98,20 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
               height="0"
               //   sizes="100vw"
               priority
-              style={{ width: '100%', height: 'auto', maxHeight: '600px', objectFit: 'cover' }}
+              style={{ width: '100%', height: 'auto', maxHeight: '100vh', objectFit: 'cover' }}
               alt={'Header Blog Image'}
             />
           </div>
 
-          <div className={styles.date}>
+          <div className={clsx(styles.date, 'global-wrapper--small')}>
             <span>{info.date}</span>
             <div className={styles.line} />
             <span>{info.minToRead} mins read</span>
           </div>
-          {children}
+          <div className={'global-wrapper--small'}>{children}</div>
         </div>
         <div className={'global-wrapper'}>
-          <div className={styles.author}>
+          {/* <div className={styles.author}>
             <div className={styles.img}>
               <Image fill src={info.author.avatarUrl} alt={'Author image'} />
             </div>
@@ -120,7 +121,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
               <span className={styles.position}>{info.author.position}</span>
               <p className={styles.description}>{info.author.description}</p>
             </div>
-          </div>
+          </div> */}
 
           <NextToRead arr={nextToReadArr} />
         </div>
