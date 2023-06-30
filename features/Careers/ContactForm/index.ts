@@ -1,3 +1,3 @@
-import ContactFormOverflow from './containers';
+import ContactForm from './containers';
 
-export default ContactFormOverflow;
+export default ContactForm;

@@ -236,6 +236,16 @@ $blue: rgb(22, 106, 234);
   }
 
   &--disabled {
+    cursor: not-allowed;
+
+    color: #fff;
+    opacity: 0.32;
+
+    &:hover {
+      color: inherit !important;
+      background: transparent !important;
+    }
+
     &_black {
       border: 2px solid transparent !important;
 

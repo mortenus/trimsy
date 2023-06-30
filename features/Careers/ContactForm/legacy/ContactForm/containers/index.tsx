@@ -3,26 +3,18 @@ import { axios } from 'core';
 
 import validateForm from 'utils/validate';
 import ContactForm from '../components';
-import { v4 as uuidv4 } from 'uuid';
 
 interface TValues {
   fullname: string;
   email: string;
-  description: string;
-  type: string | null;
+  type: string;
 }
 
-interface EnhancedFormProps {
-  type: string | null;
-  disabled: boolean;
-}
-
-const ContactFormContainer = withFormik({
-  mapPropsToValues: ({ type }: EnhancedFormProps) => ({
+const ContactFormWrapper = withFormik({
+  mapPropsToValues: () => ({
     fullname: '',
     email: '',
-    description: '',
-    type: type,
+    type: 'Career Opportunities',
   }),
   validate: (values: TValues) => {
     const errors = {};
@@ -32,27 +24,25 @@ const ContactFormContainer = withFormik({
     return errors;
   },
   handleSubmit: (values: TValues, { setSubmitting, setStatus, resetForm }) => {
+    console.log(values);
     setSubmitting(true);
+
+    // remove unnecessary spacing the end
+    if (values.fullname.match(/\s$/)?.[0]) {
+      values.fullname = values.fullname.slice(0, -1);
+    }
 
     axios
       .post('https://secure.trimsy.org/careers', values)
-      //   .post('http://localhost:3001/form', values)
+      //   .post('http://localhost:3001/careers', values)
       .then((res) => {
         setSubmitting(false);
         resetForm();
         setStatus('success');
 
-        // const submissionToken = uuidv4();
-
-        // localStorage.setItem('formSubmissionToken', submissionToken);
-        // localStorage.setItem('formSubmissionEmail', values.email);
-        // setSubmitting(false);
-
-        // window.location.href = `/development/services/${values.productType}/success?authToken=${submissionToken}`;
-
-        // setTimeout(() => {
-        //   setStatus(null);
-        // }, 5000);
+        setTimeout(() => {
+          setStatus(null);
+        }, 5000);
       })
       .catch((err) => {
         setSubmitting(false);
@@ -64,8 +54,9 @@ const ContactFormContainer = withFormik({
       });
   },
   enableReinitialize: true,
+  //   validateOnChange: false,
 
-  displayName: 'ContactForm',
+  displayName: 'ContactFormWrapper',
 })(ContactForm);
 
-export default ContactFormContainer;
+export default ContactFormWrapper;

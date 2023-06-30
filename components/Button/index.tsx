@@ -21,6 +21,7 @@ const Button = ({
 }: TButton) => {
   const stylying = clsx(
     styles.wrapper,
+    { [styles['wrapper--disabled']]: disabled },
     { [styles['wrapper--disabled_black']]: disabled === 'black' },
     { [styles['wrapper--disabled_white']]: disabled === 'white' },
     { [styles.black__inverse]: color === 'black-inverse' },

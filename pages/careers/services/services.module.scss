@@ -1,0 +1,44 @@
+.category {
+  padding: 75px 0;
+
+  h2 {
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 50px;
+    padding: 20px 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .button {
+      max-width: 48%;
+      min-height: 83px;
+      border-radius: 15px;
+      border: 1px solid #d2d2d7;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      flex-basis: 50%;
+      margin: 0px 14px 14px 0px;
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid #86868b;
+      }
+
+      &.active {
+        border: 1px solid #86868b;
+      }
+    }
+  }
+}

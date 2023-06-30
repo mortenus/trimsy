@@ -8,6 +8,7 @@ import { PlatformItem, Potential, ProfessionalItem, ContactForm, Globe } from 'f
 import { useOnScroll } from 'hooks/useOnScroll';
 
 import styles from './Careers.module.scss';
+import Intro from 'features/Careers/Intro';
 
 Careers.title = 'Careers';
 
@@ -17,11 +18,12 @@ export function Careers() {
   return (
     <div>
       <h1 className={'hidden'}>Trimsy Careers</h1>
+      <Intro />
       <section className={styles.introWrap}>
         <div className={styles.wrapper}>
           <div className={styles.intro}>
             <h2>Help your team and yourself thrive with HR and training experts </h2>
-            <Button to="#contact" color="white">
+            <Button to="/careers/services" color="white">
               Get Started
             </Button>
           </div>
@@ -43,7 +45,7 @@ export function Careers() {
                 Scale seamlessly with recruiting and business solutions.
               </PlatformItem>
             </div>
-            <Button to="#contact" color="white">
+            <Button to="/careers/services" color="white">
               Let&apos;s Talk
             </Button>
           </div>
@@ -51,18 +53,18 @@ export function Careers() {
 
         <div className={styles.background}>
           <ImageUnoptimized
-            src={'/static/img/careers/intro7.jpg'}
+            src={'/static/img/careers/intro8.jpg'}
             fill
             priority
             alt={'Intro Image'}
           />
         </div>
       </section>
-      <section className={styles.wrapper}>
+      {/* <section className={styles.wrapper}>
         <div className={styles.breaking}>
           <h2>We have the tech to make it happen-all in one place. </h2>
         </div>
-      </section>
+      </section> */}
       <section className={styles.professional}>
         <div className={styles.container}>
           <div className={styles.left}>
@@ -87,25 +89,25 @@ export function Careers() {
                 Resume. Cover Letter. LinkedIn optimization.
               </ProfessionalItem>
             </div>
-            <ModernButton to="#contact">Start Now</ModernButton>
+            <ModernButton to="/careers/services">Start Now</ModernButton>
           </div>
         </div>
       </section>
 
-      <section className={styles.wrapper}>
+      {/* <section className={styles.wrapper}>
         <div className={styles.breaking}>
           <h2>
             Exclusive rights to candidates identified in the process, benefit from higher success
             rates and a reduction in cost-per-hire.{' '}
           </h2>
         </div>
-      </section>
+      </section> */}
 
       <Globe onScrollEvent={onScrollEvent} />
 
       <Potential onScrollEvent={onScrollEvent} />
 
-      <section id="contact" className={styles.contact}>
+      {/* <section id="contact" className={styles.contact}>
         <div className={styles.wrapper}>
           <div className={styles.container}>
             <h2>Let&apos;s Talk</h2>
@@ -127,7 +129,7 @@ export function Careers() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
