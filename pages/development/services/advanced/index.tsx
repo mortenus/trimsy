@@ -11,6 +11,8 @@ const init = {
   productType: '',
   price: 3500,
   logo: '',
+  description:
+    'Web Adavnced. Visually appealing design. Integrated payment gateways for seamless transactions.  Responsive layout for optimal viewing on all devices. Advanced SEO optimization.',
 };
 
 init.productType = init.name.toLowerCase();
@@ -47,6 +49,7 @@ const FAQArr = [
 ];
 
 Advanced.title = init.name;
+Advanced.description = init.description;
 
 export default function Advanced() {
   return (

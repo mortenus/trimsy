@@ -43,8 +43,8 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         <title>{Component.title ? Component.title + ' - Trimsy' : 'Trimsy'}</title>
         <meta name="description" content={Component.description || defaultDescription} />
         <meta
-          content={Component.title ? Component.title + ' - Trimsy' : 'Trimsy'}
           property={'og:title'}
+          content={Component.title ? Component.title + ' - Trimsy' : 'Trimsy'}
         />
         <meta content={Component.description || defaultDescription} property={'og:description'} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

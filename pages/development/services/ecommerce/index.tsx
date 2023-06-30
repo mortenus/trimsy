@@ -11,6 +11,8 @@ const init = {
   productType: '',
   price: 7000,
   logo: '',
+  description:
+    'Web eCommerce. Secure payment processing. Personalized product recommendations. Mobile-responsive design. Seamless shopping experience.',
 };
 
 init.productType = init.name.toLowerCase();
@@ -47,6 +49,7 @@ const FAQArr = [
 ];
 
 eCommerce.title = init.name;
+eCommerce.description = init.description;
 
 export default function eCommerce({}) {
   return (

@@ -11,6 +11,8 @@ const init = {
   productType: '',
   price: 2500,
   logo: '',
+  description:
+    'Web Basic. Fully customized and dynamic website. Solid foundation for your online presence. Enhanced user experience and engagement.',
 };
 
 init.productType = init.name.toLowerCase();
@@ -47,6 +49,7 @@ const FAQArr = [
 ];
 
 Basic.title = init.name;
+Basic.description = init.description;
 
 export default function Basic() {
   return (

@@ -9,7 +9,7 @@ type TLanding = {
   items: any;
 };
 
-Landing.description = `Explore innovative solutions with Trimsy in Web Development, Marketplace with support and more.`;
+Landing.description = `Explore innovative solutions with Trimsy in Web Development, Marketplace, Career Opportunities and expert support.`;
 
 export default function Landing({
   handleFormChange,
@@ -28,7 +28,7 @@ export default function Landing({
       </main>
 
       <Head>
-        <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
+        <meta property="og:image" content={'https://trimsy.org/images/mini-logo.png'} />
         <meta property="og:type" content="website" />
         <script
           type="application/ld+json"
@@ -222,6 +222,16 @@ const OrganizationSchema = {
 
 export async function getStaticProps() {
   const items = [
+    {
+      data: {
+        date: 'May 15, 2023',
+        title: 'Trimsy introduces Starter, Basic and Advanced packages',
+        description:
+          'Trimsy announced today launch of cutting-edge web development packages. With each package, we harness the power of the most advanced technologies to deliver exceptional results in the digital realm.',
+        imgUrl: '/uploads/1666542894626.png',
+      },
+      slug: '/blog/trimsy-introduces-starter-basic-and-advanced-packages',
+    },
     {
       data: {
         date: 'April 17, 2023',
