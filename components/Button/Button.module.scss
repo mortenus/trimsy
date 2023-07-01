@@ -237,6 +237,7 @@ $blue: rgb(22, 106, 234);
 
   &--disabled {
     cursor: not-allowed;
+    pointer-events: none;
 
     color: #fff;
     opacity: 0.32;

@@ -42,17 +42,18 @@ const ContactFormContainer = withFormik({
         resetForm();
         setStatus('success');
 
-        // const submissionToken = uuidv4();
+        const submissionToken = uuidv4();
 
-        // localStorage.setItem('formSubmissionToken', submissionToken);
-        // localStorage.setItem('formSubmissionEmail', values.email);
-        // setSubmitting(false);
+        localStorage.setItem('formSubmissionToken', submissionToken);
+        localStorage.setItem('formSubmissionEmail', values.email);
+        localStorage.setItem('formSubmissionType', values.type || '');
+        setSubmitting(false);
 
-        // window.location.href = `/development/services/${values.productType}/success?authToken=${submissionToken}`;
+        window.location.href = `/careers/services/success?authToken=${submissionToken}`;
 
-        // setTimeout(() => {
-        //   setStatus(null);
-        // }, 5000);
+        setTimeout(() => {
+          setStatus(null);
+        }, 5000);
       })
       .catch((err) => {
         setSubmitting(false);

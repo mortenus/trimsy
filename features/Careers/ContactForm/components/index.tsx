@@ -96,7 +96,7 @@ const ContactForm = (props: any & TContactForm) => {
               id="description"
               onInput={handleChange}
               maxLength={400}
-              placeholder={'Our application should have..'}
+              placeholder={'The desired results should be..'}
             />
             <Button
               status={status && status}

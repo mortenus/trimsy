@@ -17,6 +17,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media (max-width: 734px) {
+      display: block;
+    }
+
     .button {
       max-width: 48%;
       min-height: 83px;
@@ -34,6 +38,15 @@
 
       &:hover {
         border: 1px solid #86868b;
+      }
+
+      @media (max-width: 1068px) {
+        margin: 0px 13px 13px 0px;
+      }
+
+      @media (max-width: 734px) {
+        max-width: 100%;
+        width: 100%;
       }
 
       &.active {
