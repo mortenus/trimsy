@@ -22,7 +22,7 @@ const Globe = ({ onScrollEvent }: TGlobe) => {
     <section className={styles.globeWrap} ref={globeRef}>
       <div className={styles.wrapper}>
         <div className={styles.text}>
-          <p>We provide infinite storytelling</p>
+          <p>Our experts will help</p>
           <p>through the fusion of vacancies</p>
           <p>in countries like Canada, Ukraine,</p>
           <p>the US, and Europe, technology and creativity.</p>

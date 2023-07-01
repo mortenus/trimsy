@@ -16,7 +16,7 @@ export default function Careers() {
         <p
           className={clsx(styles.text, 'typography-hero-product')}
           style={{ margin: '15px 0', fontSize: '400' }}>
-          Boost your career.
+          Hire a professional to help you.
         </p>
         <div className={clsx(styles.text, styles.button)}>
           <Button type="default" to="/careers" style={{ fontWeight: '600' }}>

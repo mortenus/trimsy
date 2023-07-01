@@ -52,15 +52,15 @@ const Potential = ({ onScrollEvent }: TPotential) => {
           style={additionalInView ? activeStyles : undefined}>
           <div className={styles.item}>
             <h6>HR manager</h6>
-            <p>Get dedicated help to develop your potential with Trimsy Careers</p>
+            <p>Get dedicated help to develop your potential with Trimsy Marketplace</p>
           </div>
           <div className={styles.item}>
             <h6>24/7</h6>
-            <p>Connect with Recruiter. Appoint at any time. We’re here to help.</p>
+            <p>Connect with an expert. We’re here to help.</p>
           </div>
           <div className={styles.item}>
             <h6>Expert consultation</h6>
-            <p>Get direct access to recruiting experts on career guidance </p>
+            <p>Get direct access to guidance on career path</p>
           </div>
         </div>
       </div>

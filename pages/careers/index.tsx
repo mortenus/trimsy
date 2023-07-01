@@ -22,7 +22,7 @@ export function Careers() {
       <section className={styles.introWrap}>
         <div className={styles.wrapper}>
           <div className={styles.intro}>
-            <h2>Help your team and yourself thrive with HR and training experts </h2>
+            <h2>Unlock your full potential with our expert guidance and tailored solutions</h2>
             <Button to="/careers/services" color="white">
               Get Started
             </Button>
