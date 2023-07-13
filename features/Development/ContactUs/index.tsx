@@ -21,11 +21,14 @@ const ContactUs = ({ onScrollEvent }: TContactUs) => {
     <section className={styles.potentialWrap} id={'contact'}>
       <div className={styles.wrapper}>
         <div className={styles.potential}>
-          <h2>{`Let's chat about your next project`}</h2>
-          <p>Tell us how we can help you bring your ideas into reality.</p>
+          <h2>{`Empower your business`}</h2>
+          <p>
+            Tell us about your project goals, and together, we'll create a stunning online presence
+            that drives success.
+          </p>
           <div className={clsx(styles.button, { [styles.active]: ButtonInView })} ref={ButtonRef}>
             <Button type="nav" to="/development/services">
-              Let's work
+              Let's begin
             </Button>
           </div>
         </div>

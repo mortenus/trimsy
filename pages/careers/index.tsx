@@ -10,7 +10,10 @@ import { useOnScroll } from 'hooks/useOnScroll';
 import styles from './Careers.module.scss';
 import Intro from 'features/Careers/Intro';
 
-Careers.title = 'Careers';
+Careers.title = 'Marketplace';
+
+Careers.description =
+  'Marketplace. Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.';
 
 export function Careers() {
   const { onScrollEvent } = useOnScroll();

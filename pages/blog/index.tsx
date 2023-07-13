@@ -21,7 +21,7 @@ const info = {
   createdAt: '2023-04-12T12:00:00+0000',
   modifiedAt: '2023-04-12T12:00:00+0000',
   minToRead: 2,
-  slug: '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+  slug: '/blog/bridging-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
   description:
     'In a world where crises and conflicts often disrupt the lives of vulnerable populations, the power of human compassion can transcend borders, bringing hope and assistance to those in need.',
   author: {
@@ -305,7 +305,7 @@ export async function getStaticProps() {
         imgUrl: '/uploads/1556542894645.jpg',
       },
       modal:
-        '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+        '/blog/bridging-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
       type: 'QUICK READ',
     },
     {

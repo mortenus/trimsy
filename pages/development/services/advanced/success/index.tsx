@@ -105,8 +105,8 @@ export async function getStaticProps() {
         imgUrl: '/uploads/1556542894645.jpg',
       },
       modal:
-        '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
-      slug: '/blog/briding-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+        '/blog/bridging-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
+      slug: '/blog/bridging-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
       type: 'QUICK READ',
     },
     {

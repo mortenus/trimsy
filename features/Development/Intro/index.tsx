@@ -20,7 +20,7 @@ const Intro = () => {
         <Banner />
         <h1 style={{ visibility: 'hidden', display: 'none' }}>Trimsy</h1>
         <h3>Success is near</h3>
-        <p>Discover your presence in Web the way you want.</p>
+        <p>Discover your presence in Web the way you want to achieve more.</p>
         <Button type="nav" color="transparent" to="/development/services">
           Get Started
         </Button>

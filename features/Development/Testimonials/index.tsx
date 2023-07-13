@@ -21,10 +21,19 @@ const items = [
     {
       img: '/static/img/home/kantar.png',
       review_title:
-        'The range of features provided exceeded my expectations and greatly enhanced my overall experience',
-      quote: 'The customer support team was responsive and helpful throughout my journey.',
-      author: 'Archakov',
+        'Trimsy made increase not only in design, but with gathering a lot of attention.',
+      quote: `We've achived gradual increase and customer support team was responsive and helpful throughout our journey.`,
+      author: 'Amakov',
       position: 'Personal',
+    },
+  ],
+  [
+    {
+      img: '/static/img/home/kantar.png',
+      review_title: 'We had great experience in partnership with Trimsy.',
+      quote: `It was quick and exciting experience and aftermath of the application is more than we wanted.`,
+      author: 'Jake Terry',
+      position: 'Executive',
     },
   ],
 ];
@@ -51,6 +60,9 @@ const Testimonials: React.FC<SwiperProps> = () => {
   return (
     <>
       <div className={styles.swiper} ref={ref}>
+        <h2 className={'typography-headline'} style={{ marginBottom: '50px' }}>
+          We're excited to share the success stories of our partners
+        </h2>
         <div
           className={styles['swiper-wrapper']}
           style={
@@ -72,7 +84,7 @@ const Testimonials: React.FC<SwiperProps> = () => {
                 .join(' ')}
               style={{
                 visibility: index === activeIndex ? 'visible' : 'hidden',
-                // transform: `translate(${index  * itemWidth}px, 0px)`,
+                // transform: `translate(${index * itemWidth}px, 0px)`,
                 // transform: `translate(${
                 //   (index % 3 === 0 ? itemWidth * (index - 1) : index) * (size !== null ? size : 0)
                 // }px, 0px)`,

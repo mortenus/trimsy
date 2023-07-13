@@ -177,7 +177,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
 
           <h3 className={'headline'}>Basic</h3>
           <div className={styles.cta}>
-            <span className={styles.pricing}>From $2500</span>
+            <span className={styles.pricing}>From $2000</span>
             <Button to="/development/services/basic" size="supersmall">
               Select
             </Button>
@@ -305,7 +305,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
 
           <h3 className={'headline'}>Advanced</h3>
           <div className={styles.cta}>
-            <span className={styles.pricing}>From $3500</span>
+            <span className={styles.pricing}>From $2500</span>
 
             <Button to="/development/services/advanced" size="supersmall">
               Select
@@ -431,7 +431,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
 
           <h3 className={'headline'}>eCommerce</h3>
           <div className={styles.cta}>
-            <span className={styles.pricing}>From $7000</span>
+            <span className={styles.pricing}>From $5000</span>
             <Button to="/development/services/ecommerce" size="supersmall">
               Select
             </Button>
@@ -594,7 +594,7 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
 
           <h3 className={'headline'}>Custom</h3>
           <div className={styles.cta}>
-            <span className={styles.pricing}>From $9999</span>
+            <span className={styles.pricing}>From $7999</span>
             <Button to="/development/services/custom" size="supersmall">
               Select
             </Button>

@@ -5,30 +5,35 @@ import React from 'react';
 import styles from './HeaderLinks.module.scss';
 
 const linkRows = [
-  //   {
-  //     id: 0,
-  //     title: 'About',
-  //     href: '/about',
-  //   },
   {
     id: 0,
-    title: 'Services',
-    links: [
-      {
-        title: 'Web Development',
-        description: 'Discover all the ways to get your presence in Web',
-        href: '/development',
-      },
-      {
-        title: 'Marketplace',
-        description: 'Get a professional to help you in your IT journey',
-        href: '/careers',
-        // target: '_blank',
-      },
-    ],
+    title: 'Web Development',
+    href: '/development',
   },
   {
     id: 1,
+    title: 'Marketplace',
+    href: '/careers',
+  },
+  //   {
+  //     id: 0,
+  //     title: 'Services',
+  //     links: [
+  //       {
+  //         title: 'Web Development',
+  //         description: 'Discover all the ways to get your presence in Web',
+  //         href: '/development',
+  //       },
+  //       {
+  //         title: 'Marketplace',
+  //         description: 'Get a professional to help you in your IT journey',
+  //         href: '/careers',
+  //         // target: '_blank',
+  //       },
+  //     ],
+  //   },
+  {
+    id: 2,
     title: 'More',
     links: [
       {
@@ -62,13 +67,13 @@ const HeaderLinks = () => {
       {linkRows.map((obj) => {
         return (
           <div key={obj.id} className={styles.temp}>
-            {/* {obj.links ? ( */}
-            <HeaderButton links={obj.links ? obj.links : []}>{obj.title}</HeaderButton>
-            {/* ) : (
+            {obj.links ? (
+              <HeaderButton links={obj.links ? obj.links : []}>{obj.title}</HeaderButton>
+            ) : (
               <Link href={obj.href ? obj.href : ''}>
                 <li>{obj.title}</li>
               </Link>
-            )} */}
+            )}
           </div>
         );
       })}

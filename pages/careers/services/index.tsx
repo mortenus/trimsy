@@ -5,7 +5,8 @@ import styles from './services.module.scss';
 
 import { ContactForm } from 'features/Careers';
 
-Services.title = 'Marketplace Services';
+Services.title =
+  'Marketplace Services. Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.';
 
 export function Services({ servicesArr }: any) {
   const [selected, setSelected] = React.useState<null | string>(null);
@@ -14,7 +15,7 @@ export function Services({ servicesArr }: any) {
     <div>
       <h1 className={'hidden'}>Trimsy Markeplace Services</h1>
       <section className={clsx(styles.category, 'global-wrapper--small')}>
-        <h2>What do you need help with?</h2>
+        <h2 className={'typography-headline'}>What do you need help with?</h2>
 
         {servicesArr.map((obj: any) => (
           <>

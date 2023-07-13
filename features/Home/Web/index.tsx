@@ -15,7 +15,7 @@ export default function Web() {
         <p
           className={clsx(styles.text, 'typography-hero-product')}
           style={{ margin: '15px 0', fontSize: '400' }}>
-          Discover your presence in Web the way you want.
+          Boost your business with massive increase in traffic and attention.
         </p>
         <div className={clsx(styles.text, styles.button)}>
           <Button type="default" to="/development" style={{ fontWeight: '600' }}>

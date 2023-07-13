@@ -19,8 +19,17 @@ type TDevelopment = {
 
 const FAQArr = [
   {
+    title: 'How an online presence boosts businesses?',
+    description: `Having a strong online presence is crucial for businesses. An effective website showcases brand, products, and services to a vast online audience. It acts as a virtual storefront, allowing potential customers to learn about offerings at any time, from anywhere.`,
+  },
+  {
     title: 'What the difference between web design and development?',
     description: `Web Development is about software and web design is about visuals. The combination of this both practices provides a great end result \u2013 a well-monetized web application with several thousands of views.`,
+  },
+  {
+    title:
+      'How does a user-friendly and intuitive website interface contribute to higher customer engagement and improved conversion rates?',
+    description: `Having a strong online presence is crucial for businesses. An effective website showcases brand, products, and services to a vast online audience. It acts as a virtual storefront, allowing potential customers to learn about offerings at any time, from anywhere.`,
   },
   {
     title: 'What is SEO?',
@@ -37,6 +46,11 @@ const FAQArr = [
     description: `Website could be developed in so many ways, without using many technologies to most modern Libraries and Frameworks. We select them based on the application requirements to boost and make your web page look the way you want it any way possible. Our team has practical experience in applying most popular libraries while developing. ReactJS under NextJS is mostly focused upon due to its high reliance and popularity. While Backend or 'server-side' is focused on pure NodeJS (or NestJS) to ensure fast and secure exchange between the sides.`,
   },
   {
+    title:
+      'How does a professionally developed website improve your online reputation and build positive brand associations?',
+    description: `A professionally developed website improves your online reputation by creating a positive first impression, showcasing your brand's professionalism and credibility. It builds positive brand associations by reflecting your brand identity, values, and unique selling points, fostering trust and loyalty among your target audience.`,
+  },
+  {
     title: 'What is Domain and VPS?',
     description: `It is simple, to host your application, you would need to use Virtual Private Server, it is simply a private computer that runs your application. Domain is the link in the browser to direct user to that computer so they could experience the app in the browser. We provide such service, to get more details get in contact with us.`,
   },
@@ -45,6 +59,11 @@ const FAQArr = [
     description: `Website security refers to the protection of a website from unauthorized access, use, modification, or destruction. It involves implementing measures to prevent cyberattacks and ensure the confidentiality, integrity, and availability of the website and its data. To ensure a website is secure, measures such as using strong passwords, keeping software up to date, using HTTPS encryption, implementing firewalls, conducting regular backups, and using security plugins can be taken.`,
     learnMoreUrl:
       'https://trimsy.org/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
+  },
+  {
+    title:
+      'What are the advantages of having a custom web application that aligns perfectly with unique business processes and requirements?',
+    description: `It streamlines your operations by automating tasks, increasing efficiency, and reducing manual errors. It enhances productivity by providing tailored features and functionalities that meet specific needs of a business. It also improves scalability, allowing the application to grow and adapt alongside the business. It optimizes a workflow, saves time and resources, and boosts business's performance`,
   },
 ];
 
