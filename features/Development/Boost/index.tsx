@@ -50,8 +50,8 @@ const Boost = ({ onScrollEvent }: TBoost) => {
       <div className={styles.wrapper}>
         <div className={styles.potential}>
           <div className={styles.title}>
-            <h2>Boost your business with</h2>
-            <h2>solid presence in Web</h2>
+            <h2 className={'typography-headline'}>Boost your business with</h2>
+            <h2 className={'typography-headline'}>solid presence in Web</h2>
           </div>
         </div>
         <div ref={additionalRef} className={styles.additional}>

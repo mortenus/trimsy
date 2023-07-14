@@ -20,6 +20,12 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  @media only screen and (max-width: 1023px) and (max-device-width: 736px) {
+    min-width: 320px;
+  }
+}
+
 main {
   position: relative;
   max-width: 2560px;
@@ -136,6 +142,13 @@ button {
     @media only screen and (max-width: 1068px) {
       font-size: 32px;
       letter-spacing: 0.04em;
+    }
+
+    @media only screen and (max-width: 734px) {
+      font-size: 26px;
+      letter-spacing: -0.03em;
+
+      //   max-width: 320px;
     }
   }
 

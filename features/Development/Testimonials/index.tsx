@@ -60,7 +60,9 @@ const Testimonials: React.FC<SwiperProps> = () => {
   return (
     <>
       <div className={styles.swiper} ref={ref}>
-        <h2 className={'typography-headline'} style={{ marginBottom: '50px' }}>
+        <h2
+          className={'typography-headline'}
+          style={{ marginBottom: '50px', padding: '0 30px', textAlign: 'center' }}>
           We're excited to share the success stories of our partners
         </h2>
         <div
