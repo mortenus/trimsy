@@ -17,16 +17,15 @@ export default function Web() {
           style={{ margin: '15px 0', fontSize: '400' }}>
           Boost your business with massive increase in traffic and attention.
         </p>
-        <div className={clsx(styles.text, styles.button)}>
-          <Button type="default" to="/development" style={{ fontWeight: '600' }}>
-            Learn more
-          </Button>
-          <Button
+        <div className={clsx(styles.text, styles.buttons)}>
+          <Link href="/development">Learn more</Link>
+          <Link href="/development/services">Get started</Link>
+          {/* <Button
             type="default"
             to="/development/services"
             style={{ fontWeight: '600', position: 'relative', zIndex: 3, marginLeft: '25px' }}>
             Get started
-          </Button>
+          </Button> */}
         </div>
         <Product />
       </div>

@@ -18,10 +18,9 @@ export default function Careers() {
           style={{ margin: '15px 0', fontSize: '400' }}>
           Hire a professional to help you.
         </p>
-        <div className={clsx(styles.text, styles.button)}>
-          <Button type="default" to="/careers" style={{ fontWeight: '600' }}>
-            Learn more
-          </Button>
+        <div className={clsx(styles.text, styles.buttons)}>
+          <Link href="/careers">Learn more</Link>
+          <Link href="/careers/services">Get started</Link>
         </div>
         {/* <Product /> */}
         <div className={styles.feather}>

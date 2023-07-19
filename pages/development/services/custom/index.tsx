@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'Custom',
   productType: '',
-  price: 9999,
+  price: 7999,
   logo: '',
   description:
     'Web Custom. Tailored web development to meet your unique needs. Customized design reflecting your brand identity. Advanced functionalities specific to your requirements. Enhanced security measures to protect your data.',

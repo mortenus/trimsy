@@ -7,8 +7,29 @@ import styles from './HeaderLinks.module.scss';
 const linkRows = [
   {
     id: 0,
-    title: 'Web Development',
-    href: '/development',
+    title: 'Development',
+    links: [
+      {
+        title: 'Web Development',
+        description: 'Discover your presence in web the way you want.',
+        href: '/about',
+      },
+    ],
+    additional: [
+      {
+        header: 'More from Development',
+        links: [
+          {
+            title: 'Compare Web packages',
+            href: '/development/services',
+          },
+          {
+            title: 'Blog',
+            href: '/blog',
+          },
+        ],
+      },
+    ],
   },
   {
     id: 1,
@@ -32,22 +53,22 @@ const linkRows = [
   //       },
   //     ],
   //   },
-  {
-    id: 2,
-    title: 'More',
-    links: [
-      {
-        title: 'About Us',
-        description: 'Get to know who we are and what we stand for.',
-        href: '/about',
-      },
-      {
-        title: 'Blog',
-        description: 'Read new releases, get updates and latest news.',
-        href: '/blog',
-      },
-    ],
-  },
+  //   {
+  //     id: 2,
+  //     title: 'More',
+  //     links: [
+  //       {
+  //         title: 'About Us',
+  //         description: 'Get to know who we are and what we stand for.',
+  //         href: '/about',
+  //       },
+  //       {
+  //         title: 'Blog',
+  //         description: 'Read new releases, get updates and latest news.',
+  //         href: '/blog',
+  //       },
+  //     ],
+  //   },
 
   //   {
   //     id: 1,
@@ -68,7 +89,11 @@ const HeaderLinks = () => {
         return (
           <div key={obj.id} className={styles.temp}>
             {obj.links ? (
-              <HeaderButton links={obj.links ? obj.links : []}>{obj.title}</HeaderButton>
+              <HeaderButton
+                links={obj.links ? obj.links : []}
+                additional={obj.additional ? obj.additional : []}>
+                {obj.title}
+              </HeaderButton>
             ) : (
               <Link href={obj.href ? obj.href : ''}>
                 <li>{obj.title}</li>

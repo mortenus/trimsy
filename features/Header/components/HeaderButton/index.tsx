@@ -8,6 +8,13 @@ import styles from './HeaderButton.module.scss';
 
 type THeaderButton = {
   children: React.ReactNode;
+  additional: {
+    header: string;
+    links: {
+      title: string;
+      href: string;
+    }[];
+  }[];
   links: {
     title: string;
     description: string;
@@ -16,7 +23,7 @@ type THeaderButton = {
   }[];
 };
 
-const HeaderButton = ({ children, links }: THeaderButton) => {
+const HeaderButton = ({ children, links, additional }: THeaderButton) => {
   const {
     handleStateChange: handleOpenChange,
     handleKeyDown,
@@ -49,8 +56,8 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
         </li>
       </a>
 
-      <div className={clsx(styles.popup, { [styles.visible]: open })}>
-        <div className={styles.text} ref={ref}>
+      <div className={clsx(styles.popup, { [styles.visible]: open })} ref={ref}>
+        <div className={styles.text}>
           {links.map((obj) => (
             <Link
               key={obj.href}
@@ -63,6 +70,22 @@ const HeaderButton = ({ children, links }: THeaderButton) => {
             </Link>
           ))}
         </div>
+        {additional && (
+          <div className={styles.additionals}>
+            {additional.map((obj) => (
+              <>
+                <h6 className={styles.header}>{obj.header}</h6>
+                <ul className={styles.items}>
+                  {obj.links.map((link) => (
+                    <Link key={link.title} href={link.href} onClick={handleOpenChange}>
+                      {link.title}
+                    </Link>
+                  ))}
+                </ul>
+              </>
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
