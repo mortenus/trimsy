@@ -34,7 +34,7 @@ const Banner = () => {
               backgroundPosition: `${useAnimateBackgroundPosition(
                 isHeadlineVisible,
                 0,
-                -179,
+                -167,
                 1750,
                 600,
               )}px 50%`,

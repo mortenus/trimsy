@@ -79,6 +79,10 @@ export default function Blog({ items }: any) {
       count: 9,
       classes: [1, 6, 7, 6, 7, 6, 7, 6, 7],
     },
+    {
+      count: 10,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 1],
+    },
   ];
 
   const layout =
@@ -287,6 +291,16 @@ export async function getStaticProps() {
   //   const items = res.data.items;
 
   const items = [
+    {
+      data: {
+        date: 'June 14, 2023',
+        title: 'Power of a Website: Bringing Attention and Customers to Your Business',
+        description:
+          'As the world becomes increasingly digital, people are turning to the internet for information, entertainment, and shopping. Businesses that adapt to this digital shift by establishing a strong online presence reap significant benefits.',
+        imgUrl: '/uploads/1666542894628.png',
+      },
+      slug: '/blog/power-of-a-website-bringing-attention-and-customers-to-your-business',
+    },
     {
       data: {
         date: 'May 15, 2023',
