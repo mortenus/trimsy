@@ -4,12 +4,19 @@ export default function Document() {
   return (
     <Html lang={'en'}>
       <Head>
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        {/* <link href="https://fonts.googleapis.com" rel="preconnect" /> */}
         <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Spartan:200,300,400,500,600,700,800"
           media="all"
+        /> */}
+        <link
+          rel="preload"
+          href="/fonts/Satoshi-Black.otf, /fonts/Satoshi-BoldItalic.otf, /fonts/Satoshi-Bold.otf, /fonts/Satoshi-Italic.otf, /fonts/Satoshi-Light.otf, /fonts/Satoshi-LightItalic.otf, /fonts/Satoshi-Medium.otf, /fonts/Satoshi-MediumItalic.otf, /fonts/Satoshi-Regular.otf"
+          as="font"
+          type="font/otf"
+          crossOrigin="anonymous"
         />
         <NextScript
           src={'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'}

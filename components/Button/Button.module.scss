@@ -23,7 +23,8 @@ $blue: rgb(22, 106, 234);
 
   //   font-size: 20px;
 
-  padding: clamp(0.4rem, 1vw, 1rem) clamp(1.6rem, 1.4vw, 3rem);
+  //   padding: clamp(0.4rem, 1vw, 1rem) clamp(1.6rem, 1.4vw, 3rem);
+  padding: clamp(0.4rem, 0.6vw, 1rem) clamp(1.6rem, 1vw, 3rem);
 
   //   &:hover {
   //     background: lighten($blue, 10%);

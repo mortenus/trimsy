@@ -10,30 +10,40 @@ import useHideScrollOnTrue from 'hooks/useHideScrollOnTrue';
 const linkRows = [
   {
     id: 0,
-    title: 'About',
-    href: '/about',
+    title: 'Web Development',
+    href: '/development',
   },
   {
     id: 1,
-    title: 'Services',
-    links: [
-      {
-        title: 'Web Development',
-        description: 'Discover all the ways to get your presence in Web',
-        href: '/development',
-      },
-      {
-        title: 'Marketplace',
-        description: 'Get a professional to help you in your IT journey',
-        href: '/careers',
-      },
-    ],
+    title: 'Marketplace',
+    href: '/careers',
   },
-  {
-    id: 2,
-    title: 'Blog',
-    href: '/blog',
-  },
+  //   {
+  //     id: 0,
+  //     title: 'About',
+  //     href: '/about',
+  //   },
+  //   {
+  //     id: 1,
+  //     title: 'Services',
+  //     links: [
+  //       {
+  //         title: 'Web Development',
+  //         description: 'Discover all the ways to get your presence in Web',
+  //         href: '/development',
+  //       },
+  //       {
+  //         title: 'Marketplace',
+  //         description: 'Get a professional to help you in your IT journey',
+  //         href: '/careers',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Blog',
+  //     href: '/blog',
+  //   },
 ];
 
 const Hamburger = ({ handleFormChange }: THamburger) => {

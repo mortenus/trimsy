@@ -12,7 +12,7 @@ const linkRows = [
       {
         title: 'Web Development',
         description: 'Discover your presence in web the way you want.',
-        href: '/about',
+        href: '/development',
       },
     ],
     additional: [
