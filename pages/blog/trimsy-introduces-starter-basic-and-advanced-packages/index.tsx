@@ -4,9 +4,10 @@ import Image from 'next/image';
 import BlogWrapper from 'features/Blog/BlogWrapper/enhanced';
 
 import styles from '../Post.module.scss';
+import Link from 'next/link';
 
 const info = {
-  title: 'Trimsy introduces Starter, Basic and Advanced packages',
+  title: 'Trimsy introduces Web packages at a great value',
   headerImg: '/uploads/1666542894626.png',
   date: 'May 15, 2023',
   createdAt: '2023-04-15T12:00:00+0000',
@@ -61,82 +62,29 @@ export default function Post() {
     <BlogWrapper info={info} nextToReadArr={nextToReadArr}>
       <section className={styles.section}>
         <p>
-          Trimsy announced today launch of cutting-edge web development packages: Web Starter, Web
-          Basic, and Web Advanced. With each package, we harness the power of the most advanced
-          technologies to deliver exceptional results in the digital realm.
+          Today, Trimsy announced launch of cutting-edge web development packages: Starter, Basic,
+          Advanced. With each package harnesses the power of unique technologies to deliver
+          exceptional results.
+        </p>
+
+        <p>
+          <span>Trimsy Development</span> has always kept a customer's view and visiom about the
+          desired outcome, considering as many detail as possible. The introduction of{' '}
+          <span>Trimsy Development</span> packages, combines everything customers wants to get the
+          desired attention, easy checkout or intuitive design to establish best experience to
+          viewers. <Link href="/development/services">Trimsy Web Plans in detail</Link>
         </p>
 
         <h3>Starter</h3>
         <p>
           The Web Starter package is designed to get your online presence off the ground. It
-          includes the essential features needed to establish a professional website. Here's what
-          you can expect:
-        </p>
-        <h6>Pages:</h6>
-        <p>
-          With the Web Starter package, we create a one-page website that showcases your key
-          information. This page serves as a concise introduction to your business, highlighting
-          your products or services, contact details, and any other essential details.
-        </p>
-
-        <h6>SEO:</h6>
-        <p>
-          Search Engine Optimization (SEO) is integrated into your website, ensuring that it is
-          optimized for search engines like Google. This helps improve your website's visibility in
-          search results, driving organic traffic to your site and increasing your online presence.
-        </p>
-
-        <h6>Responsive Design:</h6>
-        <p>
-          Your website will be designed with responsiveness in mind, meaning it will adapt
-          seamlessly to different devices and screen sizes. Whether accessed on a desktop, tablet,
-          or mobile phone, your website will provide a consistent and user-friendly experience.
+          includes the essential features needed to establish a professional website.
         </p>
 
         <h3>Basic</h3>
         <p>
           The Web Basic package builds upon the foundation laid by the Web Starter package. It
-          includes additional features to enhance your online presence. Here's what sets it apart:
-        </p>
-        <h6>Pages: </h6>
-        <p>
-          With the Web Basic package, we offer up to five pages for your website. This allows you to
-          provide more detailed information about your business, services, products, and other
-          relevant aspects.
-        </p>
-
-        <h6>SEO: </h6>
-        <p>
-          Just like in the Web Starter package, SEO is an integral part of the Web Basic package. We
-          optimize your website's content, structure, and meta tags to improve its visibility and
-          ranking in search engine results.
-        </p>
-
-        <h6> Responsive Design: </h6>
-        <p>
-          Similar to the Web Starter package, your website will be designed with a responsive
-          layout. This ensures that your website looks great and functions seamlessly across various
-          devices and screen sizes.
-        </p>
-
-        <h6> Deployment:</h6>
-        <p>
-          We handle the entire deployment process, making your website live and accessible to
-          visitors. This includes domain setup, hosting, and any technical configurations required
-          for your website to function optimally.
-        </p>
-
-        <h6> Quality Assurance Testing: </h6>
-        <p>
-          Our team conducts thorough quality assurance testing to identify and resolve any issues or
-          bugs that may impact the performance or user experience of your website.
-        </p>
-
-        <h6> Accessibility:</h6>
-        <p>
-          We ensure that your website adheres to accessibility standards, making it accessible to
-          users with disabilities. This includes considerations for features such as alternative
-          text for images, clear navigation, and appropriate color contrast.
+          includes additional features to enhance your online presence for more opportunities.
         </p>
 
         <div className={styles.img}>
@@ -144,7 +92,7 @@ export default function Post() {
             width="0"
             height="0"
             sizes="100vw"
-            style={{ width: '75%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto' }}
             src={'/uploads/1666542894628.jpg'}
             alt={'Image'}
             loading={'lazy'}
@@ -154,61 +102,7 @@ export default function Post() {
         <h3>Advanced</h3>
         <p>
           The Web Advanced package takes your online presence to the next level, providing advanced
-          features and functionalities. Here's what sets it apart from the previous packages:
-        </p>
-
-        <h6> Pages:</h6>
-        <p>
-          With the Web Advanced package, we offer up to ten pages for your website. This allows for
-          a more comprehensive presentation of your business, products, services, and other relevant
-          information
-        </p>
-
-        <h6> Advanced SEO:</h6>
-        <p>
-          The Web Advanced package includes advanced SEO capabilities. We employ advanced
-          techniques, such as keyword research, competitive analysis, and link building, to further
-          enhance your website's visibility and search engine rankings.
-        </p>
-
-        <h6> Responsive Design:</h6>
-        <p>
-          Just like the previous packages, your website will feature a responsive design that
-          ensures a seamless user experience across various devices and screen sizes.
-        </p>
-
-        <h6>Maintenance: </h6>
-        <p>
-          We provide regular website maintenance to keep your website up-to-date, secure, and
-          functioning optimally. This includes software updates, security patches, and monitoring
-          for any potential issues.
-        </p>
-
-        <h6> Third-Party Integration: </h6>
-        <p>
-          The Web Advanced package offers integration with third-party services and tools, such as
-          payment gateways, customer relationship management (CRM) systems, or e-commerce platforms.
-          This allows for enhanced functionality and integration with your existing business
-          processes.
-        </p>
-
-        <h6> Deployment:</h6>
-        <p>
-          Similar to the previous packages, we handle the deployment process, ensuring a smooth
-          transition from development to a live website.
-        </p>
-
-        <h6> Quality Assurance Testing: </h6>
-        <p>
-          Our team conducts rigorous quality assurance testing to ensure that your website meets
-          high standards of performance, functionality, and user experience.
-        </p>
-
-        <h6> Accessibility: </h6>
-        <p>
-          We prioritize accessibility considerations, ensuring that your website is accessible to
-          all users, regardless of their disabilities. This includes adhering to accessibility
-          guidelines and best practices.
+          features and functionalities.
         </p>
 
         <div className={styles.img}>
@@ -216,7 +110,7 @@ export default function Post() {
             width="0"
             height="0"
             sizes="100vw"
-            style={{ width: '75%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto' }}
             src={'/uploads/1666542894627.jpg'}
             alt={'Image'}
             loading={'lazy'}
