@@ -1,21 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 
-import BlogWrapper from 'features/Blog/BlogWrapper/standard';
-
 import styles from '../Post.module.scss';
 import Link from 'next/link';
+import BlogWrapper from 'features/Blog/BlogWrapper/enhanced';
 
 const info = {
   title: 'Tools for Enhancing Job Search Efforts and Career Transitions in the Age of AI',
-  headerImg: '/uploads/1666542894627.png',
+  headerImg: '/uploads/1666542894629.png',
   date: 'August 1, 2023',
   createdAt: '2023-08-01T12:00:00+0000',
   modifiedAt: '2023-08-01T12:00:00+0000',
   minToRead: 4,
-  slug: '/blog/tools-for-enhancin-job-search-efforts-and-career-transitions-in-the-age-of-ai',
+  slug: '/blog/tools-for-enhancing-job-search-efforts-and-career-transitions-in-the-age-of-ai',
   description:
-    'As the world becomes increasingly digital, people are turning to the internet for information, entertainment, and shopping. Businesses that adapt to this digital shift by establishing a strong online presence reap significant benefits.',
+    'With the rise of artificial intelligence and its potential impact on job displacement, job seekers and professionals navigating career transitions can find hope in the emergence of generative AI tools.',
   author: {
     fullname: 'Lesia Pylypenko',
     position: '',
@@ -39,7 +38,7 @@ const nextToReadArr = [
     title: 'Why Website Security is Important for Your Business',
     description: `Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.`,
     imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
-    slug: '/blog/why-website-security-is-important-for-your-business',
+    slug: '/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
   },
   {
     date: 'March 9, 2023',

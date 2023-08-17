@@ -11,7 +11,7 @@ const linkRows = [
     links: [
       {
         title: 'Web Development',
-        description: 'Discover your presence in web the way you want.',
+        description: 'Discover your presence in Web the way you want.',
         href: '/development',
       },
     ],
@@ -32,9 +32,27 @@ const linkRows = [
     ],
   },
   {
-    id: 1,
-    title: 'Marketplace',
-    href: '/careers',
+    id: 0,
+    title: 'Careers',
+    links: [
+      {
+        title: 'Career Development',
+        description:
+          'Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.',
+        href: '/careers',
+      },
+    ],
+    additional: [
+      {
+        header: 'More from Careers',
+        links: [
+          {
+            title: 'Blog',
+            href: '/blog',
+          },
+        ],
+      },
+    ],
   },
   //   {
   //     id: 0,

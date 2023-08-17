@@ -38,7 +38,7 @@ const nextToReadArr = [
     title: 'Why Website Security is Important for Your Business',
     description: `Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.`,
     imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
-    slug: '/blog/why-website-security-is-important-for-your-business',
+    slug: '/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
   },
   {
     date: 'March 12, 2023',

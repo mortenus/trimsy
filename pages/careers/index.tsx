@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 
 import { Button, ImageUnoptimized } from 'components';
@@ -10,17 +9,17 @@ import { useOnScroll } from 'hooks/useOnScroll';
 import styles from './Careers.module.scss';
 import Intro from 'features/Careers/Intro';
 
-Careers.title = 'Marketplace';
+Careers.title = 'Career Development';
 
 Careers.description =
-  'Marketplace. Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.';
+  'Career Development. Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.';
 
 export function Careers() {
   const { onScrollEvent } = useOnScroll();
 
   return (
     <div>
-      <h1 className={'hidden'}>Trimsy Careers</h1>
+      <h1 className={'hidden'}>Trimsy Career Development</h1>
       <Intro />
       <section className={styles.introWrap}>
         <div className={styles.wrapper}>

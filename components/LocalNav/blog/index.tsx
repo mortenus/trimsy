@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 
-import styles from './LocalNav.module.scss';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 
-const localNav = () => {
+import styles from '../LocalNav.module.scss';
+
+const BlogLocalNav = () => {
   const [searchVisible, setSearchVisible] = React.useState(false);
 
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -92,4 +93,4 @@ const localNav = () => {
   );
 };
 
-export default localNav;
+export default BlogLocalNav;

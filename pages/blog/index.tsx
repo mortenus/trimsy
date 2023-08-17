@@ -83,6 +83,10 @@ export default function Blog({ items }: any) {
       count: 10,
       classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 1],
     },
+    {
+      count: 11,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7],
+    },
   ];
 
   const layout =
@@ -291,6 +295,16 @@ export async function getStaticProps() {
   //   const items = res.data.items;
 
   const items = [
+    {
+      data: {
+        date: 'August 1, 2023',
+        title: 'Tools for Enhancing Job Search Efforts and Career Transitions in the Age of AI',
+        description:
+          'With the rise of artificial intelligence and its potential impact on job displacement, job seekers and professionals navigating career transitions can find hope in the emergence of generative AI tools.',
+        imgUrl: '/uploads/1666542894629.png',
+      },
+      slug: '/blog/tools-for-enhancing-job-search-efforts-and-career-transitions-in-the-age-of-ai',
+    },
     {
       data: {
         date: 'June 14, 2023',

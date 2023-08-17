@@ -21,6 +21,11 @@
       position: relative;
     }
   }
+  &.disablePosition {
+    .container {
+      border-bottom: 0;
+    }
+  }
 
   //   display: flex;
   //   justify-content: center;

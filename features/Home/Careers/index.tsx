@@ -12,11 +12,11 @@ export default function Careers() {
     <div className={styles.wrapper}>
       <Link href="/careers" className={styles.link} />
       <div className={styles.copy}>
-        <h2 className={clsx(styles.text, 'typography-hero-headline')}>Marketplace</h2>
+        <h2 className={clsx(styles.text, 'typography-hero-headline')}>Career Development</h2>
         <p
           className={clsx(styles.text, 'typography-hero-product')}
           style={{ margin: '15px 0', fontSize: '400' }}>
-          Hire a professional to help you.
+          Elevate your career, save time with expert guidance
         </p>
         <div className={clsx(styles.text, styles.buttons)}>
           <Link href="/careers">Learn more</Link>

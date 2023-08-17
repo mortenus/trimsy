@@ -111,7 +111,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
           <div className={'global-wrapper--small'}>{children}</div>
         </div>
         <div className={'global-wrapper'}>
-          {/* <div className={styles.author}>
+          <div className={styles.author}>
             <div className={styles.img}>
               <Image fill src={info.author.avatarUrl} alt={'Author image'} />
             </div>
@@ -121,7 +121,7 @@ const BlogWrapper = ({ children, info, nextToReadArr }: TBlogWrapper) => {
               <span className={styles.position}>{info.author.position}</span>
               <p className={styles.description}>{info.author.description}</p>
             </div>
-          </div> */}
+          </div>
 
           <NextToRead arr={nextToReadArr} />
         </div>

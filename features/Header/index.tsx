@@ -3,13 +3,15 @@ import { useRouter } from 'next/router';
 
 import styles from './Header.module.scss';
 
-import { Button, LocalNav } from 'components';
+import { Button } from 'components';
 import Logo from 'components/Logo';
 
 import { Hamburger, HeaderLinks } from './components';
 import { useInnerHeightResize } from 'hooks/useInnerHeightResize';
 import clsx from 'clsx';
 import { useCheckCurrentDepartment } from 'hooks/useCheckCurrentDepartment';
+import BlogLocalNav from 'components/LocalNav/blog';
+import MarketplaceLocalNav from 'components/LocalNav/marketplace';
 
 // type THeaderBase = {};
 
@@ -32,6 +34,10 @@ const possibleDepartments = [
     name: 'blog',
     link: '/blog',
   },
+  {
+    name: 'careers',
+    link: '/careers',
+  },
 ];
 
 type THeader = {
@@ -53,7 +59,8 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
     <>
       <header
         className={clsx(styles.wrapper, {
-          [styles.disablePosition]: currentVisibleDepartment.name === 'blog',
+          [styles.disablePosition]: currentVisibleDepartment.name,
+          [styles.disableBorder]: currentVisibleDepartment.name,
         })}>
         <div className={styles.container}>
           <nav className={styles.nav}>
@@ -83,7 +90,8 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
           </nav>
         </div>
       </header>
-      {currentVisibleDepartment.name === 'blog' && <LocalNav />}
+      {currentVisibleDepartment.name === 'blog' && <BlogLocalNav />}
+      {currentVisibleDepartment.name === 'careers' && <MarketplaceLocalNav />}
     </>
   );
 };
