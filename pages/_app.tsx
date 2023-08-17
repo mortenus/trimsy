@@ -14,7 +14,6 @@ import FormOverflow from 'features/FormOverflow';
 import Script from 'features/Script';
 import { useRouter } from 'next/router';
 import useChangeStateOnSpace from 'hooks/useChangeStateOnSpace';
-import { LocalNav } from 'components';
 
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string; description?: string };
