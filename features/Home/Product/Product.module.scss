@@ -77,11 +77,11 @@
 
     padding: 0 30px;
 
-    @media (max-width: 650px) {
-      width: clamp(29ch, 2vw, 75ch);
-    }
+    // @media (max-width: 650px) {
+    //   width: clamp(29ch, 2vw, 75ch);
+    // }
 
-    @media (max-width: 500px) {
+    @media (max-width: 650px) {
       max-width: 320px;
       width: 100%;
 

@@ -15,8 +15,13 @@ const linkRows = [
   },
   {
     id: 1,
-    title: 'Marketplace',
+    title: 'Career Development',
     href: '/careers',
+  },
+  {
+    id: 2,
+    title: 'Blog',
+    href: '/blog',
   },
   //   {
   //     id: 0,

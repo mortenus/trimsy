@@ -5,6 +5,8 @@ import styles from './blog.module.scss';
 import { BlogItem } from 'features/Blog';
 import Modal from 'features/Modal';
 import useHideOnOutsideClick from 'hooks/useHideOnOutsideClick';
+import LoadingOverlay from 'features/LoadingOverlay';
+import useHideScrollOnTrue from 'hooks/useHideScrollOnTrue';
 
 // import { useFetchBlogs } from 'features/Blog/hooks';
 // import useAnimateBackgroundPosition from 'hooks/useAnimateEaseInOut';
@@ -105,10 +107,22 @@ export default function Blog({ items }: any) {
     toNotCloseRef,
   );
 
+  const [isLoading, setIsLoading] = React.useState(false);
+  useHideScrollOnTrue(isLoading);
+
+  // Simulate loading for demonstration purposes
+  React.useEffect(() => {
+    // setIsLoading(true);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 3000); // Simulate a 3-second loading time
+  }, []);
+
   return (
     <>
       <div className={styles.wrapper}>
         <h1>Trimsy Blog</h1>
+        {isLoading && <LoadingOverlay />}
 
         {/* <LocalNav /> */}
 
