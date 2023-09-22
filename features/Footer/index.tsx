@@ -38,7 +38,7 @@ const Footer = () => {
 
           <ul className={styles.nav}>
             <li className={styles.item}>
-              <Link href="/about">About Trimsy</Link>
+              <Link href="/about">About</Link>
             </li>
             <li className={styles.item}>
               <Link href="/blog">Blog</Link>

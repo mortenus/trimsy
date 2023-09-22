@@ -8,3 +8,4 @@ export { default as Boost } from './Boost';
 export { default as Here } from './Here';
 export { default as ContactUs } from './ContactUs';
 export { default as Testimonials } from './Testimonials';
+export { default as Quick } from './Quick';

@@ -1,3 +1,5 @@
+$items-per-row: 10;
+
 .which {
   display: flex;
   flex-direction: column;
@@ -42,7 +44,7 @@
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(9, auto);
+    grid-template-rows: repeat($items-per-row, auto);
     grid-row-gap: var(--row-gap);
     grid-column-gap: var(--column-gap);
     grid-auto-flow: column;
@@ -71,8 +73,6 @@
       @media only screen and (max-width: 1068px) {
         // grid-column: 3 / 5;
         grid-column: 4 / 6;
-
-        $items-per-row: 9;
 
         @for $i from 1 through $items-per-row {
           &:nth-child(18n + #{$i}) {

@@ -59,6 +59,10 @@
       height: 1200px;
     }
 
+    @media (max-width: 734px) {
+      height: 850px;
+    }
+
     position: relative;
     display: flex;
     align-items: center;
@@ -105,10 +109,11 @@
       flex-direction: column;
     }
 
-    // @media (max-width: 734px) {
-    //   width: 350px;
-    //   background-position: top center;
-    // }
+    @media (max-width: 734px) {
+      //   width: 350px;
+      height: 850px;
+      //   background-position: top center;
+    }
   }
 
   //   .swiper-slide.prev {

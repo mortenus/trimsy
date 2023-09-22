@@ -97,6 +97,20 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
             Adaptivity for different screen sizes and devices
           </p>
         </div>
+        <div className={clsx(styles['item'], styles['seo'])}>
+          <figure
+            style={{
+              width: '50px',
+              height: '50px',
+              backgroundSize: '50px 50px',
+              backgroundImage: `url('/static/img/services/ai.png')`,
+            }}></figure>
+
+          <h5 className={'comparing-table-headline'}>Artificial Intelligence</h5>
+          <p className={'comparing-table-description'}>
+            AI tools used to expand the experience and get the best results
+          </p>
+        </div>
         <div className={clsx(styles['item'], styles['null'])}>&nbsp;</div>
         <div className={clsx(styles['item'], styles['null'])}>&nbsp;</div>
         <div className={clsx(styles['item'], styles['seo'])}>
@@ -219,6 +233,20 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <h5 className={'comparing-table-headline'}>Responsive Design</h5>
           <p className={'comparing-table-description'}>
             Adaptivity for different screen sizes and devices
+          </p>
+        </div>
+        <div className={clsx(styles['item'], styles['seo'])}>
+          <figure
+            style={{
+              width: '50px',
+              height: '50px',
+              backgroundSize: '50px 50px',
+              backgroundImage: `url('/static/img/services/ai.png')`,
+            }}></figure>
+
+          <h5 className={'comparing-table-headline'}>Artificial Intelligence</h5>
+          <p className={'comparing-table-description'}>
+            AI tools used to expand the experience and get the best results
           </p>
         </div>
         <div className={clsx(styles['item'], styles['null'])}>&nbsp;</div>
@@ -353,6 +381,20 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
             Adaptivity for different screen sizes and devices
           </p>
         </div>
+        <div className={clsx(styles['item'], styles['page'])}>
+          <figure
+            style={{
+              width: '50px',
+              height: '50px',
+              backgroundSize: '50px 50px',
+              backgroundImage: `url('/static/img/services/ai.png')`,
+            }}></figure>
+
+          <h5 className={'comparing-table-headline'}>Artificial Intelligence</h5>
+          <p className={'comparing-table-description'}>
+            AI tools used to expand the experience and get the best results
+          </p>
+        </div>
         <div className={clsx(styles['item'], styles['seo'])}>
           <figure
             style={{
@@ -476,6 +518,20 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <h5 className={'comparing-table-headline'}>Responsive Design</h5>
           <p className={'comparing-table-description'}>
             Adaptivity for different screen sizes and devices
+          </p>
+        </div>
+        <div className={clsx(styles['item'], styles['seo'])}>
+          <figure
+            style={{
+              width: '50px',
+              height: '50px',
+              backgroundSize: '50px 50px',
+              backgroundImage: `url('/static/img/services/ai.png')`,
+            }}></figure>
+
+          <h5 className={'comparing-table-headline'}>Artificial Intelligence</h5>
+          <p className={'comparing-table-description'}>
+            AI tools used to expand the experience and get the best results
           </p>
         </div>
         <div className={clsx(styles['item'], styles['seo'])}>
@@ -637,6 +693,20 @@ const CompareTable = ({ currentActive, nameClickable = false }: TCompareTable) =
           <h5 className={'comparing-table-headline'}>Responsive Design</h5>
           <p className={'comparing-table-description'}>
             Adaptivity for different screen sizes and devices
+          </p>
+        </div>
+        <div className={clsx(styles['item'], styles['seo'])}>
+          <figure
+            style={{
+              width: '50px',
+              height: '50px',
+              backgroundSize: '50px 50px',
+              backgroundImage: `url('/static/img/services/ai.png')`,
+            }}></figure>
+
+          <h5 className={'comparing-table-headline'}>Artificial Intelligence</h5>
+          <p className={'comparing-table-description'}>
+            AI tools used to expand the experience and get the best results
           </p>
         </div>
         <div className={clsx(styles['item'], styles['seo'])}>

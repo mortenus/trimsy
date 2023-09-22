@@ -6,6 +6,7 @@ import {
   Here,
   Influence,
   Intro,
+  Quick,
   Testimonials,
 } from 'features/Development';
 
@@ -83,6 +84,8 @@ export default function Development({
         <Influence />
 
         <Testimonials />
+
+        <Quick />
 
         <Boost onScrollEvent={onScrollEvent} />
 

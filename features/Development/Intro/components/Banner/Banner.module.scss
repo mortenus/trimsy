@@ -91,7 +91,7 @@ $bannerHeight: clamp(3rem, 3vw, 8rem);
         left: 0;
       }
 
-      @media (min-width: 1450px) and (max-width: 1600px) {
+      @media (max-width: 1268px) {
         &::after {
           top: 20px;
         }
