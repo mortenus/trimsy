@@ -6,6 +6,8 @@ import { Swiper } from 'components';
 
 const slidesArr = [
   '/static/img/carousel/frickle2.jpg',
+  '/static/img/carousel/pizzarellas.png',
+  '/static/img/carousel/.jpg',
   '/static/img/carousel/reactPizza.jpg',
   '/static/img/carousel/talentForce.jpg',
   '/static/img/carousel☻/archakovBlog.jpg',
