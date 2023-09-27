@@ -19,7 +19,7 @@ const items = [
       position: 'Executive',
     },
     {
-      img: '/static/img/home/kantar.png',
+      img: '/static/img/home/amakov.png',
       review_title:
         'Trimsy made increase not only in design, but with gathering a lot of attention.',
       quote: `We've achived gradual increase and customer support team was responsive and helpful throughout our journey.`,
@@ -35,7 +35,24 @@ const items = [
       author: 'Jake Terry',
       position: 'Executive',
     },
+    {
+      img: '/static/img/home/pizzarellas.png',
+      review_title:
+        'Their understanding of our specific business requirements in designing the menu presentation and online ordering system were particularly impressive.',
+      quote: `I would highly recommend Trimsy based on their exceptional performance in delivering a visually appealing website for our food delivery store.`,
+      author: 'Aino Virtanen',
+      position: 'CEO',
+    },
   ],
+  //   [
+  //     {
+  //       img: '/static/img/home/kantar.png',
+  //       review_title: 'We had great experience in partnership with Trimsy.',
+  //       quote: `It was quick and exciting experience and aftermath of the application is more than we wanted.`,
+  //       author: 'Jake Terry',
+  //       position: 'Executive',
+  //     },
+  //   ],
 ];
 
 const Testimonials: React.FC<SwiperProps> = () => {
