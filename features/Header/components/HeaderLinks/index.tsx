@@ -20,7 +20,7 @@ const linkRows = [
         header: 'More from Development',
         links: [
           {
-            title: 'Compare Web packages',
+            title: 'Choose the Website',
             href: '/development/services',
           },
           {
