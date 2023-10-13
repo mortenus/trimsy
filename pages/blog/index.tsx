@@ -35,7 +35,7 @@ const info = {
       Doing things with speed does not mean doing them imperfectly, the only way to not fall
       back - is to go forward.`,
     avatarUrl:
-      'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_800_800/0/1677288099829?e=1683158400&v=beta&t=_4dL6mKljguP7Bijl5_7Qk60bYUqaOGLI1NvaWdiYJg',
+      'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_200_200/0/1677288099829?e=1702512000&v=beta&t=1l2u2vn979HEhVkUfS3uaQ7VGZn5opraRjNnxQzrB-w',
     profileUrl: 'https://www.linkedin.com/in/alexey-pylypenko/',
   },
 };
@@ -88,6 +88,14 @@ export default function Blog({ items }: any) {
     {
       count: 11,
       classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7],
+    },
+    {
+      count: 12,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 1],
+    },
+    {
+      count: 13,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7],
     },
   ];
 
@@ -309,6 +317,27 @@ export async function getStaticProps() {
   //   const items = res.data.items;
 
   const items = [
+    {
+      data: {
+        date: 'September 7, 2023',
+        title: 'An Introduction to the DOM in Web Development',
+        description:
+          'With the rise of artificial intelligence and its potential impact on job displacement, job seekers and professionals navigating career transitions can find hope in the emergence of generative AI tools.',
+        imgUrl: '/uploads/1666542894631.png',
+      },
+      slug: '/blog/an-introduction-to-the-dom-in-web',
+    },
+    {
+      data: {
+        date: 'August 25, 2023',
+        title:
+          'Demystifying Web Design vs. Web Development: Understanding Roles and Responsibilities',
+        description:
+          'With the rise of artificial intelligence and its potential impact on job displacement, job seekers and professionals navigating career transitions can find hope in the emergence of generative AI tools.',
+        imgUrl: '/uploads/1666542894630.png',
+      },
+      slug: '/blog/demystifying-web-design-vs-web-development',
+    },
     {
       data: {
         date: 'August 1, 2023',

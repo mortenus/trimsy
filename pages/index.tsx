@@ -224,6 +224,17 @@ export async function getStaticProps() {
   const items = [
     {
       data: {
+        date: 'August 25, 2023',
+        title:
+          'Demystifying Web Design vs. Web Development: Understanding Roles and Responsibilities',
+        description:
+          'With the rise of artificial intelligence and its potential impact on job displacement, job seekers and professionals navigating career transitions can find hope in the emergence of generative AI tools.',
+        imgUrl: '/uploads/1666542894630.png',
+      },
+      slug: '/blog/demystifying-web-design-vs-web-development',
+    },
+    {
+      data: {
         date: 'August 1, 2023',
         title: 'Tools for Enhancing Job Search Efforts and Career Transitions in the Age of AI',
         description:
