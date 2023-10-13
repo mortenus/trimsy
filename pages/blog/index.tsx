@@ -97,6 +97,14 @@ export default function Blog({ items }: any) {
       count: 13,
       classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7],
     },
+    {
+      count: 14,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 1],
+    },
+    {
+      count: 15,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7],
+    },
   ];
 
   const layout =
@@ -317,6 +325,24 @@ export async function getStaticProps() {
   //   const items = res.data.items;
 
   const items = [
+    {
+      data: {
+        date: 'September 30, 2023',
+        title: 'Design Patterns in Web Development',
+        description: `In the dynamic realm of web development, three fundamental architectural patterns reign supreme.`,
+        imgUrl: '/uploads/1666542894633.png',
+      },
+      slug: '/blog/design-patterns-in-web-development',
+    },
+    {
+      data: {
+        date: 'September 21, 2023',
+        title: 'The Digital Storefront: How a Website Boosts Your Business Visibility and Reach',
+        description: `In today's digital age, having a website is not just a luxury – it's a necessity for businesses of all sizes. Your website acts as a digital storefront, and it plays a crucial role in enhancing your business's visibility and reach. In this article, we'll explore the many ways a website can help you reach a global audience and attract potential customers.`,
+        imgUrl: '/uploads/1666542894632.png',
+      },
+      slug: '/blog/how-a-website-boosts-your-business',
+    },
     {
       data: {
         date: 'September 7, 2023',

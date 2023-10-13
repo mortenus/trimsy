@@ -224,6 +224,24 @@ export async function getStaticProps() {
   const items = [
     {
       data: {
+        date: 'September 30, 2023',
+        title: 'Design Patterns in Web Development',
+        description: `In the dynamic realm of web development, three fundamental architectural patterns reign supreme: MVC (Model-View-Controller), MVP (Model-View-Presenter), and MVVM (Model-View-ViewModel). These patterns serve as the blueprint for creating structured, maintainable, and scalable web applications. In this article, we'll demystify these patterns, outlining their key principles, differences, and when to use each.`,
+        imgUrl: '/uploads/1666542894633.png',
+      },
+      slug: '/blog/design-patterns-in-web-development',
+    },
+    {
+      data: {
+        date: 'September 21, 2023',
+        title: 'The Digital Storefront: How a Website Boosts Your Business Visibility and Reach',
+        description: `In today's digital age, having a website is not just a luxury – it's a necessity for businesses of all sizes. Your website acts as a digital storefront, and it plays a crucial role in enhancing your business's visibility and reach. In this article, we'll explore the many ways a website can help you reach a global audience and attract potential customers.`,
+        imgUrl: '/uploads/1666542894632.png',
+      },
+      slug: '/blog/how-a-website-boosts-your-business',
+    },
+    {
+      data: {
         date: 'August 25, 2023',
         title:
           'Demystifying Web Design vs. Web Development: Understanding Roles and Responsibilities',
@@ -262,29 +280,6 @@ export async function getStaticProps() {
         imgUrl: '/uploads/1666542894626.png',
       },
       slug: '/blog/trimsy-introduces-starter-basic-and-advanced-packages',
-    },
-    {
-      data: {
-        date: 'April 17, 2023',
-        title:
-          'Bridging Borders with Humanity: How Trimsy x Hart Facilitates Humanitarian Aid for Ukrainians',
-        imgUrl: '/uploads/1556542894645.jpg',
-      },
-      modal:
-        '/blog/bridging-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
-      slug: '/blog/bridging-borders-with-humanity-how-trimsy-x-hart-facilitates-humanitarian-aid-for-ukranians',
-      type: 'QUICK READ',
-    },
-    {
-      data: {
-        date: 'March 14, 2023',
-        title: 'Website Security: How to Protect Your Website and Gain a Competitive Edge',
-        description:
-          'Website security is crucial for any business that operates online, regardless of its size or industry. Secure website creates strong connection between the users/audience because trust is one of the main ingredients of successful entity, whether online or offline.',
-        imgUrl: 'https://trimsy.org/uploads/1556542894631.jpg',
-        hashtags: ['Web', 'Dev', 'Security'],
-      },
-      slug: '/blog/website-security-how-to-protect-your-website-and-gain-a-comptetive-edge',
     },
     {
       data: {
