@@ -7,6 +7,6 @@ export type TServiceData = {
 };
 
 export interface TService {
-  servicesData: TServiceData[];
+  //   servicesData: TServiceData[];
   currentActive?: string;
 }

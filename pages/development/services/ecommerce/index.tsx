@@ -81,7 +81,7 @@ export default function eCommerce({}) {
 
       <ContactForm productType={init.productType} />
 
-      <CompareTable currentActive={init.name} nameClickable={true} />
+      <CompareTable currentActive={init.name} />
       <FAQ arr={FAQArr} />
     </div>
   );

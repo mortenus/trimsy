@@ -119,7 +119,7 @@ export default function Custom() {
 
       <ContactForm productType={init.productType} />
 
-      <CompareTable currentActive={init.name} nameClickable={true} />
+      <CompareTable currentActive={init.name} />
       <FAQ arr={FAQArr} />
     </div>
   );
