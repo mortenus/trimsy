@@ -27,7 +27,7 @@ export function Services({ servicesArr }: any) {
               </Button>
             </div>
 
-            <ContactForm disabled={selected === null} type={selected} />
+            <ContactForm disabled={selected === null} product={selected} />
           </>
         ) : (
           <>

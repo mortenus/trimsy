@@ -38,13 +38,13 @@ const Footer = () => {
 
           <ul className={styles.nav}>
             <li className={styles.item}>
-              <Link href="/about">About</Link>
-            </li>
-            <li className={styles.item}>
               <Link href="/blog">Blog</Link>
             </li>
             <li className={styles.item}>
-              <Link href="/stands-with-ukraine">We stand with Ukraine</Link>
+              <Link href="/about">About</Link>
+            </li>
+            <li className={styles.item}>
+              <Link href="/blog">Contact Trimsy</Link>
             </li>
           </ul>
         </div>
@@ -60,8 +60,11 @@ const Footer = () => {
           <li>
             <Link href="/privacy-policy">Privacy Policy</Link>
           </li>
+          <li>
+            <Link href="/terms-of-use">Terms of Use</Link>
+          </li>
         </ul>
-        <p className={styles.copyright}>©2023 Trimsy</p>
+        <p className={styles.copyright}>Copyright © 2023 Trimsy inc. All rights reserved</p>
       </div>
     </footer>
   );

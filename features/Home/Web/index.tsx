@@ -14,7 +14,7 @@ export default function Web() {
         <h2 className={clsx(styles.text, 'typography-hero-headline')}>Web Development</h2>
         <p
           className={clsx(styles.text, 'typography-hero-product')}
-          style={{ margin: '15px 0', fontSize: '400' }}>
+          style={{ margin: '15px 0', padding: '0 10px' }}>
           Boost your business with massive increase in traffic and attention.
         </p>
         <div className={clsx(styles.text, styles.buttons)}>

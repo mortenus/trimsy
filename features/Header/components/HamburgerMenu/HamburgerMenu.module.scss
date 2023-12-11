@@ -1,8 +1,8 @@
 .popup {
   max-height: 0;
   position: absolute;
-  //   top: 76px;
   top: 66px;
+  //   top: calc(var(--navbar-height) + 2px);
   right: 0;
   background: #fff;
   box-shadow: 0 6px 18px 0 rgb(22 45 61 / 12%);
@@ -54,7 +54,7 @@
   text-align: left;
 
   padding-bottom: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  //   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
   margin-bottom: 100px;
   overflow-y: scroll;
 
@@ -67,8 +67,8 @@
     }
 
     h4 {
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 18px;
+      font-weight: 700;
       //   margin-top: 8px;
       margin-bottom: 30px;
     }

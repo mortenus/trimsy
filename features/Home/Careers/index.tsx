@@ -15,8 +15,8 @@ export default function Careers() {
         <h2 className={clsx(styles.text, 'typography-hero-headline')}>Career Development</h2>
         <p
           className={clsx(styles.text, 'typography-hero-product')}
-          style={{ margin: '15px 0', fontSize: '400' }}>
-          Elevate your career, save time with expert guidance
+          style={{ margin: '15px 0', padding: '0 10px' }}>
+          Save time with expert guidance and elevate your career
         </p>
         <div className={clsx(styles.text, styles.buttons)}>
           <Link href="/careers">Learn more</Link>

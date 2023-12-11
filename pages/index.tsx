@@ -224,6 +224,15 @@ export async function getStaticProps() {
   const items = [
     {
       data: {
+        date: 'October 16, 2023',
+        title: 'Revolutionizing Web Development: The Future with AI',
+        description: `In the fast-paced world of technology, web development is continually evolving. And at the heart of this transformation lies Artificial Intelligence (AI). AI is reshaping the future of web development, enhancing user experiences, automating tasks, and improving website performance. In this article, we'll delve into the exciting possibilities AI brings to the world of web development.`,
+        imgUrl: '/uploads/1666542894634.png',
+      },
+      slug: '/blog/revolutionizing-web-development-the-future-with-ai',
+    },
+    {
+      data: {
         date: 'September 30, 2023',
         title: 'Design Patterns in Web Development',
         description: `In the dynamic realm of web development, three fundamental architectural patterns reign supreme: MVC (Model-View-Controller), MVP (Model-View-Presenter), and MVVM (Model-View-ViewModel). These patterns serve as the blueprint for creating structured, maintainable, and scalable web applications. In this article, we'll demystify these patterns, outlining their key principles, differences, and when to use each.`,

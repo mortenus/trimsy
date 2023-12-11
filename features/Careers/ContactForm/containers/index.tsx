@@ -9,20 +9,20 @@ interface TValues {
   fullname: string;
   email: string;
   description: string;
-  type: string | null;
+  product: string | null;
 }
 
 interface EnhancedFormProps {
-  type: string | null;
+  product: string | null;
   disabled: boolean;
 }
 
 const ContactFormContainer = withFormik({
-  mapPropsToValues: ({ type }: EnhancedFormProps) => ({
+  mapPropsToValues: ({ product }: EnhancedFormProps) => ({
     fullname: '',
     email: '',
     description: '',
-    type: type,
+    product,
   }),
   validate: (values: TValues) => {
     const errors = {};
@@ -46,7 +46,7 @@ const ContactFormContainer = withFormik({
 
         localStorage.setItem('formSubmissionToken', submissionToken);
         localStorage.setItem('formSubmissionEmail', values.email);
-        localStorage.setItem('formSubmissionType', values.type || '');
+        localStorage.setItem('formSubmissionType', values.product || '');
         setSubmitting(false);
 
         window.location.href = `/careers/services/success?authToken=${submissionToken}`;

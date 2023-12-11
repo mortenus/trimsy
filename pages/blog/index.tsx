@@ -105,6 +105,10 @@ export default function Blog({ items }: any) {
       count: 15,
       classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7],
     },
+    {
+      count: 16,
+      classes: [1, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 6, 7, 1],
+    },
   ];
 
   const layout =
@@ -325,6 +329,15 @@ export async function getStaticProps() {
   //   const items = res.data.items;
 
   const items = [
+    {
+      data: {
+        date: 'October 16, 2023',
+        title: 'Revolutionizing Web Development: The Future with AI',
+        description: `In the fast-paced world of technology, web development is continually evolving. And at the heart of this transformation lies Artificial Intelligence (AI). AI is reshaping the future of web development, enhancing user experiences, automating tasks, and improving website performance. In this article, we'll delve into the exciting possibilities AI brings to the world of web development.`,
+        imgUrl: '/uploads/1666542894634.png',
+      },
+      slug: '/blog/revolutionizing-web-development-the-future-with-ai',
+    },
     {
       data: {
         date: 'September 30, 2023',
