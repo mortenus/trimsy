@@ -7,53 +7,67 @@ import styles from './HeaderLinks.module.scss';
 const linkRows = [
   {
     id: 0,
-    title: 'Development',
+    title: 'Products',
     links: [
       {
         title: 'Web Development',
         description: 'Discover your presence in Web the way you want.',
         href: '/development',
       },
-    ],
-    additional: [
       {
-        header: 'More from Development',
-        links: [
-          {
-            title: 'Choose the Website',
-            href: '/development/services',
-          },
-          {
-            title: 'Blog',
-            href: '/blog',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: 'Careers',
-    links: [
-      {
-        title: 'Career Development',
+        title: 'Career Growth',
         description:
-          'Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.',
+          'Unique resume. Inspiring Cover Letter. Careers opportunities, and more, all powered by AI.',
         href: '/careers',
       },
     ],
     additional: [
       {
-        header: 'More from Careers',
+        header: 'More from Trimsy',
         links: [
+          //   {
+          //     title: 'Choose the Website',
+          //     href: '/development/services',
+          //   },
+          {
+            title: 'About us',
+            href: '/about',
+          },
           {
             title: 'Blog',
             href: '/blog',
+          },
+          {
+            title: 'Partners Program',
+            href: '/partners',
           },
         ],
       },
     ],
   },
+  //   {
+  //     id: 1,
+  //     title: 'Careers',
+  //     links: [
+  //       {
+  //         title: 'Career Development',
+  //         description:
+  //           'Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.',
+  //         href: '/careers',
+  //       },
+  //     ],
+  //     additional: [
+  //       {
+  //         header: 'More from Careers',
+  //         links: [
+  //           {
+  //             title: 'Blog',
+  //             href: '/blog',
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
   //   {
   //     id: 0,
   //     title: 'Services',

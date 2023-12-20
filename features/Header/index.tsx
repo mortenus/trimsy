@@ -12,6 +12,7 @@ import clsx from 'clsx';
 import { useCheckCurrentDepartment } from 'hooks/useCheckCurrentDepartment';
 import BlogLocalNav from 'components/LocalNav/blog';
 import MarketplaceLocalNav from 'components/LocalNav/marketplace';
+import PartnersLocalNav from 'components/LocalNav/partners';
 
 // type THeaderBase = {};
 
@@ -37,6 +38,10 @@ const possibleDepartments = [
   {
     name: 'careers',
     link: '/careers',
+  },
+  {
+    name: 'partners',
+    link: '/partners',
   },
 ];
 
@@ -92,6 +97,7 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
       </header>
       {currentVisibleDepartment.name === 'blog' && <BlogLocalNav />}
       {currentVisibleDepartment.name === 'careers' && <MarketplaceLocalNav />}
+      {currentVisibleDepartment.name === 'partners' && <PartnersLocalNav />}
     </>
   );
 };
