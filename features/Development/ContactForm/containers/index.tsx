@@ -3,6 +3,8 @@ import { axios } from 'core';
 
 import validateForm from 'utils/validate';
 import ContactForm from '../components';
+import useApiEndpoint from 'hooks/useApiEndpoint';
+import checkApiEndpoint from 'utils/checkApiEndpoint';
 
 interface TValues {
   fullname: string;
@@ -26,9 +28,10 @@ const ContactFormContainer = withFormik({
   handleSubmit: (values: TValues, { setSubmitting, setStatus, resetForm }) => {
     setSubmitting(true);
 
+    const API_ENDPOINT = checkApiEndpoint();
+
     axios
-      .post('https://secure.trimsy.org/form', values)
-      //   .post('http://localhost:3001/form', values)
+      .post(`${API_ENDPOINT}/form`, values)
       .then((res) => {
         setSubmitting(false);
         resetForm();

@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'Starter',
   productType: '',
-  price: 999,
+  price: 499,
   logo: '',
   description:
     'Web Starter. Affordable website package. User-friendly interface. Quick setup and launch. Reliable hosting and security.',
@@ -105,7 +105,10 @@ export default function Starter() {
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />
-      <FAQ arr={FAQArr} />
+
+      <section className={'global-wrapper--small'} style={{ padding: '100px 0 150px 0' }}>
+        <FAQ headline="Questions?" arr={FAQArr} />
+      </section>
     </div>
   );
 }

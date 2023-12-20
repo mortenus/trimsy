@@ -58,9 +58,9 @@ const HeaderButton = ({ children, links, additional }: THeaderButton) => {
 
       <div className={clsx(styles.popup, { [styles.visible]: open })} ref={ref}>
         <div className={styles.text}>
-          {links.map((obj) => (
+          {links.map((obj, key) => (
             <Link
-              key={obj.href}
+              key={key}
               className={styles.item}
               target={obj.target && obj.target}
               href={obj.href}

@@ -3,6 +3,7 @@ import { axios } from 'core';
 
 import validateForm from 'utils/validate';
 import ContactForm from '../components';
+import checkApiEndpoint from 'utils/checkApiEndpoint';
 
 interface TValues {
   fullname: string;
@@ -24,8 +25,9 @@ const ContactFormWrapper = withFormik({
     return errors;
   },
   handleSubmit: (values: TValues, { setSubmitting, setStatus, resetForm }) => {
-    console.log(values);
     setSubmitting(true);
+
+    const API_ENDPOINT = checkApiEndpoint();
 
     // remove unnecessary spacing the end
     if (values.fullname.match(/\s$/)?.[0]) {
@@ -33,8 +35,7 @@ const ContactFormWrapper = withFormik({
     }
 
     axios
-      .post('https://secure.trimsy.org/careers', values)
-      //   .post('http://localhost:3001/careers', values)
+      .post(`${API_ENDPOINT}/careers`, values)
       .then((res) => {
         setSubmitting(false);
         resetForm();

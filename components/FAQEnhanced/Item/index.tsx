@@ -10,7 +10,7 @@ type TItem = {
   children: React.ReactNode;
 };
 
-const Item = ({ title, children, learnMoreUrl }: TItem) => {
+const FAQItemEnhanced = ({ title, children, learnMoreUrl }: TItem) => {
   const {
     handleStateChange: handleOpenChange,
     state: open,
@@ -56,11 +56,11 @@ const Item = ({ title, children, learnMoreUrl }: TItem) => {
           transition: 'max-height 0.3s ease-in-out',
           minHeight: '0px',
         }}>
-        <p>{children}</p>
+        {children}
         {learnMoreUrl && <Link href={learnMoreUrl}>Learn More</Link>}
       </div>
     </div>
   );
 };
 
-export default Item;
+export default FAQItemEnhanced;

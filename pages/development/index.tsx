@@ -98,7 +98,9 @@ export default function Development({
           handleKeyDownOverflowChange={handleKeyDownOverflowChange}
         />
 
-        <FAQ arr={FAQArr} />
+        <section className={'global-wrapper--small'} style={{ padding: '100px 0 150px 0' }}>
+          <FAQ headline={'Questions?'} arr={FAQArr} />
+        </section>
 
         {/* <ContactForm /> */}
         <ContactUs onScrollEvent={onScrollEvent} />

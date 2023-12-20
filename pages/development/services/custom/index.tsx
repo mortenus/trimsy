@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'Custom',
   productType: '',
-  price: 7999,
+  price: 'Custom',
   logo: '',
   description:
     'Web Custom. Tailored web development to meet your unique needs. Customized design reflecting your brand identity. Advanced functionalities specific to your requirements. Enhanced security measures to protect your data.',
@@ -60,7 +60,7 @@ export default function Custom() {
           <div className={styles.text}>
             {init.isNew && <span className={styles.new}>New</span>}
             <h1 className={styles.product}>Web {init.name}</h1>
-            <span className={styles.pricing}>From ${init.price}</span>
+            <span className={styles.pricing}>{init.price}</span>
           </div>
           <div className={styles.icon}>
             <svg
@@ -120,7 +120,9 @@ export default function Custom() {
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />
-      <FAQ arr={FAQArr} />
+      <section className={'global-wrapper--small'} style={{ padding: '100px 0 150px 0' }}>
+        <FAQ headline="Questions?" arr={FAQArr} />
+      </section>
     </div>
   );
 }

@@ -36,20 +36,23 @@ const Footer = () => {
           </svg> */}
           </Link>
 
-          <ul className={styles.nav}>
-            <li className={styles.item}>
-              <Link href="/blog">Blog</Link>
-            </li>
-            <li className={styles.item}>
-              <Link href="/about">About</Link>
-            </li>
-            <li className={styles.item}>
-              <Link href="/blog">Contact Trimsy</Link>
-            </li>
-          </ul>
+          <p>
+            Explore innovative solutions with Trimsy in Web Development, Marketplace, Career
+            Opportunities and expert support.
+          </p>
         </div>
         <div className={styles.rightSide}>
-          <FooterLinks />
+          {/* <FooterLinks /> */}
+
+          <div className={styles.nav}>
+            <h3>Company</h3>
+            <div className={styles.links}>
+              <Link href="/about">About</Link>
+              <Link href="/careers">Careers</Link>
+              <Link href="/blog">Blog</Link>
+              <Link href="/blog">Partners Program</Link>
+            </div>
+          </div>
         </div>
       </div>
       <div className={styles.notice}>

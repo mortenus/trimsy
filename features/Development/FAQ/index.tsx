@@ -4,6 +4,7 @@ import Item from './components/Item';
 import styles from './FAQ.module.scss';
 
 type TFAQ = {
+  headline?: string;
   arr: {
     title: string;
     description: string;
@@ -11,15 +12,17 @@ type TFAQ = {
   }[];
 };
 
-const FAQ = ({ arr }: TFAQ) => {
+const FAQ = ({ headline, arr }: TFAQ) => {
   return (
     <section className={styles.wrapper}>
-      <div className={styles.intro}>
-        <h2>Questions?</h2>
-      </div>
+      {headline && (
+        <div className={styles.intro}>
+          <h2>{headline}</h2>
+        </div>
+      )}
       {arr.map((item, i) => (
-        <Item key={i} description={item.description} learnMoreUrl={item.learnMoreUrl}>
-          {item.title}
+        <Item key={i} title={item.title} learnMoreUrl={item.learnMoreUrl}>
+          {item.description}
         </Item>
       ))}
     </section>

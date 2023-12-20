@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'Basic',
   productType: '',
-  price: 2500,
+  price: 1500,
   logo: '',
   description:
     'Web Basic. Fully customized and dynamic website. Solid foundation for your online presence. Enhanced user experience and engagement.',
@@ -108,7 +108,9 @@ export default function Basic() {
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />
-      <FAQ arr={FAQArr} />
+      <section className={'global-wrapper--small'} style={{ padding: '100px 0 150px 0' }}>
+        <FAQ headline="Questions?" arr={FAQArr} />
+      </section>
     </div>
   );
 }

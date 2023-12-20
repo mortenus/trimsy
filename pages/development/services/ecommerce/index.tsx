@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'eCommerce',
   productType: '',
-  price: 7000,
+  price: 4000,
   logo: '',
   description:
     'Web eCommerce. Secure payment processing. Personalized product recommendations. Mobile-responsive design. Seamless shopping experience.',
@@ -82,7 +82,9 @@ export default function eCommerce({}) {
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />
-      <FAQ arr={FAQArr} />
+      <section className={'global-wrapper--small'} style={{ padding: '100px 0 150px 0' }}>
+        <FAQ headline="Questions?" arr={FAQArr} />
+      </section>
     </div>
   );
 }
