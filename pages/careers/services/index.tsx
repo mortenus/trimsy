@@ -12,6 +12,11 @@ Services.title =
 export function Services({ servicesArr }: any) {
   const [selected, setSelected] = React.useState<null | string>(null);
 
+  React.useEffect(() => {
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [selected]); // Trigger effect when selectedState changes
+
   return (
     <div>
       <h1 className={'hidden'}>Trimsy Markeplace Services</h1>
