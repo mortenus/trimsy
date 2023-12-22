@@ -64,17 +64,17 @@
         display: inline-block;
         font-weight: 800;
 
-        @media (max-width: 734px) {
-          font-size: 32px;
-        }
+        //     @media (max-width: 734px) {
+        //       font-size: 32px;
+        //     }
 
-        @media (max-width: 450px) {
-          font-size: 36px;
-        }
+        //     @media (max-width: 450px) {
+        //       font-size: 36px;
+        //     }
 
-        @media (max-width: 372px) {
-          font-size: 28px;
-        }
+        //     @media (max-width: 372px) {
+        //       font-size: 28px;
+        //     }
       }
     }
 
@@ -108,6 +108,10 @@
       color: #6e6e73;
 
       margin: 15px 0;
+
+      @media (max-width: 500px) {
+        font-size: 14px;
+      }
     }
   }
 }

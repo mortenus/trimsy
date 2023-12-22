@@ -6,27 +6,33 @@ import THamburger from './Hamburger.types';
 
 import HamburgerMenu from '../HamburgerMenu';
 import useHideScrollOnTrue from 'hooks/useHideScrollOnTrue';
+import { useRouter } from 'next/router';
 
 const linkRows = [
   {
     id: 0,
+    title: 'About',
+    href: '/about',
+  },
+  {
+    id: 1,
     title: 'Web Development',
     href: '/development',
   },
   {
-    id: 1,
+    id: 2,
     title: 'Career Development',
     href: '/careers',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Blog',
     href: '/blog',
   },
   {
-    id: 3,
-    title: 'About',
-    href: '/about',
+    id: 4,
+    title: 'Partners Program',
+    href: '/partners',
   },
   //   {
   //     id: 0,

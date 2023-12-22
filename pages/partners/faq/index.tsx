@@ -2,7 +2,7 @@ import Logo from 'components/Logo';
 import Link from 'next/link';
 import React from 'react';
 
-import styles from './privacy-policy.module.scss';
+import styles from './faq.module.scss';
 import FAQItemEnhanced from 'components/FAQEnhanced/Item';
 
 TermsOfUse.title = 'Partners FAQ';
