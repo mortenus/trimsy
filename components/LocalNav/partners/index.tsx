@@ -54,7 +54,7 @@ const MarketplaceLocalNav = () => {
           </span>
           <ul className={styles[`menu-items`]}>
             <li className={styles.items}>
-              <Link href="/partners/signup">Log In</Link>
+              <Link href="https://admin.trimsy.ca/auth/signin">Log In</Link>
             </li>
             <li className={styles.items}>
               <Link href="/partners/signup">Join</Link>

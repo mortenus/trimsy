@@ -8,15 +8,15 @@ import styles from './about.module.scss';
 
 const itemArr = [
   {
-    number: 18,
+    number: 120,
     title: 'Successful fulfillment of orders',
   },
   {
-    number: 1,
+    number: 2,
     title: 'years of experience',
   },
   {
-    number: 5,
+    number: 15,
     title: 'collaborations a week',
   },
 ];
@@ -27,9 +27,9 @@ export default function About({ items }: any) {
   return (
     <>
       <h1 className={'hidden'}>About Us | Trimsy</h1>
-      <section className={styles.introWrap}>
-        <div className="global-wrapper ">
-          <div className={styles.intro}>
+      <section className={styles[`intro`]}>
+        <div className="global-wrapper">
+          <div className={styles[`intro-wrapper`]}>
             <h2>About us</h2>
           </div>
           <div className={styles.platform}>

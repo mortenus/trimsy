@@ -41,7 +41,7 @@ export default function Landing({}) {
         <h1 style={{ display: 'none', visibility: 'hidden' }}>Trimsy Partners Program</h1>
 
         <section className={styles[`intro`]}>
-          <h2 className={styles[`intro__title`]}>Partners Program</h2>
+          <h2 className={styles[`intro__title`]}>Join Partners Program</h2>
           {/* <p className={styles[`intro__description`]}>
             New way for you to earn commissions on sales
           </p> */}

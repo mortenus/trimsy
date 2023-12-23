@@ -60,6 +60,8 @@
     }
 
     .rightSide {
+      display: flex;
+
       @media (max-width: 710px) {
         display: flex;
         justify-content: center;
@@ -73,7 +75,18 @@
       }
 
       .nav {
-        .links {
+        margin-right: 50px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &__title {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.88);
+        }
+
+        &__links {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -82,13 +95,15 @@
             font-weight: 400;
             margin-bottom: 15px;
             border-bottom: 1px solid transparent;
+            color: rgba(0, 0, 0, 0.75);
+            font-size: 14px;
 
             &:hover {
-              border-bottom: 1px solid #000;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.75);
             }
 
             &:first-child {
-              margin-top: 30px;
+              margin-top: 15px;
             }
 
             &:last-child {

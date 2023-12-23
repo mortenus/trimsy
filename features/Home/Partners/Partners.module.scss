@@ -1,0 +1,83 @@
+.wrapper {
+  height: 460px;
+  position: relative;
+
+  background: #fff;
+
+  .feather {
+    text-align: center;
+    width: 100%;
+
+    img {
+      //   width: 239px;
+      //   height: 241px;
+      width: 195px;
+      height: 198px;
+
+      margin-top: 75px;
+    }
+  }
+
+  .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  .copy {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    // -webkit-box-pack: center;
+    // -ms-flex-pack: center;
+    // justify-content: center;
+    // padding-top: 100px;
+
+    .text {
+      width: 100%;
+      text-align: center;
+      color: #000;
+    }
+
+    .subtitle {
+      width: 100%;
+      text-align: center;
+      color: #6b7280;
+      font-size: 20px;
+    }
+
+    .buttons {
+      a {
+        color: #0066cc;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: -0.5px;
+
+        padding: 0;
+        background: none;
+
+        position: relative;
+        z-index: 5;
+
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          border-bottom: 2px solid #0066cc;
+        }
+      }
+    }
+  }
+}

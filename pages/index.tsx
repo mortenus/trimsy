@@ -1,5 +1,5 @@
 import { SwiperSmall } from 'components';
-import { Careers, Web } from 'features/Home';
+import { Careers, Partners, Web } from 'features/Home';
 
 import Head from 'next/head';
 
@@ -25,6 +25,8 @@ export default function Landing({
         <Careers />
 
         <SwiperSmall items={items} style={{ marginTop: '30px' }} />
+
+        {/* <Partners /> */}
       </main>
 
       <Head>

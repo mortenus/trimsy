@@ -28,7 +28,7 @@ const FAQItems = [
   {
     title: 'Do you have a user privacy policy?',
     description:
-      'Currently, we are accepting partners who can drive volume and quality that meet Trimsy guidelines. Once you sign in, You get the affiliate link you can post anywhere.',
+      'Yes. Tracking users at an individual level is not allowed and against our program terms and conditions. Partners are unable to include any user- or device-level identifiers such as IDFA, Android ID, publisher tracking ID, clickID, or any other data that identifies a particular user or device.',
   },
 ];
 
@@ -47,9 +47,9 @@ export default function Landing({}) {
           </p>
 
           <div className={styles[`intro-additional`]}>
-            <span className={styles[`intro-additional--item`]}>From $500 on Web Development</span>
+            <span className={styles[`intro-additional--item`]}>From $250 on Web Development</span>
             <span className={styles[`intro-additional--item`]}>
-              From $25 on Careers (Resume, SMM)
+              From $25 on Marketplace (Resume, SMM)
             </span>
           </div>
           <Button size="medium" to="/partners/signup">
@@ -62,9 +62,8 @@ export default function Landing({}) {
             <h2 className={styles[`todo-intro__title`]}>What is the Trimsy Partners Program?</h2>
 
             <p className={styles[`todo-intro__description`]}>
-              The program provides a unique way for you to earn commissions. Receive (or manage
-              using Trimsy Toolkit) your personalized tracking link, promote however is suitable for
-              you and earn on every sale
+              Receive (or manage using Trimsy Toolkit) your personalized tracking link, promote
+              however is suitable for you and earn on every sale.
             </p>
           </div>
           <div className={`global-wrapper--small`}>

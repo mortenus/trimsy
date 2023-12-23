@@ -45,12 +45,21 @@ const Footer = () => {
           {/* <FooterLinks /> */}
 
           <div className={styles.nav}>
-            <h3>Company</h3>
-            <div className={styles.links}>
-              <Link href="/about">About</Link>
-              <Link href="/careers">Careers</Link>
+            <h3 className={styles[`nav__title`]}>Solutions</h3>
+            <div className={styles[`nav__links`]}>
+              <Link href="/development">Web Development</Link>
+              <Link href="/careers">Marketplace</Link>
+              <Link href="/assistant">AI Assistant</Link>
+            </div>
+          </div>
+          <div className={styles.nav}>
+            <h3 className={styles[`nav__title`]}>About Trimsy</h3>
+            <div className={styles[`nav__links`]}>
+              <Link href="/about">Trimsy Leadership</Link>
+              <Link href="/careers">Career Opportunities</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/partners">Partners Program</Link>
+              <Link href="/">Contact Trimsy</Link>
             </div>
           </div>
         </div>

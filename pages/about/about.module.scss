@@ -33,13 +33,13 @@
   //   }
 }
 
-.introWrap {
+.intro {
   position: relative;
 
   color: #fff;
   padding: 100px 0;
 
-  .intro {
+  .intro-wrapper {
     display: flex;
     flex-direction: column;
 
@@ -123,7 +123,7 @@
   }
   .vision {
     color: #fff;
-    padding: 200px 0;
+    padding-top: 200px;
 
     text-align: center;
 
@@ -162,7 +162,7 @@
 
 .community {
   background: #fa6050;
-  padding: 100px 0;
+  padding: 25px 0;
 
   color: #fff;
 
@@ -203,5 +203,7 @@
     justify-content: center;
 
     margin: 50px 0;
+
+    padding: 0 10px;
   }
 }
