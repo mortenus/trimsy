@@ -49,7 +49,7 @@ const Footer = () => {
             <div className={styles[`nav__links`]}>
               <Link href="/development">Web Development</Link>
               <Link href="/careers">Marketplace</Link>
-              <Link href="/assistant">AI Assistant</Link>
+              <Link href="/ai-assistant">AI Assistant</Link>
             </div>
           </div>
           <div className={styles.nav}>

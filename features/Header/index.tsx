@@ -13,6 +13,7 @@ import { useCheckCurrentDepartment } from 'hooks/useCheckCurrentDepartment';
 import BlogLocalNav from 'components/LocalNav/blog';
 import MarketplaceLocalNav from 'components/LocalNav/marketplace';
 import PartnersLocalNav from 'components/LocalNav/partners';
+import AssistantLocalNav from 'components/LocalNav/assistant';
 
 // type THeaderBase = {};
 
@@ -42,6 +43,10 @@ const possibleDepartments = [
   {
     name: 'partners',
     link: '/partners',
+  },
+  {
+    name: 'ai-assistant',
+    link: '/ai-assistant',
   },
 ];
 
@@ -98,6 +103,7 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
       {currentVisibleDepartment.name === 'blog' && <BlogLocalNav />}
       {currentVisibleDepartment.name === 'careers' && <MarketplaceLocalNav />}
       {currentVisibleDepartment.name === 'partners' && <PartnersLocalNav />}
+      {currentVisibleDepartment.name === 'ai-assistant' && <AssistantLocalNav />}
     </>
   );
 };

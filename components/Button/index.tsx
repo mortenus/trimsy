@@ -48,14 +48,15 @@ const Button = ({
           <div className={stylying}>{children}</div>
         </Link>
       ) : (
-        <div
+        <button
           style={style && style}
           onClick={onClick}
           className={stylying}
           tabIndex={tabIndex || 0}
-          onKeyDown={onKeyDown}>
+          onKeyDown={onKeyDown}
+          disabled={!!disabled}>
           {children}
-        </div>
+        </button>
       )}
     </>
   );

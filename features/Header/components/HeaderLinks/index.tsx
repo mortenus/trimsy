@@ -15,10 +15,15 @@ const linkRows = [
         href: '/development',
       },
       {
-        title: 'Career Growth',
+        title: 'Marketplace',
         description:
           'Unique resume. Inspiring Cover Letter. Careers opportunities, and more, all powered by AI.',
         href: '/careers',
+      },
+      {
+        title: 'AI Assistant',
+        description: 'Precision is power, and power begets progress.',
+        href: '/ai-assistant',
       },
     ],
     additional: [
@@ -29,10 +34,6 @@ const linkRows = [
           //     title: 'Choose the Website',
           //     href: '/development/services',
           //   },
-          {
-            title: 'About us',
-            href: '/about',
-          },
           {
             title: 'Blog',
             href: '/blog',

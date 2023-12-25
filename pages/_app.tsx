@@ -61,7 +61,8 @@ export default function App({ Component, pageProps }: CustomAppProps) {
         handleFormChange={handleFormOverflowChange}
         handleKeyDownOverflowChange={handleKeyDownOverflowChange}
       />
-      <Footer />
+
+      {router.pathname !== '/ai-assistant' && <Footer />}
 
       {router.pathname === '/development' ||
         (router.pathname === '/development/services' && (
