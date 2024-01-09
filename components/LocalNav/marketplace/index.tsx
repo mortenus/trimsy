@@ -50,7 +50,7 @@ const MarketplaceLocalNav = () => {
       <div className="global-wrapper--small">
         <div className={styles.content}>
           <span className={styles.headline}>
-            <Link href="/careers">Career Development</Link>
+            <Link href="/marketplace">Career Development</Link>
           </span>
           <ul className={styles[`menu-items`]}>
             <li className={styles.items}></li>

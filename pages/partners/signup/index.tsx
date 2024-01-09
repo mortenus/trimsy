@@ -47,7 +47,7 @@ export default function Landing({}) {
           </p> */}
           <p className={styles[`intro__description`]}>
             Currently new propositions are closed. Please, try to signup after new deadline begins
-            on Dec 25, 2023
+            on Jan 10, 2024
           </p>
         </section>
 

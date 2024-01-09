@@ -17,7 +17,7 @@ const possibleDepartments = [
   //   },
   {
     name: 'careers',
-    link: '/careers',
+    link: '/marketplace',
   },
 ];
 

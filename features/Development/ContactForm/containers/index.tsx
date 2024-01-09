@@ -31,7 +31,7 @@ const ContactFormContainer = withFormik({
     const API_ENDPOINT = checkApiEndpoint();
 
     axios
-      .post(`${API_ENDPOINT}/form`, values)
+      .post(`${API_ENDPOINT}/web`, values)
       .then((res) => {
         setSubmitting(false);
         resetForm();

@@ -10,20 +10,24 @@ import checkApiEndpoint from 'utils/checkApiEndpoint';
 interface TValues {
   fullname: string;
   email: string;
-  description: string;
-  productType: string;
-}
-
-interface EnhancedFormProps {
-  productType: string;
+  //   description: string;
+  order: {
+    productType: string;
+    purpose: string;
+    seo: string;
+  };
 }
 
 const ContactFormContainer = withFormik({
-  mapPropsToValues: ({ productType }: EnhancedFormProps) => ({
+  mapPropsToValues: () => ({
     fullname: '',
     email: '',
-    description: '',
-    productType: productType,
+    // description: '',
+    order: {
+      productType: '',
+      purpose: '',
+      seo: '',
+    },
   }),
   validate: (values: TValues) => {
     const errors = {};
@@ -37,8 +41,10 @@ const ContactFormContainer = withFormik({
 
     const API_ENDPOINT = checkApiEndpoint();
 
+    console.log(values);
+
     axios
-      .post(`${API_ENDPOINT}/form`, values)
+      .post(`${API_ENDPOINT}/web`, values)
       .then((res) => {
         setSubmitting(false);
         resetForm();
@@ -50,7 +56,7 @@ const ContactFormContainer = withFormik({
         localStorage.setItem('formSubmissionEmail', values.email);
         setSubmitting(false);
 
-        window.location.href = `/development/services/${values.productType}/success?authToken=${submissionToken}`;
+        window.location.href = `/development/services/${values.order.productType}/success?authToken=${submissionToken}`;
 
         setTimeout(() => {
           setStatus(null);

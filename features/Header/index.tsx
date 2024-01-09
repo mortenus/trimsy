@@ -10,10 +10,13 @@ import { Hamburger, HeaderLinks } from './components';
 import { useInnerHeightResize } from 'hooks/useInnerHeightResize';
 import clsx from 'clsx';
 import { useCheckCurrentDepartment } from 'hooks/useCheckCurrentDepartment';
-import BlogLocalNav from 'components/LocalNav/blog';
-import MarketplaceLocalNav from 'components/LocalNav/marketplace';
-import PartnersLocalNav from 'components/LocalNav/partners';
-import AssistantLocalNav from 'components/LocalNav/assistant';
+import {
+  AssistantLocalNav,
+  BlogLocalNav,
+  CareersLocalNav,
+  MarketplaceLocalNav,
+  PartnersLocalNav,
+} from 'components/LocalNav';
 
 // type THeaderBase = {};
 
@@ -37,12 +40,16 @@ const possibleDepartments = [
     link: '/blog',
   },
   {
-    name: 'careers',
-    link: '/careers',
+    name: 'marketplace',
+    link: '/marketplace',
   },
   {
     name: 'partners',
     link: '/partners',
+  },
+  {
+    name: 'careers',
+    link: '/careers',
   },
   {
     name: 'ai-assistant',
@@ -101,7 +108,8 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
         </div>
       </header>
       {currentVisibleDepartment.name === 'blog' && <BlogLocalNav />}
-      {currentVisibleDepartment.name === 'careers' && <MarketplaceLocalNav />}
+      {currentVisibleDepartment.name === 'marketplace' && <MarketplaceLocalNav />}
+      {currentVisibleDepartment.name === 'careers' && <CareersLocalNav />}
       {currentVisibleDepartment.name === 'partners' && <PartnersLocalNav />}
       {currentVisibleDepartment.name === 'ai-assistant' && <AssistantLocalNav />}
     </>

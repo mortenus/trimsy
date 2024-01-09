@@ -8,131 +8,141 @@ import { useOnScroll } from 'hooks/useOnScroll';
 
 import styles from './Careers.module.scss';
 import Intro from 'features/Careers/Intro';
+import Link from 'next/link';
+import clsx from 'clsx';
+import Image from 'next/image';
 
-Careers.title = 'Career Development';
+Careers.title = 'Careers Opportunities';
 
-Careers.description =
-  'Career Development. Unique resume. Inspiring Cover Letter. Careers opportunities. Quality Personal Branding.';
+Careers.description = `Careers Opportunities. Dare to dream, aspire to achieve, and make your mark as we’re trying best to redefine what's possible for better.`;
 
-export function Careers() {
+const roles = [
+  {
+    title: 'Head of SEO',
+    date: 'Jan 05, 2024',
+    location: 'Remote',
+    href: '/head-of-seo',
+  },
+  {
+    title: 'Marketing Specialist',
+    date: 'Jan 09, 2024',
+    location: 'Remote',
+    href: '/marketing-specialist',
+  },
+];
+
+type TCareers = {
+  handleFormChange: () => void;
+  handleKeyDownOverflowChange: (e: any) => void;
+};
+
+export function Careers({ handleFormChange }: TCareers) {
   const { onScrollEvent } = useOnScroll();
 
   return (
-    <div>
-      <h1 className={'hidden'}>Trimsy Career Development</h1>
-      <Intro />
-      <section className={styles.introWrap}>
-        <div className={styles.wrapper}>
-          <div className={styles.intro}>
-            <h2>Unlock your full potential with our expert guidance and tailored solutions</h2>
-            <Button to="/careers/services" color="white">
-              Get Started
-            </Button>
-          </div>
-        </div>
-        <div className={styles.wrapper}>
-          <div className={styles.platform}>
-            <div className={styles.platform_text}>
-              <h2>One platform,</h2>
-              <h2>infinite possibilities</h2>
-            </div>
-            <div className={styles.items}>
-              <PlatformItem offset={150} onScrollEvent={onScrollEvent}>
-                Get a full innovative recruitment while using new modern technologies
-              </PlatformItem>
-              <PlatformItem offset={250} onScrollEvent={onScrollEvent}>
-                Harvest new opportunities with RP to bring your vision to life.
-              </PlatformItem>
-              <PlatformItem offset={350} onScrollEvent={onScrollEvent}>
-                Scale seamlessly with recruiting and business solutions.
-              </PlatformItem>
-            </div>
-            <Button to="/careers/services" color="white">
-              Let&apos;s Talk
-            </Button>
-          </div>
-        </div>
+    <>
+      <main>
+        <h1 style={{ display: 'none', visibility: 'hidden' }}>Trimsy Careers Opportunities</h1>
 
-        <div className={styles.background}>
-          <ImageUnoptimized
-            src={'/static/img/careers/intro8.jpg'}
-            fill
-            priority
-            alt={'Intro Image'}
-          />
-        </div>
-      </section>
-      {/* <section className={styles.wrapper}>
-        <div className={styles.breaking}>
-          <h2>We have the tech to make it happen-all in one place. </h2>
-        </div>
-      </section> */}
-      <section className={styles.professional}>
-        <div className={styles.container}>
-          <div className={styles.left}>
-            <h2>Get your professional</h2>
-            <h2>resume to boost your career</h2>
-            <svg
-              width="212"
-              height="213"
-              viewBox="0 0 212 213"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M200.047 0L153.764 13.5068L172.503 0.779323C160.673 3.46165 145.727 8.70849 126.942 17.1768L96.2826 49.2514L107.165 26.8459C96.6438 32.718 85.4907 40.4161 74.7439 49.4327L67.6095 78.5667L66.0743 56.9994C55.463 66.7862 45.4839 77.6605 37.2206 89.1238C28.5374 101.131 21.7507 113.817 18.3506 126.459L5.6532 117.941C6.79109 128.679 10.3086 138.013 16.0793 146.576L0.898438 141.909C4.34823 152.557 9.98802 159.444 19.5246 165.017C14.1829 180.105 11.6768 195.873 8.98559 211.595L17.294 213C26.93 116.627 94.928 55.187 156.383 27.965L159.499 35.8398C104.546 60.5335 61.8298 102.218 39.4784 162.299C47.6513 162.344 55.6436 161.347 63.049 159.444L65.2615 131.851L71.1767 156.997C76.0986 155.185 80.614 153.01 84.6328 150.473L75.2858 130.763L90.0964 146.531C93.7088 143.631 96.689 140.369 98.9467 136.789C112.674 115.267 127.033 93.8813 155.299 75.984L134.664 68.6439L166.317 69.5954C171.465 66.9675 176.883 63.7505 180.992 60.7147L158.551 58.9024L192.281 50.9279C194.9 48.2999 197.338 45.5361 199.551 42.7722C207.362 32.8313 212.645 22.4826 211.381 13.0718C210.794 8.36413 207.995 3.9374 203.434 1.45897C202.305 0.869942 201.086 0.348883 200.047 0Z"
-                fill="#858585"
-              />
-            </svg>
-          </div>
-
-          <div className={styles.right}>
-            <div className={styles.items}>
-              <ProfessionalItem offset={50} onScrollEvent={onScrollEvent}>
-                Resume. Cover Letter. LinkedIn optimization.
-              </ProfessionalItem>
-            </div>
-            <ModernButton to="/careers/services">Start Now</ModernButton>
-          </div>
-        </div>
-      </section>
-
-      {/* <section className={styles.wrapper}>
-        <div className={styles.breaking}>
-          <h2>
-            Exclusive rights to candidates identified in the process, benefit from higher success
-            rates and a reduction in cost-per-hire.{' '}
+        <section className={styles[`intro`]}>
+          <h5 className={styles[`intro__subtitle`]}>Work at Trimsy</h5>
+          <h2 className={styles[`intro__title`]}>Join a team and create with us.</h2>
+          <p className={styles[`intro__description`]}>
+            Dare to dream, aspire to achieve, and make your mark as we’re trying best to redefine
+            what's possible for better.
+          </p>
+          <Link className={styles[`intro__link`]} href="/careers#roles">
+            Learn more
+          </Link>
+        </section>
+        <section className={clsx('global-wrapper--small', styles[`careers-section`])}>
+          <h2 className={styles[`careers-section__title`]}>
+            Innovation is more than a buzzword for us, a commitment to creating solutions that
+            matter.
           </h2>
-        </div>
-      </section> */}
+          <div className={styles[`careers-section__texts`]}>
+            <p className={styles[`careers-section__texts__item`]}>
+              For everything it take for our dedication to excellence extends beyond the realms of
+              technology — we channel our creativity into addressing pressing issues like
+              accessibility, equity, privacy, and environmental sustainability.
+            </p>
+            <p className={styles[`careers-section__texts__item`]}>
+              For everything it take for our dedication to excellence extends beyond the realms of
+              technology — we channel our creativity into addressing pressing issues like
+              accessibility, equity, privacy, and environmental sustainability.
+            </p>
+          </div>
 
-      <Globe onScrollEvent={onScrollEvent} />
-
-      <Potential onScrollEvent={onScrollEvent} />
-
-      {/* <section id="contact" className={styles.contact}>
-        <div className={styles.wrapper}>
-          <div className={styles.container}>
-            <h2>Let&apos;s Talk</h2>
-
-            <div className={styles.content}>
-              <div className={styles.left}>
-                <p>
-                  Find candidates that will fit your organization, whether you’re an enterprise
-                  customer, software vendor, or startup.
-                </p>
-                <p>
-                  That’s why 90% of the professionals we place in permanent jobs stay in the role
-                  for two or more years.
-                </p>
-              </div>
-              <div className={styles.right}>
-                <ContactForm />
-              </div>
+          <div className={styles[`careers-section__images`]}>
+            <div className={styles[`careers-section__images__items`]}>
+              <Image
+                src={'/static/img/careers/allice.png'}
+                width="0"
+                height="0"
+                sizes="100vw"
+                alt={'Avatar Image'}
+              />
+              <Image
+                src={'/static/img/careers/peter.jpg'}
+                width="0"
+                height="0"
+                sizes="100vw"
+                alt={'Avatar Image'}
+              />
+            </div>
+            <div className={styles[`careers-section__images__items`]}>
+              <Image
+                src={'/static/img/careers/mark.png'}
+                width="0"
+                height="0"
+                sizes="100vw"
+                alt={'Avatar Image'}
+              />
+              <Image
+                src={'/static/img/careers/gabbie.jpg'}
+                width="0"
+                height="0"
+                sizes="100vw"
+                alt={'Avatar Image'}
+              />
             </div>
           </div>
-        </div>
-      </section> */}
-    </div>
+        </section>
+        <section className={clsx('global-wrapper--small', styles[`roles`])} id={'roles'}>
+          <h2 className={styles[`roles-title`]}>Find your perfect role.</h2>
+          <div className={styles[`roles__wrap`]}>
+            {roles.map((role) => (
+              <div className={styles[`roles__wrap-item`]}>
+                <div className={styles[`roles__wrap-item-text`]}>
+                  <Link
+                    className={styles[`roles__wrap-item-text__title`]}
+                    href={`/careers${role.href}`}>
+                    {role.title}
+                  </Link>
+                  <span className={styles[`roles__wrap-item-text__date`]}>{role.date}</span>
+                </div>
+                <p className={styles[`roles__wrap-item__location`]}>{role.location}</p>
+                <Link className={styles[`roles__wrap__item__link`]} href="/">
+                  Apply
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className={styles[`get-discovered`]}>
+          <div className={'global-wrapper--small'}>
+            <h2 className={styles[`get-discovered__title`]}>Get Discovered</h2>
+            <p className={styles[`get-discovered__description`]}>
+              Share some basic information and submit your resume. If there’s a role that might be a
+              good match, an Trimsy recruiter will be in touch.
+            </p>
+            <Button className={styles[`get-discovered__link`]} onClick={handleFormChange}>
+              Start now
+            </Button>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
 

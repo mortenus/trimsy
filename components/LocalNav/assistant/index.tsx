@@ -50,11 +50,11 @@ const AssistantLocalNav = () => {
       <div className="global-wrapper--small">
         <div className={styles.content}>
           <span className={styles.headline}>
-            <Link href="/partners">AI Assistant</Link>
+            <Link href="/ai-assistant">AI Assistant</Link>
           </span>
           <ul className={styles[`menu-items`]}>
             <li className={styles.items}>
-              <Link href="https://admin.trimsy.ca/auth/signin">Sign In</Link>
+              <Link href="https://admin.trimsy.ca">Sign In</Link>
             </li>
             {/* <li className={styles.items}>
               <Link href="/partners/signup"></Link>

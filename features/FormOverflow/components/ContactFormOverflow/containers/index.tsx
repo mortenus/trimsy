@@ -3,18 +3,19 @@ import { axios } from 'core';
 
 import validateForm from 'utils/validate';
 import ContactFormOverflow from '../components';
+import checkApiEndpoint from 'utils/checkApiEndpoint';
 
 interface TValues {
   fullname: string;
   email: string;
-  description: string;
+  text: string;
 }
 
 const ContactFormOverflowContainer = withFormik({
   mapPropsToValues: () => ({
     fullname: '',
     email: '',
-    description: '',
+    text: '',
   }),
   validate: (values: TValues) => {
     const errors = {};
@@ -26,8 +27,10 @@ const ContactFormOverflowContainer = withFormik({
   handleSubmit: (values: TValues, { setSubmitting, setStatus, resetForm }) => {
     setSubmitting(true);
 
+    const API_ENDPOINT = checkApiEndpoint();
+
     axios
-      .post('https://secure.trimsy.org/form', values)
+      .post(`${API_ENDPOINT}/form`, values)
       .then((res) => {
         setSubmitting(false);
         resetForm();

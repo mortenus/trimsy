@@ -48,7 +48,7 @@ const Footer = () => {
             <h3 className={styles[`nav__title`]}>Solutions</h3>
             <div className={styles[`nav__links`]}>
               <Link href="/development">Web Development</Link>
-              <Link href="/careers">Marketplace</Link>
+              <Link href="/marketplace">Marketplace</Link>
               <Link href="/ai-assistant">AI Assistant</Link>
             </div>
           </div>

@@ -18,7 +18,7 @@ const linkRows = [
         title: 'Marketplace',
         description:
           'Unique resume. Inspiring Cover Letter. Careers opportunities, and more, all powered by AI.',
-        href: '/careers',
+        href: '/marketplace',
       },
       {
         title: 'AI Assistant',
@@ -46,6 +46,12 @@ const linkRows = [
       },
     ],
   },
+
+  //   {
+  //     id: 1,
+  //     title: 'News',
+  //     href: '/blog',
+  //   },
   //   {
   //     id: 1,
   //     title: 'Careers',
@@ -128,10 +134,10 @@ const HeaderLinks = () => {
               {obj.title}
             </HeaderButton>
             {/* ) : (
-              <Link href={obj.href ? obj.href : ''}>
-                <li>{obj.title}</li>
-              </Link>
-            )} */}
+               <Link href={obj.href ? obj.href : ''}>
+                 <li>{obj.title}</li>
+               </Link>
+             )} */}
           </div>
         );
       })}

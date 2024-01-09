@@ -7,7 +7,7 @@
       margin: auto;
       max-width: 2632px;
       //   min-height: calc(100vh - var(--navbar-height) - 100px);
-      padding-top: 100px;
+      padding: 52px 0;
     }
 
     display: flex;
@@ -32,7 +32,7 @@
         font-size: 48px;
         font-weight: 600;
         letter-spacing: -0.03em;
-        margin: 12px 0;
+        // margin: 12px 0;
       }
 
       .pricing {
@@ -48,7 +48,7 @@
       .new {
         font-size: 18px;
         color: #bf4800;
-        font-weight: 500;
+        font-weight: 400;
 
         margin-bottom: 10px;
 

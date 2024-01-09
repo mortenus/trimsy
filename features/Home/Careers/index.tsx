@@ -10,7 +10,7 @@ import Image from 'next/image';
 export default function Careers() {
   return (
     <div className={styles.wrapper}>
-      <Link href="/careers" className={styles.link} />
+      <Link href="/marketplace" className={styles.link} />
       <div className={styles.copy}>
         <h2 className={clsx(styles.text, 'typography-hero-headline')}>Career Development</h2>
         <p
@@ -19,8 +19,8 @@ export default function Careers() {
           Save time with expert guidance and elevate your career
         </p>
         <div className={clsx(styles.text, styles.buttons)}>
-          <Link href="/careers">Learn more</Link>
-          <Link href="/careers/services">Get started</Link>
+          <Link href="/marketplace">Learn more</Link>
+          <Link href="/marketplace/services">Get started</Link>
         </div>
         {/* <Product /> */}
         <div className={styles.feather}>

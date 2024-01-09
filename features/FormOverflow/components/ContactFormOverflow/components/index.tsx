@@ -32,9 +32,9 @@ const ContactFormOverflow = (props: any) => {
             tabIndex={1}
           />
           <textarea
-            value={values?.description}
-            name="description"
-            id="description"
+            value={values?.text}
+            name="text"
+            id="text"
             onInput={handleChange}
             maxLength={400}
             placeholder={'Describe your objective'}

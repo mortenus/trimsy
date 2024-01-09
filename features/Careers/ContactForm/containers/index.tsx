@@ -52,7 +52,7 @@ const ContactFormContainer = withFormik({
         localStorage.setItem('formSubmissionType', values.product || '');
         setSubmitting(false);
 
-        window.location.href = `/careers/services/success?authToken=${submissionToken}`;
+        window.location.href = `/marketplace/services/success?authToken=${submissionToken}`;
 
         setTimeout(() => {
           setStatus(null);

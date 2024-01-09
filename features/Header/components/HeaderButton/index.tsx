@@ -73,16 +73,16 @@ const HeaderButton = ({ children, links, additional }: THeaderButton) => {
         {additional && (
           <div className={styles.additionals}>
             {additional.map((obj) => (
-              <>
-                <h6 className={styles.header}>{obj.header}</h6>
-                <ul className={styles.items}>
-                  {obj.links.map((link) => (
-                    <Link key={link.title} href={link.href} onClick={handleOpenChange}>
+              <div className={styles[`additionals__item`]} key={obj.header}>
+                <h6 className={styles[`additionals__item-header`]}>{obj.header}</h6>
+                <ul className={styles[`additionals__item-links`]}>
+                  {obj.links.map((link, index) => (
+                    <Link key={index} href={link.href} onClick={handleOpenChange}>
                       {link.title}
                     </Link>
                   ))}
                 </ul>
-              </>
+              </div>
             ))}
           </div>
         )}

@@ -42,7 +42,7 @@ export function TermsOfUse() {
           <div className={styles.center} style={{ marginBottom: '50px' }}>
             <h4>Introduction</h4>
             <p>
-              Welcome to Trimsy. The ensuing terms of utilization, herein referred to as{' '}
+              Welcome to Trimsy. The following terms of use, referred to as{' '}
               <strong>"Terms,"</strong> regulate your entrance to and utilization of: (a) our online
               platform, encompassing all content and features, available on or through
               https://trimsy.org <strong>(the "Trimsy Website")</strong>"; (b) our online
@@ -819,7 +819,9 @@ export function TermsOfUse() {
           </FAQItemEnhanced>
 
           <h4>Contact Us</h4>
-          <p>You can familiarize yourself with our privacy practices</p>
+          <p>
+            Please, you can familiarize yourself with our terms of use practices directly with us.
+          </p>
           <p>Trimsy inc.</p>
           <p>+1 587-998-1168</p>
           <Link href="mailto:support@trimsy.org">{`support@trimsy.org`}</Link>

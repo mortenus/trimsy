@@ -22,7 +22,7 @@ const linkRows = [
   {
     id: 2,
     title: 'Career Development',
-    href: '/careers',
+    href: '/marketplace',
   },
   {
     id: 3,

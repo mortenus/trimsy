@@ -201,7 +201,7 @@ export default function Services({ items, handleFormChange }: TServices) {
                   <p className={'typography-description bold small'}>
                     Social Media Management, Careers opportunities and more.
                   </p>
-                  <Button type="default" to="/careers">
+                  <Button type="default" to="/marketplace">
                     Learn More
                   </Button>
                 </div>

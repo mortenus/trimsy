@@ -54,7 +54,7 @@ Advanced.description = init.description;
 export default function Advanced() {
   return (
     <div className={styles.wrapper}>
-      {/* <Banner /> */}
+      <Banner />
       <div className={styles['info--wrapper']}>
         <div className={styles.info}>
           <div className={styles.text}>

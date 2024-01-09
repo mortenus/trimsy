@@ -31,7 +31,7 @@ export default function SuccessPage({ items }: any) {
           localStorage.removeItem('formSubmissionEmail');
           localStorage.removeItem('formSubmissionType');
         } else {
-          router.push('/careers/services');
+          router.push('/marketplace/services');
         }
       }
     }

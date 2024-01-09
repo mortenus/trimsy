@@ -14,6 +14,7 @@ import FormOverflow from 'features/FormOverflow';
 import Script from 'features/Script';
 import { useRouter } from 'next/router';
 import useChangeStateOnSpace from 'hooks/useChangeStateOnSpace';
+import { useCheckCurrentDepartment } from 'hooks/useCheckCurrentDepartment';
 
 type CustomAppProps = AppProps & {
   Component: NextComponentType & { title: string; description?: string };
@@ -21,6 +22,17 @@ type CustomAppProps = AppProps & {
 
 const defaultDescription =
   'Discover your presence in Web the way you want. Trimsy has developers to help you achieve anything in the world of Web.';
+
+const possibleDepartments = [
+  {
+    name: undefined,
+    link: '/',
+  },
+  {
+    name: 'careers',
+    link: '/careers',
+  },
+];
 
 export default function App({ Component, pageProps }: CustomAppProps) {
   const {
@@ -33,6 +45,8 @@ export default function App({ Component, pageProps }: CustomAppProps) {
   useGtag();
 
   const router = useRouter();
+
+  const { currentVisibleDepartment } = useCheckCurrentDepartment({ possibleDepartments });
 
   return (
     <>
@@ -64,14 +78,15 @@ export default function App({ Component, pageProps }: CustomAppProps) {
 
       {router.pathname !== '/ai-assistant' && <Footer />}
 
-      {router.pathname === '/development' ||
-        (router.pathname === '/development/services' && (
-          <FormOverflow
-            open={formOpen}
-            handleOpen={handleFormOverflowChange}
-            handleKeyDownOverflowChange={handleKeyDownOverflowChange}
-          />
-        ))}
+      {(currentVisibleDepartment.name === 'careers' ||
+        router.pathname === '/development' ||
+        router.pathname === '/development/services') && (
+        <FormOverflow
+          open={formOpen}
+          handleOpen={handleFormOverflowChange}
+          handleKeyDownOverflowChange={handleKeyDownOverflowChange}
+        />
+      )}
     </>
   );
 }

@@ -41,7 +41,7 @@ const Potential = ({ onScrollEvent }: TPotential) => {
               <h4>your business</h4>
             </div>
 
-            <Button to="/careers/services" color={'black'}>
+            <Button to="/marketplace/services" color={'black'}>
               Let&apos;s Talk
             </Button>
           </div>
