@@ -102,6 +102,7 @@ export default function Starter() {
         </div>
       </div>
 
+      {/* @ts-ignore */}
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />

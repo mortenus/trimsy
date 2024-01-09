@@ -117,6 +117,7 @@ export default function Custom() {
         </div>
       </div>
 
+      {/* @ts-ignore */}
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />

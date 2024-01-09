@@ -109,6 +109,7 @@ export default function Advanced() {
         </div>
       </div>
 
+      {/* @ts-ignore */}
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />

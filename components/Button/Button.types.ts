@@ -10,7 +10,7 @@ type TButtonBase = {
   color?: 'black' | 'white' | 'black-inverse' | 'transparent';
   tabIndex?: number;
   onKeyDown?: React.KeyboardEventHandler;
-  className?: HTMLAttributes<HTMLDivElement>;
+  className?: HTMLAttributes<HTMLDivElement> | string;
 };
 
 interface TButtonOnClick extends TButtonBase {

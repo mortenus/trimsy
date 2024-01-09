@@ -79,6 +79,7 @@ export default function eCommerce({}) {
         </div>
       </div>
 
+      {/* @ts-ignore */}
       <ContactForm productType={init.productType} />
 
       <CompareTable currentActive={init.name} />
