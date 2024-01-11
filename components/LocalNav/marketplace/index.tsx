@@ -6,6 +6,13 @@ import { useRouter } from 'next/router';
 
 import styles from '../LocalNav.module.scss';
 
+const routes = [
+  {
+    title: 'Services',
+    pathname: '/marketplace/services',
+  },
+];
+
 const MarketplaceLocalNav = () => {
   const [searchVisible, setSearchVisible] = React.useState(false);
 
@@ -53,7 +60,17 @@ const MarketplaceLocalNav = () => {
             <Link href="/marketplace">Career Development</Link>
           </span>
           <ul className={styles[`menu-items`]}>
-            <li className={styles.items}></li>
+            {routes.map((item) => (
+              <li className={styles.items}>
+                <Link
+                  className={clsx(styles[`menu-link`], {
+                    [styles.active]: item.pathname === router.pathname,
+                  })}
+                  href={item.pathname}>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

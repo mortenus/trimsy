@@ -200,7 +200,7 @@ export function TermsOfUse() {
           </FAQItemEnhanced>
           <FAQItemEnhanced title="I’ve released a payment but my bank details aren’t correct. What should I do?">
             <p>
-              Please email support@trimsy.org mmediately and we will attempt to stop the payment
+              Please email support@trimsy.org immediately and we will attempt to stop the payment
               before it is processed, or an amendment will be sent.
             </p>
           </FAQItemEnhanced>
@@ -210,7 +210,10 @@ export function TermsOfUse() {
           </FAQItemEnhanced>
 
           <h4>Contact Us</h4>
-          <p>You can familiarize yourself with our privacy practices</p>
+          <p>
+            Please, you can familiarize yourself with our terms of use and privacy practices
+            directly with us.
+          </p>
           <p>Trimsy inc.</p>
           <p>+1 587-998-1168</p>
           <Link href="mailto:support@trimsy.org">{`support@trimsy.org`}</Link>

@@ -17,7 +17,7 @@
 
     font-weight: 600;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     @media (max-width: 734px) {
       font-size: 48px;
@@ -25,7 +25,7 @@
   }
 
   &__description {
-    font-size: 18px;
+    font-size: 20px;
     color: #6e6e73;
 
     font-weight: 400;
@@ -33,7 +33,7 @@
     text-align: center;
 
     @media (max-width: 734px) {
-      font-size: 14px;
+      font-size: 16px;
 
       width: 300px;
     }

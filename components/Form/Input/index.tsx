@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import styles from './ContactInput.module.scss';
+import { useField } from 'formik';
 
 type TContactInput = {
   placeholder: string;
@@ -12,6 +13,7 @@ type TContactInput = {
   name: string;
   help?: boolean;
   tabIndex?: number;
+  label?: string;
 };
 
 const ContactInput = ({
@@ -23,7 +25,9 @@ const ContactInput = ({
   help = false,
   onBlur,
   tabIndex,
+  label,
 }: TContactInput) => {
+  const [field, meta] = useField(name);
   return (
     <div
       className={clsx(
@@ -32,7 +36,11 @@ const ContactInput = ({
         { [styles.big]: size === 'big' },
         { [styles.text]: size === 'text' },
       )}>
-      {help && <label className={styles.error}>{help}</label>}
+      {label && (
+        <label htmlFor={name} className={styles.label}>
+          {label}
+        </label>
+      )}
       <input
         placeholder={placeholder}
         name={name}
@@ -42,7 +50,13 @@ const ContactInput = ({
         onBlur={onBlur}
         type="text"
         tabIndex={tabIndex}
+        className={clsx(styles.input, { [styles[`input--error`]]: help })}
       />
+      {meta.touched && meta.error && help && (
+        <label htmlFor={name} className={styles.error}>
+          {help}
+        </label>
+      )}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Head from 'next/head';
 import React from 'react';
 
 import styles from './about.module.scss';
+import Link from 'next/link';
 
 const itemArr = [
   {
@@ -95,7 +96,14 @@ export default function About({ items }: any) {
           <CommunityItem />
         </div>
       </section>
-      <SwiperSmall items={items} />
+      <section className={styles[`get-discovered`]}>
+        <div className={'global-wrapper--small'}>
+          <h2 className={styles[`get-discovered__title`]}>Trimsy Help</h2>
+          <p className={styles[`get-discovered__description`]}>+1 587-998-1168</p>
+          <Link href="mailto:support@trimsy.org">support@trimsy.org</Link>
+        </div>
+      </section>
+      {/* <SwiperSmall items={items} /> */}
       <Head>
         <meta content={'https://trimsy.org/images/mini-logo.png'} property="og:image" />
         <meta property="og:type" content="website" />

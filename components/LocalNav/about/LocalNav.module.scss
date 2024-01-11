@@ -11,8 +11,6 @@
   z-index: 99;
   background-color: rgba(255, 255, 255, 1);
 
-  border-bottom: 1px solid #000;
-
   .content {
     display: flex;
     justify-content: space-between;
@@ -33,33 +31,12 @@
 
     .menu-items {
       display: flex;
-      align-items: center;
 
       .items {
         display: flex;
-        // margin-left: 52px;
-        margin-right: 38px;
+        margin-left: 52px;
 
-        // cursor: pointer;
-
-        .menu-link {
-          white-space: nowrap;
-          opacity: 0.88;
-          font-size: 1em;
-
-          &:hover {
-            color: #06c;
-            opacity: 1;
-          }
-
-          &.active {
-            color: #000;
-            opacity: 0.56;
-            cursor: default;
-
-            pointer-events: none;
-          }
-        }
+        cursor: pointer;
 
         .search {
           display: inline-flex;

@@ -1,0 +1,60 @@
+.item {
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  user-select: none;
+
+  width: 300px;
+
+  text-align: left;
+
+  border-radius: 25px;
+
+  transition: background 0.1s ease-in, padding 0.3s ease;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+
+  &.active {
+    color: #fff;
+    background: #000;
+
+    border: 1px solid #fff;
+  }
+
+  &-headline {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+
+    &-text {
+      display: flex;
+      align-items: center;
+
+      &__title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+    &__price {
+      font-size: 14px;
+
+      margin-top: 10px;
+
+      min-height: 20px;
+    }
+  }
+
+  &-description {
+    padding-left: 20px;
+
+    .point {
+      font-size: 13px;
+      list-style: outside;
+      margin-bottom: 5px;
+
+      font-weight: 500;
+    }
+  }
+}

@@ -5,7 +5,7 @@
   justify-content: center;
 
   //   min-height: calc(100vh - 500px);
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - var(--navbar-height) - var(--localnavbar-height));
   position: relative;
 
   background: linear-gradient(90deg, #9b49a9, #400241);

@@ -4,16 +4,9 @@ import React from 'react';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 
-import styles from './LocalNav.module.scss';
+import styles from '../LocalNav.module.scss';
 
-const routes = [
-  {
-    title: 'Profile',
-    pathname: 'https://admin.trimsy.ca/auth/signin',
-  },
-];
-
-const AssistantLocalNav = () => {
+const MarketplaceLocalNav = () => {
   const [searchVisible, setSearchVisible] = React.useState(false);
 
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -57,23 +50,10 @@ const AssistantLocalNav = () => {
       <div className="global-wrapper--small">
         <div className={styles.content}>
           <span className={styles.headline}>
-            <Link href="/ai-assistant">AI Assistant</Link>
+            <Link href="/marketplace">Trimsy Leadership</Link>
           </span>
           <ul className={styles[`menu-items`]}>
-            {routes.map((item) => (
-              <li className={styles.items}>
-                <Link
-                  className={clsx(styles[`menu-link`], {
-                    [styles.active]: item.pathname === router.pathname,
-                  })}
-                  href={item.pathname}>
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-            {/* <li className={styles.items}>
-              <Link href="/partners/signup"></Link>
-            </li> */}
+            <li className={styles.items}></li>
           </ul>
         </div>
       </div>
@@ -81,4 +61,4 @@ const AssistantLocalNav = () => {
   );
 };
 
-export default AssistantLocalNav;
+export default MarketplaceLocalNav;

@@ -3,10 +3,13 @@ import Head from 'next/head';
 import styles from './signup.module.scss';
 import { Button } from 'components';
 import Link from 'next/link';
+import { ContactForm } from 'features/Partners';
 
 // import { RegisterForm } from 'modules';
 
 Landing.description = `Our affiliate program, called Partners Program, provides a unique way for you to earn commissions on each sale.`;
+
+const disable = true;
 
 const bannerItems = [
   {
@@ -40,16 +43,30 @@ export default function Landing({}) {
       <main>
         <h1 style={{ display: 'none', visibility: 'hidden' }}>Trimsy Partners Program</h1>
 
-        <section className={styles[`intro`]}>
-          <h2 className={styles[`intro__title`]}>Join Partners Program</h2>
-          {/* <p className={styles[`intro__description`]}>
+        {disable ? (
+          <section className={styles[`intro`]}>
+            <h2 className={styles[`intro__title`]}>Join Partners Program</h2>
+            {/* <p className={styles[`intro__description`]}>
             New way for you to earn commissions on sales
           </p> */}
-          <p className={styles[`intro__description`]}>
-            Currently new propositions are closed. Please, try to signup after new deadline begins
-            on Jan 10, 2024
-          </p>
-        </section>
+            <p className={styles[`intro__description`]}>
+              Currently new propositions are closed. Please, try to signup after new deadline begins
+              on Jan 15, 2024
+            </p>
+          </section>
+        ) : (
+          <section className={styles[`intro`]}>
+            <h2 className={styles[`intro__title`]}>Join Partners Program</h2>
+            {/* <p className={styles[`intro__description`]}>
+              New way for you to earn commissions on sales
+            </p> */}
+            <p className={styles[`intro__description`]}>
+              New way for you to earn commissions on sales
+            </p>
+
+            <ContactForm />
+          </section>
+        )}
 
         {/* <RegisterForm /> */}
       </main>

@@ -5,6 +5,18 @@ import clsx from 'clsx';
 import { useRouter } from 'next/router';
 
 import styles from '../LocalNav.module.scss';
+import Button from 'components/Button';
+
+const routes = [
+  {
+    title: 'Profile',
+    pathname: 'https://admin.trimsy.ca/auth/signin',
+  },
+  {
+    title: 'FAQ',
+    pathname: '/partners/faq',
+  },
+];
 
 const MarketplaceLocalNav = () => {
   const [searchVisible, setSearchVisible] = React.useState(false);
@@ -53,12 +65,20 @@ const MarketplaceLocalNav = () => {
             <Link href="/partners">Partners</Link>
           </span>
           <ul className={styles[`menu-items`]}>
-            <li className={styles.items}>
-              <Link href="https://admin.trimsy.ca/auth/signin">Log In</Link>
-            </li>
-            <li className={styles.items}>
-              <Link href="/partners/signup">Join</Link>
-            </li>
+            {routes.map((item) => (
+              <li className={styles.items}>
+                <Link
+                  className={clsx(styles[`menu-link`], {
+                    [styles.active]: item.pathname === router.pathname,
+                  })}
+                  href={item.pathname}>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+            <Button size="supersmall" to={'/partners/signup'}>
+              Sign Up
+            </Button>
           </ul>
         </div>
       </div>
