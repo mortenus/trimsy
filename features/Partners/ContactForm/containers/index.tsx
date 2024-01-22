@@ -1,7 +1,7 @@
 import { withFormik } from 'formik';
 import { axios } from 'core';
 
-import validateForm from '../utils/validateForm';
+import validateForm from 'utils/validate';
 import ContactForm from '../components';
 import { v4 as uuidv4 } from 'uuid';
 import useApiEndpoint from 'hooks/useApiEndpoint';
@@ -11,6 +11,7 @@ interface TValues {
   fullname: string;
   email: string;
   //   description: string;
+
   order: {
     productType: string;
     purpose: string;

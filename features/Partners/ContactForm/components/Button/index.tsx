@@ -12,7 +12,7 @@ type TButton = {
   activeType: TPurpose;
 };
 
-const Button = ({ onClick, title, description, type, activeType, help }: TButton) => {
+const Button = ({ onClick, title, description, type, activeType }: TButton) => {
   return (
     <>
       <div
