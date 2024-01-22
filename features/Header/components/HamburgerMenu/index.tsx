@@ -33,13 +33,11 @@ const HamburgerMenu = ({
               {obj.title}
             </HamburgerExtendedButton>
           ) : (
-            <Link
-              key={obj.id}
-              className={styles.item}
-              href={obj.href}
-              onClick={handleHamburgerChange}>
-              <h4>{obj.title}</h4>
-            </Link>
+            <li className={styles.item}>
+              <Link key={obj.id} href={obj.href} onClick={handleHamburgerChange}>
+                <h4 className={styles.title}>{obj.title}</h4>
+              </Link>
+            </li>
           );
         })}
       </ul>

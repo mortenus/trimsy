@@ -21,6 +21,9 @@
   //   top: 0;
 
   @media (max-width: 1068px) {
+    display: none;
+    visibility: hidden;
+
     flex-wrap: wrap;
   }
 

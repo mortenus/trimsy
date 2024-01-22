@@ -24,6 +24,8 @@
 
   padding-bottom: 100px;
 
+  cursor: default;
+
   &.visible {
     height: 100vh;
     max-height: 100vh;
@@ -56,21 +58,32 @@
   padding-bottom: 30px;
   //   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
   margin-bottom: 100px;
-  overflow-y: scroll;
+  //   overflow-y: scroll;
 
   visibility: hidden;
   opacity: 0;
 
+  display: flex;
+  flex-direction: column;
+
   .item {
+    display: inline-flex;
+    margin-bottom: 30px;
+
     &:last-child {
       margin-bottom: 0;
     }
 
-    h4 {
-      font-size: 18px;
-      font-weight: 700;
-      //   margin-top: 8px;
-      margin-bottom: 30px;
+    a {
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        //   margin-top: 8px;
+
+        @media (max-width: 734px) {
+          font-size: 24px;
+        }
+      }
     }
   }
 }

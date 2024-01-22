@@ -16,6 +16,10 @@
   margin-bottom: 15px;
   margin-right: 15px;
 
+  @media (max-width: 734px) {
+    width: 100%;
+  }
+
   &.active {
     color: #fff;
     background: #000;

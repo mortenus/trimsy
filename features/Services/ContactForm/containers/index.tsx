@@ -12,9 +12,9 @@ interface TValues {
   email: string;
   //   description: string;
   order: {
-    productType: string;
-    purpose: string;
-    seo: string;
+    websiteType: string;
+    websitePurpose: string;
+    seoPackage: string;
   };
 }
 
@@ -24,9 +24,9 @@ const ContactFormContainer = withFormik({
     email: '',
     // description: '',
     order: {
-      productType: '',
-      purpose: '',
-      seo: '',
+      websiteType: '',
+      websitePurpose: '',
+      seoPackage: '',
     },
   }),
   validate: (values: TValues) => {
@@ -40,8 +40,6 @@ const ContactFormContainer = withFormik({
     setSubmitting(true);
 
     const API_ENDPOINT = checkApiEndpoint();
-
-    console.log(values);
 
     axios
       .post(`${API_ENDPOINT}/web`, values)

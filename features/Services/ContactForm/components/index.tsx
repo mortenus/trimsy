@@ -14,7 +14,7 @@ import { Button } from 'components';
 import useDebounce from 'hooks/useDebounce';
 
 type TContactForm = {
-  productTypeProp?: string;
+  websiteType?: string;
 };
 
 type TPurposeArr = {
@@ -95,7 +95,7 @@ const ContactForm = (props: any & TContactForm) => {
     handleBlur,
     handleSubmit,
     isSubmitting,
-    productTypeProp,
+    websiteType,
   } = props;
 
   const [activeStage, setActiveStage] = React.useState(0);
@@ -107,16 +107,16 @@ const ContactForm = (props: any & TContactForm) => {
   };
 
   // Orders
-  const [purpose, setPurpose] = React.useState<TPurpose>(null);
+  const [websitePurpose, setWebsitePurpose] = React.useState<TPurpose>(null);
 
   const handlePurposeChange = (type: TPurpose) => {
-    setPurpose(type);
+    setWebsitePurpose(type);
     setActiveStage(2);
   };
 
-  const [seo, setSeo] = React.useState<string | null>(null);
+  const [seoPackage, setSeoPackage] = React.useState<string | null>(null);
   const handleSeoChange = (type: string) => {
-    setSeo(type);
+    setSeoPackage(type);
     setActiveStage(3);
   };
 
@@ -144,15 +144,14 @@ const ContactForm = (props: any & TContactForm) => {
   );
 
   React.useEffect(() => {
-    if (activeStage === 2) {
-      scrollToRef(SEObuttonWrapperRef);
-      console.log('active stage 2');
-    } else if (activeStage === 3) {
+    // if (activeStage === 2) {
+    //   scrollToRef(SEObuttonWrapperRef);
+    //   console.log('active stage 2');
+    // } else
+    if (activeStage === 3) {
       setPreFormAnim(true);
       debouncePreFormHidden();
-      console.log('active stage 3');
     }
-
     // Add more conditions for other stages
   }, [activeStage]);
 
@@ -175,9 +174,9 @@ const ContactForm = (props: any & TContactForm) => {
   };
 
   const handleSubmitDebounce = () => {
-    values.order.productType = productTypeProp;
-    values.order.purpose = purpose;
-    values.order.seo = seo;
+    values.order.websiteType = websiteType;
+    values.order.websitePurpose = websitePurpose;
+    values.order.seoPackage = seoPackage;
 
     handleSubmit();
   };
@@ -197,7 +196,7 @@ const ContactForm = (props: any & TContactForm) => {
               <ButtonServices
                 {...obj}
                 onClick={() => handlePurposeChange(obj.type)}
-                activeType={purpose}
+                activeType={websitePurpose}
                 key={obj.type}
               />
             ))}
@@ -224,7 +223,7 @@ const ContactForm = (props: any & TContactForm) => {
               {seoArr.map((obj) => (
                 <SEOButton
                   key={obj.title}
-                  activeType={seo}
+                  activeType={seoPackage}
                   arr={obj}
                   onClick={() => handleSeoChange(obj.title.toLowerCase())}
                 />
@@ -234,7 +233,7 @@ const ContactForm = (props: any & TContactForm) => {
         </div>
 
         <div
-          className={clsx('global-wrapper--small', styles[`final-form`], {
+          className={clsx('', styles[`final-form`], {
             [styles.show]: preFormHidden,
           })}
           ref={contactComponentRef}>
@@ -261,7 +260,7 @@ const ContactForm = (props: any & TContactForm) => {
               value={values?.fullname}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder={'Type your name*'}
+              placeholder={'Type your name *'}
             />
 
             <div className={styles[`item`]}>
@@ -272,7 +271,7 @@ const ContactForm = (props: any & TContactForm) => {
                 value={values?.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                placeholder={'Type your email*'}
+                placeholder={'Type your email *'}
               />
 
               <p className={styles[`item__description`]}>

@@ -31,13 +31,11 @@ const RegisterFormContainer = withFormik({
     axios
       .post('http://localhost:3001/user/signup', values)
       .then(() => {
-        console.log('Success');
         const submissionToken = uuidv4();
 
         localStorage.setItem('formSubmissionToken', submissionToken);
         localStorage.setItem('formSubmissionEmail', values.email);
 
-        console.log('REroute');
         router.push(`/auth/signup/success?authToken=${submissionToken}`);
       })
       .catch(() => {

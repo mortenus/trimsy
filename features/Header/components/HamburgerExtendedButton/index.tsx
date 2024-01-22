@@ -40,9 +40,11 @@ const HamburgerExtendedButton = ({ children, links, onClick }: THamburgerExtende
       <div className={clsx(styles.popup, { [styles.visible]: open })}>
         <ul className={styles.text}>
           {links.map((obj) => (
-            <Link key={obj.href} className={styles.item} href={obj.href} onClick={handleOnClick}>
-              <h4>{obj.title}</h4>
-            </Link>
+            <li>
+              <Link key={obj.href} className={styles.item} href={obj.href} onClick={handleOnClick}>
+                <h4>{obj.title}</h4>
+              </Link>
+            </li>
           ))}
         </ul>
       </div>

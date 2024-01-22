@@ -1,7 +1,7 @@
 import { withFormik } from 'formik';
 import { axios } from 'core';
 
-import validateForm from 'utils/validate';
+import validateForm from '../utils/validateForm';
 import ContactForm from '../components';
 import { v4 as uuidv4 } from 'uuid';
 import useApiEndpoint from 'hooks/useApiEndpoint';
@@ -16,6 +16,7 @@ interface TValues {
     purpose: string;
     seo: string;
   };
+  isConsent: boolean;
 }
 
 const ContactFormContainer = withFormik({
@@ -28,6 +29,7 @@ const ContactFormContainer = withFormik({
       purpose: '',
       seo: '',
     },
+    isConsent: false,
   }),
   validate: (values: TValues) => {
     const errors = {};
@@ -40,8 +42,6 @@ const ContactFormContainer = withFormik({
     setSubmitting(true);
 
     const API_ENDPOINT = checkApiEndpoint();
-
-    console.log(values);
 
     axios
       .post(`${API_ENDPOINT}/web`, values)

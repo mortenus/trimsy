@@ -21,7 +21,6 @@ const BlogSearch = () => {
         .get(`https://secure.trimsy.org/blog/search?q=${q}`)
         .then((response) => {
           setItems(response.data);
-          console.log(response.data);
           setIsLoading;
         })
         .catch((error) => {

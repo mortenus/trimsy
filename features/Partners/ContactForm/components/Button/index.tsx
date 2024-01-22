@@ -12,14 +12,16 @@ type TButton = {
   activeType: TPurpose;
 };
 
-const Button = ({ onClick, title, description, type, activeType }: TButton) => {
+const Button = ({ onClick, title, description, type, activeType, help }: TButton) => {
   return (
-    <div
-      className={clsx(styles[`item`], { [styles.active]: type === activeType })}
-      onClick={onClick}>
-      <h3 className={styles[`item-title`]}>{title}</h3>
-      <p className={styles[`item-description`]}>{description}</p>
-    </div>
+    <>
+      <div
+        className={clsx(styles[`item`], { [styles.active]: type === activeType })}
+        onClick={onClick}>
+        <h3 className={styles[`item-title`]}>{title}</h3>
+        <p className={styles[`item-description`]}>{description}</p>
+      </div>
+    </>
   );
 };
 

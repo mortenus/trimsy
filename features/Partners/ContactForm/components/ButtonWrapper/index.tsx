@@ -6,10 +6,11 @@ type TButtonWrapper = {
   title: string;
   description: string;
   children: React.ReactNode;
+  help?: string;
 };
 
 const ButtonWrapper: React.ForwardRefRenderFunction<HTMLDivElement, TButtonWrapper> = (
-  { title, description, children },
+  { title, description, children, help },
   ref,
 ) => {
   return (
@@ -50,6 +51,8 @@ const ButtonWrapper: React.ForwardRefRenderFunction<HTMLDivElement, TButtonWrapp
         />
       </div> */}
       <div className={styles[`wrap-buttons`]}>{children}</div>
+
+      {help && <label className={styles.error}>{help}</label>}
 
       {/* <Button
               status={status && status}

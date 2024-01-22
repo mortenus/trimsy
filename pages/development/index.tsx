@@ -83,7 +83,7 @@ export default function Development({
 
         <Influence />
 
-        <Testimonials />
+        {/* <Testimonials /> */}
 
         <Quick />
 

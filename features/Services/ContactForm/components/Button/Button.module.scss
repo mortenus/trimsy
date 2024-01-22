@@ -28,6 +28,10 @@
     border: 1px solid #fff;
   }
 
+  @media (max-width: 734px) {
+    width: 100%;
+  }
+
   &.active {
     color: #fff;
     background: #000;

@@ -86,33 +86,33 @@ const ContactForm = (props: any & TContactForm) => {
             </Button>
           </div>
         </div>
-      ) : activeStage === 1 ? (
-        <div className={'global-wrapper--small'}>
-          <div className={styles.more}>
-            <h5>Additional information</h5>
-            <textarea
-              value={values?.description}
-              name="description"
-              id="description"
-              onInput={handleChange}
-              maxLength={400}
-              placeholder={'The desired results should be..'}
-            />
-            <Button
-              status={status && status}
-              disabled={isSubmitting ? 'black' : false}
-              // type="submit"
-              style={{ border: `2px solid #000` }}
-              color="white"
-              size="medium"
-              onClick={handleNextStage}>
-              Next
-            </Button>
-          </div>
-        </div>
       ) : (
+        //     <div className={'global-wrapper--small'}>
+        //       <div className={styles.more}>
+        //         <h5>Additional information</h5>
+        //         <textarea
+        //           value={values?.description}
+        //           name="description"
+        //           id="description"
+        //           onInput={handleChange}
+        //           maxLength={400}
+        //           placeholder={'The desired results should be..'}
+        //         />
+        //         <Button
+        //           status={status && status}
+        //           disabled={isSubmitting ? 'black' : false}
+        //           // type="submit"
+        //           style={{ border: `2px solid #000` }}
+        //           color="white"
+        //           size="medium"
+        //           onClick={handleNextStage}>
+        //           Next
+        //         </Button>
+        //       </div>
+        //     </div>
+        //   ) : (
         <div className={'global-wrapper--small'}>
-          <div onClick={handlePrevStage} className={styles.return}>
+          {/* <div onClick={handlePrevStage} className={styles.return}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="12"
@@ -121,7 +121,7 @@ const ContactForm = (props: any & TContactForm) => {
               <path d="M7 9.79a.5.5 0 0 1 .854-.353L12 13.584l4.146-4.147a.5.5 0 1 1 .708.708L12 14.998l-4.854-4.853A.5.5 0 0 1 7 9.79Z"></path>
             </svg>{' '}
             <span>Return</span>
-          </div>
+          </div> */}
           <div onSubmit={handleSubmit} className={styles.form}>
             <ContactInput
               size="small"

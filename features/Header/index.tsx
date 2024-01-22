@@ -85,7 +85,7 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
           [styles.disableBorder]: currentVisibleDepartment.name,
         })}>
         <div className={styles.container}>
-          <nav className={styles.nav}>
+          <nav className={clsx('global-wrapper', styles.nav)}>
             <Logo />
 
             <div className={styles.wrap}>

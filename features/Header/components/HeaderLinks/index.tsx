@@ -46,6 +46,42 @@ const linkRows = [
       },
     ],
   },
+  {
+    id: 1,
+    title: 'Discover',
+    links: [
+      {
+        title: 'About',
+        description: '',
+        href: '/about',
+      },
+      {
+        title: 'Careers',
+        description: '',
+        href: '/careers',
+      },
+      {
+        title: 'Partners Prgoram',
+        description: '',
+        href: '/partners',
+      },
+    ],
+    additional: [
+      {
+        header: 'More from Trimsy',
+        links: [
+          //   {
+          //     title: 'Choose the Website',
+          //     href: '/development/services',
+          //   },
+          {
+            title: 'Blog',
+            href: '/blog',
+          },
+        ],
+      },
+    ],
+  },
 
   //   {
   //     id: 1,

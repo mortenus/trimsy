@@ -9,7 +9,7 @@ import { ContactForm } from 'features/Partners';
 
 Landing.description = `Our affiliate program, called Partners Program, provides a unique way for you to earn commissions on each sale.`;
 
-const disable = true;
+const disable = false;
 
 const bannerItems = [
   {
@@ -51,7 +51,7 @@ export default function Landing({}) {
           </p> */}
             <p className={styles[`intro__description`]}>
               Currently new propositions are closed. Please, try to signup after new deadline begins
-              on Jan 15, 2024
+              on Jan 25, 2024
             </p>
           </section>
         ) : (

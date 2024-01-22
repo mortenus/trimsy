@@ -56,6 +56,25 @@
     display: flex;
     //   justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0;
+    padding-top: 20px;
+  }
+
+  .error {
+    font-size: 18px;
+
+    color: rgba(255, 0, 0, 0.7);
+    font-weight: 400;
+
+    position: relative;
+
+    user-select: none;
+
+    @media (max-width: 1250px) {
+      top: -45%;
+    }
+
+    @media (max-width: 500px) {
+      top: -5vw;
+    }
   }
 }

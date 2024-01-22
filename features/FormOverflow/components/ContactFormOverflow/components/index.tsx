@@ -37,7 +37,7 @@ const ContactFormOverflow = (props: any) => {
             id="text"
             onInput={handleChange}
             maxLength={400}
-            placeholder={'Describe your objective'}
+            placeholder={''}
             tabIndex={1}
           />
         </div>

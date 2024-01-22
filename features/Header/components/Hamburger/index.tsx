@@ -70,11 +70,10 @@ const Hamburger = ({ handleFormChange }: THamburger) => {
   useHideScrollOnTrue(hamburgerActive);
 
   return (
-    <div className={styles.hamburger}>
+    <div className={styles.hamburger} onClick={handleHamburgerChange}>
       {hamburgerActive ? (
         <svg
           className={styles.svg}
-          onClick={handleHamburgerChange}
           style={{ width: '20px', height: '20px' }}
           width="35"
           height="35"
@@ -89,7 +88,6 @@ const Hamburger = ({ handleFormChange }: THamburger) => {
       ) : (
         <svg
           className={styles.svg}
-          onClick={handleHamburgerChange}
           style={{ width: '25px', height: '25px' }}
           width="91"
           height="61"

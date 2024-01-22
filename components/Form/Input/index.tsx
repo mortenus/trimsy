@@ -37,7 +37,7 @@ const ContactInput = ({
         { [styles.text]: size === 'text' },
       )}>
       {label && (
-        <label htmlFor={name} className={styles.label}>
+        <label htmlFor={name} className={clsx(styles.label, { [styles[`label--error`]]: help })}>
           {label}
         </label>
       )}

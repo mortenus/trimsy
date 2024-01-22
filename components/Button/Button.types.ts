@@ -3,7 +3,7 @@ import { HTMLAttributes } from 'react';
 type TButtonBase = {
   children: React.ReactNode;
   type?: string;
-  disabled?: boolean | 'black' | 'white';
+  disabled?: boolean | 'black' | 'white' | 'black-loading' | 'white-loading';
   status?: 'success' | 'fail';
   style?: React.CSSProperties;
   size?: 'small' | 'medium' | 'large' | 'supersmall';

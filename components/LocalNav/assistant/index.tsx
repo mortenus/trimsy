@@ -43,7 +43,6 @@ const AssistantLocalNav = () => {
   };
 
   React.useEffect(() => {
-    console.log(router.pathname, router.query.q);
     if (router.pathname === '/blog/search' && router.query.q) {
       setSearchQuery(router.query.q.toString());
     } else {

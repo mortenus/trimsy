@@ -135,11 +135,9 @@ const ContactForm = (props: any & TContactForm) => {
   React.useEffect(() => {
     if (activeStage === 2) {
       scrollToRef(SEObuttonWrapperRef);
-      console.log('active stage 2');
     } else if (activeStage === 3) {
       setPreFormAnim(true);
       debouncePreFormHidden();
-      console.log('active stage 3');
     }
 
     // Add more conditions for other stages
@@ -171,7 +169,11 @@ const ContactForm = (props: any & TContactForm) => {
     handleSubmit();
   };
 
-  const [isConsent, setIsConsent] = React.useState<boolean | null>(false);
+  const [isConsent, setIsConsent] = React.useState<boolean | null>(null);
+
+  const handleIsConsent = (bool: boolean | null) => {
+    setIsConsent(bool);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -182,7 +184,75 @@ const ContactForm = (props: any & TContactForm) => {
             [styles.hidden]: preFormHidden,
           })}>
           <div onSubmit={handleSubmit} className={styles[`final-form__items`]}>
-            <h3 className={styles.title}>Enter your username and email:</h3>
+            {/* <Button
+              status={status && status}
+              disabled={isSubmitting ? 'black' : false}
+              //   type="submit"
+              color="black-inverse"
+              size="medium"
+              onClick={handleSubmitDebounce}>
+              Submit
+            </Button> */}
+            <div className={styles[`final-form__items`]}>
+              <ContactInput
+                size="small"
+                name="socialMedia"
+                help={!touched?.socialMedia ? undefined : errors.socialMedia}
+                value={values?.socialMedia}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                label={'Where would you like to promote Trimsy? *'}
+                placeholder={'Twitter: @example, Instagram: @example'}
+              />
+
+              <ContactInput
+                size="small"
+                name="companyName"
+                help={!touched?.companyName ? undefined : errors.companyName}
+                value={values?.companyName}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                label={'Company Name (if applicable)'}
+                placeholder={'Company Name'}
+              />
+
+              <ContactInput
+                size="small"
+                name="hearAbout"
+                help={!touched?.hearAbout ? undefined : errors.hearAbout}
+                value={values?.hearAbout}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                label={'How did you hear about Trimsy? *'}
+                placeholder={'Your answer'}
+              />
+
+              <ContactInput
+                size="small"
+                name="audienceTarget"
+                help={!touched?.audienceTarget ? undefined : errors.audienceTarget}
+                value={values?.audienceTarget}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                label={`What are the target audience you want to target? *`}
+                placeholder={'Your answer'}
+              />
+
+              <ContactInput
+                size="small"
+                name="details"
+                help={!touched?.details ? undefined : errors.details}
+                value={values?.details}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                label={`More details you would want us to know?`}
+                placeholder={'Your answer'}
+              />
+            </div>
+          </div>
+
+          <div className={styles[`final-form__items`]}>
+            <h3 className={styles.title}>Account</h3>
             <div className={styles[`item`]}>
               <ContactInput
                 size="small"
@@ -192,10 +262,11 @@ const ContactForm = (props: any & TContactForm) => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 placeholder={'Enter your username'}
-                label={'Username'}
+                label={'Username *'}
               />
               <p className={styles[`item__description`]}>
-                Username will be used to log in and you won’t be able to change it
+                Username will be used to log in to your account, you won’t be able to change it
+                later
               </p>
             </div>
 
@@ -208,37 +279,15 @@ const ContactForm = (props: any & TContactForm) => {
                 onBlur={handleBlur}
                 name="email"
                 placeholder={'Enter your email'}
-                label={'Email'}
+                label={'Email *'}
               />
 
               <p className={styles[`item__description`]}>
-                We’ll email you a receipt if you release the funds and send new program updates,
-                promotions, and important announcements via your email address
+                In case of releasing the funds, any important information or updates, and important
+                announcements - We'll send it to your email address
               </p>
             </div>
-            {/* <Button
-              status={status && status}
-              disabled={isSubmitting ? 'black' : false}
-              //   type="submit"
-              color="black-inverse"
-              size="medium"
-              onClick={handleSubmitDebounce}>
-              Submit
-            </Button> */}
-          </div>
-          <div onSubmit={handleSubmit} className={styles[`final-form__items`]}>
-            <ContactInput
-              size="small"
-              name="socialMedia"
-              help={!touched?.socialMedia ? undefined : errors.socialMedia}
-              value={values?.socialMedia}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              placeholder={'What are your main social handles'}
-            />
-          </div>
-          <div onSubmit={handleSubmit} className={styles[`final-form__items`]}>
-            <h3 className={styles.title}>Enter your password:</h3>
+
             <ContactInput
               size="small"
               name="password"
@@ -247,16 +296,18 @@ const ContactForm = (props: any & TContactForm) => {
               onChange={handleChange}
               onBlur={handleBlur}
               placeholder={'Password'}
+              label={'Password *'}
             />
 
             <ContactInput
               size="small"
-              name="rpassword"
-              help={!touched?.rpassword ? undefined : errors.rpassword}
-              value={values?.rpassword}
+              name="passwordRepeat"
+              help={!touched?.passwordRepeat ? undefined : errors.passwordRepeat}
+              value={values?.passwordRepeat}
               onChange={handleChange}
               onBlur={handleBlur}
               placeholder={'Repeat password'}
+              label={'Repeat password *'}
             />
 
             {/* <Button
@@ -271,25 +322,33 @@ const ContactForm = (props: any & TContactForm) => {
           </div>
           <ButtonWrapper
             title={'Terms and Conditions'}
-            description={'I agree to the Trimsy Partner Program terms and conditions'}>
+            description={'I agree to the Trimsy Partner Program terms and conditions'}
+            help={
+              !isConsent ? 'Partners program requires agreement with terms and conditions' : ''
+            }>
             {purposeArr.map((obj) => (
               <ButtonServices
                 {...obj}
-                onClick={() => setIsConsent(obj.type)}
-                activeType={purpose}
+                onClick={() => handleIsConsent(obj.type)}
+                activeType={isConsent}
                 key={obj.title}
               />
             ))}
           </ButtonWrapper>
-          <Button
-            status={status && status}
-            disabled={isSubmitting ? 'black' : false}
-            //   type="submit"
-            color="black-inverse"
-            size="medium"
-            onClick={handleSubmitDebounce}>
-            Submit
-          </Button>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Button
+              status={status && status}
+              disabled={
+                Object.values(errors).length !== 0 || !isConsent || isSubmitting ? true : false
+              }
+              //   type="submit"
+              type="submit"
+              size="medium"
+              onClick={handleSubmitDebounce}>
+              Join
+            </Button>
+          </div>
           {/* {activeStage >= 2 && (
           <ButtonWrapper title={'SEO.'} description={'Select the one that works best for you.'}>
             {purposeArr.map((obj) => (
