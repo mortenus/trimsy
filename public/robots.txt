@@ -1,2 +1,9 @@
-User-agent: Googlebot-Image
-Disallow: /static
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://trimsy.ca
+
+# Sitemaps
+Sitemap: https://trimsy.ca/sitemap.xml
