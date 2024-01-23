@@ -154,7 +154,7 @@ export default function Services({ items, handleFormChange }: TServices) {
                           top: '-60px',
                         }}
                         src={'/static/img/services/lock.png'}
-                        alt="Lock Icon"
+                        alt="Lock Icon - Trimsy x Privacy"
                         loading={'lazy'}
                         quality={'100'}
                       />
@@ -182,7 +182,7 @@ export default function Services({ items, handleFormChange }: TServices) {
                         height="141"
                         sizes="100vw"
                         src={'/static/img/services/feather.png'}
-                        alt="Feather"
+                        alt="Trimsy Marketplace icon"
                         loading={'lazy'}
                         quality={'100'}
                       />
@@ -192,7 +192,7 @@ export default function Services({ items, handleFormChange }: TServices) {
                         height="78"
                         sizes="100vw"
                         src={'/images/TMarketplace-small.png'}
-                        alt="Trimsy Blog"
+                        alt="Trimsy Marketplace image"
                         loading={'lazy'}
                         quality={'100'}
                       />

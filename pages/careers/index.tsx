@@ -86,14 +86,14 @@ export function Careers({ handleFormChange }: TCareers) {
                 width="0"
                 height="0"
                 sizes="100vw"
-                alt={'Avatar Image'}
+                alt={'Illustrated portrait of Allice smiling, looking at the reader.'}
               />
               <Image
                 src={'/static/img/careers/peter.jpg'}
                 width="0"
                 height="0"
                 sizes="100vw"
-                alt={'Avatar Image'}
+                alt={'Illustrated portrait of Peter smiling, looking at the reader.'}
               />
             </div>
             <div className={styles[`careers-section__images__items`]}>
@@ -102,14 +102,14 @@ export function Careers({ handleFormChange }: TCareers) {
                 width="0"
                 height="0"
                 sizes="100vw"
-                alt={'Avatar Image'}
+                alt={'Illustrated portrait of Mark smiling, looking at the reader.'}
               />
               <Image
                 src={'/static/img/careers/gabbie.jpg'}
                 width="0"
                 height="0"
                 sizes="100vw"
-                alt={'Avatar Image'}
+                alt={'Illustrated portrait of Gabbie smiling, looking at the reader.'}
               />
             </div>
           </div>

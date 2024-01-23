@@ -15,7 +15,7 @@ const Quick = () => {
           <Image
             className={styles.fill}
             src={'/static/img/services/quick.png'}
-            alt="Screen with example of a website"
+            alt="Laptop screen with example of a website on it"
             width={1183}
             height={718}
           />

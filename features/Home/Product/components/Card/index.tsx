@@ -26,7 +26,12 @@ const Card = ({
     <div key={title} className={clsx([styles.wrapper, { [styles.hover]: hover }])}>
       <div className={styles.content}>
         <div className={styles.image}>
-          <ImageUnoptimized fill src={imageUrl} loading={'lazy'} alt="Additional Item" />
+          <ImageUnoptimized
+            fill
+            src={imageUrl}
+            loading={'lazy'}
+            alt="Shopping Item Example - Web Development Products. Sirol Shop"
+          />
         </div>
 
         <div className={styles.favorite}>
@@ -37,7 +42,7 @@ const Card = ({
                 ? '/static/img/sneakers/heart-liked.svg'
                 : '/static/img/sneakers/heart-unliked.svg'
             }
-            alt="Liked item icon"
+            alt="Liked icon - Example Web Development Products. Sirol Shop"
           />
         </div>
       </div>
@@ -53,7 +58,7 @@ const Card = ({
             src={
               added ? '/static/img/sneakers/btn-checked.svg' : '/static/img/sneakers/btn-plus.svg'
             }
-            alt="Added item icon"
+            alt="Add icon - Example Web Development Products. Sirol Shop"
           />
         </div>
       </div>

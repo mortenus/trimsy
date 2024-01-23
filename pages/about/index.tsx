@@ -62,7 +62,7 @@ export default function About({ items }: any) {
             src={'/static/img/about/background.jpg'}
             fill
             priority
-            alt={'Intro Image'}
+            alt={'Background intro image for About Page'}
           />
         </div>
         <div className={styles.vision}>

@@ -29,7 +29,7 @@ export default function Careers() {
             height="141"
             sizes="100vw"
             src={'/static/img/services/feather.png'}
-            alt="Feather"
+            alt="Marketplace Feather Icon"
             loading={'lazy'}
             quality={'100'}
           />
