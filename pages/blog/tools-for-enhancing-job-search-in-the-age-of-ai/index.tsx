@@ -12,7 +12,7 @@ const info = {
   createdAt: '2023-08-01T12:00:00+0000',
   modifiedAt: '2023-08-01T12:00:00+0000',
   minToRead: 4,
-  slug: '/blog/tools-for-enhancing-job-search-efforts-and-career-transitions-in-the-age-of-ai',
+  slug: '/blog/tools-for-enhancing-job-search-in-the-age-of-ai',
   description:
     'With the rise of artificial intelligence and its potential impact on job displacement, job seekers and professionals navigating career transitions can find hope in the emergence of generative AI tools.',
   author: {

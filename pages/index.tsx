@@ -270,7 +270,7 @@ export async function getStaticProps() {
           'With the rise of artificial intelligence and its potential impact on job displacement, job seekers and professionals navigating career transitions can find hope in the emergence of generative AI tools.',
         imgUrl: '/uploads/1666542894629.png',
       },
-      slug: '/blog/tools-for-enhancing-job-search-efforts-and-career-transitions-in-the-age-of-ai',
+      slug: '/blog/tools-for-enhancing-job-search-in-the-age-of-ai',
     },
     {
       data: {

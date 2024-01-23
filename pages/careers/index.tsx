@@ -18,16 +18,22 @@ Careers.description = `Careers Opportunities. Dare to dream, aspire to achieve, 
 
 const roles = [
   {
-    title: 'Head of SEO',
-    date: 'Jan 05, 2024',
+    title: 'Sales Manager',
+    date: 'Jan 23, 2024',
     location: 'Remote',
-    href: '/head-of-seo',
+    href: '/sales-manager',
   },
   {
     title: 'Marketing Specialist',
     date: 'Jan 09, 2024',
     location: 'Remote',
     href: '/marketing-specialist',
+  },
+  {
+    title: 'Head of SEO',
+    date: 'Jan 05, 2024',
+    location: 'Remote',
+    href: '/head-of-seo',
   },
 ];
 
@@ -122,9 +128,9 @@ export function Careers({ handleFormChange }: TCareers) {
                   <span className={styles[`roles__wrap-item-text__date`]}>{role.date}</span>
                 </div>
                 <p className={styles[`roles__wrap-item__location`]}>{role.location}</p>
-                <Link className={styles[`roles__wrap__item__link`]} href="/">
+                <span className={styles[`roles__wrap-item__link`]} onClick={handleFormChange}>
                   Apply
-                </Link>
+                </span>
               </div>
             ))}
           </div>

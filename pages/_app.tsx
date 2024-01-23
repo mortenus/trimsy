@@ -60,6 +60,7 @@ export default function App({ Component, pageProps }: CustomAppProps) {
           content={Component.title ? Component.title + ' - Trimsy' : 'Trimsy'}
         />
         <meta content={Component.description || defaultDescription} property={'og:description'} />
+        <meta property="og:url" content={`https://www.${router.pathname}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
