@@ -89,9 +89,9 @@ const Intro = () => {
               height="630"
               src="https://www.youtube.com/embed/KVB42PLfIlw?si=GXqmUAg6GScq_04P"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+              allowFullScreen></iframe>
           </div>
         </UniversalModal>
       )}
