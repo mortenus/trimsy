@@ -1,39 +1,34 @@
 import { withFormik } from 'formik';
 import { axios } from 'core';
 
-import validateForm from 'utils/validate';
+import validateForm from '../utils/validateForm';
 import ContactForm from '../components';
 import { v4 as uuidv4 } from 'uuid';
 import useApiEndpoint from 'hooks/useApiEndpoint';
 import checkApiEndpoint from 'utils/checkApiEndpoint';
 
-interface TValues {
-  fullname: string;
-  email: string;
-  //   description: string;
+import TPartnersData from '../types/partners.types';
 
-  order: {
-    productType: string;
-    purpose: string;
-    seo: string;
-  };
+interface TValues extends TPartnersData {
   isConsent: boolean;
 }
 
 const ContactFormContainer = withFormik({
   mapPropsToValues: () => ({
-    fullname: '',
+    username: '',
     email: '',
-    // description: '',
-    order: {
-      productType: '',
-      purpose: '',
-      seo: '',
-    },
+    description: '',
+    password: '',
+    passwordRepeat: '',
+    socialMedia: '',
+    companyName: '',
+    hearAbout: '',
+    audienceTarget: '',
+    details: '',
     isConsent: false,
   }),
   validate: (values: TValues) => {
-    const errors = {};
+    const errors: any = {};
 
     validateForm({ values, errors });
 
@@ -44,8 +39,24 @@ const ContactFormContainer = withFormik({
 
     const API_ENDPOINT = checkApiEndpoint();
 
+    const postData = {
+      user: {
+        username: values.username,
+        email: values.email,
+        description: values.description,
+        password: values.password,
+      },
+      additional: {
+        socialMedia: values.socialMedia,
+        companyName: values.companyName,
+        heartAbout: values.hearAbout,
+        audienceTarget: values.audienceTarget,
+        details: values.details,
+      },
+    };
+
     axios
-      .post(`${API_ENDPOINT}/web`, values)
+      .post(`${API_ENDPOINT}/auth/partners/signup`, postData)
       .then((res) => {
         setSubmitting(false);
         resetForm();
@@ -57,7 +68,7 @@ const ContactFormContainer = withFormik({
         localStorage.setItem('formSubmissionEmail', values.email);
         setSubmitting(false);
 
-        window.location.href = `/development/services/${values.order.productType}/success?authToken=${submissionToken}`;
+        window.location.href = `/partners/signup/success?authToken=${submissionToken}`;
 
         setTimeout(() => {
           setStatus(null);
@@ -71,6 +82,33 @@ const ContactFormContainer = withFormik({
           setStatus(null);
         }, 5000);
       });
+    //     axios
+    //       .post(`${API_ENDPOINT}/web`, values)
+    //       .then((res) => {
+    //         setSubmitting(false);
+    //         resetForm();
+    //         setStatus('success');
+
+    //         const submissionToken = uuidv4();
+
+    //         localStorage.setItem('formSubmissionToken', submissionToken);
+    //         localStorage.setItem('formSubmissionEmail', values.email);
+    //         setSubmitting(false);
+
+    //         window.location.href = `/development/services/${values.order.productType}/success?authToken=${submissionToken}`;
+
+    //         setTimeout(() => {
+    //           setStatus(null);
+    //         }, 5000);
+    //       })
+    //       .catch((err) => {
+    //         setSubmitting(false);
+    //         setStatus('fail');
+
+    //         setTimeout(() => {
+    //           setStatus(null);
+    //         }, 5000);
+    //       });
   },
   enableReinitialize: true,
 

@@ -8,6 +8,9 @@ export default function useHideScrollOnTrue(stateBool: boolean) {
       document.documentElement.style.removeProperty('overflow');
     }
 
+    return () => {
+      document.documentElement.style.removeProperty('overflow');
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stateBool]);
 }

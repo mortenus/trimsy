@@ -23,7 +23,11 @@ const Product = () => {
         <header className={styles.header}>
           <div className={styles.intro}>
             <div className={styles.image}>
-              <Image fill src="/static/img/sneakers/logo.png" alt="logo" />
+              <Image
+                fill
+                src="/static/img/sneakers/logo.png"
+                alt="Logo - Example Web Development Products. Sirol Shop"
+              />
             </div>
             <div className={styles.text}>
               <h3>Sirol Shop</h3>
@@ -32,7 +36,12 @@ const Product = () => {
           </div>
           <ul className={styles.headerLinks}>
             <li>
-              <Image width={17} height={17} src="/static/img/sneakers/cart.svg" alt="Cart Icon" />
+              <Image
+                width={17}
+                height={17}
+                src="/static/img/sneakers/cart.svg"
+                alt="Shopping Cart Icon - Example Web Development Products. Sirol Shop"
+              />
               <span>$899</span>
             </li>
             <li>
@@ -44,7 +53,12 @@ const Product = () => {
               />
             </li>
             <li>
-              <Image width={20} height={20} src={'/static/img/sneakers/user.svg'} alt="user" />
+              <Image
+                width={20}
+                height={20}
+                src={'/static/img/sneakers/user.svg'}
+                alt="User - Example Web Development Products. Sirol Shop"
+              />
             </li>
           </ul>
         </header>

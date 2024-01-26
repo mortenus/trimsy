@@ -75,17 +75,8 @@ const seoArr: TSeoArr[] = [
 ];
 
 const ContactForm = (props: any & TContactForm) => {
-  const {
-    values,
-    status,
-    touched,
-    errors,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    isSubmitting,
-    productTypeProp,
-  } = props;
+  const { values, status, touched, errors, handleChange, handleBlur, handleSubmit, isSubmitting } =
+    props;
 
   const [activeStage, setActiveStage] = React.useState(0);
 
@@ -162,9 +153,9 @@ const ContactForm = (props: any & TContactForm) => {
   };
 
   const handleSubmitDebounce = () => {
-    values.order.productType = productTypeProp;
-    values.order.purpose = purpose;
-    values.order.seo = seo;
+    // values.order.productType = productTypeProp;
+    // values.order.purpose = purpose;
+    // values.order.seo = seo;
 
     handleSubmit();
   };

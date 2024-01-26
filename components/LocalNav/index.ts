@@ -1,3 +1,4 @@
+export { default as DevelopmentLocalNav } from './development';
 export { default as MarketplaceLocalNav } from './marketplace';
 export { default as PartnersLocalNav } from './partners';
 export { default as AssistantLocalNav } from './assistant';

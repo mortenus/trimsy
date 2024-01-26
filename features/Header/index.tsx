@@ -17,6 +17,7 @@ import {
   MarketplaceLocalNav,
   PartnersLocalNav,
   AboutLocalNav,
+  DevelopmentLocalNav,
 } from 'components/LocalNav';
 
 // type THeaderBase = {};
@@ -43,6 +44,10 @@ const possibleDepartments = [
   {
     name: 'blog',
     link: '/blog',
+  },
+  {
+    name: 'development',
+    link: '/development',
   },
   {
     name: 'marketplace',
@@ -114,6 +119,7 @@ const Header = ({ handleFormChange, handleKeyDownOverflowChange }: THeader) => {
       </header>
       {currentVisibleDepartment.name === 'about' && <AboutLocalNav />}
       {currentVisibleDepartment.name === 'blog' && <BlogLocalNav />}
+      {currentVisibleDepartment.name === 'development' && <DevelopmentLocalNav />}
       {currentVisibleDepartment.name === 'marketplace' && <MarketplaceLocalNav />}
       {currentVisibleDepartment.name === 'careers' && <CareersLocalNav />}
       {currentVisibleDepartment.name === 'partners' && <PartnersLocalNav />}

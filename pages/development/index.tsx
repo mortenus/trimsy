@@ -68,7 +68,8 @@ const FAQArr = [
   },
 ];
 
-Development.title = 'Development';
+Development.title = 'Website Development and Design';
+Development.description = 'The web So you can do the things you love in ways never before possible.';
 
 export default function Development({
   handleFormChange,
