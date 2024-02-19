@@ -9,7 +9,7 @@ import { ContactForm } from 'features/Partners';
 
 Landing.description = `Our affiliate program, called Partners Program, provides a unique way for you to earn commissions on each sale.`;
 
-const disable = false;
+const disable = true;
 
 const bannerItems = [
   {
