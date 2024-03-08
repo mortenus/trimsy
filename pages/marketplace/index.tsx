@@ -91,7 +91,7 @@ export function Careers() {
                 Resume. Cover Letter. LinkedIn optimization.
               </ProfessionalItem>
             </div>
-            <ModernButton to="/careers/services">Start Now</ModernButton>
+            <ModernButton to="/marketplace/services">Start Now</ModernButton>
           </div>
         </div>
       </section>
