@@ -42,7 +42,7 @@ export default function Landing({}) {
         <section className={styles[`intro`]}>
           <div className={styles[`intro__banner`]}>
             <p className={styles[`intro__banner-text`]}>
-              Curretly under development. Opening planned on Jan 25, 2024.
+              Curretly under development. Opening planned on Mar 25, 2024.
             </p>
           </div>
           <h5 className={styles[`intro__subtitle`]}>FUTURE IS HERE</h5>

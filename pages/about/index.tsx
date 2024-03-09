@@ -99,7 +99,7 @@ export default function About({ items }: any) {
       <section className={styles[`get-discovered`]}>
         <div className={'global-wrapper--small'}>
           <h2 className={styles[`get-discovered__title`]}>Trimsy Help</h2>
-          <p className={styles[`get-discovered__description`]}>+1 587-998-1168</p>
+          <p className={styles[`get-discovered__description`]}>+1 587-439-2480</p>
           <Link href="mailto:support@trimsy.org">support@trimsy.org</Link>
         </div>
       </section>

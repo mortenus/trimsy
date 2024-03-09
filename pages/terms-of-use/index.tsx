@@ -823,7 +823,7 @@ export function TermsOfUse() {
             Please, you can familiarize yourself with our terms of use practices directly with us.
           </p>
           <p>Trimsy inc.</p>
-          <p>+1 587-998-1168</p>
+          <p>+1 587-439-2480</p>
           <Link href="mailto:support@trimsy.org">{`support@trimsy.org`}</Link>
         </div>
       </div>

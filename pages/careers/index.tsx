@@ -19,22 +19,22 @@ Careers.description = `Careers Opportunities. Dare to dream, aspire to achieve, 
 const roles = [
   {
     title: 'Sales Manager',
-    date: 'Jan 23, 2024',
-    location: 'Remote',
+    date: 'Mar 31, 2024',
+    location: 'Calgary, Canada',
     href: '/sales-manager',
   },
-  {
-    title: 'Marketing Specialist',
-    date: 'Jan 09, 2024',
-    location: 'Remote',
-    href: '/marketing-specialist',
-  },
-  {
-    title: 'Head of SEO',
-    date: 'Jan 05, 2024',
-    location: 'Remote',
-    href: '/head-of-seo',
-  },
+  //   {
+  //     title: 'Marketing Specialist',
+  //     date: 'Jan 09, 2024',
+  //     location: 'Remote',
+  //     href: '/marketing-specialist',
+  //   },
+  //   {
+  //     title: 'Head of SEO',
+  //     date: 'Jan 05, 2024',
+  //     location: 'Remote',
+  //     href: '/head-of-seo',
+  //   },
 ];
 
 type TCareers = {
