@@ -48,6 +48,8 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
     }
 
     setStartX(null);
+
+    event.preventDefault(); // Prevent vertical scrolling
   };
 
   return (
