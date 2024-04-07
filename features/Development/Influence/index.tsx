@@ -82,7 +82,7 @@ const Influence = () => {
     <section id="portfolio" className={styles.section}>
       <div className={styles.intro}>
         <h2>Believing in seeing</h2>
-        <p>Expand trending User Experience to get the most attention.</p>
+        <p>Expanding the most trending to get the most attention.</p>
       </div>
       <div className={styles.wrapper}>
         <Swiper items={slides} />
