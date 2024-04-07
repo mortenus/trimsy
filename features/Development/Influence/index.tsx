@@ -80,10 +80,10 @@ const slides = [
 const Influence = () => {
   return (
     <section id="portfolio" className={styles.section}>
-      <div className={styles.intro}>
+      {/* <div className={styles.intro}>
         <h2>Believing in seeing</h2>
         <p>Expanding the most trending to get the most attention.</p>
-      </div>
+      </div> */}
       <div className={styles.wrapper}>
         <Swiper items={slides} />
       </div>

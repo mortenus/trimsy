@@ -1,17 +1,21 @@
 .section {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+
+  // padding: 25px 0;
+
+  //   color: #fff;
+
+  //   background: #000;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  //   padding-bottom: 100px;
-  //   padding-top: 270px;
-  //   padding-top: 150px;
-
-  padding: 125px 0;
-
+  /* padding: 125px 0; */
+  padding: 25px 0;
   color: #fff;
-
-  background: #000;
-  //   margin-top: -115px;
+  background: #f7f7f7;
 
   @media (max-width: 734px) {
     padding-top: 50px;
@@ -89,7 +93,7 @@
   .wrapper {
     width: 100%;
     position: relative;
-    padding: 25px 0;
+    // padding: 25px 0;
 
     .item {
       padding: 25px 100px 0 50px;

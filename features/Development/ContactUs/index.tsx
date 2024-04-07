@@ -22,13 +22,10 @@ const ContactUs = ({ onScrollEvent }: TContactUs) => {
       <div className={styles.wrapper}>
         <div className={styles.potential}>
           <h2>{`Empower your business`}</h2>
-          <p>
-            Tell us about your project goals, and together, we'll create a stunning online presence
-            that drives success.
-          </p>
+          <p>Taking a look at the advantages</p>
           <div className={clsx(styles.button, { [styles.active]: ButtonInView })} ref={ButtonRef}>
             <Button type="nav" to="/development/services">
-              Let's begin
+              Learn more
             </Button>
           </div>
         </div>

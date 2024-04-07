@@ -281,14 +281,14 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.16);
+    background-color: rgba(0, 0, 0, 0.16);
     -webkit-transition: background-color 100ms linear;
     transition: background-color 100ms linear;
     margin: 0 7px;
     cursor: pointer;
 
     &.active {
-      background-color: rgba(255, 255, 255, 0.56);
+      background-color: rgba(0, 0, 0, 0.56);
     }
   }
 }
@@ -299,7 +299,7 @@
   bottom: -20px;
   position: absolute;
   padding: 6px 7px;
-  border: 2px solid rgba(255, 255, 255, 0.75);
+  border: 2px solid rgba(0, 0, 0, 0.75);
   background: transparent;
   border-radius: 50px;
   display: flex;

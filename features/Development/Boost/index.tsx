@@ -14,19 +14,20 @@ type TBoost = {
 const itemsArr = [
   {
     title: 'SEO',
-    description: 'Get the SEO optimization your site need for perfect search visibility.',
+    description: 'The Search Engine Optimization your website needs for perfect search visibility.',
   },
   {
     title: 'UI and UX',
-    description: 'Loop forward for new UI and UI experience with the help of our experts.',
+    description:
+      'Getting forward in new UI and UI experience with the help of Artificial Inteligence.',
   },
   {
     title: 'Faster Loading',
-    description: 'Our team ensures to bring the best loading of pages for the user.',
+    description: 'Ensuring to bring the best loading of pages for users.',
   },
   {
     title: 'Latest Solutions',
-    description: 'Trimsy uses latest tech solutions to bring your website to new level.',
+    description: 'Latest tech solutions to ensure your website gets to the new level',
   },
 ];
 
@@ -50,8 +51,8 @@ const Boost = ({ onScrollEvent }: TBoost) => {
       <div className={styles.wrapper}>
         <div className={styles.potential}>
           <div className={styles.title}>
-            <h2 className={'typography-headline'}>Boost your business with</h2>
-            <h2 className={'typography-headline'}>solid presence in Web</h2>
+            <h2 className={'typography-headline'}>Boosting your business with</h2>
+            <h2 className={'typography-headline'}>solid presence</h2>
           </div>
         </div>
         <div ref={additionalRef} className={styles.additional}>
