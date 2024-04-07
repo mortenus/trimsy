@@ -14,7 +14,7 @@ import { Button } from 'components';
 import useDebounce from 'hooks/useDebounce';
 
 type TContactForm = {
-  websiteType?: string;
+  productType?: string;
 };
 
 type TPurposeArr = {
@@ -95,7 +95,7 @@ const ContactForm = (props: any & TContactForm) => {
     handleBlur,
     handleSubmit,
     isSubmitting,
-    websiteType,
+    productType,
   } = props;
 
   const [activeStage, setActiveStage] = React.useState(0);
@@ -174,7 +174,7 @@ const ContactForm = (props: any & TContactForm) => {
   };
 
   const handleSubmitDebounce = () => {
-    values.order.websiteType = websiteType;
+    values.order.websiteType = productType;
     values.order.websitePurpose = websitePurpose;
     values.order.seoPackage = seoPackage;
 
