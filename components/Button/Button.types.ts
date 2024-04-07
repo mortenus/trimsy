@@ -11,6 +11,7 @@ type TButtonBase = {
   tabIndex?: number;
   onKeyDown?: React.KeyboardEventHandler;
   className?: HTMLAttributes<HTMLDivElement> | string;
+  target?: '_blank';
 };
 
 interface TButtonOnClick extends TButtonBase {

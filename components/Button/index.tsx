@@ -18,6 +18,7 @@ const Button = ({
   color,
   tabIndex,
   onKeyDown,
+  target,
 }: TButton) => {
   const stylying = clsx(
     styles.wrapper,
@@ -44,7 +45,10 @@ const Button = ({
   return (
     <>
       {!onClick ? (
-        <Link href={to ? to : '#'} style={{ ...{ width: 'fit-content' }, ...(style && style) }}>
+        <Link
+          target={target ? target : ''}
+          href={to ? to : '#'}
+          style={{ ...{ width: 'fit-content' }, ...(style && style) }}>
           <div className={stylying}>{children}</div>
         </Link>
       ) : (

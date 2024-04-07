@@ -71,10 +71,10 @@
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    // justify-content: center;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+    // align-items: center;
     will-change: opacity;
     z-index: 0 !important;
 
@@ -92,6 +92,37 @@
 
     @media (min-width: 1441px) {
       width: 1250px;
+    }
+
+    .additional {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      background: radial-gradient(
+        100% 43% at left bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0)
+      );
+
+      .container {
+        display: flex;
+        margin: 50px 100px;
+
+        .text {
+          text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+          display: flex;
+          align-items: center;
+
+          & > * {
+            margin-left: 15px;
+            font-size: 18px;
+
+            &:first-child {
+              margin-left: 25px;
+            }
+          }
+        }
+      }
     }
   }
 

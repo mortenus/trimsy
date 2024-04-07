@@ -4,11 +4,14 @@ import useResize from './hooks/useResize';
 import useSwiper from './hooks/useSwiper';
 import styles from './Swiper.module.scss';
 
+import { TSwiperItems } from './types';
+import Button from 'components/Button';
+
 interface SwiperProps {
-  images: string[];
+  items: TSwiperItems[];
 }
 
-const Swiper: React.FC<SwiperProps> = ({ images }) => {
+const Swiper: React.FC<SwiperProps> = ({ items }) => {
   const ref = React.useRef(null);
   const isVisible = useIsVisible({ ref });
 
@@ -21,7 +24,7 @@ const Swiper: React.FC<SwiperProps> = ({ images }) => {
     handlePlayPause,
     isPlaying,
     handlePaginationClick,
-  } = useSwiper({ images, autoPlayDuration: 3500, isVisible });
+  } = useSwiper({ items, autoPlayDuration: 3500, isVisible });
 
   const size = useResize();
 
@@ -34,7 +37,7 @@ const Swiper: React.FC<SwiperProps> = ({ images }) => {
             transform: `translate3d(${activeIndex * (size !== null ? -size : 0)}px, 0px, 0px)`,
             transition: `transform 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s`,
           }}>
-          {images.map((image, index) => (
+          {items.map((item, index) => (
             <div
               key={index}
               className={[
@@ -46,10 +49,21 @@ const Swiper: React.FC<SwiperProps> = ({ images }) => {
                 .filter(Boolean)
                 .join(' ')}
               style={{
-                backgroundImage: `url(${image})`,
+                backgroundImage: `url(${item.imgUrl})`,
                 transform: `translate(${index * (size !== null ? size : 0)}px, 0px)`,
-              }}
-            />
+              }}>
+              <div className={styles.additional}>
+                <div className={styles.container}>
+                  <Button size="small" to={item.href} target="_blank">
+                    Learn More
+                  </Button>
+                  <div className={styles.text}>
+                    <h3>{item.title}</h3>
+                    {item.description && <p>{item.description}</p>}
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
@@ -88,7 +102,7 @@ const Swiper: React.FC<SwiperProps> = ({ images }) => {
         )}
       </button>
       <div className={styles['swiper-pagination']}>
-        {images.map((_, index) => (
+        {items.map((_, index) => (
           <div
             key={index}
             className={[
