@@ -54,7 +54,7 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
               }}>
               <div className={styles.additional}>
                 <div className={styles.container}>
-                  <Button size="small" to={item.href} target="_blank">
+                  <Button className={styles.button} size="small" to={item.href} target="_blank">
                     Learn More
                   </Button>
                   <div className={styles.text}>

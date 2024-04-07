@@ -19,8 +19,10 @@ const Button = ({
   tabIndex,
   onKeyDown,
   target,
+  className,
 }: TButton) => {
   const stylying = clsx(
+    className,
     styles.wrapper,
     { [styles['wrapper--disabled']]: disabled },
     { [styles['wrapper--disabled_black']]: disabled === 'black' },
