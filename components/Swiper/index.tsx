@@ -32,10 +32,20 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
 
   const touchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     setStartX(event.touches[0].clientX);
+
+    // Prevent vertical scrolling when interacting with the swiper
   };
 
-  const touchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+  const touchEnd = () => {
+    setStartX(null);
+
+    // Re-enable vertical scrolling when touch interaction ends
+    document.body.style.overflow = 'auto';
+  };
+
+  const touchMove = (event: React.TouchEvent<HTMLDivElement>) => {
     if (startX === null) return;
+    document.body.style.overflow = 'hidden';
 
     const endX = event.changedTouches[0].clientX;
     const deltaX = endX - startX;
@@ -46,10 +56,6 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
     } else if (deltaX < -threshold) {
       handleNext(); // Move to next item
     }
-
-    setStartX(null);
-
-    event.preventDefault(); // Prevent vertical scrolling
   };
 
   return (
@@ -58,6 +64,7 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
         <div
           onTouchStart={touchStart}
           onTouchEnd={touchEnd}
+          onTouchMove={touchMove}
           className={styles['swiper-wrapper']}
           style={{
             transform: `translate3d(${activeIndex * (size !== null ? -size : 0)}px, 0px, 0px)`,
