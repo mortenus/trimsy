@@ -28,10 +28,34 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
 
   const size = useResize();
 
+  const [startX, setStartX] = React.useState<number | null>(null);
+
+  const touchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    setStartX(event.touches[0].clientX);
+  };
+
+  const touchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (startX === null) return;
+
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+
+    const threshold = 50; // Adjust as needed
+    if (deltaX > threshold) {
+      handlePrev(); // Move to previous item
+    } else if (deltaX < -threshold) {
+      handleNext(); // Move to next item
+    }
+
+    setStartX(null);
+  };
+
   return (
     <>
       <div className={styles.swiper} ref={ref}>
         <div
+          onTouchStart={touchStart}
+          onTouchEnd={touchEnd}
           className={styles['swiper-wrapper']}
           style={{
             transform: `translate3d(${activeIndex * (size !== null ? -size : 0)}px, 0px, 0px)`,
