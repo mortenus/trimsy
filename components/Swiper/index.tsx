@@ -86,7 +86,10 @@ const Swiper: React.FC<SwiperProps> = ({ items }) => {
                 transform: `translate(${index * (size !== null ? size : 0)}px, 0px)`,
               }}>
               <div className={styles.additional}>
-                <div className={styles.container}>
+                <div
+                  className={[styles.container, index === activeIndex && styles['animation']]
+                    .filter(Boolean)
+                    .join(' ')}>
                   <Button className={styles.button} size="small" to={item.href} target="_blank">
                     Learn More
                   </Button>
