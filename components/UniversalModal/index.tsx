@@ -46,13 +46,29 @@ const UniversalModal = ({
 
   //   useHideOnOutsideClick(opened, setIsOpened, ref, toNotCloseRef);
 
+  const modalRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
+
   return (
     <div
       className={clsx(styles.overflow, className && className, {
         [styles.overlayVisible]: isModalVisible,
       })}>
       <div className={clsx({ ['global-wrapper--small']: !size })} ref={customRef}>
-        <div className={clsx(styles.content, { [styles.full]: size === 'full' })}>
+        <div className={clsx(styles.content, { [styles.full]: size === 'full' })} ref={modalRef}>
           {showClose && (
             <svg
               className={styles.close}

@@ -96,7 +96,7 @@ export default function About({ items }: any) {
           <CommunityItem />
         </div>
       </section>
-      <section className={styles[`get-discovered`]}>
+      <section className={styles[`get-discovered`]} id={'contact'}>
         <div className={'global-wrapper--small'}>
           <h2 className={styles[`get-discovered__title`]}>Trimsy Help</h2>
           <p className={styles[`get-discovered__description`]}>+1 587-439-2480</p>

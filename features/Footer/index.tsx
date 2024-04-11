@@ -59,7 +59,7 @@ const Footer = () => {
               <Link href="/careers">Career Opportunities</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/partners">Partners Program</Link>
-              <Link href="/about">Contact Trimsy</Link>
+              <Link href="/about#contact">Contact Trimsy</Link>
             </div>
           </div>
         </div>

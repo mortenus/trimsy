@@ -142,9 +142,9 @@ export function Careers({ handleFormChange }: TCareers) {
               Share some basic information and submit your resume. If there’s a role that might be a
               good match, an Trimsy recruiter will be in touch.
             </p>
-            <Button className={styles[`get-discovered__link`]} onClick={handleFormChange}>
+            <button className={styles[`get-discovered__link`]} onClick={handleFormChange}>
               Start now
-            </Button>
+            </button>
           </div>
         </section>
       </main>
