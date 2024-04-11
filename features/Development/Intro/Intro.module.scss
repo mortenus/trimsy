@@ -18,8 +18,16 @@
   //   padding: 175px 0;
 
   @media (max-width: 734px) {
+    // min-height: auto;
+  }
+
+  @media (max-height: 725px) {
+    padding: 50px 0;
+  }
+
+  @media (min-height: 950px) {
     min-height: auto;
-    padding: 290px 0;
+    padding: 200px 0;
   }
 
   h1 {

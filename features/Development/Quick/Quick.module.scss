@@ -4,6 +4,10 @@
 
   background: #f7f7f7;
 
+  @media (max-width: 1068px) {
+    padding-top: 0;
+  }
+
   @media (max-width: 734px) {
     height: 150px;
   }
@@ -49,7 +53,6 @@
 
   @media (max-width: 1068px) {
     padding-left: 25px;
-    padding-bottom: 30px;
   }
 
   @media (max-width: 734px) {
@@ -63,6 +66,8 @@
 
     @media (max-width: 1440px) {
       max-width: 1024px;
+
+      padding: 40px 0;
     }
 
     @media (max-width: 1250px) {
