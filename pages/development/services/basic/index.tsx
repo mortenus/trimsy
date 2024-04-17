@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'Basic',
   productType: '',
-  price: 1500,
+  price: 2500,
   logo: '',
   description:
     'Web Basic. Fully customized and dynamic website. Solid foundation for your online presence. Enhanced user experience and engagement.',

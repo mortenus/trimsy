@@ -52,17 +52,19 @@ const linkRows = [
     links: [
       {
         title: 'About',
-        description: '',
+        description: 'Learn more about our company and our mission to redefine the industry',
         href: '/about',
       },
       {
         title: 'Careers',
-        description: '',
+        description:
+          'Explore exciting opportunities to join our team and grow your career with us.',
         href: '/careers',
       },
       {
-        title: 'Partners Prgoram',
-        description: '',
+        title: 'Partners Program',
+        description:
+          'Discover how you can become a valued partner and collaborate with us for mutual success.',
         href: '/partners',
       },
     ],

@@ -9,7 +9,7 @@ const init = {
   isNew: true,
   name: 'Advanced',
   productType: '',
-  price: 2500,
+  price: 3500,
   logo: '',
   description:
     'Web Adavnced. Visually appealing design. Integrated payment gateways for seamless transactions.  Responsive layout for optimal viewing on all devices. Advanced SEO optimization.',

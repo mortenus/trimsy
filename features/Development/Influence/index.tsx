@@ -36,7 +36,7 @@ const slides = [
   {
     title: 'Frickle AI',
     description: 'Music AI platform',
-    imgUrl: '/static/img/carousel/frickle.jpg',
+    imgUrl: '/static/img/carousel/frickl.jpg',
     href: 'https://www.figma.com/proto/Kyam2iaerzyKX8qhQKnFKc/Frickle-AI----AI-sounds?page-id=0%3A1&type=design&node-id=7-2&viewport=2120%2C3473%2C0.43&t=DlW6rsVJGL1euDDq-1&scaling=min-zoom&mode=design',
   },
   {

@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'eCommerce',
   productType: '',
-  price: 4000,
+  price: 7000,
   logo: '',
   description:
     'Web eCommerce. Secure payment processing. Personalized product recommendations. Mobile-responsive design. Seamless shopping experience.',

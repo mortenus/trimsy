@@ -9,7 +9,7 @@ const init = {
   isNew: false,
   name: 'Starter',
   productType: '',
-  price: 499,
+  price: 999,
   logo: '',
   description:
     'Web Starter. Affordable website package. User-friendly interface. Quick setup and launch. Reliable hosting and security.',
