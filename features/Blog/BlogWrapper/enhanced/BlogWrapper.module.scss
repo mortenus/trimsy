@@ -82,7 +82,9 @@ $blogBackground: #fff;
     @media (max-width: 390px) {
       font-size: 10px;
     }
-
+    span:first-child {
+      display: none;
+    }
     .line {
       height: 1px;
       background: #000;

@@ -76,7 +76,7 @@ const Footer = () => {
             <Link href="/terms-of-use">Terms of Use</Link>
           </li>
         </ul>
-        <p className={styles.copyright}>Copyright © 2023 Trimsy inc. All rights reserved</p>
+        <p className={styles.copyright}>Copyright © 2024 Trimsy inc. All rights reserved</p>
       </div>
     </footer>
   );
