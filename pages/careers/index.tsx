@@ -17,18 +17,18 @@ Careers.title = 'Careers Opportunities';
 Careers.description = `Careers Opportunities. Dare to dream, aspire to achieve, and make your mark as we’re trying best to redefine what's possible for better.`;
 
 const roles = [
-  //   {
-  //     title: 'Sales Manager',
-  //     date: 'Mar 31, 2024',
-  //     location: 'Calgary, Canada',
-  //     href: '/sales-manager',
-  //   },
   {
-    title: 'Marketing Specialist',
-    date: 'May 17, 2024',
-    location: 'Remote',
-    href: '/marketing-specialist',
+    title: 'Sales Manager | On site',
+    date: 'Jun 03, 2024',
+    location: 'Calgary, Canada',
+    href: '/sales-manager',
   },
+  //   {
+  //     title: 'Marketing Specialist',
+  //     date: 'May 17, 2024',
+  //     location: 'Remote',
+  //     href: '/marketing-specialist',
+  //   },
   //   {
   //     title: 'Head of SEO',
   //     date: 'Jan 05, 2024',
