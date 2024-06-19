@@ -26,6 +26,21 @@ const roles = [
   //   {
   //     title: 'Marketing Specialist',
   //     date: 'May 17, 2024',
+  {
+    title: 'Sales Manager | On site',
+    date: 'Jun 03, 2024',
+    location: 'Calgary, Canada',
+    href: '/sales-manager',
+  },
+  //   {
+  //     title: 'Marketing Specialist',
+  //     date: 'May 17, 2024',
+  //     location: 'Remote',
+  //     href: '/marketing-specialist',
+  //   },
+  //   {
+  //     title: 'Head of SEO',
+  //     date: 'Jan 05, 2024',
   //     location: 'Remote',
   //     href: '/marketing-specialist',
   //   },
