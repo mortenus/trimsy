@@ -21,7 +21,7 @@ const info = {
   Doing things with speed does not mean doing them imperfectly, the only way to not fall
   back - is to go forward.`,
     avatarUrl:
-      'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_200_200/0/1677288099829?e=1702512000&v=beta&t=1l2u2vn979HEhVkUfS3uaQ7VGZn5opraRjNnxQzrB-w',
+      'https://media.licdn.com/dms/image/D4D03AQHHuaDY4z8V7A/profile-displayphoto-shrink_200_200/0/1677288102806?e=1721865600&v=beta&t=DGDiOOXgFgO7g4beK29p9Kn-6tFk2g7WOTgqOvqCI9Q',
     profileUrl: 'https://www.linkedin.com/in/alexey-pylypenko/',
   },
   description:
