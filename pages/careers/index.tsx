@@ -28,7 +28,7 @@ const roles = [
   //     date: 'May 17, 2024',
   {
     title: 'Sales Manager | On site',
-    date: 'Jun 03, 2024',
+    date: 'July 26, 2024',
     location: 'Calgary, Canada',
     href: '/sales-manager',
   },
@@ -44,12 +44,12 @@ const roles = [
   //     location: 'Remote',
   //     href: '/marketing-specialist',
   //   },
-  {
-    title: 'Head of SEO',
-    date: 'July 05, 2024',
-    location: 'Remote',
-    href: '/head-of-seo',
-  },
+  //   {
+  //     title: 'Head of SEO',
+  //     date: 'July 05, 2024',
+  //     location: 'Remote',
+  //     href: '/head-of-seo',
+  //   },
 ];
 
 type TCareers = {

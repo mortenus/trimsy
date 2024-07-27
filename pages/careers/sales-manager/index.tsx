@@ -16,7 +16,7 @@ const index = ({ handleFormChange, handleKeyDownOverflowChange }: TPost) => {
       <div className={styles.headline}>
         <h2 className={styles.title}>Sales Manager</h2>
 
-        <span className={styles.date}>Jun 03, 2024</span>
+        <span className={styles.date}>July 26, 2024</span>
 
         <div className={styles.cta}>
           <Button size="small" onClick={handleFormChange}>
